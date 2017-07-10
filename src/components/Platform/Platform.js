@@ -8,8 +8,36 @@ import path_2_copy_3 from '../../img/path-2-copy-3.svg';
 
 class Platform extends Component {
 
-	changeHandler = (e) => {
-		this.refs.slider.slickGoTo(e);
+	changeHandler = (n, e) => {
+		switch(e) {
+			case this.platformReact:
+				e.className = 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 active';
+				this.platformRails.className = 'platform rails col-md-2 col-sm-2';
+				this.platformIos.className = 'platform ios col-md-2 col-sm-2';
+				this.platformAndroid.className = 'platform android col-md-2 col-sm-2';
+				break;
+			case this.platformRails:
+				e.className = 'platform rails col-md-2 col-sm-2 active';
+				this.platformReact.className = 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1';
+				this.platformIos.className = 'platform ios col-md-2 col-sm-2';
+				this.platformAndroid.className = 'platform android col-md-2 col-sm-2';
+				break;
+			case this.platformIos:
+				e.className = 'platform ios col-md-2 col-sm-2 active';
+				this.platformReact.className = 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1';
+				this.platformRails.className = 'platform rails col-md-2 col-sm-2';
+				this.platformAndroid.className = 'platform android col-md-2 col-sm-2';
+				break;
+			case this.platformAndroid:
+				e.className = 'platform android col-md-2 col-sm-2 active';
+				this.platformReact.className = 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1';
+				this.platformRails.className = 'platform rails col-md-2 col-sm-2';
+				this.platformIos.className = 'platform ios col-md-2 col-sm-2';
+				break;
+			default:
+				break;
+		}
+		this.refs.slider.slickGoTo(n);
 	};
 
 	settings = {
@@ -24,14 +52,13 @@ class Platform extends Component {
 
 	render() {
 
-
 		return (
 			<div className="second-screen">
 
 				<div className="header gutter-10 row">
 
-					<div className="platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 active url" id="react"
-							 onClick={ () => this.changeHandler(0) } >
+					<div className="platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 active" id="react"
+							 onClick={ () => this.changeHandler(0, this.platformReact) } ref={ div => {this.platformReact = div}}>
 
 						<div className="empty-box"></div>
 
@@ -54,7 +81,7 @@ class Platform extends Component {
 
 					</div>
 
-					<div className="platform rails col-md-2 col-sm-2 url" id="rails" onClick={ () => this.changeHandler(1) }>
+					<div className={`platform rails col-md-2 col-sm-2 url`} id="rails" onClick={ () => this.changeHandler(1, this.platformRails) } ref={ div => {this.platformRails = div} } >
 
 						<div className="empty-box"></div>
 
@@ -79,7 +106,7 @@ class Platform extends Component {
 
 					</div>
 
-					<div className="platform ios col-md-2 col-sm-2" id="ios" onClick={ () => this.changeHandler(2) } >
+					<div className="platform ios col-md-2 col-sm-2" id="ios" onClick={ () => this.changeHandler(2, this.platformIos) } ref={ div => {this.platformIos = div} }>
 
 						<div className="empty-box"></div>
 
@@ -94,7 +121,7 @@ class Platform extends Component {
 
 					</div>
 
-					<div className="platform android col-md-2 col-sm-2" id="android" onClick={ () => this.changeHandler(3) }  >
+					<div className="platform android col-md-2 col-sm-2" id="android" onClick={ () => this.changeHandler(3, this.platformAndroid) } ref={ div => {this.platformAndroid = div} } >
 
 						<div className="empty-box"></div>
 
