@@ -1,4 +1,8 @@
 import React from 'react';
+import logo_copy from '../../img/logo-copy.svg';
+import page_1_copy_3 from '../../img/page-1-copy-3.png';
+import page_1_copy_32x from '../../img/page-1-copy-3@2x.png';
+import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
 
 const Header =() => {
 	return (
@@ -6,12 +10,12 @@ const Header =() => {
 
 			<div className="header">
 
-				<img src="img/logo-copy.svg"
+				<img src={logo_copy}
 						 className="Logo-Copy" />
 
-					<img src="img/page-1-copy-3.png"
-							 srcSet="img/page-1-copy-3@2x.png 2x,
-             img/page-1-copy-3@3x.png 3x"
+					<img src={page_1_copy_3}
+							 srcSet={`${page_1_copy_32x} 2x,
+				${page_1_copy_33x} 3x`}
 							 className="Page-1-Copy-3" />
 
 						<div className="Mobile-Web-develop-Copy">

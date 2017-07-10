@@ -5,7 +5,7 @@ import './sass/main.css';
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="app-container">
         <Header/>
       </div>
     );

@@ -73,15 +73,15 @@ body {
   padding-right: 5px;
   padding-left: 5px; }
 
-.container {
+.app-container {
   width: 100%;
   padding: 0;
   margin: 0; }
-  .container > .first-screen {
+  .app-container > .first-screen {
     display: block;
     position: relative;
     width: 100%; }
-    .container > .first-screen > .header {
+    .app-container > .first-screen > .header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -93,7 +93,7 @@ body {
       padding-top: 159px;
       padding-bottom: 170px;
       position: relative; }
-      .container > .first-screen > .header:before {
+      .app-container > .first-screen > .header:before {
         content: '';
         position: absolute;
         width: 276px;
@@ -102,7 +102,7 @@ body {
         left: 0;
         top: calc(50% - 310px);
         z-index: 0; }
-      .container > .first-screen > .header:after {
+      .app-container > .first-screen > .header:after {
         content: '';
         position: absolute;
         width: 263px;
@@ -111,17 +111,17 @@ body {
         right: 0;
         top: calc(50% - 310px);
         z-index: 0; }
-      .container > .first-screen > .header > .Logo-Copy {
+      .app-container > .first-screen > .header > .Logo-Copy {
         max-width: 477px;
         width: 100%;
         min-height: 341px;
         object-fit: contain;
         z-index: 1; }
-      .container > .first-screen > .header > .Page-1-Copy-3 {
+      .app-container > .first-screen > .header > .Page-1-Copy-3 {
         position: absolute;
         padding-right: 11px;
         z-index: 1; }
-      .container > .first-screen > .header > .Mobile-Web-develop-Copy {
+      .app-container > .first-screen > .header > .Mobile-Web-develop-Copy {
         max-width: 671px;
         width: 100%;
         min-height: 50px;
@@ -135,14 +135,14 @@ body {
         color: #0a0c0f;
         margin-top: -62px;
         z-index: 1; }
-      .container > .first-screen > .header .svg--s {
+      .app-container > .first-screen > .header .svg--s {
         position: absolute; }
-      .container > .first-screen > .header .svg-filters {
+      .app-container > .first-screen > .header .svg-filters {
         position: absolute;
         visibility: hidden;
         width: 1px;
         height: 1px; }
-      .container > .first-screen > .header > .header-button {
+      .app-container > .first-screen > .header > .header-button {
         max-width: 320px;
         width: 100%;
         min-height: 54px;
@@ -157,9 +157,9 @@ body {
         transition: all 0.45s ease-out;
         filter: url("/#filter-ripple-2");
         z-index: 1; }
-        .container > .first-screen > .header > .header-button:hover {
+        .app-container > .first-screen > .header > .header-button:hover {
           background-color: #0FABE8; }
-    .container > .first-screen > .footer {
+    .app-container > .first-screen > .footer {
       display: flex;
       justify-content: center;
       width: 100%;
@@ -167,7 +167,7 @@ body {
       object-fit: contain;
       background-image: linear-gradient(to right, #21b4ed, #00c2de);
       position: relative; }
-      .container > .first-screen > .footer > .row > .title {
+      .app-container > .first-screen > .footer > .row > .title {
         position: relative;
         top: -70px;
         min-height: 330px;
@@ -179,7 +179,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between; }
-        .container > .first-screen > .footer > .row > .title > h2 {
+        .app-container > .first-screen > .footer > .row > .title > h2 {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 32px;
           font-weight: 600;
@@ -189,7 +189,7 @@ body {
           color: #0a0c0f;
           margin: 0;
           margin-bottom: 8px; }
-        .container > .first-screen > .footer > .row > .title > p {
+        .app-container > .first-screen > .footer > .row > .title > p {
           font-family: "SFUIDisplay", sans-serif;
           font-size: 16px;
           font-weight: 300;
@@ -199,7 +199,7 @@ body {
           color: #0a0c0f;
           margin: 0;
           padding: 0 130px; }
-  .container .second-screen {
+  .app-container .second-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,142 +208,142 @@ body {
     object-fit: contain;
     background-color: #ffffff;
     box-sizing: border-box; }
-    .container .second-screen > .header {
+    .app-container .second-screen > .header {
       display: flex;
       justify-content: space-between;
       padding-top: 100px; }
-      .container .second-screen > .header > .react, .container .second-screen > .header .rails, .container .second-screen > .header .ios, .container .second-screen > .header .android {
+      .app-container .second-screen > .header > .react, .app-container .second-screen > .header .rails, .app-container .second-screen > .header .ios, .app-container .second-screen > .header .android {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center; }
-        .container .second-screen > .header > .react > img, .container .second-screen > .header .rails > img, .container .second-screen > .header .ios > img, .container .second-screen > .header .android > img {
+        .app-container .second-screen > .header > .react > img, .app-container .second-screen > .header .rails > img, .app-container .second-screen > .header .ios > img, .app-container .second-screen > .header .android > img {
           cursor: pointer; }
-        .container .second-screen > .header > .react > svg, .container .second-screen > .header .rails > svg, .container .second-screen > .header .ios > svg, .container .second-screen > .header .android > svg {
+        .app-container .second-screen > .header > .react > svg, .app-container .second-screen > .header .rails > svg, .app-container .second-screen > .header .ios > svg, .app-container .second-screen > .header .android > svg {
           display: none; }
-        .container .second-screen > .header > .react > h3, .container .second-screen > .header .rails > h3, .container .second-screen > .header .ios > h3, .container .second-screen > .header .android > h3 {
+        .app-container .second-screen > .header > .react > h3, .app-container .second-screen > .header .rails > h3, .app-container .second-screen > .header .ios > h3, .app-container .second-screen > .header .android > h3 {
           margin-bottom: 0;
           color: #9b9b9b; }
-        .container .second-screen > .header > .react:hover > h3, .container .second-screen > .header .rails:hover > h3, .container .second-screen > .header .ios:hover > h3, .container .second-screen > .header .android:hover > h3 {
+        .app-container .second-screen > .header > .react:hover > h3, .app-container .second-screen > .header .rails:hover > h3, .app-container .second-screen > .header .ios:hover > h3, .app-container .second-screen > .header .android:hover > h3 {
           color: #000; }
-      .container .second-screen > .header > .react > .logo {
+      .app-container .second-screen > .header > .react > .logo {
         width: 123px;
         height: 110px;
         background: url("../img/react-logo-disable.svg") no-repeat;
         background-size: cover;
         background-position: center center; }
-      .container .second-screen > .header > .react.active > .logo {
+      .app-container .second-screen > .header > .react.active > .logo {
         background: url("../img/react-logo-enable.svg") no-repeat;
         display: none; }
-      .container .second-screen > .header > .react.active > svg {
+      .app-container .second-screen > .header > .react.active > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .react.active > h3 {
+      .app-container .second-screen > .header > .react.active > h3 {
         color: #000; }
-      .container .second-screen > .header > .react.active:hover > .logo {
+      .app-container .second-screen > .header > .react.active:hover > .logo {
         background: url("../img/react-logo-enable.svg") no-repeat;
         background-size: contain;
         background-position: center center;
         display: none; }
-      .container .second-screen > .header > .react.active:hover > svg {
+      .app-container .second-screen > .header > .react.active:hover > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .rails > .logo {
+      .app-container .second-screen > .header > .rails > .logo {
         width: 192px;
         height: 68px;
         background: url("../img/rails-logo-disable.svg") no-repeat;
         background-size: cover;
         background-position: center center; }
-      .container .second-screen > .header > .rails.active > .logo {
+      .app-container .second-screen > .header > .rails.active > .logo {
         display: none; }
-      .container .second-screen > .header > .rails.active > svg {
+      .app-container .second-screen > .header > .rails.active > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .rails.active > h3 {
+      .app-container .second-screen > .header > .rails.active > h3 {
         color: #000; }
-      .container .second-screen > .header > .rails.active:hover > .logo {
+      .app-container .second-screen > .header > .rails.active:hover > .logo {
         background: url("../img/rails-logo-enable.svg") no-repeat;
         background-size: contain;
         background-position: center center;
         display: none; }
-      .container .second-screen > .header > .rails.active:hover > svg {
+      .app-container .second-screen > .header > .rails.active:hover > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .ios > .logo {
+      .app-container .second-screen > .header > .ios > .logo {
         width: 75px;
         height: 90px;
         background: url("../img/i-os-disable.svg") no-repeat;
         background-size: contain;
         background-position: center center; }
-      .container .second-screen > .header > .ios.active > .logo {
+      .app-container .second-screen > .header > .ios.active > .logo {
         display: none; }
-      .container .second-screen > .header > .ios.active > svg {
+      .app-container .second-screen > .header > .ios.active > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .ios.active > h3 {
+      .app-container .second-screen > .header > .ios.active > h3 {
         color: #000; }
-      .container .second-screen > .header > .ios.active:hover > .logo {
+      .app-container .second-screen > .header > .ios.active:hover > .logo {
         background: url("../img/i-os-enable.svg") no-repeat;
         background-size: contain;
         background-position: center center;
         display: none; }
-      .container .second-screen > .header > .ios.active:hover > svg {
+      .app-container .second-screen > .header > .ios.active:hover > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .android > .logo {
+      .app-container .second-screen > .header > .android > .logo {
         width: 82.5px;
         height: 90px;
         background: url("../img/android-disable.svg") no-repeat;
         background-size: contain;
         background-position: center center; }
-      .container .second-screen > .header > .android.active > .logo {
+      .app-container .second-screen > .header > .android.active > .logo {
         display: none; }
-      .container .second-screen > .header > .android.active > svg {
+      .app-container .second-screen > .header > .android.active > svg {
         display: block;
         overflow: visible; }
-      .container .second-screen > .header > .android.active > h3 {
+      .app-container .second-screen > .header > .android.active > h3 {
         color: #000; }
-      .container .second-screen > .header > .android.active:hover > .logo {
+      .app-container .second-screen > .header > .android.active:hover > .logo {
         background: url("../img/android-enable.svg") no-repeat;
         background-size: contain;
         background-position: center center;
         display: none; }
-      .container .second-screen > .header > .android.active:hover > svg {
+      .app-container .second-screen > .header > .android.active:hover > svg {
         display: block;
         overflow: visible; }
-  .container .second-screen > .header {
+  .app-container .second-screen > .header {
     position: relative; }
-    .container .second-screen > .header > .platform {
+    .app-container .second-screen > .header > .platform {
       cursor: pointer; }
-      .container .second-screen > .header > .platform .logo {
+      .app-container .second-screen > .header > .platform .logo {
         transition: 0.4s; }
-    .container .second-screen > .header > .react:hover > .logo {
+    .app-container .second-screen > .header > .react:hover > .logo {
       background: url("../img/react-logo-hover-copy.svg") no-repeat;
       background-size: contain;
       display: none; }
-    .container .second-screen > .header > .react:hover > svg {
+    .app-container .second-screen > .header > .react:hover > svg {
       display: block;
       overflow: visible; }
-    .container .second-screen > .header > .rails:hover > .logo {
+    .app-container .second-screen > .header > .rails:hover > .logo {
       background: url("../img/rails-logo-hover-copy.svg") no-repeat;
       background-size: contain;
       display: none; }
-    .container .second-screen > .header > .rails:hover > svg {
+    .app-container .second-screen > .header > .rails:hover > svg {
       display: block;
       overflow: visible; }
-    .container .second-screen > .header > .ios:hover > .logo {
+    .app-container .second-screen > .header > .ios:hover > .logo {
       background: url("../img/i-os-hover-copy.svg") no-repeat;
       background-size: contain;
       display: none; }
-    .container .second-screen > .header > .ios:hover > svg {
+    .app-container .second-screen > .header > .ios:hover > svg {
       display: block;
       overflow: visible; }
-    .container .second-screen > .header > .android:hover > .logo {
+    .app-container .second-screen > .header > .android:hover > .logo {
       display: none; }
-    .container .second-screen > .header > .android:hover > svg {
+    .app-container .second-screen > .header > .android:hover > svg {
       display: block;
       overflow: visible; }
-    .container .second-screen > .header .line {
+    .app-container .second-screen > .header .line {
       position: absolute;
       top: 105%;
       left: 0;
@@ -358,42 +358,42 @@ body {
       -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
       -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
       transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22); }
-    .container .second-screen > .header .platform:nth-child(1).active ~ .line {
+    .app-container .second-screen > .header .platform:nth-child(1).active ~ .line {
       -webkit-transform: translateX(0);
       transform: translateX(0); }
-    .container .second-screen > .header .platform:nth-child(2).active ~ .line {
+    .app-container .second-screen > .header .platform:nth-child(2).active ~ .line {
       -webkit-transform: translateX(100%);
       transform: translateX(100%); }
-    .container .second-screen > .header .platform:nth-child(3).active ~ .line {
+    .app-container .second-screen > .header .platform:nth-child(3).active ~ .line {
       -webkit-transform: translateX(200%);
       transform: translateX(200%); }
-    .container .second-screen > .header .platform:nth-child(4).active ~ .line {
+    .app-container .second-screen > .header .platform:nth-child(4).active ~ .line {
       -webkit-transform: translateX(300%);
       transform: translateX(300%); }
-  .container .second-screen > .row > .body {
+  .app-container .second-screen > .row > .body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-top: 137px; }
-    .container .second-screen > .row > .body > .carousel, .container .second-screen > .row > .body .slick-slide {
+    .app-container .second-screen > .row > .body > .carousel, .app-container .second-screen > .row > .body .slick-slide {
       width: 100%;
       overflow: hidden; }
-      .container .second-screen > .row > .body > .carousel:focus, .container .second-screen > .row > .body .slick-slide:focus {
+      .app-container .second-screen > .row > .body > .carousel:focus, .app-container .second-screen > .row > .body .slick-slide:focus {
         outline: none;
         border: none; }
-      .container .second-screen > .row > .body > .carousel:active, .container .second-screen > .row > .body .slick-slide:active {
+      .app-container .second-screen > .row > .body > .carousel:active, .app-container .second-screen > .row > .body .slick-slide:active {
         outline: none;
         border: none; }
-    .container .second-screen > .row > .body > .carousel {
+    .app-container .second-screen > .row > .body > .carousel {
       margin-bottom: 146px; }
-      .container .second-screen > .row > .body > .carousel .slick-track {
+      .app-container .second-screen > .row > .body > .carousel .slick-track {
         display: flex; }
-      .container .second-screen > .row > .body > .carousel .react, .container .second-screen > .row > .body > .carousel .rails, .container .second-screen > .row > .body > .carousel .ios, .container .second-screen > .row > .body > .carousel .android {
+      .app-container .second-screen > .row > .body > .carousel .react, .app-container .second-screen > .row > .body > .carousel .rails, .app-container .second-screen > .row > .body > .carousel .ios, .app-container .second-screen > .row > .body > .carousel .android {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center; }
-        .container .second-screen > .row > .body > .carousel .react > .title, .container .second-screen > .row > .body > .carousel .rails > .title, .container .second-screen > .row > .body > .carousel .ios > .title, .container .second-screen > .row > .body > .carousel .android > .title {
+        .app-container .second-screen > .row > .body > .carousel .react > .title, .app-container .second-screen > .row > .body > .carousel .rails > .title, .app-container .second-screen > .row > .body > .carousel .ios > .title, .app-container .second-screen > .row > .body > .carousel .android > .title {
           font-family: "SFUIDisplayMedium", sans-serif;
           font-size: 32px;
           font-weight: 600;
@@ -402,7 +402,7 @@ body {
           text-align: center;
           color: #0a0c0f;
           margin-bottom: 8px; }
-        .container .second-screen > .row > .body > .carousel .react > p, .container .second-screen > .row > .body > .carousel .rails > p, .container .second-screen > .row > .body > .carousel .ios > p, .container .second-screen > .row > .body > .carousel .android > p {
+        .app-container .second-screen > .row > .body > .carousel .react > p, .app-container .second-screen > .row > .body > .carousel .rails > p, .app-container .second-screen > .row > .body > .carousel .ios > p, .app-container .second-screen > .row > .body > .carousel .android > p {
           font-family: "SFUIDisplay", sans-serif;
           font-size: 16px;
           font-weight: 300;
@@ -412,24 +412,24 @@ body {
           color: #0a0c0f;
           margin: 0;
           margin-bottom: 60px; }
-  .container .second-screen > .footer {
+  .app-container .second-screen > .footer {
     display: flex;
     position: relative;
     width: 100%;
     max-height: 900px;
     display: flex;
     justify-content: center; }
-    .container .second-screen > .footer > img {
+    .app-container .second-screen > .footer > img {
       max-width: 1440px;
       width: 100%;
       height: auto; }
-    .container .second-screen > .footer > .title {
+    .app-container .second-screen > .footer > .title {
       position: absolute;
       padding-top: 5.5%;
       left: 0;
       width: 100%;
       margin-left: 0; }
-      .container .second-screen > .footer > .title > .col-md-4, .container .second-screen > .footer > .title .col-sm-4 {
+      .app-container .second-screen > .footer > .title > .col-md-4, .app-container .second-screen > .footer > .title .col-sm-4 {
         height: 180px;
         background-color: #ffffff;
         display: flex;
@@ -437,7 +437,7 @@ body {
         justify-content: center;
         align-items: flex-start;
         padding-left: 7vw; }
-        .container .second-screen > .footer > .title > .col-md-4 > p, .container .second-screen > .footer > .title .col-sm-4 > p {
+        .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 16px;
           line-height: 1.38;
@@ -445,7 +445,7 @@ body {
           color: #0a0c0f;
           margin: 0;
           margin-bottom: 10px; }
-        .container .second-screen > .footer > .title > .col-md-4 > h3, .container .second-screen > .footer > .title .col-sm-4 > h3 {
+        .app-container .second-screen > .footer > .title > .col-md-4 > h3, .app-container .second-screen > .footer > .title .col-sm-4 > h3 {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 44px;
           font-weight: 600;
@@ -453,20 +453,20 @@ body {
           letter-spacing: 0.2px;
           color: #0a0c0f;
           margin: 0; }
-    .container .second-screen > .footer > img {
+    .app-container .second-screen > .footer > img {
       width: 100%;
       max-height: 900px;
       height: 100%; }
-    .container .second-screen > .footer > .button {
+    .app-container .second-screen > .footer > .button {
       position: absolute;
       bottom: 9%;
       width: 100%;
       right: 0;
       display: flex;
       justify-content: flex-end; }
-      .container .second-screen > .footer > .button > .row {
+      .app-container .second-screen > .footer > .button > .row {
         margin-right: 0; }
-        .container .second-screen > .footer > .button > .row > div {
+        .app-container .second-screen > .footer > .button > .row > div {
           max-width: 120px;
           height: 120px;
           transform: rotate(-360deg);
@@ -475,26 +475,26 @@ body {
           justify-content: center;
           align-items: center;
           padding: 0; }
-        .container .second-screen > .footer > .button > .row > img {
+        .app-container .second-screen > .footer > .button > .row > img {
           width: 24px;
           height: 48px; }
-  .container > .third-screen > .header {
+  .app-container > .third-screen > .header {
     width: 100%;
     height: 720px;
     object-fit: contain;
     background: linear-gradient(to right, #00c2de, #27cecb);
     display: flex;
     justify-content: center; }
-    .container > .third-screen > .header > .row {
+    .app-container > .third-screen > .header > .row {
       height: 100%;
       margin-left: 0;
       background: url(../img/3.svg) 88% bottom no-repeat; }
-      .container > .third-screen > .header > .row > div {
+      .app-container > .third-screen > .header > .row > div {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        .container > .third-screen > .header > .row > div > .profession > h2 {
+        .app-container > .third-screen > .header > .row > div > .profession > h2 {
           display: inline;
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 20px;
@@ -505,12 +505,12 @@ body {
           padding-bottom: 10px;
           border-bottom: 1px solid #fff;
           cursor: pointer; }
-        .container > .third-screen > .header > .row > div > .profession > .price, .container > .third-screen > .header > .row > div > .profession .button {
+        .app-container > .third-screen > .header > .row > div > .profession > .price, .app-container > .third-screen > .header > .row > div > .profession .button {
           display: none; }
-        .container > .third-screen > .header > .row > div > .profession.active {
+        .app-container > .third-screen > .header > .row > div > .profession.active {
           margin-bottom: 53px;
           margin-top: 53px; }
-          .container > .third-screen > .header > .row > div > .profession.active > h2 {
+          .app-container > .third-screen > .header > .row > div > .profession.active > h2 {
             object-fit: contain;
             font-family: "SFUIDisplaySemibold", sans-serif;
             font-size: 44px;
@@ -520,7 +520,7 @@ body {
             color: #ffffff;
             border-bottom: none;
             cursor: default; }
-          .container > .third-screen > .header > .row > div > .profession.active > .price {
+          .app-container > .third-screen > .header > .row > div > .profession.active > .price {
             display: block;
             object-fit: contain;
             font-family: "SFUIDisplay", sans-serif;
@@ -530,7 +530,7 @@ body {
             letter-spacing: 0px;
             color: #ffffff;
             margin-top: 10px; }
-          .container > .third-screen > .header > .row > div > .profession.active > .button {
+          .app-container > .third-screen > .header > .row > div > .profession.active > .button {
             display: block;
             width: 270px;
             height: 54px;
@@ -545,54 +545,54 @@ body {
             color: #27c6ce;
             cursor: pointer;
             margin-top: 16px; }
-            .container > .third-screen > .header > .row > div > .profession.active > .button:hover {
+            .app-container > .third-screen > .header > .row > div > .profession.active > .button:hover {
               color: #0fabe8; }
-            .container > .third-screen > .header > .row > div > .profession.active > .button.active {
+            .app-container > .third-screen > .header > .row > div > .profession.active > .button.active {
               background-color: transparent;
               color: #fff;
               border: 1px solid #fff; }
-              .container > .third-screen > .header > .row > div > .profession.active > .button.active:hover {
+              .app-container > .third-screen > .header > .row > div > .profession.active > .button.active:hover {
                 background-color: #fff;
                 color: #27c6ce; }
-          .container > .third-screen > .header > .row > div > .profession.active > #qa-show-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active > #qa-show-button {
             filter: url("/#qa-show-form"); }
-          .container > .third-screen > .header > .row > div > .profession.active #support-show-form-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active #support-show-form-button {
             filter: url("/#support-show-form"); }
-          .container > .third-screen > .header > .row > div > .profession.active #lead-show-form-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active #lead-show-form-button {
             filter: url("/#lead-show-form"); }
-          .container > .third-screen > .header > .row > div > .profession.active #front-show-form-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active #front-show-form-button {
             filter: url("/#front-show-form"); }
-          .container > .third-screen > .header > .row > div > .profession.active #web-show-form-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active #web-show-form-button {
             filter: url("/#web-show-form"); }
-          .container > .third-screen > .header > .row > div > .profession.active #html-show-form-button {
+          .app-container > .third-screen > .header > .row > div > .profession.active #html-show-form-button {
             filter: url("/#html-show-form"); }
-        .container > .third-screen > .header > .row > div > .profession:first-child {
+        .app-container > .third-screen > .header > .row > div > .profession:first-child {
           margin-top: 0; }
-        .container > .third-screen > .header > .row > div > .profession:last-child {
+        .app-container > .third-screen > .header > .row > div > .profession:last-child {
           margin-bottom: 0; }
-      .container > .third-screen > .header > .row > .skills-offers {
+      .app-container > .third-screen > .header > .row > .skills-offers {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         padding-top: 70px;
         padding-bottom: 70px; }
-        .container > .third-screen > .header > .row > .skills-offers.active {
+        .app-container > .third-screen > .header > .row > .skills-offers.active {
           display: none; }
-        .container > .third-screen > .header > .row > .skills-offers > .skills, .container > .third-screen > .header > .row > .skills-offers .offer {
+        .app-container > .third-screen > .header > .row > .skills-offers > .skills, .app-container > .third-screen > .header > .row > .skills-offers .offer {
           display: none; }
-        .container > .third-screen > .header > .row > .skills-offers > .skills.active {
+        .app-container > .third-screen > .header > .row > .skills-offers > .skills.active {
           display: block;
           margin-bottom: 70px; }
-        .container > .third-screen > .header > .row > .skills-offers > .offer.active {
+        .app-container > .third-screen > .header > .row > .skills-offers > .offer.active {
           display: block; }
-        .container > .third-screen > .header > .row > .skills-offers > .skills > .title, .container > .third-screen > .header > .row > .skills-offers .offer > .title {
+        .app-container > .third-screen > .header > .row > .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row > .skills-offers .offer > .title {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 18px;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 20px; }
-        .container > .third-screen > .header > .row > .skills-offers > .skills > p, .container > .third-screen > .header > .row > .skills-offers .offer > p {
+        .app-container > .third-screen > .header > .row > .skills-offers > .skills > p, .app-container > .third-screen > .header > .row > .skills-offers .offer > p {
           font-family: "SFUIDisplaySemibold", sans-serif;
           margin: 0;
           font-size: 20px;
@@ -600,7 +600,7 @@ body {
           line-height: 2;
           letter-spacing: -0.1px;
           color: #ffffff; }
-      .container > .third-screen > .header > .row > .respond {
+      .app-container > .third-screen > .header > .row > .respond {
         display: none;
         flex-direction: column;
         justify-content: space-between;
@@ -608,25 +608,25 @@ body {
         padding: 105px 0 95px 13px;
         width: 100%;
         height: 100%; }
-        .container > .third-screen > .header > .row > .respond.active {
+        .app-container > .third-screen > .header > .row > .respond.active {
           display: flex; }
-        .container > .third-screen > .header > .row > .respond > .wrap {
+        .app-container > .third-screen > .header > .row > .respond > .wrap {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           height: 360px;
           -moz-placeholder-color: rgba(255, 255, 255, 0.7);
           -ms-input-placeholder-color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > .header > .row > .respond > .wrap > label {
+          .app-container > .third-screen > .header > .row > .respond > .wrap > label {
             width: 100%;
             position: relative; }
-            .container > .third-screen > .header > .row > .respond > .wrap > label:before {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > label:before {
               position: absolute;
               content: '';
               width: 100%;
               height: 1px;
               top: -20px; }
-          .container > .third-screen > .header > .row > .respond > .wrap > input {
+          .app-container > .third-screen > .header > .row > .respond > .wrap > input {
             width: 100%;
             height: 36px;
             border-top: none;
@@ -640,28 +640,28 @@ body {
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus {
               outline: 0;
               outline-offset: 0; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid {
               font-family: "SFUIDisplayRegular", sans-serif;
               font-size: 16px;
               text-align: left;
               color: #f8e81c;
               border-bottom: 1px solid #f8e81c; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-moz-placeholder {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-moz-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-moz-placeholder {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-moz-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-ms-input-placeholder {
+            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-ms-input-placeholder {
               color: #f8e81c; }
-          .container > .third-screen > .header > .row > .respond > .wrap ::-webkit-input-placeholder {
+          .app-container > .third-screen > .header > .row > .respond > .wrap ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > .header > .row > .respond > .wrap ::-moz-placeholder {
+          .app-container > .third-screen > .header > .row > .respond > .wrap ::-moz-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > .header > .row > .respond > .wrap > label:after {
+          .app-container > .third-screen > .header > .row > .respond > .wrap > label:after {
             position: absolute;
             content: '*';
             font-family: "SFUIDisplayRegular", sans-serif;
@@ -670,9 +670,9 @@ body {
             color: rgba(255, 255, 255, 0.7);
             top: -50px;
             right: 5px; }
-          .container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid + label:after {
+          .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid + label:after {
             color: #f8e81c; }
-        .container > .third-screen > .header > .row > .respond > button {
+        .app-container > .third-screen > .header > .row > .respond > button {
           width: 270px;
           height: 54px;
           font-family: "SFUIDisplaySemibold", sans-serif;
@@ -685,58 +685,58 @@ body {
           border-radius: 5px;
           background-color: #fff;
           margin-top: 62px; }
-          .container > .third-screen > .header > .row > .respond > button:hover {
+          .app-container > .third-screen > .header > .row > .respond > button:hover {
             color: #0fabe8; }
-        .container > .third-screen > .header > .row > .respond > #show-form-button {
+        .app-container > .third-screen > .header > .row > .respond > #show-form-button {
           filter: url("/#show-form"); }
-  .container > .third-screen > .footer {
+  .app-container > .third-screen > .footer {
     height: 580px;
     position: relative;
     background-color: #f0f6fa; }
-    .container > .third-screen > .footer .Path-2-Copy {
+    .app-container > .third-screen > .footer .Path-2-Copy {
       position: absolute;
       top: calc(50% - 32px);
       left: calc(50% - 558px);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .container > .third-screen > .footer .Path-2-Copy:hover path {
+      .app-container > .third-screen > .footer .Path-2-Copy:hover path {
         stroke-opacity: 1; }
-    .container > .third-screen > .footer .Path-2-Copy-2 {
+    .app-container > .third-screen > .footer .Path-2-Copy-2 {
       position: absolute;
       top: calc(50% - 32px);
       right: calc(50% - 558px);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .container > .third-screen > .footer .Path-2-Copy-2:hover path {
+      .app-container > .third-screen > .footer .Path-2-Copy-2:hover path {
         stroke-opacity: 1; }
-    .container > .third-screen > .footer .carousel-bottom, .container > .third-screen > .footer .slick-slide {
+    .app-container > .third-screen > .footer .carousel-bottom, .app-container > .third-screen > .footer .slick-slide {
       min-height: 580px;
       display: flex;
       overflow: visible; }
-      .container > .third-screen > .footer .carousel-bottom:focus, .container > .third-screen > .footer .slick-slide:focus {
+      .app-container > .third-screen > .footer .carousel-bottom:focus, .app-container > .third-screen > .footer .slick-slide:focus {
         outline: none;
         border: none; }
-      .container > .third-screen > .footer .carousel-bottom:active, .container > .third-screen > .footer .slick-slide:active {
+      .app-container > .third-screen > .footer .carousel-bottom:active, .app-container > .third-screen > .footer .slick-slide:active {
         outline: none;
         border: none; }
-      .container > .third-screen > .footer .carousel-bottom .slick-list, .container > .third-screen > .footer .slick-slide .slick-list {
+      .app-container > .third-screen > .footer .carousel-bottom .slick-list, .app-container > .third-screen > .footer .slick-slide .slick-list {
         width: 100%;
         height: 100%;
         overflow: hidden; }
-        .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track, .container > .third-screen > .footer .slick-slide .slick-list .slick-track {
+        .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track {
           display: flex;
           width: 50vw;
           height: 100%; }
-          .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment {
+          .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment {
             position: relative;
             display: flex;
             border-radius: 4px;
             padding: 120px 11.3vw;
             height: 100%;
             background-color: #f0f6fa; }
-            .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap {
+            .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap {
               margin: 0 auto;
               height: 340px;
               position: relative;
@@ -748,11 +748,11 @@ body {
               background-color: #ffffff;
               box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
               padding: 44px 120px 49px; }
-              .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > img, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > img {
+              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > img, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > img {
                 width: 90px;
                 height: 90px;
                 margin-bottom: 8px; }
-              .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .name, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .name {
+              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .name, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .name {
                 font-family: "SFUIDisplaySemibold", sans-serif;
                 font-size: 20px;
                 font-weight: 600;
@@ -761,14 +761,14 @@ body {
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
-              .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .company, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .company {
+              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .company, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .company {
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 18px;
                 line-height: 1.22;
                 letter-spacing: -0.1px;
                 text-align: center;
                 color: #9b9b9b; }
-              .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review {
+              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review {
                 margin-top: 32px;
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 16px;
@@ -778,7 +778,7 @@ body {
                 color: #0a0c0f;
                 position: relative;
                 white-space: normal; }
-                .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
                   position: absolute;
                   line-height: 0.7;
                   display: block;
@@ -787,30 +787,30 @@ body {
                   font-size: 90px;
                   text-align: center;
                   color: #9b9b9b; }
-                .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before {
+                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before {
                   top: 0;
                   left: -78px; }
-                .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
                   top: 0px;
                   right: -78px; }
-          .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .slick-center > .wrap, .container > .third-screen > .footer .carousel-bottom .slick-list .slick-track .slick-current > .wrap, .container > .third-screen > .footer .slick-slide .slick-list .slick-track > .slick-center > .wrap, .container > .third-screen > .footer .slick-slide .slick-list .slick-track .slick-current > .wrap {
+          .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .slick-center > .wrap, .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track .slick-current > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .slick-center > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track .slick-current > .wrap {
             max-width: 720px;
             width: 100%; }
-  .container > .third-screen > footer {
+  .app-container > .third-screen > footer {
     width: 100%;
     min-height: 720px;
     object-fit: contain;
     background-image: linear-gradient(to left, #27c4ce, #33d4bd);
     display: flex;
     justify-content: center; }
-    .container > .third-screen > footer > .row {
+    .app-container > .third-screen > footer > .row {
       height: 100%; }
-      .container > .third-screen > footer > .row > form {
+      .app-container > .third-screen > footer > .row > form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 70px 0 74px 13px; }
-        .container > .third-screen > footer > .row > form > legend {
+        .app-container > .third-screen > footer > .row > form > legend {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 44px;
           font-weight: 600;
@@ -818,7 +818,7 @@ body {
           letter-spacing: 0.2px;
           color: #ffffff;
           margin-bottom: 73px; }
-        .container > .third-screen > footer > .row > form > .wrap {
+        .app-container > .third-screen > footer > .row > form > .wrap {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -826,16 +826,16 @@ body {
           position: relative;
           -moz-placeholder-color: rgba(255, 255, 255, 0.7);
           -ms-input-placeholder-color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > footer > .row > form > .wrap > label {
+          .app-container > .third-screen > footer > .row > form > .wrap > label {
             width: 100%;
             position: relative; }
-            .container > .third-screen > footer > .row > form > .wrap > label:before {
+            .app-container > .third-screen > footer > .row > form > .wrap > label:before {
               position: absolute;
               content: '';
               width: 100%;
               height: 1px;
               top: -17px; }
-          .container > .third-screen > footer > .row > form > .wrap > input {
+          .app-container > .third-screen > footer > .row > form > .wrap > input {
             width: 100%;
             height: 36px;
             border-top: none;
@@ -849,28 +849,28 @@ body {
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus {
               outline: 0;
               outline-offset: 0; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid {
               font-family: "SFUIDisplayRegular", sans-serif;
               font-size: 16px;
               text-align: left;
               color: #f8e81c;
               border-bottom: 1px solid #f8e81c; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder {
               color: #f8e81c; }
-            .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder {
+            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder {
               color: #f8e81c; }
-          .container > .third-screen > footer > .row > form > .wrap ::-webkit-input-placeholder {
+          .app-container > .third-screen > footer > .row > form > .wrap ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > footer > .row > form > .wrap ::-moz-placeholder {
+          .app-container > .third-screen > footer > .row > form > .wrap ::-moz-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > footer > .row > form > .wrap > label[for=email]:after, .container > .third-screen > footer > .row > form > .wrap label[for=name]:after, .container > .third-screen > footer > .row > form > .wrap label[for=project]:after {
+          .app-container > .third-screen > footer > .row > form > .wrap > label[for=email]:after, .app-container > .third-screen > footer > .row > form > .wrap label[for=name]:after, .app-container > .third-screen > footer > .row > form > .wrap label[for=project]:after {
             position: absolute;
             content: '*';
             font-family: "SFUIDisplayRegular", sans-serif;
@@ -879,9 +879,9 @@ body {
             color: rgba(255, 255, 255, 0.7);
             top: -47px;
             right: 5px; }
-          .container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid + label:after {
+          .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid + label:after {
             color: #f8e81c; }
-        .container > .third-screen > footer > .row > form > button {
+        .app-container > .third-screen > footer > .row > form > button {
           width: 270px;
           height: 54px;
           font-family: "SFUIDisplaySemibold", sans-serif;
@@ -894,11 +894,11 @@ body {
           border-radius: 5px;
           background-color: #fff;
           margin-top: 43px; }
-          .container > .third-screen > footer > .row > form > button:hover {
+          .app-container > .third-screen > footer > .row > form > button:hover {
             color: #0fabe8; }
-        .container > .third-screen > footer > .row > form #send-respond-button {
+        .app-container > .third-screen > footer > .row > form #send-respond-button {
           filter: url("/#send-respond"); }
-      .container > .third-screen > footer > .row > .contact {
+      .app-container > .third-screen > footer > .row > .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -906,25 +906,25 @@ body {
         padding: 70px 0 70px 10px;
         width: 100%;
         min-height: 600px; }
-        .container > .third-screen > footer > .row > .contact > img {
+        .app-container > .third-screen > footer > .row > .contact > img {
           width: 250px;
           height: 59.4px; }
-        .container > .third-screen > footer > .row > .contact > .email, .container > .third-screen > footer > .row > .contact .adress {
+        .app-container > .third-screen > footer > .row > .contact > .email, .app-container > .third-screen > footer > .row > .contact .adress {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 18px;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7); }
-          .container > .third-screen > footer > .row > .contact > .email > span, .container > .third-screen > footer > .row > .contact .adress > span {
+          .app-container > .third-screen > footer > .row > .contact > .email > span, .app-container > .third-screen > footer > .row > .contact .adress > span {
             font-family: "SFUIDisplayRegular", sans-serif;
             font-size: 20px;
             font-weight: 500;
             line-height: 1.5;
             letter-spacing: -0.1px;
             color: #ffffff; }
-        .container > .third-screen > footer > .row > .contact > .adress {
+        .app-container > .third-screen > footer > .row > .contact > .adress {
           margin-top: 10px; }
-        .container > .third-screen > footer > .row > .contact > .phone {
+        .app-container > .third-screen > footer > .row > .contact > .phone {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 36px;
           font-weight: 500;
