@@ -8,7 +8,9 @@ import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
 import { TweenLite } from "gsap";
 
 // onClick = (id) => {
+
 // 	return function(e) {
+
 // 		TweenLite.set(, { attr: { x: e.offsetX, y: e.offsetY, width: 0, height: 0 } });
 // 		TweenLite.to(turb, 5, { attr: { x: '-=300', y: '-=300', width: 600, height: 600 } });
 // 		TweenLite.fromTo(dm, 3, { attr: { scale: 30 } }, { attr: { scale: 0 } });
