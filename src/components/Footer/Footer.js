@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonAnimation from '../common/ButtonAnimation';
 import page_1_copy_3 from '../../img/page-1-copy-3.svg';
 
 const Footer = () => {
@@ -26,16 +27,7 @@ const Footer = () => {
 
 				</div>
 
-				{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-					<defs>
-						<filter id="send-respond">
-							<feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							<feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							<feComposite operator="in" in2="ripple"></feComposite>
-							<feComposite in2="SourceGraphic"></feComposite>
-						</filter>
-					</defs>
-				</svg>*/}
+				<ButtonAnimation />
 
 				<button type="submit" id="send-respond-button">Отправить запрос</button>
 

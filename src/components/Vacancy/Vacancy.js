@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonAnimation from '../common/ButtonAnimation';
 
 const Vacancy = () => {
 	return (
@@ -17,16 +18,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="qa-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="qa-show-button">Откликнуться</div>
 
@@ -38,16 +30,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="support-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="support-show-form-button">Откликнуться</div>
 
@@ -59,16 +42,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="lead-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="lead-show-form-button">Откликнуться</div>
 
@@ -80,16 +54,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="front-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="front-show-form-button">Откликнуться</div>
 
@@ -101,16 +66,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="web-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="web-show-form-button">Откликнуться</div>
 
@@ -122,16 +78,7 @@ const Vacancy = () => {
 
 							<div className="price">100 000 – 120 000 руб.</div>
 
-							{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							 <defs>
-							 <filter id="html-show-form">
-							 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-							 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-							 <feComposite operator="in" in2="ripple"></feComposite>
-							 <feComposite in2="SourceGraphic"></feComposite>
-							 </filter>
-							 </defs>
-							 </svg>*/}
+							<ButtonAnimation />
 
 							<div className="button" id="html-show-form-button">Откликнуться</div>
 
@@ -257,16 +204,7 @@ const Vacancy = () => {
 
 						</div>
 
-						{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-						 <defs>
-						 <filter id="show-form">
-						 <feImage xlink:href="img/ripple.png" x="30" y="20" width="0" height="0" result="ripple"></feImage>
-						 <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="20" result="dm" />
-						 <feComposite operator="in" in2="ripple"></feComposite>
-						 <feComposite in2="SourceGraphic"></feComposite>
-						 </filter>
-						 </defs>
-						 </svg>*/}
+						<ButtonAnimation />
 
 						<button type="submit" id="show-form-button">Отправить запрос</button>
 

@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ButtonAnimation from '../common/ButtonAnimation';
 import logo_copy from '../../img/logo-copy.svg';
 import page_1_copy_3 from '../../img/page-1-copy-3.png';
 import page_1_copy_32x from '../../img/page-1-copy-3@2x.png';
 import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
 
-const Header =() => {
+import { TweenLite } from "gsap";
+
+// onClick = (id) => {
+// 	return function(e) {
+// 		TweenLite.set(, { attr: { x: e.offsetX, y: e.offsetY, width: 0, height: 0 } });
+// 		TweenLite.to(turb, 5, { attr: { x: '-=300', y: '-=300', width: 600, height: 600 } });
+// 		TweenLite.fromTo(dm, 3, { attr: { scale: 30 } }, { attr: { scale: 0 } });
+// 	};
+// };
+
+
+const Header = () => {
+
 	return (
 		<div className="first-screen">
 
@@ -22,16 +35,7 @@ const Header =() => {
 							Mobile & Web development
 						</div>
 
-						{/*<svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="svg-filters">
-							<defs>
-								<filter id="filter-ripple-2">
-									<feimage xlink:href="img/ripple.png" x={30} y={20} width={0} height={0} result="ripple" />
-									<fedisplacementmap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale={20} result="dm" />
-									<fecomposite operator="in" in2="ripple" />
-									<fecomposite in2="SourceGraphic" />
-								</filter>
-							</defs>
-						</svg>*/}
+						<ButtonAnimation id="filter-ripple-2" />
 
 						<div className="header-button" id="component-8" href="#contact">
 							Связаться с нами
