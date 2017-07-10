@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Platform from './components/Platform/Platform';
+import Vacancy from './components/Vacancy/Vacancy';
 import './sass/main.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="app-container">
         <Header />
         <Platform />
+        <Vacancy />
       </div>
     );
   }
