@@ -245,15 +245,15 @@ const Vacancy = () => {
 
 						<div className="wrap">
 
-							<input name="email" type="email" required placeholder="Email" id="email-respond" /><label for="email-respond"></label>
+							<input name="email" type="email" required placeholder="Email" id="email-respond" /><label htmlFor="email-respond"></label>
 
-							<input type="text" required placeholder="Имя" id="name-respond" /><label for="name-respond"></label>
+							<input type="text" required placeholder="Имя" id="name-respond" /><label htmlFor="name-respond"></label>
 
-							<input type="text" required placeholder="Должность" id="phone-respond" /><label for="phone-respond"></label>
+							<input type="text" required placeholder="Должность" id="phone-respond" /><label htmlFor="phone-respond"></label>
 
-							<input type="text" required placeholder="Компания" id="company-respond" /><label for="company-respond"></label>
+							<input type="text" required placeholder="Компания" id="company-respond" /><label htmlFor="company-respond"></label>
 
-							<input type="text" required placeholder="Тип проекта" id="project-respond" /><label for="project-respond"></label>
+							<input type="text" required placeholder="Тип проекта" id="project-respond" /><label htmlFor="project-respond"></label>
 
 						</div>
 

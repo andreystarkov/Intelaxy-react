@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Platform from './components/Platform/Platform';
 import Vacancy from './components/Vacancy/Vacancy';
+import Comment from './components/Comment/Comment';
+import Footer from './components/Footer/Footer';
 import './sass/main.css';
 
 class App extends Component {
@@ -11,6 +13,8 @@ class App extends Component {
         <Header />
         <Platform />
         <Vacancy />
+        <Comment />
+        <Footer />
       </div>
     );
   }

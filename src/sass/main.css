@@ -689,54 +689,54 @@ body {
             color: #0fabe8; }
         .app-container > .third-screen > .header > .row > .respond > #show-form-button {
           filter: url("/#show-form"); }
-  .app-container > .third-screen > .footer {
+  .app-container > .section-comment {
     height: 580px;
     position: relative;
     background-color: #f0f6fa; }
-    .app-container > .third-screen > .footer .Path-2-Copy {
+    .app-container > .section-comment .Path-2-Copy {
       position: absolute;
       top: calc(50% - 32px);
       left: calc(50% - 558px);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .app-container > .third-screen > .footer .Path-2-Copy:hover path {
+      .app-container > .section-comment .Path-2-Copy:hover path {
         stroke-opacity: 1; }
-    .app-container > .third-screen > .footer .Path-2-Copy-2 {
+    .app-container > .section-comment .Path-2-Copy-2 {
       position: absolute;
       top: calc(50% - 32px);
       right: calc(50% - 558px);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .app-container > .third-screen > .footer .Path-2-Copy-2:hover path {
+      .app-container > .section-comment .Path-2-Copy-2:hover path {
         stroke-opacity: 1; }
-    .app-container > .third-screen > .footer .carousel-bottom, .app-container > .third-screen > .footer .slick-slide {
+    .app-container > .section-comment .carousel-bottom, .app-container > .section-comment .slick-slide {
       min-height: 580px;
       display: flex;
       overflow: visible; }
-      .app-container > .third-screen > .footer .carousel-bottom:focus, .app-container > .third-screen > .footer .slick-slide:focus {
+      .app-container > .section-comment .carousel-bottom:focus, .app-container > .section-comment .slick-slide:focus {
         outline: none;
         border: none; }
-      .app-container > .third-screen > .footer .carousel-bottom:active, .app-container > .third-screen > .footer .slick-slide:active {
+      .app-container > .section-comment .carousel-bottom:active, .app-container > .section-comment .slick-slide:active {
         outline: none;
         border: none; }
-      .app-container > .third-screen > .footer .carousel-bottom .slick-list, .app-container > .third-screen > .footer .slick-slide .slick-list {
+      .app-container > .section-comment .carousel-bottom .slick-list, .app-container > .section-comment .slick-slide .slick-list {
         width: 100%;
         height: 100%;
         overflow: hidden; }
-        .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track {
+        .app-container > .section-comment .carousel-bottom .slick-list .slick-track, .app-container > .section-comment .slick-slide .slick-list .slick-track {
           display: flex;
           width: 50vw;
           height: 100%; }
-          .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment {
+          .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment {
             position: relative;
             display: flex;
             border-radius: 4px;
             padding: 120px 11.3vw;
             height: 100%;
             background-color: #f0f6fa; }
-            .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap {
+            .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap {
               margin: 0 auto;
               height: 340px;
               position: relative;
@@ -748,11 +748,11 @@ body {
               background-color: #ffffff;
               box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
               padding: 44px 120px 49px; }
-              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > img, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > img {
+              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > img, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > img {
                 width: 90px;
                 height: 90px;
                 margin-bottom: 8px; }
-              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .name, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .name {
+              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .name, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .name {
                 font-family: "SFUIDisplaySemibold", sans-serif;
                 font-size: 20px;
                 font-weight: 600;
@@ -761,14 +761,14 @@ body {
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
-              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .company, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .company {
+              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .company, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .company {
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 18px;
                 line-height: 1.22;
                 letter-spacing: -0.1px;
                 text-align: center;
                 color: #9b9b9b; }
-              .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review {
+              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review {
                 margin-top: 32px;
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 16px;
@@ -778,7 +778,7 @@ body {
                 color: #0a0c0f;
                 position: relative;
                 white-space: normal; }
-                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
                   position: absolute;
                   line-height: 0.7;
                   display: block;
@@ -787,30 +787,30 @@ body {
                   font-size: 90px;
                   text-align: center;
                   color: #9b9b9b; }
-                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before {
+                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before {
                   top: 0;
                   left: -78px; }
-                .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
                   top: 0px;
                   right: -78px; }
-          .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track > .slick-center > .wrap, .app-container > .third-screen > .footer .carousel-bottom .slick-list .slick-track .slick-current > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track > .slick-center > .wrap, .app-container > .third-screen > .footer .slick-slide .slick-list .slick-track .slick-current > .wrap {
+          .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .carousel-bottom .slick-list .slick-track .slick-current > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track .slick-current > .wrap {
             max-width: 720px;
             width: 100%; }
-  .app-container > .third-screen > footer {
+  .app-container > footer {
     width: 100%;
     min-height: 720px;
     object-fit: contain;
     background-image: linear-gradient(to left, #27c4ce, #33d4bd);
     display: flex;
     justify-content: center; }
-    .app-container > .third-screen > footer > .row {
+    .app-container > footer > .row {
       height: 100%; }
-      .app-container > .third-screen > footer > .row > form {
+      .app-container > footer > .row > form {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 70px 0 74px 13px; }
-        .app-container > .third-screen > footer > .row > form > legend {
+        .app-container > footer > .row > form > legend {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 44px;
           font-weight: 600;
@@ -818,7 +818,7 @@ body {
           letter-spacing: 0.2px;
           color: #ffffff;
           margin-bottom: 73px; }
-        .app-container > .third-screen > footer > .row > form > .wrap {
+        .app-container > footer > .row > form > .wrap {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -826,16 +826,16 @@ body {
           position: relative;
           -moz-placeholder-color: rgba(255, 255, 255, 0.7);
           -ms-input-placeholder-color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > footer > .row > form > .wrap > label {
+          .app-container > footer > .row > form > .wrap > label {
             width: 100%;
             position: relative; }
-            .app-container > .third-screen > footer > .row > form > .wrap > label:before {
+            .app-container > footer > .row > form > .wrap > label:before {
               position: absolute;
               content: '';
               width: 100%;
               height: 1px;
               top: -17px; }
-          .app-container > .third-screen > footer > .row > form > .wrap > input {
+          .app-container > footer > .row > form > .wrap > input {
             width: 100%;
             height: 36px;
             border-top: none;
@@ -849,28 +849,28 @@ body {
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus {
+            .app-container > footer > .row > form > .wrap > input:focus {
               outline: 0;
               outline-offset: 0; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid {
               font-family: "SFUIDisplayRegular", sans-serif;
               font-size: 16px;
               text-align: left;
               color: #f8e81c;
               border-bottom: 1px solid #f8e81c; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder {
               color: #f8e81c; }
-          .app-container > .third-screen > footer > .row > form > .wrap ::-webkit-input-placeholder {
+          .app-container > footer > .row > form > .wrap ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > footer > .row > form > .wrap ::-moz-placeholder {
+          .app-container > footer > .row > form > .wrap ::-moz-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > footer > .row > form > .wrap > label[for=email]:after, .app-container > .third-screen > footer > .row > form > .wrap label[for=name]:after, .app-container > .third-screen > footer > .row > form > .wrap label[for=project]:after {
+          .app-container > footer > .row > form > .wrap > label[for=email]:after, .app-container > footer > .row > form > .wrap label[for=name]:after, .app-container > footer > .row > form > .wrap label[for=project]:after {
             position: absolute;
             content: '*';
             font-family: "SFUIDisplayRegular", sans-serif;
@@ -879,9 +879,9 @@ body {
             color: rgba(255, 255, 255, 0.7);
             top: -47px;
             right: 5px; }
-          .app-container > .third-screen > footer > .row > form > .wrap > input:focus:required:invalid + label:after {
+          .app-container > footer > .row > form > .wrap > input:focus:required:invalid + label:after {
             color: #f8e81c; }
-        .app-container > .third-screen > footer > .row > form > button {
+        .app-container > footer > .row > form > button {
           width: 270px;
           height: 54px;
           font-family: "SFUIDisplaySemibold", sans-serif;
@@ -894,11 +894,11 @@ body {
           border-radius: 5px;
           background-color: #fff;
           margin-top: 43px; }
-          .app-container > .third-screen > footer > .row > form > button:hover {
+          .app-container > footer > .row > form > button:hover {
             color: #0fabe8; }
-        .app-container > .third-screen > footer > .row > form #send-respond-button {
+        .app-container > footer > .row > form #send-respond-button {
           filter: url("/#send-respond"); }
-      .app-container > .third-screen > footer > .row > .contact {
+      .app-container > footer > .row > .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -906,25 +906,25 @@ body {
         padding: 70px 0 70px 10px;
         width: 100%;
         min-height: 600px; }
-        .app-container > .third-screen > footer > .row > .contact > img {
+        .app-container > footer > .row > .contact > img {
           width: 250px;
           height: 59.4px; }
-        .app-container > .third-screen > footer > .row > .contact > .email, .app-container > .third-screen > footer > .row > .contact .adress {
+        .app-container > footer > .row > .contact > .email, .app-container > footer > .row > .contact .adress {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 18px;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > footer > .row > .contact > .email > span, .app-container > .third-screen > footer > .row > .contact .adress > span {
+          .app-container > footer > .row > .contact > .email > span, .app-container > footer > .row > .contact .adress > span {
             font-family: "SFUIDisplayRegular", sans-serif;
             font-size: 20px;
             font-weight: 500;
             line-height: 1.5;
             letter-spacing: -0.1px;
             color: #ffffff; }
-        .app-container > .third-screen > footer > .row > .contact > .adress {
+        .app-container > footer > .row > .contact > .adress {
           margin-top: 10px; }
-        .app-container > .third-screen > footer > .row > .contact > .phone {
+        .app-container > footer > .row > .contact > .phone {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 36px;
           font-weight: 500;

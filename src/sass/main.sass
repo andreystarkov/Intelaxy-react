@@ -807,295 +807,295 @@ body
 					>#show-form-button
 						filter: url('/#show-form')
 
-		>.footer
-			height: 580px
-			position: relative
-			background-color: #f0f6fa
+	>.section-comment
+		height: 580px
+		position: relative
+		background-color: #f0f6fa
 
-			.Path-2-Copy
-				position: absolute
-				top: calc(50% - 32px)
-				left: calc(50% - 558px)
-				z-index: 100
-				cursor: pointer
-				stroke-opacity: 0.5
-				&:hover
-					path
-						stroke-opacity: 1
+		.Path-2-Copy
+			position: absolute
+			top: calc(50% - 32px)
+			left: calc(50% - 558px)
+			z-index: 100
+			cursor: pointer
+			stroke-opacity: 0.5
+			&:hover
+				path
+					stroke-opacity: 1
 
-			.Path-2-Copy-2
-				position: absolute
-				top: calc(50% - 32px)
-				right: calc(50% - 558px)
-				z-index: 100
-				cursor: pointer
-				stroke-opacity: 0.5
-				&:hover
-					path
-						stroke-opacity: 1
+		.Path-2-Copy-2
+			position: absolute
+			top: calc(50% - 32px)
+			right: calc(50% - 558px)
+			z-index: 100
+			cursor: pointer
+			stroke-opacity: 0.5
+			&:hover
+				path
+					stroke-opacity: 1
 
-			.carousel-bottom, .slick-slide
-				min-height: 580px
-				display: flex
-				overflow: visible
+		.carousel-bottom, .slick-slide
+			min-height: 580px
+			display: flex
+			overflow: visible
 
-				&:focus
-					outline: none
-					border: none
+			&:focus
+				outline: none
+				border: none
 
-				&:active
-					outline: none
-					border: none
+			&:active
+				outline: none
+				border: none
 
-				.slick-list
-					width: 100%
+			.slick-list
+				width: 100%
+				height: 100%
+				overflow: hidden
+
+				.slick-track
+					display: flex
+					width: 50vw
 					height: 100%
-					overflow: hidden
 
-					.slick-track
+					>.comment
+						position: relative
 						display: flex
-						width: 50vw
+						border-radius: 4px
+						padding: 120px 11.3vw
 						height: 100%
+						background-color: #f0f6fa
 
-						>.comment
+						>.wrap
+							margin: 0 auto
+							height: 340px
 							position: relative
+							width: 50vw
 							display: flex
-							border-radius: 4px
-							padding: 120px 11.3vw
-							height: 100%
-							background-color: #f0f6fa
+							flex-direction: column
+							justify-content: center
+							align-items: center
+							background-color: #ffffff
+							box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
+							padding: 44px 120px 49px
 
-							>.wrap
-								margin: 0 auto
-								height: 340px
+							>img
+								width: 90px
+								height: 90px
+								margin-bottom: 8px
+
+							>.name
+								font-family: $SFUIDsemibold
+								font-size: 20px
+								font-weight: 600
+								line-height: 1.5
+								letter-spacing: -0.1px
+								text-align: center
+								color: #0a0c0f
+								margin-bottom: 5px
+
+							>.company
+								font-family: $SFUIDregular
+								font-size: 18px
+								line-height: 1.22
+								letter-spacing: -0.1px
+								text-align: center
+								color: #9b9b9b
+
+							>.review
+								margin-top: 32px
+								font-family: $SFUIDregular
+								font-size: 16px
+								line-height: 1.63
+								letter-spacing: -0.4px
+								text-align: center
+								color: #0a0c0f
 								position: relative
-								width: 50vw
-								display: flex
-								flex-direction: column
-								justify-content: center
-								align-items: center
-								background-color: #ffffff
-								box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
-								padding: 44px 120px 49px
+								white-space: normal
 
-								>img
-									width: 90px
-									height: 90px
-									margin-bottom: 8px
-
-								>.name
-									font-family: $SFUIDsemibold
-									font-size: 20px
-									font-weight: 600
-									line-height: 1.5
-									letter-spacing: -0.1px
-									text-align: center
-									color: #0a0c0f
-									margin-bottom: 5px
-
-								>.company
-									font-family: $SFUIDregular
-									font-size: 18px
-									line-height: 1.22
-									letter-spacing: -0.1px
+								&:before, &:after
+									position: absolute
+									line-height: 0.7
+									display: block
+									content: "\0022"
+									font-family: $DINRoundPro
+									font-size: 90px
 									text-align: center
 									color: #9b9b9b
 
-								>.review
-									margin-top: 32px
-									font-family: $SFUIDregular
-									font-size: 16px
-									line-height: 1.63
-									letter-spacing: -0.4px
-									text-align: center
-									color: #0a0c0f
-									position: relative
-									white-space: normal
+								&:before
+									top: 0
+									left: -78px
 
-									&:before, &:after
-										position: absolute
-										line-height: 0.7
-										display: block
-										content: "\0022"
-										font-family: $DINRoundPro
-										font-size: 90px
-										text-align: center
-										color: #9b9b9b
+								&:after
+									top: 0px
+									right: -78px
 
-									&:before
-										top: 0
-										left: -78px
+					>.slick-center, .slick-current
+						>.wrap
+							max-width: 720px
+							width: 100%
 
-									&:after
-										top: 0px
-										right: -78px
+	>footer
+		//max-width: 1440px
+		width: 100%
+		min-height: 720px
+		object-fit: contain
+		background-image: linear-gradient(to left, #27c4ce, #33d4bd)
+		display: flex
+		justify-content: center
 
-						>.slick-center, .slick-current
-							>.wrap
-								max-width: 720px
-								width: 100%
+		>.row
+			height: 100%
 
-		>footer
-			//max-width: 1440px
-			width: 100%
-			min-height: 720px
-			object-fit: contain
-			background-image: linear-gradient(to left, #27c4ce, #33d4bd)
-			display: flex
-			justify-content: center
+			>form
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				padding: 70px 0 74px 13px
 
-			>.row
-				height: 100%
+				>legend
+					font-family: $SFUIDsemibold
+					font-size: 44px
+					font-weight: 600
+					line-height: 1.14
+					letter-spacing: 0.2px
+					color: #ffffff
+					margin-bottom: 73px
 
-				>form
+				>.wrap
 					display: flex
 					flex-direction: column
 					justify-content: space-between
-					padding: 70px 0 74px 13px
+					height: 360px
+					position: relative
 
-					>legend
-						font-family: $SFUIDsemibold
-						font-size: 44px
-						font-weight: 600
-						line-height: 1.14
-						letter-spacing: 0.2px
-						color: #ffffff
-						margin-bottom: 73px
+					>label
+						width: 100%
+						position: relative
+						&:before
+							position: absolute
+							content: ''
+							width: 100%
+							height: 1px
+							top: -17px
 
-					>.wrap
-						display: flex
-						flex-direction: column
-						justify-content: space-between
-						height: 360px
+					>input
+						width: 100%
+						height: 36px
+						border-top: none
+						border-left: none
+						border-right: none
+						box-shadow: none
+						border-bottom: 1px solid #fff
+						background-color: transparent
+						font-family: $SFUIDregular
+						font-size: 16px
+						text-align: left
+						color: rgba(255, 255, 255, 0.7)
 						position: relative
 
-						>label
-							width: 100%
-							position: relative
-							&:before
-								position: absolute
-								content: ''
-								width: 100%
-								height: 1px
-								top: -17px
+						&:focus
+							outline: 0
+							outline-offset: 0
 
-						>input
-							width: 100%
-							height: 36px
-							border-top: none
-							border-left: none
-							border-right: none
-							box-shadow: none
-							border-bottom: 1px solid #fff
-							background-color: transparent
+						&:focus:required:invalid
 							font-family: $SFUIDregular
 							font-size: 16px
 							text-align: left
-							color: rgba(255, 255, 255, 0.7)
-							position: relative
-
-							&:focus
-								outline: 0
-								outline-offset: 0
-
-							&:focus:required:invalid
-								font-family: $SFUIDregular
-								font-size: 16px
-								text-align: left
-								color: #f8e81c
-								border-bottom: 1px solid #f8e81c
-							&:focus:required:invalid::-webkit-input-placeholder
-								color: #f8e81c
-							&:focus:required:invalid::-moz-placeholder
-								color: #f8e81c
-							&:focus:required:invalid:-moz-placeholder
-								color: #f8e81c
-							&:focus:required:invalid:-ms-input-placeholder
-								color: #f8e81c
-
-						::-webkit-input-placeholder
-							color: rgba(255, 255, 255, 0.7)
-						::-moz-placeholder
-							color: rgba(255, 255, 255, 0.7)
-						:-moz-placeholder
-							color: rgba(255, 255, 255, 0.7)
-						:-ms-input-placeholder
-							color: rgba(255, 255, 255, 0.7)
-
-						>label[for=email], label[for=name], label[for=project]
-							&:after
-								position: absolute
-								content: '*'
-								font-family: $SFUIDregular
-								font-size: 16px
-								text-align: right
-								color: rgba(255, 255, 255, 0.7)
-								top: -47px
-								right: 5px
-
-						>input:focus:required:invalid + label:after
+							color: #f8e81c
+							border-bottom: 1px solid #f8e81c
+						&:focus:required:invalid::-webkit-input-placeholder
+							color: #f8e81c
+						&:focus:required:invalid::-moz-placeholder
+							color: #f8e81c
+						&:focus:required:invalid:-moz-placeholder
+							color: #f8e81c
+						&:focus:required:invalid:-ms-input-placeholder
 							color: #f8e81c
 
-
-					>button
-						width: 270px
-						height: 54px
-						font-family: $SFUIDsemibold
-						font-size: 18px
-						font-weight: 500
-						line-height: 1.22
-						text-align: center
-						color: #27c6ce
-						border: none
-						border-radius: 5px
-						background-color: #fff
-						margin-top: 43px
-
-						&:hover
-							color: #0fabe8
-
-					#send-respond-button
-						filter: url('/#send-respond')
-
-				>.contact
-					display: flex
-					flex-direction: column
-					justify-content: space-between
-					max-width: 345px
-					padding: 70px 0 70px 10px
-					width: 100%
-					min-height: 600px
-
-					>img
-						width: 250px
-						height: 59.4px
-
-					>.email, .adress
-						font-family: $SFUIDregular
-						font-size: 18px
-						line-height: 1.22
-						letter-spacing: -0.1px
+					::-webkit-input-placeholder
+						color: rgba(255, 255, 255, 0.7)
+					::-moz-placeholder
+						color: rgba(255, 255, 255, 0.7)
+					:-moz-placeholder
+						color: rgba(255, 255, 255, 0.7)
+					:-ms-input-placeholder
 						color: rgba(255, 255, 255, 0.7)
 
-						>span
+					>label[for=email], label[for=name], label[for=project]
+						&:after
+							position: absolute
+							content: '*'
 							font-family: $SFUIDregular
-							font-size: 20px
-							font-weight: 500
-							line-height: 1.5
-							letter-spacing: -0.1px
-							color: #ffffff
+							font-size: 16px
+							text-align: right
+							color: rgba(255, 255, 255, 0.7)
+							top: -47px
+							right: 5px
 
-					>.adress
-						margin-top: 10px
+					>input:focus:required:invalid + label:after
+						color: #f8e81c
 
-					>.phone
+
+				>button
+					width: 270px
+					height: 54px
+					font-family: $SFUIDsemibold
+					font-size: 18px
+					font-weight: 500
+					line-height: 1.22
+					text-align: center
+					color: #27c6ce
+					border: none
+					border-radius: 5px
+					background-color: #fff
+					margin-top: 43px
+
+					&:hover
+						color: #0fabe8
+
+				#send-respond-button
+					filter: url('/#send-respond')
+
+			>.contact
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				max-width: 345px
+				padding: 70px 0 70px 10px
+				width: 100%
+				min-height: 600px
+
+				>img
+					width: 250px
+					height: 59.4px
+
+				>.email, .adress
+					font-family: $SFUIDregular
+					font-size: 18px
+					line-height: 1.22
+					letter-spacing: -0.1px
+					color: rgba(255, 255, 255, 0.7)
+
+					>span
 						font-family: $SFUIDregular
-						font-size: 36px
+						font-size: 20px
 						font-weight: 500
-						line-height: 0.83
-						letter-spacing: -0.5px
+						line-height: 1.5
+						letter-spacing: -0.1px
 						color: #ffffff
-						margin-top: 40px
+
+				>.adress
+					margin-top: 10px
+
+				>.phone
+					font-family: $SFUIDregular
+					font-size: 36px
+					font-weight: 500
+					line-height: 0.83
+					letter-spacing: -0.5px
+					color: #ffffff
+					margin-top: 40px
 
 .img-responsive
 	display: block
