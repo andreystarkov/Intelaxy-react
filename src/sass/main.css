@@ -1,3 +1,5 @@
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
 @font-face {
   font-family: 'SFUIDisplay';
   src: local("SFUIDisplay"), url(../fonts/SFUIDisplay/SFUIDisplay-Light.woff) format("woff"); }
@@ -375,25 +377,25 @@ body {
     flex-direction: row;
     justify-content: space-around;
     padding-top: 137px; }
-    .app-container .second-screen > .row > .body > .carousel, .app-container .second-screen > .row > .body .slick-slide {
+    .app-container .second-screen > .row > .body .slick-slider {
       width: 100%;
       overflow: hidden; }
-      .app-container .second-screen > .row > .body > .carousel:focus, .app-container .second-screen > .row > .body .slick-slide:focus {
+      .app-container .second-screen > .row > .body .slick-slider:focus {
         outline: none;
         border: none; }
-      .app-container .second-screen > .row > .body > .carousel:active, .app-container .second-screen > .row > .body .slick-slide:active {
+      .app-container .second-screen > .row > .body .slick-slider:active {
         outline: none;
         border: none; }
-    .app-container .second-screen > .row > .body > .carousel {
+    .app-container .second-screen > .row > .body .slick-slider {
       margin-bottom: 146px; }
-      .app-container .second-screen > .row > .body > .carousel .slick-track {
+      .app-container .second-screen > .row > .body .slick-slider .slick-track {
         display: flex; }
-      .app-container .second-screen > .row > .body > .carousel .react, .app-container .second-screen > .row > .body > .carousel .rails, .app-container .second-screen > .row > .body > .carousel .ios, .app-container .second-screen > .row > .body > .carousel .android {
+      .app-container .second-screen > .row > .body .slick-slider .react, .app-container .second-screen > .row > .body .slick-slider .rails, .app-container .second-screen > .row > .body .slick-slider .ios, .app-container .second-screen > .row > .body .slick-slider .android {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center; }
-        .app-container .second-screen > .row > .body > .carousel .react > .title, .app-container .second-screen > .row > .body > .carousel .rails > .title, .app-container .second-screen > .row > .body > .carousel .ios > .title, .app-container .second-screen > .row > .body > .carousel .android > .title {
+        .app-container .second-screen > .row > .body .slick-slider .react > .title, .app-container .second-screen > .row > .body .slick-slider .rails > .title, .app-container .second-screen > .row > .body .slick-slider .ios > .title, .app-container .second-screen > .row > .body .slick-slider .android > .title {
           font-family: "SFUIDisplayMedium", sans-serif;
           font-size: 32px;
           font-weight: 600;
@@ -402,7 +404,7 @@ body {
           text-align: center;
           color: #0a0c0f;
           margin-bottom: 8px; }
-        .app-container .second-screen > .row > .body > .carousel .react > p, .app-container .second-screen > .row > .body > .carousel .rails > p, .app-container .second-screen > .row > .body > .carousel .ios > p, .app-container .second-screen > .row > .body > .carousel .android > p {
+        .app-container .second-screen > .row > .body .slick-slider .react > p, .app-container .second-screen > .row > .body .slick-slider .rails > p, .app-container .second-screen > .row > .body .slick-slider .ios > p, .app-container .second-screen > .row > .body .slick-slider .android > p {
           font-family: "SFUIDisplay", sans-serif;
           font-size: 16px;
           font-weight: 300;
