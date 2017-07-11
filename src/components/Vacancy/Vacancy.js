@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ButtonAnimation from '../common/ButtonAnimation';
 import classNames from 'classnames';
+import Dropzone from 'react-dropzone'
 
 class Vacancy extends Component {
 
@@ -111,7 +112,8 @@ class Vacancy extends Component {
 			activeSkill: 0,
 			activeOffer: 0,
 			activeForm: false,
-			buttonText: 'Откликнуться'
+			buttonText: 'Откликнуться',
+			files: []
 		};
 	}
 
@@ -150,6 +152,12 @@ class Vacancy extends Component {
 		}) )
 	};
 
+	onDrop(files) {
+		this.setState({
+			files
+		});
+	}
+
 	render() {
 
 		const formClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond', { 'active': this.state.activeForm });
@@ -164,7 +172,7 @@ class Vacancy extends Component {
 
 					<div className="gutter-10 row">
 
-						<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
+						<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 column">
 
 							{ this.professions.map( (profession, index) => {
 
@@ -237,20 +245,29 @@ class Vacancy extends Component {
 
 							<div className="wrap">
 
-								<input name="email" type="email" required placeholder="Email" id="email-respond"/>
-								<label	htmlFor="email-respond"></label>
-
 								<input type="text" required placeholder="Имя" id="name-respond"/>
 								<label htmlFor="name-respond"></label>
 
-								<input type="text" required placeholder="Должность" id="phone-respond"/>
+								<input name="email" type="email" required placeholder="Email" id="email-respond"/>
+								<label	htmlFor="email-respond"></label>
+
+								<input type="text" placeholder="Телефон" id="phone-respond"/>
 								<label htmlFor="phone-respond"></label>
 
-								<input type="text" required placeholder="Компания" id="company-respond"/>
-								<label htmlFor="company-respond"></label>
+								<input type="text" placeholder="Желаемая зарплата" id="pay-respond"/>
+								<label htmlFor="pay-respond"></label>
 
-								<input type="text" required placeholder="Тип проекта" id="project-respond"/>
-								<label htmlFor="project-respond"></label>
+								<Dropzone onDrop={this.onDrop.bind(this)} className="drop-zone" >
+									<p>Прикрепить резюме</p>
+								</Dropzone>
+
+								<aside className="drop-file">
+									<ul>
+										{
+											this.state.files.map((f, index) => <li key={`file-${index}`}>{f.name} - {f.size} bytes</li>)
+										}
+									</ul>
+								</aside>
 
 							</div>
 

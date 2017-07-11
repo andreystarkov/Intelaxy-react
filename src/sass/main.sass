@@ -453,7 +453,7 @@ body
 						align-items: center
 
 						>.title
-							font-family: $SFUIDtext
+							font-family: $SFUIDsemibold
 							font-size: 32px
 							font-weight: 600
 							line-height: 1.81
@@ -569,33 +569,36 @@ body
 					height: 100%
 					display: flex
 					flex-direction: column
-					justify-content: center
+					justify-content: space-between
+					padding-top: 70px
+					padding-bottom: 70px
 
 					>.profession
 
 						>h2
-							display: inline
+							display: inline-block
 							font-family: $SFUIDsemibold
 							font-size: 20px
 							font-weight: 500
-							line-height: 3
+							line-height: 1
 							letter-spacing: -0.1px
 							color: #ffffff
 							padding-bottom: 10px
 							border-bottom: 1px solid #fff
 							cursor: pointer
+							margin: 0
 
 						>.price, .button
 							display: none
 
 						&.active
-							margin-bottom: 53px
-							margin-top: 53px
+							margin-bottom: 25px
+							margin-top: 25px
 
 							>h2
 								object-fit: contain
 								font-family: $SFUIDsemibold
-								font-size: 44px
+								font-size: 40px
 								font-weight: 600
 								line-height: 1.14
 								letter-spacing: 0.2px
@@ -703,9 +706,9 @@ body
 						>p
 							font-family: $SFUIDsemibold
 							margin: 0
-							font-size: 20px
+							font-size: 16px
 							font-weight: 500
-							line-height: 2
+							line-height: 3
 							letter-spacing: -0.1px
 							color: #ffffff
 
@@ -714,7 +717,7 @@ body
 					flex-direction: column
 					justify-content: space-between
 					max-width: 460px
-					padding: 105px 0 95px 13px
+					padding: 105px 0 105px 13px
 					width: 100%
 					height: 100%
 
@@ -725,7 +728,7 @@ body
 						display: flex
 						flex-direction: column
 						justify-content: space-between
-						height: 360px
+						height: 415px
 
 						>label
 							width: 100%
@@ -793,6 +796,32 @@ body
 
 						>input:focus:required:invalid + label:after
 							color: #f8e81c
+
+						>.drop-zone
+							max-width: 460px
+							width: 100%
+							height: 54px
+							border-radius: 4px
+							border: dashed 1.5px #ffffff
+							cursor: pointer
+							>p
+								font-family: $SFUIDtext
+								font-size: 18px
+								font-weight: 500
+								line-height: 54px
+								text-align: center
+								color: #ffffff
+
+						>.drop-file
+							>ul
+								padding: 0
+								text-decoration: none
+								list-style: none
+								font-family: $SFUIDtext
+								font-size: 14px
+								text-align: center
+								color: #ffffff
+								cursor: default
 
 					>button
 						width: 270px

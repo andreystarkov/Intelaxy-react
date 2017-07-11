@@ -401,7 +401,7 @@ body {
         justify-content: space-between;
         align-items: center; }
         .app-container .second-screen > .row > .body .slick-slider .react > .title, .app-container .second-screen > .row > .body .slick-slider .rails > .title, .app-container .second-screen > .row > .body .slick-slider .ios > .title, .app-container .second-screen > .row > .body .slick-slider .android > .title {
-          font-family: "SFUIDisplayMedium", sans-serif;
+          font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 32px;
           font-weight: 600;
           line-height: 1.81;
@@ -500,27 +500,30 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center; }
+        justify-content: space-between;
+        padding-top: 70px;
+        padding-bottom: 70px; }
         .app-container > .third-screen > .header > .row > div > .profession > h2 {
-          display: inline;
+          display: inline-block;
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 20px;
           font-weight: 500;
-          line-height: 3;
+          line-height: 1;
           letter-spacing: -0.1px;
           color: #ffffff;
           padding-bottom: 10px;
           border-bottom: 1px solid #fff;
-          cursor: pointer; }
+          cursor: pointer;
+          margin: 0; }
         .app-container > .third-screen > .header > .row > div > .profession > .price, .app-container > .third-screen > .header > .row > div > .profession .button {
           display: none; }
         .app-container > .third-screen > .header > .row > div > .profession.active {
-          margin-bottom: 53px;
-          margin-top: 53px; }
+          margin-bottom: 25px;
+          margin-top: 25px; }
           .app-container > .third-screen > .header > .row > div > .profession.active > h2 {
             object-fit: contain;
             font-family: "SFUIDisplaySemibold", sans-serif;
-            font-size: 44px;
+            font-size: 40px;
             font-weight: 600;
             line-height: 1.14;
             letter-spacing: 0.2px;
@@ -602,9 +605,9 @@ body {
         .app-container > .third-screen > .header > .row > .skills-offers > .skills > p, .app-container > .third-screen > .header > .row > .skills-offers .offer > p {
           font-family: "SFUIDisplaySemibold", sans-serif;
           margin: 0;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 500;
-          line-height: 2;
+          line-height: 3;
           letter-spacing: -0.1px;
           color: #ffffff; }
       .app-container > .third-screen > .header > .row > .respond {
@@ -612,7 +615,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         max-width: 460px;
-        padding: 105px 0 95px 13px;
+        padding: 105px 0 105px 13px;
         width: 100%;
         height: 100%; }
         .app-container > .third-screen > .header > .row > .respond.active {
@@ -621,7 +624,7 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          height: 360px;
+          height: 415px;
           -moz-placeholder-color: rgba(255, 255, 255, 0.7);
           -ms-input-placeholder-color: rgba(255, 255, 255, 0.7); }
           .app-container > .third-screen > .header > .row > .respond > .wrap > label {
@@ -679,6 +682,29 @@ body {
             right: 5px; }
           .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid + label:after {
             color: #f8e81c; }
+          .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-zone {
+            max-width: 460px;
+            width: 100%;
+            height: 54px;
+            border-radius: 4px;
+            border: dashed 1.5px #ffffff;
+            cursor: pointer; }
+            .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-zone > p {
+              font-family: "SFUIDisplayMedium", sans-serif;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 54px;
+              text-align: center;
+              color: #ffffff; }
+          .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-file > ul {
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: "SFUIDisplayMedium", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            color: #ffffff;
+            cursor: default; }
         .app-container > .third-screen > .header > .row > .respond > button {
           width: 270px;
           height: 54px;
