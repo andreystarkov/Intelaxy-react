@@ -718,32 +718,32 @@ body {
       stroke-opacity: 0.5; }
       .app-container > .section-comment .Path-2-Copy-2:hover path {
         stroke-opacity: 1; }
-    .app-container > .section-comment .carousel-bottom, .app-container > .section-comment .slick-slide {
+    .app-container > .section-comment .slick-slider {
       min-height: 580px;
       display: flex;
       overflow: visible; }
-      .app-container > .section-comment .carousel-bottom:focus, .app-container > .section-comment .slick-slide:focus {
+      .app-container > .section-comment .slick-slider:focus {
         outline: none;
         border: none; }
-      .app-container > .section-comment .carousel-bottom:active, .app-container > .section-comment .slick-slide:active {
+      .app-container > .section-comment .slick-slider:active {
         outline: none;
         border: none; }
-      .app-container > .section-comment .carousel-bottom .slick-list, .app-container > .section-comment .slick-slide .slick-list {
+      .app-container > .section-comment .slick-slider .slick-list {
         width: 100%;
         height: 100%;
         overflow: hidden; }
-        .app-container > .section-comment .carousel-bottom .slick-list .slick-track, .app-container > .section-comment .slick-slide .slick-list .slick-track {
+        .app-container > .section-comment .slick-slider .slick-list .slick-track {
           display: flex;
           width: 50vw;
           height: 100%; }
-          .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment {
+          .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide {
             position: relative;
             display: flex;
             border-radius: 4px;
             padding: 120px 11.3vw;
             height: 100%;
             background-color: #f0f6fa; }
-            .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap {
+            .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
               margin: 0 auto;
               height: 340px;
               position: relative;
@@ -755,11 +755,11 @@ body {
               background-color: #ffffff;
               box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
               padding: 44px 120px 49px; }
-              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > img, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > img {
+              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > img, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > img {
                 width: 90px;
                 height: 90px;
                 margin-bottom: 8px; }
-              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .name, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .name {
+              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
                 font-family: "SFUIDisplaySemibold", sans-serif;
                 font-size: 20px;
                 font-weight: 600;
@@ -768,14 +768,14 @@ body {
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
-              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .company, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .company {
+              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .company, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .company {
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 18px;
                 line-height: 1.22;
                 letter-spacing: -0.1px;
                 text-align: center;
                 color: #9b9b9b; }
-              .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review {
+              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
                 margin-top: 32px;
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 16px;
@@ -785,7 +785,7 @@ body {
                 color: #0a0c0f;
                 position: relative;
                 white-space: normal; }
-                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
                   position: absolute;
                   line-height: 0.7;
                   display: block;
@@ -794,13 +794,13 @@ body {
                   font-size: 90px;
                   text-align: center;
                   color: #9b9b9b; }
-                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:before {
+                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before {
                   top: 0;
                   left: -78px; }
-                .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slide .slick-list .slick-track > .comment > .wrap > .review:after {
+                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
                   top: 0px;
                   right: -78px; }
-          .app-container > .section-comment .carousel-bottom .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .carousel-bottom .slick-list .slick-track .slick-current > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slide .slick-list .slick-track .slick-current > .wrap {
+          .app-container > .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap {
             max-width: 720px;
             width: 100%; }
   .app-container > footer {
@@ -824,7 +824,8 @@ body {
           line-height: 1.14;
           letter-spacing: 0.2px;
           color: #ffffff;
-          margin-bottom: 73px; }
+          margin-bottom: 73px;
+          border: none; }
         .app-container > footer > .row > form > .wrap {
           display: flex;
           flex-direction: column;

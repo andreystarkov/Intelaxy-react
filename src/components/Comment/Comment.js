@@ -1,73 +1,128 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Slider from 'react-slick';
 import bitmap_copy from '../../img/bitmap-copy.jpg';
 import bitmap_copy2x from '../../img/bitmap-copy@2x.jpg';
 import bitmap_copy3x from '../../img/bitmap-copy@3x.jpg';
 
-const Comment = () => {
-	return (
+class Comment extends Component {
 
-		<div className="section-comment">
+	constructor(props) {
+		super(props);
 
-			<svg xmlns="http://www.w3.org/2000/svg" width="34" height="64" viewBox="0 0 34 64" className="Path-2-Copy prev">
-				<path fill="none" fillRule="evenodd" stroke="#21B4ED" d="M33 0L1 32.817 31.408 64"/>
-			</svg>
+		this.comments = [{
+			img: bitmap_copy,
+			name: 'Alexey Ryskin',
+			company: 'SEO of Intelaxy inc.',
+			review: `Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них
+								нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.`
+		}, {
+			img: bitmap_copy,
+			name: 'Alexey Ryskin',
+			company: 'SEO of Intelaxy inc.',
+			review: `Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них
+								нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.`
+		},{
+			img: bitmap_copy,
+			name: 'Alexey Ryskin',
+			company: 'SEO of Intelaxy inc.',
+			review: `Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них
+								нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.`
+		}]
+	};
 
-			<svg xmlns="http://www.w3.org/2000/svg" width="34" height="64" viewBox="0 0 34 64" className="Path-2-Copy-2 next">
-				<path fill="none" fillRule="evenodd" stroke="#21B4ED" d="M1 0l32 32.817L2.592 64"/>
-			</svg>
+	next = () => {
+		this.slider.slickNext()
+	};
 
-			<div className="carousel-bottom">
-
-				<div className="comment">
-					<div className="wrap">
-						<img src={bitmap_copy}
-								 srcSet={`${bitmap_copy2x} 2x,
-						 ${bitmap_copy3x} 3x`}
-								 className="Bitmap-Copy" />
-
-						<div className="name">Alexey Ryskin</div>
-
-						<div className="company">SEO of Intelaxy inc.</div>
-
-						<p className="review">Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них
-							нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.</p>
-					</div>
+	previous = () => {
+		this.slider.slickPrev()
+	};
 
 
-					<div className="wrap">
-						<img src={bitmap_copy}
-								 srcSet={`${bitmap_copy2x} 2x,
-						 ${bitmap_copy3x} 3x`}
-								 className="Bitmap-Copy" />
+	render() {
 
-						<div className="name">Alexey Ryskin</div>
+		const settings = {
+			initialSlide: 1,
+			slidesToShow: 1,
+			infinite: true,
+			arrows: false,
+			fade: false,
+			draggable: true,
+			centerMode: true,
+			centerPadding: '240px'
+		};
 
-						<div className="company">SEO of Intelaxy inc.</div>
+		return (
 
-						<p className="review">Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них
-							нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.</p>
-					</div>
-				</div>
-				<div className="comment">
-					<div className="wrap">
-						<img src={bitmap_copy}
-								 srcSet={`${bitmap_copy2x} 2x,
-						 ${bitmap_copy3x} 3x`}
-								 className="Bitmap-Copy" />
+			<div className="section-comment">
 
-							<div className="name">Alexey Ryskin</div>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="34"
+					height="64"
+					viewBox="0 0 34 64"
+					className="Path-2-Copy prev"
+					onClick={() => this.previous()}
+				>
+					<path
+						fill="none"
+						fillRule="evenodd"
+						stroke="#21B4ED"
+						d="M33 0L1 32.817 31.408 64"
+					/>
+				</svg>
 
-							<div className="company">SEO of Intelaxy inc.</div>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="34"
+					height="64"
+					viewBox="0 0 34 64"
+					className="Path-2-Copy-2 next"
+					onClick={() => this.next()}
+				>
+					<path
+						fill="none"
+						fillRule="evenodd"
+						stroke="#21B4ED"
+						d="M1 0l32 32.817L2.592 64"
+					/>
+				</svg>
 
-							<p className="review">Самая профессиональная компания из всех, с которыми мне приходилось работать. Для них нет ничего невозможного, дай бог им счастья, здоровья, развития и всех-всех благ.</p>
-					</div>
-				</div>
+				<Slider ref={c => this.slider = c }	{...settings}>
+
+						{ this.comments.map((comment, index) => {
+
+								return (
+									<div
+										key={`commnt-${index}`}
+										className="comment"
+									>
+										<div
+											className="wrap"
+											key={`comment-${index}`}
+										>
+											<img src={comment.img}
+													 srcSet={`${comment.img}2x 2x,
+																			${comment.img}3x 3x`}
+											/>
+
+											<div className="name">{comment.name}</div>
+
+											<div className="company">{comment.company}</div>
+
+											<p className="review">{comment.review}</p>
+										</div>
+									</div>
+								)
+							})
+						}
+
+				</Slider>
 
 			</div>
 
-		</div>
-
-	)
-};
+		)
+	}
+}
 
 export default Comment;
