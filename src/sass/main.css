@@ -224,6 +224,11 @@ body {
         .app-container .second-screen > .header > .react > svg, .app-container .second-screen > .header .rails > svg, .app-container .second-screen > .header .ios > svg, .app-container .second-screen > .header .android > svg {
           display: none; }
         .app-container .second-screen > .header > .react > h3, .app-container .second-screen > .header .rails > h3, .app-container .second-screen > .header .ios > h3, .app-container .second-screen > .header .android > h3 {
+          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.5;
+          letter-spacing: -0.1px;
           margin-bottom: 0;
           color: #9b9b9b; }
         .app-container .second-screen > .header > .react:hover > h3, .app-container .second-screen > .header .rails:hover > h3, .app-container .second-screen > .header .ios:hover > h3, .app-container .second-screen > .header .android:hover > h3 {
@@ -573,13 +578,13 @@ body {
         .app-container > .third-screen > .header > .row > div > .profession:last-child {
           margin-bottom: 0; }
       .app-container > .third-screen > .header > .row > .skills-offers {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-around;
         padding-top: 70px;
         padding-bottom: 70px; }
         .app-container > .third-screen > .header > .row > .skills-offers.active {
-          display: none; }
+          display: flex; }
         .app-container > .third-screen > .header > .row > .skills-offers > .skills, .app-container > .third-screen > .header > .row > .skills-offers .offer {
           display: none; }
         .app-container > .third-screen > .header > .row > .skills-offers > .skills.active {

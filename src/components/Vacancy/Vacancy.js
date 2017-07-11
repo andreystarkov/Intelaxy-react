@@ -1,222 +1,273 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ButtonAnimation from '../common/ButtonAnimation';
+import classNames from 'classnames';
 
-const Vacancy = () => {
-	return (
+class Vacancy extends Component {
 
-		<div className="third-screen">
+	constructor(props) {
+		super(props);
 
-			<div className="header">
+		this.profession = null;
 
-				<div className="gutter-10 row">
+		this.professions = [{
+			title: 'QA Engineer',
+			price: '100 000 – 120 000 руб.'
+		}, {
+			title: 'Support Engineer',
+			price: '100 000 – 120 000 руб.'
+		}, {
+			title: 'Lead Web-разработчик',
+			price: '100 000 – 120 000 руб.'
+		}, {
+			title: 'Ведущий Front-End разработчик',
+			price: '100 000 – 120 000 руб.'
+		}, {
+			title: 'Ведущий Web-разработчик',
+			price: '100 000 – 120 000 руб.'
+		}, {
+			title: 'HTML-верстальщик',
+			price: '100 000 – 120 000 руб.'
+		}];
 
-					<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
+		this.professionSkills = [{
+			title: 'Ключевые навыки QA Engineer',
+			firstSkill: 'Первый навык QA Engineer',
+			secondSkill: 'Второй навык QA Engineer',
+			thirdSkill: 'Третий навык подлиннее QA Engineer',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) QA Engineer'
+		}, {
+			title: 'Ключевые навыки Support Engineer',
+			firstSkill: 'Первый навык Support Engineer',
+			secondSkill: 'Второй навык Support Engineer',
+			thirdSkill: 'Третий навык подлиннее Support Engineer',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Support Engineer'
+		}, {
+			title: 'Ключевые навыки Lead Web-разработчик',
+			firstSkill: 'Первый навык Lead Web-разработчик',
+			secondSkill: 'Второй навык Lead Web-разработчик',
+			thirdSkill: 'Третий навык подлиннее Lead Web-разработчик',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Lead Web-разработчик'
+		}, {
+			title: 'Ключевые навыки Ведущий Front-End разработчик',
+			firstSkill: 'Первый навык Ведущий Front-End разработчик',
+			secondSkill: 'Второй навык Ведущий Front-End разработчик',
+			thirdSkill: 'Третий навык подлиннее Ведущий Front-End разработчик',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Ведущий Front-End разработчик'
+		}, {
+			title: 'Ключевые навыки Ведущий Web-разработчик',
+			firstSkill: 'Первый навык Ведущий Web-разработчик',
+			secondSkill: 'Второй навык Ведущий Web-разработчик',
+			thirdSkill: 'Третий навык подлиннее Ведущий Web-разработчик',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Ведущий Web-разработчик'
+		}, {
+			title: 'Ключевые навыки HTML-верстальщик',
+			firstSkill: 'Первый навык HTML-верстальщик',
+			secondSkill: 'Второй навык HTML-верстальщик',
+			thirdSkill: 'Третий навык подлиннее HTML-верстальщик',
+			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) HTML-верстальщик'
+		}];
 
-						<div className="profession active" id="QA">
+		this.professionOffers = [{
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество QA Engineer',
+				secondOffer: 'Второстепенное преимущество QA Engineer',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+			}, {
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество Support Engineer',
+				secondOffer: 'Второстепенное преимущество Support Engineer',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+			}, {
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество Lead Web-разработчик',
+				secondOffer: 'Второстепенное преимущество Lead Web-разработчик',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+			}, {
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество Front-End разработчик',
+				secondOffer: 'Второстепенное преимущество Ведущий Front-End разработчик',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+			}, {
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество Ведущий Web-разработчик',
+				secondOffer: 'Второстепенное преимущество Ведущий Web-разработчик',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+			}, {
+				title: 'Мы предлагаем',
+				firstOffer: 'Главное преимущество HTML-верстальщик',
+				secondOffer: 'Второстепенное преимущество HTML-верстальщик',
+				thirdOffer: 'Плюшки с чайком',
+				fourthOffer: 'Что-нибудь еще'
+		}];
 
-							<h2>QA Engineer</h2>
+		this.state = {
+			activeProfession: 0,
+			activeSkillOffers: true,
+			activeSkill: 0,
+			activeOffer: 0,
+			activeForm: false,
+			buttonText: 'Откликнуться'
+		};
+	}
 
-							<div className="price">100 000 – 120 000 руб.</div>
+	handleChange = (event, profession) => {
+		event.stopPropagation();
+		this.setState({
+			activeProfession: profession,
+			activeSkillOffers: true,
+			activeSkill: profession,
+			activeOffer: profession,
+			activeForm: false,
+			buttonText: 'Откликнуться'
+		})
+	};
 
-							<ButtonAnimation />
+	showForm = (event, profession) => {
+		event.stopPropagation();
 
-							<div className="button" id="qa-show-button">Откликнуться</div>
+		this.state.activeForm ? (
+			this.setState({
+				activeProfession: profession,
+				activeSkillOffers: true,
+				activeSkill: profession,
+				activeOffer: profession,
+				activeForm: false,
+				buttonText: 'Откликнуться'
+			})
+		) : (
+		this.setState({
+			activeProfession: profession,
+			activeSkillOffers: false,
+			activeSkill: null,
+			activeOffer: null,
+			activeForm: true,
+			buttonText: 'Вернуться к условиям'
+		}) )
+	};
+
+	render() {
+
+		const formClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond', { 'active': this.state.activeForm });
+		const skillOffersClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 skills-offers', { 'active': this.state.activeSkillOffers });
+		const buttonClasses = classNames('button', { 'active': this.state.activeForm });
+
+		return (
+
+			<div className="third-screen">
+
+				<div className="header">
+
+					<div className="gutter-10 row">
+
+						<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2">
+
+							{ this.professions.map( (profession, index) => {
+
+								const classes = classNames('profession', { 'active': index === this.state.activeProfession });
+
+								return(
+
+									<div
+										key={`profession-${index}`}
+										className={classes}
+										onClick={(event)=>this.handleChange(event, index)}
+									>
+										<h2>{profession.title}</h2>
+										<div className="price">{profession.price}</div>
+										<ButtonAnimation />
+										<div
+											className={buttonClasses}
+											onClick={(event)=>this.showForm(event, index)}
+										>{this.state.buttonText}</div>
+									</div>
+
+								)}
+							)}
 
 						</div>
 
-						<div className="profession" id="support">
+						<div className={skillOffersClasses}>
 
-							<h2>Support Engineer</h2>
+							{ this.professionSkills.map((profession, index)=>{
 
-							<div className="price">100 000 – 120 000 руб.</div>
+								const classes = classNames('skills', { 'active': index === this.state.activeSkill });
 
-							<ButtonAnimation />
+								return(
+									<div
+										key={`skills-${index}`}
+										className={classes}
+									>
+										<div className="title">{profession.title}</div>
+										<p>{profession.firstSkill}</p>
+										<p>{profession.secondSkill}</p>
+										<p>{profession.thirdSkill}</p>
+										<p>{profession.fourthSkill}</p>
+									</div>
+								)}
+							)}
 
-							<div className="button" id="support-show-form-button">Откликнуться</div>
+							{
+								this.professionOffers.map( (profession, index) => {
 
-						</div>
+									const classes = classNames('offer', { 'active': index === this.state.activeOffer });
 
-						<div className="profession" id="lead_web">
-
-							<h2>Lead Web-разработчик</h2>
-
-							<div className="price">100 000 – 120 000 руб.</div>
-
-							<ButtonAnimation />
-
-							<div className="button" id="lead-show-form-button">Откликнуться</div>
-
-						</div>
-
-						<div className="profession" id="front-end">
-
-							<h2>Ведущий Front-End разработчик</h2>
-
-							<div className="price">100 000 – 120 000 руб.</div>
-
-							<ButtonAnimation />
-
-							<div className="button" id="front-show-form-button">Откликнуться</div>
-
-						</div>
-
-						<div className="profession" id="web">
-
-							<h2>Ведущий Web-разработчик</h2>
-
-							<div className="price">100 000 – 120 000 руб.</div>
-
-							<ButtonAnimation />
-
-							<div className="button" id="web-show-form-button">Откликнуться</div>
+									return(
+										<div
+											key={`offer-${index}`}
+											className={classes}
+										>
+											<div className="title">{profession.title}</div>
+											<p>{profession.firstOffer}</p>
+											<p>{profession.secondOffer}</p>
+											<p>{profession.thirdOffer}</p>
+											<p>{profession.fourthOffer}</p>
+										</div>
+									)
+								})
+							}
 
 						</div>
 
-						<div className="profession" id="html">
+						<form action="#" name="send-respond" className={formClasses}>
 
-							<h2>HTML-верстальщик</h2>
+							<div className="wrap">
 
-							<div className="price">100 000 – 120 000 руб.</div>
+								<input name="email" type="email" required placeholder="Email" id="email-respond"/>
+								<label	htmlFor="email-respond"></label>
+
+								<input type="text" required placeholder="Имя" id="name-respond"/>
+								<label htmlFor="name-respond"></label>
+
+								<input type="text" required placeholder="Должность" id="phone-respond"/>
+								<label htmlFor="phone-respond"></label>
+
+								<input type="text" required placeholder="Компания" id="company-respond"/>
+								<label htmlFor="company-respond"></label>
+
+								<input type="text" required placeholder="Тип проекта" id="project-respond"/>
+								<label htmlFor="project-respond"></label>
+
+							</div>
 
 							<ButtonAnimation />
 
-							<div className="button" id="html-show-form-button">Откликнуться</div>
+							<button type="submit" id="show-form-button">Отправить запрос</button>
 
-						</div>
+						</form>
 
 					</div>
-
-					<div className="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 skills-offers">
-
-						<div className="skills active" id="QA-skills">
-
-							<div className="title">Ключевые навыки QA</div>
-
-							<p>Первый навык QA</p>
-
-							<p>Второй навык QA</p>
-
-							<p>Третий навык подлиннее QA</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) QA</p>
-
-						</div>
-
-						<div className="skills" id="support-skills">
-
-							<div className="title">Ключевые навыки support</div>
-
-							<p>Первый навык support</p>
-
-							<p>Второй навык support</p>
-
-							<p>Третий навык подлиннее support</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) support</p>
-
-						</div>
-
-						<div className="skills" id="lead_web-skills">
-
-							<div className="title">Ключевые навыки lead_web</div>
-
-							<p>Первый навык lead_web</p>
-
-							<p>Второй навык lead_web</p>
-
-							<p>Третий навык подлиннее lead_web</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) lead_web</p>
-
-						</div>
-
-						<div className="skills" id="front-end-skills">
-
-							<div className="title">Ключевые навыки front-end</div>
-
-							<p>Первый навык front-end</p>
-
-							<p>Второй навык front-end</p>
-
-							<p>Третий навык подлиннее front-end</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) front-end</p>
-
-						</div>
-
-						<div className="skills" id="web-skills">
-
-							<div className="title">Ключевые навыки web</div>
-
-							<p>Первый навык web</p>
-
-							<p>Второй навык web</p>
-
-							<p>Третий навык подлиннее web</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) web</p>
-
-						</div>
-
-						<div className="skills" id="html-skills">
-
-							<div className="title">Ключевые навыки html</div>
-
-							<p>Первый навык html</p>
-
-							<p>Второй навык html</p>
-
-							<p>Третий навык подлиннее html</p>
-
-							<p>А четвертый совсем длинный (с примерами в скобках) html</p>
-
-						</div>
-
-						<div className="offer active">
-
-							<div className="title">Мы предлагаем</div>
-
-							<p>Главное преимущество</p>
-
-							<p>Второстепенное преимущество</p>
-
-							<p>Плюшки с чайком</p>
-
-							<p>Что-нибудь еще</p>
-
-						</div>
-
-					</div>
-
-					<form action="#" name="send-respond" className="col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond">
-
-						<div className="wrap">
-
-							<input name="email" type="email" required placeholder="Email" id="email-respond" /><label htmlFor="email-respond"></label>
-
-							<input type="text" required placeholder="Имя" id="name-respond" /><label htmlFor="name-respond"></label>
-
-							<input type="text" required placeholder="Должность" id="phone-respond" /><label htmlFor="phone-respond"></label>
-
-							<input type="text" required placeholder="Компания" id="company-respond" /><label htmlFor="company-respond"></label>
-
-							<input type="text" required placeholder="Тип проекта" id="project-respond" /><label htmlFor="project-respond"></label>
-
-						</div>
-
-						<ButtonAnimation />
-
-						<button type="submit" id="show-form-button">Отправить запрос</button>
-
-					</form>
 
 				</div>
 
 			</div>
 
-		</div>
-
-	)
-};
+		)
+	}
+}
 
 export default Vacancy;
