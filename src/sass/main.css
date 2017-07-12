@@ -784,8 +784,7 @@ body {
               padding: 44px 120px 49px; }
               .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > img, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > img {
                 width: 90px;
-                height: 90px;
-                margin-bottom: 8px; }
+                height: 90px; }
               .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
                 font-family: "SFUIDisplaySemibold", sans-serif;
                 font-size: 20px;
