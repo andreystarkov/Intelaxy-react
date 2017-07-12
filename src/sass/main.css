@@ -773,7 +773,8 @@ body {
               margin: 0 auto;
               height: 340px;
               position: relative;
-              width: 50vw;
+              max-width: 720px;
+              width: 100%;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -826,7 +827,7 @@ body {
                 .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
                   top: 0px;
                   right: -78px; }
-          .app-container > .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap {
+          .app-container > .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
             max-width: 720px;
             width: 100%; }
   .app-container > footer {
