@@ -49,7 +49,7 @@ class Comment extends Component {
 			fade: false,
 			draggable: true,
 			centerMode: true,
-			centerPadding: '240px'
+			centerPadding: '290px'
 		};
 
 		return (
