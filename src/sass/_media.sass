@@ -35,16 +35,43 @@
 @media only screen and (max-width : 1280px)
 	/**/
 
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1024px)
-	/**/
+	html
+		body
+			font-size: 13px
 
+			.app-container
+				>.first-screen
+					>.header
+						padding-top: 100px
+						padding-bottom: 130px
+						>.header-button
+							margin-top: 50px
+
+					>.footer
+						>.row
+							>.title
+								padding-top: 40px
+								padding-bottom: 40px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
-
+	html
+		body
+			font-size: 12px
+			.app-container
+				>.first-screen
+					>.header
+						>.Logo-Copy
+							width: 70%
+					>.footer
+						>.row
+							>.title
+								top: 0
+								background-image: linear-gradient(to right, #21b4ed, #00c2de)
+								>h2, p
+									color: #fff
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

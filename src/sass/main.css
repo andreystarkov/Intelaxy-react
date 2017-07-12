@@ -96,20 +96,26 @@ html, body {
       .app-container > .first-screen > .header:before {
         content: '';
         position: absolute;
-        width: 276px;
+        max-width: 276px;
+        min-width: 105px;
+        width: 19%;
         height: 620px;
         background: url("../img/page-1.svg") no-repeat;
+        background-size: contain;
         left: 0;
-        top: calc(50% - 310px);
+        top: 150px;
         z-index: 0; }
       .app-container > .first-screen > .header:after {
         content: '';
         position: absolute;
-        width: 263px;
+        max-width: 276px;
+        min-width: 105px;
+        width: 19%;
         height: 620px;
         background: url("../img/page-1-copy-2.svg") no-repeat;
+        background-size: contain;
         right: 0;
-        top: calc(50% - 310px);
+        top: 150px;
         z-index: 0; }
       .app-container > .first-screen > .header > .Logo-Copy {
         max-width: 477px;
@@ -164,14 +170,12 @@ html, body {
       display: flex;
       justify-content: center;
       width: 100%;
-      min-height: 350px;
       object-fit: contain;
       background-image: linear-gradient(to right, #21b4ed, #00c2de);
       position: relative; }
       .app-container > .first-screen > .footer > .row > .title {
         position: relative;
         top: -70px;
-        min-height: 330px;
         border-radius: 4px;
         background-color: #ffffff;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
@@ -988,11 +992,28 @@ html, body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
-  /**/ }
+  html body {
+    font-size: 13px; }
+    html body .app-container > .first-screen > .header {
+      padding-top: 100px;
+      padding-bottom: 130px; }
+      html body .app-container > .first-screen > .header > .header-button {
+        margin-top: 50px; }
+    html body .app-container > .first-screen > .footer > .row > .title {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  /**/ }
+  html body {
+    font-size: 12px; }
+    html body .app-container > .first-screen > .header > .Logo-Copy {
+      width: 70%; }
+    html body .app-container > .first-screen > .footer > .row > .title {
+      top: 0;
+      background-image: linear-gradient(to right, #21b4ed, #00c2de); }
+      html body .app-container > .first-screen > .footer > .row > .title > h2, html body .app-container > .first-screen > .footer > .row > .title p {
+        color: #fff; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
