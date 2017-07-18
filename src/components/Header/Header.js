@@ -25,23 +25,23 @@ const Header = () => {
 
 			<div className="header">
 
+				<img src={page_1_copy_3}
+						 srcSet={`${page_1_copy_32x} 2x,
+			${page_1_copy_33x} 3x`}
+						 className="Page-1-Copy-3" />
+
 				<img src={logo_copy}
 						 className="Logo-Copy" />
 
-					<img src={page_1_copy_3}
-							 srcSet={`${page_1_copy_32x} 2x,
-				${page_1_copy_33x} 3x`}
-							 className="Page-1-Copy-3" />
+				<div className="Mobile-Web-develop-Copy">
+					Mobile & Web development
+				</div>
 
-						<div className="Mobile-Web-develop-Copy">
-							Mobile & Web development
-						</div>
+				<ButtonAnimation id="filter-ripple-2" />
 
-						<ButtonAnimation id="filter-ripple-2" />
-
-						<div className="header-button" id="component-8" href="#contact">
-							Связаться с нами
-						</div>
+				<div className="header-button" id="component-8" href="#contact">
+					Связаться с нами
+				</div>
 
 			</div>
 
