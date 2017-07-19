@@ -77,7 +77,8 @@ html, body {
 .app-container {
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  overflow: hidden; }
   .app-container > .first-screen {
     display: block;
     position: relative;
@@ -219,7 +220,11 @@ html, body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        min-width: 192px;
+        padding: 0; }
+        .app-container .second-screen > .header > .react > .logo, .app-container .second-screen > .header .rails > .logo, .app-container .second-screen > .header .ios > .logo, .app-container .second-screen > .header .android > .logo {
+          max-width: 192px; }
         .app-container .second-screen > .header > .react > img, .app-container .second-screen > .header .rails > img, .app-container .second-screen > .header .ios > img, .app-container .second-screen > .header .android > img {
           cursor: pointer; }
         .app-container .second-screen > .header > .react > svg, .app-container .second-screen > .header .rails > svg, .app-container .second-screen > .header .ios > svg, .app-container .second-screen > .header .android > svg {
@@ -235,10 +240,10 @@ html, body {
         .app-container .second-screen > .header > .react:hover > h3, .app-container .second-screen > .header .rails:hover > h3, .app-container .second-screen > .header .ios:hover > h3, .app-container .second-screen > .header .android:hover > h3 {
           color: #000; }
       .app-container .second-screen > .header > .react > .logo {
-        width: 123px;
+        width: 100%;
         height: 110px;
         background: url("../img/react-logo-disable.svg") no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center center; }
       .app-container .second-screen > .header > .react.active > .logo {
         background: url("../img/react-logo-enable.svg") no-repeat;
@@ -257,7 +262,7 @@ html, body {
         display: block;
         overflow: visible; }
       .app-container .second-screen > .header > .rails > .logo {
-        width: 192px;
+        width: 100%;
         height: 68px;
         background: url("../img/rails-logo-disable.svg") no-repeat;
         background-size: cover;
@@ -278,7 +283,7 @@ html, body {
         display: block;
         overflow: visible; }
       .app-container .second-screen > .header > .ios > .logo {
-        width: 75px;
+        width: 100%;
         height: 90px;
         background: url("../img/i-os-disable.svg") no-repeat;
         background-size: contain;
@@ -299,7 +304,7 @@ html, body {
         display: block;
         overflow: visible; }
       .app-container .second-screen > .header > .android > .logo {
-        width: 82.5px;
+        width: 100%;
         height: 90px;
         background: url("../img/android-disable.svg") no-repeat;
         background-size: contain;
@@ -356,6 +361,7 @@ html, body {
       top: 105%;
       left: 0;
       width: 16.7%;
+      min-width: 192px;
       height: 2px;
       pointer-events: none;
       border: 1px solid #fff;
@@ -437,7 +443,7 @@ html, body {
       left: 0;
       width: 100%;
       margin-left: 0; }
-      .app-container .second-screen > .footer > .title > .col-md-4, .app-container .second-screen > .footer > .title .col-sm-4 {
+      .app-container .second-screen > .footer > .title > .col-md-4, .app-container .second-screen > .footer > .title .col-sm-4, .app-container .second-screen > .footer > .title .col-xs-4 {
         height: 180px;
         background-color: #ffffff;
         display: flex;
@@ -445,7 +451,7 @@ html, body {
         justify-content: center;
         align-items: flex-start;
         padding-left: 7vw; }
-        .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p {
+        .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p, .app-container .second-screen > .footer > .title .col-xs-4 > p {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 1em;
           line-height: 1.38;
@@ -453,7 +459,7 @@ html, body {
           color: #0a0c0f;
           margin: 0;
           margin-bottom: 10px; }
-        .app-container .second-screen > .footer > .title > .col-md-4 > h3, .app-container .second-screen > .footer > .title .col-sm-4 > h3 {
+        .app-container .second-screen > .footer > .title > .col-md-4 > h3, .app-container .second-screen > .footer > .title .col-sm-4 > h3, .app-container .second-screen > .footer > .title .col-xs-4 > h3 {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 2.75em;
           font-weight: 600;
@@ -464,6 +470,7 @@ html, body {
     .app-container .second-screen > .footer > img {
       width: 100%;
       max-height: 900px;
+      min-height: 400px;
       height: 100%; }
     .app-container .second-screen > .footer > .button {
       position: absolute;
@@ -999,7 +1006,9 @@ html, body {
         margin-top: 50px; }
     html body .app-container > .first-screen > .footer > .row > .title {
       padding-top: 40px;
-      padding-bottom: 40px; } }
+      padding-bottom: 40px; }
+    html body .app-container > .second-screen .header .line {
+      border-width: 0 9vw; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -1011,7 +1020,35 @@ html, body {
       top: 0;
       background-image: linear-gradient(to right, #21b4ed, #00c2de); }
       html body .app-container > .first-screen > .footer > .row > .title > h2, html body .app-container > .first-screen > .footer > .row > .title p {
-        color: #fff; } }
+        color: #fff;
+        line-height: 1.5; }
+    html body .app-container > .second-screen .header {
+      padding-top: 40px; }
+      html body .app-container > .second-screen .header > .react, html body .app-container > .second-screen .header .rails, html body .app-container > .second-screen .header .ios, html body .app-container > .second-screen .header .android {
+        min-width: 106px; }
+      html body .app-container > .second-screen .header > .line {
+        min-width: 106px;
+        border-width: 0 6vw; }
+    html body .app-container > .second-screen > .row > .body {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 40px; }
+      html body .app-container > .second-screen > .row > .body .slick-slider {
+        margin-bottom: 40px; }
+        html body .app-container > .second-screen > .row > .body .slick-slider .react > p, html body .app-container > .second-screen > .row > .body .slick-slider .rails > p, html body .app-container > .second-screen > .row > .body .slick-slider .ios > p, html body .app-container > .second-screen > .row > .body .slick-slider .android > p {
+          margin-bottom: 32px; }
+    html body .app-container > .second-screen .footer > img {
+      width: 645px; }
+    html body .app-container > .second-screen .footer > .title > .col-md-4, html body .app-container > .second-screen .footer > .title .col-sm-4, html body .app-container > .second-screen .footer > .title .col-xs-4 {
+      width: 201px;
+      height: 73px; }
+      html body .app-container > .second-screen .footer > .title > .col-md-4 p, html body .app-container > .second-screen .footer > .title .col-sm-4 p, html body .app-container > .second-screen .footer > .title .col-xs-4 p {
+        font-size: 12px;
+        margin-bottom: 0; }
+      html body .app-container > .second-screen .footer > .title > .col-md-4 h3, html body .app-container > .second-screen .footer > .title .col-sm-4 h3, html body .app-container > .second-screen .footer > .title .col-xs-4 h3 {
+        font-size: 28px; }
+    html body .app-container > .second-screen .footer > .button {
+      display: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

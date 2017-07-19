@@ -19,7 +19,7 @@ class Platform extends Component {
 
 		this.platforms = [{
 			title: 'React Native',
-			className: 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1',
+			className: 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 col-xs-offset-2',
 			img: ReactSvg
 		}, {
 			title: 'Ruby on Rails',
@@ -108,17 +108,17 @@ class Platform extends Component {
 								className={classes}
 								onClick={() => this.changeHandler(index)}
 							>
-								<div className="empty-box"></div>
-								<div className="logo"></div>
+								<div className="empty-box" />
+								<div className="logo" />
 								<platform.img />
 								<h3>{platform.title}</h3>
 							</div>
 						)}
 					)}
 
-					<div className="col-md-2 col-sm-2"></div>
+					<div className="col-md-2 col-sm-2" />
 
-					<div className="line col-md-offset-2"></div>
+					<div className="line col-md-offset-2 col-sm-offset-1 col-xs-offset-2" />
 
 				</div>
 

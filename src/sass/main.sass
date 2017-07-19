@@ -63,6 +63,7 @@ html, body
 	width: 100%
 	padding: 0
 	margin: 0
+	overflow: hidden
 
 	>.first-screen
 		display: block
@@ -226,6 +227,11 @@ html, body
 				flex-direction: column
 				justify-content: space-between
 				align-items: center
+				min-width: 192px
+				padding: 0
+
+				>.logo
+					max-width: 192px
 
 				>img
 					cursor: pointer
@@ -248,10 +254,11 @@ html, body
 
 			>.react
 				>.logo
-					width: 123px
+					//max-width: 123px
+					width: 100%
 					height: 110px
 					background: url("../img/react-logo-disable.svg") no-repeat
-					background-size: cover
+					background-size: contain
 					background-position: center center
 				&.active
 					>.logo
@@ -274,7 +281,8 @@ html, body
 
 			>.rails
 				>.logo
-					width: 192px
+					//max-width: 192px
+					width: 100%
 					height: 68px
 					background: url("../img/rails-logo-disable.svg") no-repeat
 					background-size: cover
@@ -300,7 +308,8 @@ html, body
 
 			>.ios
 				>.logo
-					width: 75px
+					//max-width: 75px
+					width: 100%
 					height: 90px
 					background: url("../img/i-os-disable.svg") no-repeat
 					background-size: contain
@@ -326,7 +335,8 @@ html, body
 
 			>.android
 				>.logo
-					width: 82.5px
+					//max-width: 82.5px
+					width: 100%
 					height: 90px
 					background: url("../img/android-disable.svg") no-repeat
 					background-size: contain
@@ -395,6 +405,7 @@ html, body
 				top: 105%
 				left: 0
 				width: 16.7%
+				min-width: 192px
 				height: 2px
 				pointer-events: none
 				border: 1px solid #fff
@@ -495,7 +506,7 @@ html, body
 				width: 100%
 				margin-left: 0
 
-				>.col-md-4, .col-sm-4
+				>.col-md-4, .col-sm-4, .col-xs-4
 					height: 180px
 					background-color: #ffffff
 					display: flex
@@ -525,6 +536,7 @@ html, body
 			>img
 				width: 100%
 				max-height: 900px
+				min-height: 400px
 				height: 100%
 
 			>.button
