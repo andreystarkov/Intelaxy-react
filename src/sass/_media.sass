@@ -19,17 +19,20 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1440px)
 	.app-container
-		.second-screen
+		>.second-screen
 			.header
 				.line
 					border-width: 0 6vw
-		//.third-screen
-		//	>.footer
-		//		.Path-2-Copy
-		//			left: 11.3vw
-		//		.path-2-copy-2
-		//			right: 11.3vw
-
+		>.third-screen
+			> .header
+				> .row
+					> div
+						padding-left: 0
+						padding-right: 0
+					>.skills-offers
+						.offer, .skills
+							> p
+								line-height: 2
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1280px)
@@ -58,6 +61,12 @@
 					.header
 						.line
 							border-width: 0 9vw
+				>.third-screen
+					> .header
+						> .row
+							>.column, .skills-offers
+								height: 650px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -109,6 +118,12 @@
 									font-size: 28px
 						>.button
 							display: none
+				>.third-screen
+					> .header
+						> .row
+							>.column, .skills-offers
+								height: 606px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

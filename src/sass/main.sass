@@ -568,7 +568,7 @@ html, body
 
 		>.header
 			width: 100%
-			height: 720px
+			height: auto
 			object-fit: contain
 			background: linear-gradient(to right, #00c2de, #27cecb)
 			display: flex
@@ -579,8 +579,8 @@ html, body
 				margin-left: 0
 				background: url(../img/3.svg) 88% bottom no-repeat
 
-				>div
-					height: 100%
+				>.column, .skills-offers
+					height: 720px
 					display: flex
 					flex-direction: column
 					justify-content: space-between
@@ -592,7 +592,7 @@ html, body
 						>h2
 							display: inline-block
 							font-family: $SFUIDsemibold
-							font-size: 1.25em
+							font-size: 1em
 							font-weight: 500
 							line-height: 1
 							letter-spacing: -0.1px
@@ -612,7 +612,7 @@ html, body
 							>h2
 								object-fit: contain
 								font-family: $SFUIDsemibold
-								font-size: 2.5em
+								font-size: 2.3em
 								font-weight: 600
 								line-height: 1.14
 								letter-spacing: 0.2px
@@ -633,7 +633,8 @@ html, body
 
 							>.button
 								display: block
-								width: 270px
+								max-width: 270px
+								width: 100%
 								height: 54px
 								object-fit: contain
 								background-color: #fff
@@ -733,7 +734,7 @@ html, body
 					max-width: 460px
 					padding: 105px 0 105px 13px
 					width: 100%
-					height: 100%
+					height: 720px
 
 					&.active
 						display: flex
