@@ -3,8 +3,10 @@ import { bindActionCreators } from 'redux';
 import * as rawActions from "../actions";
 import { connect } from 'react-redux';
 
-const DESKTOP_WIDTH = 1200;
+const DESKTOP_WIDTH = 1440;
+const DESKTOP_SMALL_WIDTH = 1024;
 const TABLET_WIDTH = 768;
+const MOBILE_WIDTH = 480;
 
 class ViewPort extends Component {
 	componentDidMount () {
@@ -23,8 +25,12 @@ class ViewPort extends Component {
 		let newViewPort;
 
 		if (DESKTOP_WIDTH < width) {
+			newViewPort = 'desktopHD'
+		} else if (DESKTOP_SMALL_WIDTH < width) {
 			newViewPort = 'desktop'
 		} else if (TABLET_WIDTH < width) {
+			newViewPort = 'desktopSmall'
+		} else if (MOBILE_WIDTH < width) {
 			newViewPort = 'tablet'
 		} else {
 			newViewPort = 'mobile'
@@ -37,6 +43,7 @@ class ViewPort extends Component {
 	};
 
 	render () {
+		console.log(this.props.viewPort)
 		return null
 	}
 }
