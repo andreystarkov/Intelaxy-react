@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ButtonAnimation from '../common/ButtonAnimation';
 import classNames from 'classnames';
-import Dropzone from 'react-dropzone'
+import Dropzone from 'react-dropzone';
+import { connect } from 'react-redux';
+
 
 class Vacancy extends Component {
 
@@ -286,5 +288,7 @@ class Vacancy extends Component {
 		)
 	}
 }
+
+
 
 export default Vacancy;

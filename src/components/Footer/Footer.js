@@ -1,6 +1,7 @@
 import React from 'react';
 import ButtonAnimation from '../common/ButtonAnimation';
 import page_1_copy_3 from '../../img/page-1-copy-3.svg';
+import ViewPort from '../../containers/ViewPort'
 
 const Footer = () => {
 	return (
@@ -54,6 +55,8 @@ const Footer = () => {
 			</div>
 
 		</div>
+
+		<ViewPort />
 
 	</footer>
 
