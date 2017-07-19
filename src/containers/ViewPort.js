@@ -8,6 +8,7 @@ const TABLET_WIDTH = 768;
 
 class ViewPort extends Component {
 	componentDidMount () {
+		this.checkViewport();
 		window.addEventListener('resize', this.checkViewport)
 	}
 
@@ -33,11 +34,9 @@ class ViewPort extends Component {
 			changeViewPort(newViewPort)
 		}
 
-
 	};
 
 	render () {
-		console.log('viewPort', this.props.viewPort);
 		return null
 	}
 }
