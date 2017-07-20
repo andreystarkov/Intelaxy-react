@@ -10,7 +10,7 @@ const VacancyMobile = ({ professions, activeProfession, onClickMobile}) => {
 
 				<Panel
 					header={
-						<div>
+						<div className="profession-header">
 							<h2>{professions[activeProfession].title}</h2>
 							<div className="price">{professions[activeProfession].price}</div>
 						</div>

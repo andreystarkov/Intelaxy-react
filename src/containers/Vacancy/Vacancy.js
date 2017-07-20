@@ -180,9 +180,7 @@ class Vacancy extends Component {
 		const formClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond', { 'active': this.state.activeForm });
 		const skillOffersClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 skills-offers', { 'active': this.state.activeSkillOffers });
 		const buttonClasses = classNames('button', { 'active': this.state.activeForm });
-
 		const { viewPort } = this.props.appReducer;
-		console.log('this.state ',this.state)
 
 		return (
 
