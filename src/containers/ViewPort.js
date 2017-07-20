@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import * as rawActions from "../actions";
 import { connect } from 'react-redux';
@@ -43,7 +43,7 @@ class ViewPort extends Component {
 	};
 
 	render () {
-		console.log(this.props.viewPort)
+		console.log(this.props.viewPort);
 		return null
 	}
 }

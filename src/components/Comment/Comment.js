@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import bitmap_copy from '../../img/bitmap-copy.jpg';
-import bitmap_copy2x from '../../img/bitmap-copy@2x.jpg';
-import bitmap_copy3x from '../../img/bitmap-copy@3x.jpg';
 
 class Comment extends Component {
 
@@ -101,10 +99,7 @@ class Comment extends Component {
 											className="wrap"
 											key={`comment-${index}`}
 										>
-											<img src={comment.img}
-													 srcSet={`${comment.img}2x 2x,
-																			${comment.img}3x 3x`}
-											/>
+											<img src={comment.img} />
 
 											<div className="name">{comment.name}</div>
 

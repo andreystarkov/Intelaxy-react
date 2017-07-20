@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import ButtonAnimation from '../common/ButtonAnimation';
+import ButtonAnimation from '../../components/common/ButtonAnimation';
 import classNames from 'classnames';
-import Dropzone from 'react-dropzone';
 import { connect } from 'react-redux';
+
+import Professions from '../../components/Vacancy/Professions/Professions'
+import SkillOffers from '../../components/Vacancy/SkillOffers/SkillOffers'
+import VacancyMobile from '../../components/Vacancy/VacancyMobile/VacancyMobile';
+import VacancyForm from '../../components/Vacancy/VacancyForm/VacancyForm';
 
 
 class Vacancy extends Component {
@@ -116,8 +120,8 @@ class Vacancy extends Component {
 			activeForm: false,
 			buttonText: 'Откликнуться',
 			files: []
-		};
-	}
+		}
+	};
 
 	handleChange = (event, profession) => {
 		event.stopPropagation();
@@ -158,7 +162,18 @@ class Vacancy extends Component {
 		this.setState({
 			files
 		});
-	}
+	};
+
+	onClickMobile = (profession) => {
+		this.setState({
+			activeProfession: profession,
+			activeSkillOffers: true,
+			activeSkill: profession,
+			activeOffer: profession,
+			activeForm: false,
+			buttonText: 'Откликнуться'
+		})
+	};
 
 	render() {
 
@@ -166,120 +181,63 @@ class Vacancy extends Component {
 		const skillOffersClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 skills-offers', { 'active': this.state.activeSkillOffers });
 		const buttonClasses = classNames('button', { 'active': this.state.activeForm });
 
+		const { viewPort } = this.props.appReducer;
+		console.log('this.state ',this.state)
+
 		return (
 
 			<div className="third-screen">
 
 				<div className="header">
 
+				{ (viewPort === 'tablet' || viewPort === 'mobile')
+
+					?
+
+					<div className="gutter-10 row">
+						<VacancyMobile
+							professions={this.professions}
+							activeProfession={this.state.activeProfession}
+							onClickMobile={this.onClickMobile}
+						/>
+						<SkillOffers
+							skillOffersClasses={skillOffersClasses}
+							professionSkills={this.professionSkills}
+							activeSkill={this.state.activeSkill}
+							activeOffer={this.state.activeOffer}
+							professionOffers={this.professionOffers}
+						/>
+					</div>
+
+					:
+
 					<div className="gutter-10 row">
 
-						<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 column">
+						<Professions
+							professions={this.professions}
+							activeProfession={this.state.activeProfession}
+							handleChange={this.handleChange}
+							showForm={this.showForm}
+							buttonClasses={buttonClasses}
+							buttonText={this.state.buttonText}
+						/>
 
-							{ this.professions.map( (profession, index) => {
+						<SkillOffers
+							skillOffersClasses={skillOffersClasses}
+							professionSkills={this.professionSkills}
+							activeSkill={this.state.activeSkill}
+							activeOffer={this.state.activeOffer}
+							professionOffers={this.professionOffers}
+						/>
 
-								const classes = classNames('profession', { 'active': index === this.state.activeProfession });
-
-								return(
-
-									<div
-										key={`profession-${index}`}
-										className={classes}
-										onClick={(event)=>this.handleChange(event, index)}
-									>
-										<h2>{profession.title}</h2>
-										<div className="price">{profession.price}</div>
-										<ButtonAnimation />
-										<div
-											className={buttonClasses}
-											onClick={(event)=>this.showForm(event, index)}
-										>{this.state.buttonText}</div>
-									</div>
-
-								)}
-							)}
-
-						</div>
-
-						<div className={skillOffersClasses}>
-
-							{ this.professionSkills.map((profession, index)=>{
-
-								const classes = classNames('skills', { 'active': index === this.state.activeSkill });
-
-								return(
-									<div
-										key={`skills-${index}`}
-										className={classes}
-									>
-										<div className="title">{profession.title}</div>
-										<p>{profession.firstSkill}</p>
-										<p>{profession.secondSkill}</p>
-										<p>{profession.thirdSkill}</p>
-										<p>{profession.fourthSkill}</p>
-									</div>
-								)}
-							)}
-
-							{
-								this.professionOffers.map( (profession, index) => {
-
-									const classes = classNames('offer', { 'active': index === this.state.activeOffer });
-
-									return(
-										<div
-											key={`offer-${index}`}
-											className={classes}
-										>
-											<div className="title">{profession.title}</div>
-											<p>{profession.firstOffer}</p>
-											<p>{profession.secondOffer}</p>
-											<p>{profession.thirdOffer}</p>
-											<p>{profession.fourthOffer}</p>
-										</div>
-									)
-								})
-							}
-
-						</div>
-
-						<form action="#" name="send-respond" className={formClasses}>
-
-							<div className="wrap">
-
-								<input type="text" required placeholder="Имя" id="name-respond"/>
-								<label htmlFor="name-respond"></label>
-
-								<input name="email" type="email" required placeholder="Email" id="email-respond"/>
-								<label	htmlFor="email-respond"></label>
-
-								<input type="text" placeholder="Телефон" id="phone-respond"/>
-								<label htmlFor="phone-respond"></label>
-
-								<input type="text" placeholder="Желаемая зарплата" id="pay-respond"/>
-								<label htmlFor="pay-respond"></label>
-
-								<Dropzone onDrop={this.onDrop.bind(this)} className="drop-zone" >
-									<p>Прикрепить резюме</p>
-								</Dropzone>
-
-								<aside className="drop-file">
-									<ul>
-										{
-											this.state.files.map((f, index) => <li key={`file-${index}`}>{f.name} - {f.size} bytes</li>)
-										}
-									</ul>
-								</aside>
-
-							</div>
-
-							<ButtonAnimation />
-
-							<button type="submit" id="show-form-button">Отправить запрос</button>
-
-						</form>
+						<VacancyForm
+							formClasses={formClasses}
+							onDrop={this.onDrop.bind(this)}
+							files={this.state.files}
+						/>
 
 					</div>
+				}
 
 				</div>
 
@@ -289,6 +247,10 @@ class Vacancy extends Component {
 	}
 }
 
+function mapStateToProps(state) {
+	return {
+		appReducer: state.appReducer
+	};
+}
 
-
-export default Vacancy;
+export default connect(mapStateToProps)(Vacancy);

@@ -1,0 +1,48 @@
+.vacancy-mobile {
+  width: 100%; }
+  .vacancy-mobile .vacancy-accordin .panel {
+    height: auto;
+    object-fit: contain;
+    background: linear-gradient(to right, #00c2de, #27cecb);
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0; }
+    .vacancy-mobile .vacancy-accordin .panel .panel-heading {
+      border: none;
+      background: linear-gradient(to right, #00c2de, #27cecb); }
+      .vacancy-mobile .vacancy-accordin .panel .panel-heading a {
+        text-decoration: none; }
+        .vacancy-mobile .vacancy-accordin .panel .panel-heading a h2 {
+          border-bottom: none;
+          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 0.1px;
+          text-align: left;
+          color: #ffffff; }
+        .vacancy-mobile .vacancy-accordin .panel .panel-heading a .price {
+          font-family: SFUIDisplay;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 1.17;
+          letter-spacing: 0px;
+          text-align: left;
+          color: #ffffff; }
+    .vacancy-mobile .vacancy-accordin .panel .panel-body {
+      background-color: rgba(10, 12, 15, 0.15); }
+      .vacancy-mobile .vacancy-accordin .panel .panel-body div {
+        margin-bottom: 20px; }
+        .vacancy-mobile .vacancy-accordin .panel .panel-body div h2 {
+          display: inline-block;
+          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-size: 1em;
+          font-weight: 500;
+          line-height: 1;
+          letter-spacing: -0.1px;
+          color: #ffffff;
+          padding-bottom: 3px;
+          border-bottom: 1px solid #fff;
+          cursor: pointer;
+          margin: 0; }
+      .vacancy-mobile .vacancy-accordin .panel .panel-body div:last-child {
+        margin-bottom: 0; }

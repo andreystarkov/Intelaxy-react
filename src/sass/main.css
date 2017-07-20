@@ -1,5 +1,6 @@
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
+@import url(../components/Vacancy/VacancyMobile/style.css);
 @font-face {
   font-family: 'SFUIDisplay';
   src: local("SFUIDisplay"), url(../fonts/SFUIDisplay/SFUIDisplay-Light.woff) format("woff"); }
@@ -502,7 +503,7 @@ html, body {
     justify-content: center; }
     .app-container > .third-screen > .header > .row {
       height: 100%;
-      margin-left: 0;
+      margin-left: -5px;
       background: url(../img/3.svg) 88% bottom no-repeat; }
       .app-container > .third-screen > .header > .row > .column, .app-container > .third-screen > .header > .row .skills-offers {
         height: 720px;
@@ -625,7 +626,6 @@ html, body {
         justify-content: space-between;
         max-width: 460px;
         padding: 105px 0 105px 13px;
-        width: 100%;
         height: 720px; }
         .app-container > .third-screen > .header > .row > .respond.active {
           display: flex; }
@@ -715,7 +715,7 @@ html, body {
             color: #ffffff;
             cursor: default; }
         .app-container > .third-screen > .header > .row > .respond > button {
-          width: 270px;
+          max-width: 270px;
           height: 54px;
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 1.125em;
@@ -1015,7 +1015,7 @@ html, body {
       padding-bottom: 40px; }
     html body .app-container > .second-screen .header .line {
       border-width: 0 9vw; }
-    html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers {
+    html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
       height: 650px; } }
 
 /* Small Devices, Tablets */
@@ -1057,8 +1057,29 @@ html, body {
         font-size: 28px; }
     html body .app-container > .second-screen .footer > .button {
       display: none; }
-    html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers {
-      height: 606px; } }
+    html body .app-container > .third-screen > .header {
+      min-height: 606px; }
+      html body .app-container > .third-screen > .header > .row {
+        min-height: 606px;
+        background: url(../img/3.svg) 40% bottom no-repeat;
+        background-size: 270.8px 371px; }
+        html body .app-container > .third-screen > .header > .row > .skills-offers {
+          height: 470px;
+          padding-top: 40px;
+          padding-bottom: 0;
+          justify-content: flex-start;
+          padding-left: 20px;
+          padding-right: 20px; }
+          html body .app-container > .third-screen > .header > .row > .skills-offers .skills .title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.57;
+            letter-spacing: -0.1px; }
+          html body .app-container > .third-screen > .header > .row > .skills-offers .skills p {
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 2;
+            letter-spacing: 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
