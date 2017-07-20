@@ -744,7 +744,10 @@ html, body {
             background-color: transparent;
             border: none;
             color: #fff;
-            text-align: center; }
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.29;
+            letter-spacing: -0.1px; }
           .app-container > .third-screen > .header > .row .nav-tabs > li.active {
             background-color: #fff; }
             .app-container > .third-screen > .header > .row .nav-tabs > li.active > a {
