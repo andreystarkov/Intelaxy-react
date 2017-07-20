@@ -121,7 +121,7 @@ class Vacancy extends Component {
 			activeForm: false,
 			buttonText: 'Откликнуться',
 			files: [],
-			open: true
+			open: false
 		}
 	};
 
