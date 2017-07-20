@@ -125,15 +125,14 @@
 							min-height: 606px
 							background: url(../img/3.svg) 40% bottom no-repeat
 							background-size: 270.8px 371px
-							>.column, .skills-offers, .respond
-							>.skills-offers
-								height: 470px
+							.skills-offers
+								height: 520px
 								padding-top: 40px
 								padding-bottom: 40px
 								justify-content: space-between
 								padding-left: 20px
 								padding-right: 20px
-								.skills
+								.skills, .offer
 									.title
 										font-size: 14px
 										font-weight: 600
@@ -143,11 +142,19 @@
 									p
 										font-size: 12px
 										font-weight: 300
-										line-height: 2
+										line-height: 2.2
 										letter-spacing: 0
 									&.active
 										margin-bottom: 0
-
+							.respond
+								&.active
+									height: 520px
+									padding-top: 40px
+									padding-bottom: 40px
+									padding-left: 20px
+									padding-right: 20px
+							.nav-tabs
+								margin-top: 15px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

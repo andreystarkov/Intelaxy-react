@@ -505,14 +505,14 @@ html, body {
       height: 100%;
       margin-left: -5px;
       background: url(../img/3.svg) 88% bottom no-repeat; }
-      .app-container > .third-screen > .header > .row > .column, .app-container > .third-screen > .header > .row .skills-offers {
+      .app-container > .third-screen > .header > .row .column, .app-container > .third-screen > .header > .row .skills-offers {
         height: 720px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding-top: 70px;
         padding-bottom: 70px; }
-        .app-container > .third-screen > .header > .row > .column > .profession > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession > h2 {
+        .app-container > .third-screen > .header > .row .column > .profession > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession > h2 {
           display: inline-block;
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 1em;
@@ -524,12 +524,12 @@ html, body {
           border-bottom: 1px solid #fff;
           cursor: pointer;
           margin: 0; }
-        .app-container > .third-screen > .header > .row > .column > .profession > .price, .app-container > .third-screen > .header > .row > .column > .profession .button, .app-container > .third-screen > .header > .row .skills-offers > .profession > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession .button {
+        .app-container > .third-screen > .header > .row .column > .profession > .price, .app-container > .third-screen > .header > .row .column > .profession .button, .app-container > .third-screen > .header > .row .skills-offers > .profession > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession .button {
           display: none; }
-        .app-container > .third-screen > .header > .row > .column > .profession.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active {
+        .app-container > .third-screen > .header > .row .column > .profession.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active {
           margin-bottom: 25px;
           margin-top: 25px; }
-          .app-container > .third-screen > .header > .row > .column > .profession.active > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > h2 {
+          .app-container > .third-screen > .header > .row .column > .profession.active > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > h2 {
             object-fit: contain;
             font-family: "SFUIDisplaySemibold", sans-serif;
             font-size: 2.3em;
@@ -539,7 +539,7 @@ html, body {
             color: #ffffff;
             border-bottom: none;
             cursor: default; }
-          .app-container > .third-screen > .header > .row > .column > .profession.active > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .price {
+          .app-container > .third-screen > .header > .row .column > .profession.active > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .price {
             display: block;
             object-fit: contain;
             font-family: "SFUIDisplay", sans-serif;
@@ -549,7 +549,7 @@ html, body {
             letter-spacing: 0px;
             color: #ffffff;
             margin-top: 10px; }
-          .app-container > .third-screen > .header > .row > .column > .profession.active > .button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button {
+          .app-container > .third-screen > .header > .row .column > .profession.active > .button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button {
             display: block;
             max-width: 270px;
             width: 100%;
@@ -565,54 +565,54 @@ html, body {
             color: #27c6ce;
             cursor: pointer;
             margin-top: 16px; }
-            .app-container > .third-screen > .header > .row > .column > .profession.active > .button:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button:hover {
+            .app-container > .third-screen > .header > .row .column > .profession.active > .button:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button:hover {
               color: #0fabe8; }
-            .app-container > .third-screen > .header > .row > .column > .profession.active > .button.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active {
+            .app-container > .third-screen > .header > .row .column > .profession.active > .button.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active {
               background-color: transparent;
               color: #fff;
               border: 1px solid #fff; }
-              .app-container > .third-screen > .header > .row > .column > .profession.active > .button.active:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active:hover {
+              .app-container > .third-screen > .header > .row .column > .profession.active > .button.active:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active:hover {
                 background-color: #fff;
                 color: #27c6ce; }
-          .app-container > .third-screen > .header > .row > .column > .profession.active > #qa-show-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > #qa-show-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active > #qa-show-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > #qa-show-button {
             filter: url("/#qa-show-form"); }
-          .app-container > .third-screen > .header > .row > .column > .profession.active #support-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #support-show-form-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active #support-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #support-show-form-button {
             filter: url("/#support-show-form"); }
-          .app-container > .third-screen > .header > .row > .column > .profession.active #lead-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #lead-show-form-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active #lead-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #lead-show-form-button {
             filter: url("/#lead-show-form"); }
-          .app-container > .third-screen > .header > .row > .column > .profession.active #front-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #front-show-form-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active #front-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #front-show-form-button {
             filter: url("/#front-show-form"); }
-          .app-container > .third-screen > .header > .row > .column > .profession.active #web-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #web-show-form-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active #web-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #web-show-form-button {
             filter: url("/#web-show-form"); }
-          .app-container > .third-screen > .header > .row > .column > .profession.active #html-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #html-show-form-button {
+          .app-container > .third-screen > .header > .row .column > .profession.active #html-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #html-show-form-button {
             filter: url("/#html-show-form"); }
-        .app-container > .third-screen > .header > .row > .column > .profession:first-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:first-child {
+        .app-container > .third-screen > .header > .row .column > .profession:first-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:first-child {
           margin-top: 0; }
-        .app-container > .third-screen > .header > .row > .column > .profession:last-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:last-child {
+        .app-container > .third-screen > .header > .row .column > .profession:last-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:last-child {
           margin-bottom: 0; }
-      .app-container > .third-screen > .header > .row > .skills-offers {
+      .app-container > .third-screen > .header > .row .skills-offers {
         display: none;
         flex-direction: column;
         justify-content: space-around;
         padding-top: 70px;
         padding-bottom: 70px; }
-        .app-container > .third-screen > .header > .row > .skills-offers.active {
+        .app-container > .third-screen > .header > .row .skills-offers.active {
           display: flex; }
-        .app-container > .third-screen > .header > .row > .skills-offers > .skills, .app-container > .third-screen > .header > .row > .skills-offers .offer {
+        .app-container > .third-screen > .header > .row .skills-offers > .skills, .app-container > .third-screen > .header > .row .skills-offers .offer {
           display: none; }
-        .app-container > .third-screen > .header > .row > .skills-offers > .skills.active {
+        .app-container > .third-screen > .header > .row .skills-offers > .skills.active {
           display: block;
           margin-bottom: 70px; }
-        .app-container > .third-screen > .header > .row > .skills-offers > .offer.active {
+        .app-container > .third-screen > .header > .row .skills-offers > .offer.active {
           display: block; }
-        .app-container > .third-screen > .header > .row > .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row > .skills-offers .offer > .title {
+        .app-container > .third-screen > .header > .row .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row .skills-offers .offer > .title {
           font-family: "SFUIDisplayRegular", sans-serif;
           font-size: 1.125em;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 20px; }
-        .app-container > .third-screen > .header > .row > .skills-offers > .skills > p, .app-container > .third-screen > .header > .row > .skills-offers .offer > p {
+        .app-container > .third-screen > .header > .row .skills-offers > .skills > p, .app-container > .third-screen > .header > .row .skills-offers .offer > p {
           font-family: "SFUIDisplaySemibold", sans-serif;
           margin: 0;
           font-size: 1em;
@@ -620,32 +620,41 @@ html, body {
           line-height: 3;
           letter-spacing: -0.1px;
           color: #ffffff; }
-      .app-container > .third-screen > .header > .row > .respond {
+      .app-container > .third-screen > .header > .row .respond {
         display: none;
         flex-direction: column;
         justify-content: space-between;
         max-width: 460px;
         padding: 105px 0 105px 13px;
         height: 720px; }
-        .app-container > .third-screen > .header > .row > .respond.active {
+        .app-container > .third-screen > .header > .row .respond.active {
           display: flex; }
-        .app-container > .third-screen > .header > .row > .respond > .wrap {
+        .app-container > .third-screen > .header > .row .respond > .wrap {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           height: 415px;
           -moz-placeholder-color: rgba(255, 255, 255, 0.7);
           -ms-input-placeholder-color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > label[for=name-respond], .app-container > .third-screen > .header > .row > .respond > .wrap label[for=email-respond] {
+          .app-container > .third-screen > .header > .row .respond > .wrap > label[for=name-respond], .app-container > .third-screen > .header > .row .respond > .wrap label[for=email-respond] {
             width: 100%;
             position: relative; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > label[for=name-respond]:before, .app-container > .third-screen > .header > .row > .respond > .wrap label[for=email-respond]:before {
+            .app-container > .third-screen > .header > .row .respond > .wrap > label[for=name-respond]:before, .app-container > .third-screen > .header > .row .respond > .wrap label[for=email-respond]:before {
               position: absolute;
               content: '';
               width: 100%;
               height: 1px;
               top: -20px; }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > input {
+            .app-container > .third-screen > .header > .row .respond > .wrap > label[for=name-respond]:after, .app-container > .third-screen > .header > .row .respond > .wrap label[for=email-respond]:after {
+              position: absolute;
+              content: '*';
+              font-family: "SFUIDisplayRegular", sans-serif;
+              font-size: 1em;
+              text-align: right;
+              color: rgba(255, 255, 255, 0.7);
+              top: -50px;
+              right: 5px; }
+          .app-container > .third-screen > .header > .row .respond > .wrap > input {
             width: 100%;
             height: 36px;
             border-top: none;
@@ -659,53 +668,44 @@ html, body {
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus {
               outline: 0;
               outline-offset: 0; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid {
               font-family: "SFUIDisplayRegular", sans-serif;
               font-size: 1em;
               text-align: left;
               color: #f8e81c;
               border-bottom: 1px solid #f8e81c; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid::-moz-placeholder {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid::-moz-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-moz-placeholder {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid:-moz-placeholder {
               color: #f8e81c; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid:-ms-input-placeholder {
+            .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid:-ms-input-placeholder {
               color: #f8e81c; }
-          .app-container > .third-screen > .header > .row > .respond > .wrap ::-webkit-input-placeholder {
+          .app-container > .third-screen > .header > .row .respond > .wrap ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > .header > .row > .respond > .wrap ::-moz-placeholder {
+          .app-container > .third-screen > .header > .row .respond > .wrap ::-moz-placeholder {
             color: rgba(255, 255, 255, 0.7); }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > label:after {
-            position: absolute;
-            content: '*';
-            font-family: "SFUIDisplayRegular", sans-serif;
-            font-size: 1em;
-            text-align: right;
-            color: rgba(255, 255, 255, 0.7);
-            top: -50px;
-            right: 5px; }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > input:focus:required:invalid + label:after {
+          .app-container > .third-screen > .header > .row .respond > .wrap > input:focus:required:invalid + label:after {
             color: #f8e81c; }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-zone {
+          .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone {
             max-width: 460px;
             width: 100%;
             height: 54px;
             border-radius: 4px;
             border: dashed 1.5px #ffffff;
             cursor: pointer; }
-            .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-zone > p {
+            .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone > p {
               font-family: "SFUIDisplayMedium", sans-serif;
               font-size: 1.125em;
               font-weight: 500;
               line-height: 54px;
               text-align: center;
               color: #ffffff; }
-          .app-container > .third-screen > .header > .row > .respond > .wrap > .drop-file > ul {
+          .app-container > .third-screen > .header > .row .respond > .wrap > .drop-file > ul {
             padding: 0;
             text-decoration: none;
             list-style: none;
@@ -714,7 +714,7 @@ html, body {
             text-align: center;
             color: #ffffff;
             cursor: default; }
-        .app-container > .third-screen > .header > .row > .respond > button {
+        .app-container > .third-screen > .header > .row .respond > button {
           max-width: 270px;
           height: 54px;
           font-family: "SFUIDisplaySemibold", sans-serif;
@@ -727,10 +727,35 @@ html, body {
           border-radius: 5px;
           background-color: #fff;
           margin-top: 62px; }
-          .app-container > .third-screen > .header > .row > .respond > button:hover {
+          .app-container > .third-screen > .header > .row .respond > button:hover {
             color: #0fabe8; }
-        .app-container > .third-screen > .header > .row > .respond > #show-form-button {
+        .app-container > .third-screen > .header > .row .respond > #show-form-button {
           filter: url("/#show-form"); }
+      .app-container > .third-screen > .header > .row .nav-tabs {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        border-bottom: none; }
+        .app-container > .third-screen > .header > .row .nav-tabs > li {
+          width: 100%;
+          border: 1px solid #fff;
+          border-radius: 2px; }
+          .app-container > .third-screen > .header > .row .nav-tabs > li > a {
+            background-color: transparent;
+            border: none;
+            color: #fff; }
+          .app-container > .third-screen > .header > .row .nav-tabs > li.active {
+            background-color: #fff; }
+            .app-container > .third-screen > .header > .row .nav-tabs > li.active > a {
+              color: #27c6ce; }
+        .app-container > .third-screen > .header > .row .nav-tabs > li:first-child {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0; }
+        .app-container > .third-screen > .header > .row .nav-tabs > li:last-child {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0; }
+      .app-container > .third-screen > .header > .row .respond.mobile {
+        max-width: 800px; }
   .app-container > .section-comment {
     height: 580px;
     position: relative;
@@ -1063,26 +1088,34 @@ html, body {
         min-height: 606px;
         background: url(../img/3.svg) 40% bottom no-repeat;
         background-size: 270.8px 371px; }
-        html body .app-container > .third-screen > .header > .row > .skills-offers {
-          height: 470px;
+        html body .app-container > .third-screen > .header > .row .skills-offers {
+          height: 520px;
           padding-top: 40px;
           padding-bottom: 40px;
           justify-content: space-between;
           padding-left: 20px;
           padding-right: 20px; }
-          html body .app-container > .third-screen > .header > .row > .skills-offers .skills .title {
+          html body .app-container > .third-screen > .header > .row .skills-offers .skills .title, html body .app-container > .third-screen > .header > .row .skills-offers .offer .title {
             font-size: 14px;
             font-weight: 600;
             line-height: 1.57;
             letter-spacing: -0.1px;
             margin-bottom: 14px; }
-          html body .app-container > .third-screen > .header > .row > .skills-offers .skills p {
+          html body .app-container > .third-screen > .header > .row .skills-offers .skills p, html body .app-container > .third-screen > .header > .row .skills-offers .offer p {
             font-size: 12px;
             font-weight: 300;
-            line-height: 2;
+            line-height: 2.2;
             letter-spacing: 0; }
-          html body .app-container > .third-screen > .header > .row > .skills-offers .skills.active {
-            margin-bottom: 0; } }
+          html body .app-container > .third-screen > .header > .row .skills-offers .skills.active, html body .app-container > .third-screen > .header > .row .skills-offers .offer.active {
+            margin-bottom: 0; }
+        html body .app-container > .third-screen > .header > .row .respond.active {
+          height: 520px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 20px;
+          padding-right: 20px; }
+        html body .app-container > .third-screen > .header > .row .nav-tabs {
+          margin-top: 15px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

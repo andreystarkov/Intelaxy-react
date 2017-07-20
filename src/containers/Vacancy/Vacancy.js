@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ButtonAnimation from '../../components/common/ButtonAnimation';
+import { Tabs, Tab } from 'react-bootstrap';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 
@@ -119,7 +120,8 @@ class Vacancy extends Component {
 			activeOffer: 0,
 			activeForm: false,
 			buttonText: 'Откликнуться',
-			files: []
+			files: [],
+			open: true
 		}
 	};
 
@@ -171,13 +173,21 @@ class Vacancy extends Component {
 			activeSkill: profession,
 			activeOffer: profession,
 			activeForm: false,
-			buttonText: 'Откликнуться'
+			buttonText: 'Откликнуться',
+			open: !this.state.open,
+		})
+	};
+
+	showContent = () => {
+		this.setState({
+			open: !this.state.open,
 		})
 	};
 
 	render() {
 
 		const formClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond', { 'active': this.state.activeForm });
+		const formClassesMobile = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond mobile active');
 		const skillOffersClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 skills-offers', { 'active': this.state.activeSkillOffers });
 		const buttonClasses = classNames('button', { 'active': this.state.activeForm });
 		const { viewPort } = this.props.appReducer;
@@ -197,14 +207,29 @@ class Vacancy extends Component {
 							professions={this.professions}
 							activeProfession={this.state.activeProfession}
 							onClickMobile={this.onClickMobile}
+							expanded={this.state.open}
+							showContent={this.showContent}
 						/>
-						<SkillOffers
-							skillOffersClasses={skillOffersClasses}
-							professionSkills={this.professionSkills}
-							activeSkill={this.state.activeSkill}
-							activeOffer={this.state.activeOffer}
-							professionOffers={this.professionOffers}
-						/>
+						<Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+							<Tab eventKey={1} title="Условия">
+								<SkillOffers
+									skillOffersClasses={skillOffersClasses}
+									professionSkills={this.professionSkills}
+									activeSkill={this.state.activeSkill}
+									activeOffer={this.state.activeOffer}
+									professionOffers={this.professionOffers}
+								/>
+							</Tab>
+							<Tab eventKey={2} title="Форма связи">
+								<VacancyForm
+									formClasses={formClassesMobile}
+									onDrop={this.onDrop.bind(this)}
+									files={this.state.files}
+									activeForm={true}
+								/>
+							</Tab>
+						</Tabs>
+
 					</div>
 
 					:
