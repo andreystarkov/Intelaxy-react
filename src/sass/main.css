@@ -743,7 +743,8 @@ html, body {
           .app-container > .third-screen > .header > .row .nav-tabs > li > a {
             background-color: transparent;
             border: none;
-            color: #fff; }
+            color: #fff;
+            text-align: center; }
           .app-container > .third-screen > .header > .row .nav-tabs > li.active {
             background-color: #fff; }
             .app-container > .third-screen > .header > .row .nav-tabs > li.active > a {
