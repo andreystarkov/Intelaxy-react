@@ -742,6 +742,7 @@ html, body {
           border-radius: 2px; }
           .app-container > .third-screen > .header > .row .nav-tabs > li > a {
             background-color: transparent;
+            font-family: "SFUIDisplayRegular", sans-serif;
             border: none;
             color: #fff;
             text-align: center;
