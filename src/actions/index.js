@@ -1,8 +1,8 @@
 import { CHANGE_VIEWPORT } from './constants'
 
-export function changeViewPort(viewPort) {
+export function changeViewPort(viewPort, viewWidth) {
 	return {
 		type: CHANGE_VIEWPORT,
-		payload: viewPort
+		payload: { viewPort, viewWidth }
 	}
 }

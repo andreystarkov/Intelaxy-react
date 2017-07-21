@@ -33,7 +33,11 @@
 						.offer, .skills
 							> p
 								line-height: 2
-
+		.section-comment
+			.Path-2-Copy-2
+				right: calc(50% - 38%)
+			.Path-2-Copy
+				left: calc(50% - 38%)
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1280px)
 	/**/
@@ -155,6 +159,40 @@
 									padding-right: 20px
 							.nav-tabs
 								margin-top: 15px
+				.section-comment
+					height: 424px
+					.slick-slider
+						min-height: 424px
+						.slick-dots
+							bottom: 10px
+						.slick-list
+							padding: 0
+							.slick-track
+								>.comment, .slick-slide
+									padding: 40px 20px
+									>.wrap
+										>.name
+											font-size: 1.2em
+											margin-top: 13px
+											margin-bottom: 4px
+										>.review
+											margin-top: 46px
+											&:before
+												position: absolute
+												line-height: 0.7
+												display: block
+												content: "\0022"
+												font-family: $DINRoundPro
+												font-size: 5.625em
+												text-align: center
+												color: #9b9b9b
+
+											&:before
+												top: -33px
+												left: calc(50% - 14px)
+
+											&:after
+												display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)

@@ -37,13 +37,13 @@ class ViewPort extends Component {
 		}
 
 		if (viewPort !== newViewPort) {
-			changeViewPort(newViewPort)
+			changeViewPort(newViewPort, width)
 		}
 
 	};
 
 	render () {
-		console.log(this.props.viewPort);
+		console.log(this.props.viewPort.viewPort);
 		return null
 	}
 }

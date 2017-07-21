@@ -761,54 +761,54 @@ html, body {
           border-top-left-radius: 0; }
       .app-container > .third-screen > .header > .row .respond.mobile {
         max-width: 800px; }
-  .app-container > .section-comment {
+  .app-container .section-comment {
     height: 580px;
     position: relative;
     background-color: #f0f6fa; }
-    .app-container > .section-comment .Path-2-Copy {
+    .app-container .section-comment .Path-2-Copy {
       position: absolute;
       top: calc(50% - 32px);
       left: calc(50% - 34%);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .app-container > .section-comment .Path-2-Copy:hover path {
+      .app-container .section-comment .Path-2-Copy:hover path {
         stroke-opacity: 1; }
-    .app-container > .section-comment .Path-2-Copy-2 {
+    .app-container .section-comment .Path-2-Copy-2 {
       position: absolute;
       top: calc(50% - 32px);
       right: calc(50% - 34%);
       z-index: 100;
       cursor: pointer;
       stroke-opacity: 0.5; }
-      .app-container > .section-comment .Path-2-Copy-2:hover path {
+      .app-container .section-comment .Path-2-Copy-2:hover path {
         stroke-opacity: 1; }
-    .app-container > .section-comment .slick-slider {
+    .app-container .section-comment .slick-slider {
       min-height: 580px;
       display: flex;
       overflow: visible; }
-      .app-container > .section-comment .slick-slider:focus {
+      .app-container .section-comment .slick-slider:focus {
         outline: none;
         border: none; }
-      .app-container > .section-comment .slick-slider:active {
+      .app-container .section-comment .slick-slider:active {
         outline: none;
         border: none; }
-      .app-container > .section-comment .slick-slider .slick-list {
+      .app-container .section-comment .slick-slider .slick-list {
         width: 100%;
         height: 100%;
         overflow: hidden; }
-        .app-container > .section-comment .slick-slider .slick-list .slick-track {
+        .app-container .section-comment .slick-slider .slick-list .slick-track {
           display: flex;
           width: 50vw;
           height: 100%; }
-          .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide {
+          .app-container .section-comment .slick-slider .slick-list .slick-track > .comment, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide {
             position: relative;
             display: flex;
             border-radius: 4px;
             padding: 120px 11.3vw;
             height: 100%;
             background-color: #f0f6fa; }
-            .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
+            .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
               margin: 0 auto;
               height: 340px;
               position: relative;
@@ -820,11 +820,11 @@ html, body {
               align-items: center;
               background-color: #ffffff;
               box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
-              padding: 0 120px; }
-              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > img, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > img {
+              padding: 0 11%; }
+              .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > img, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > img {
                 width: 90px;
                 height: 90px; }
-              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
+              .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
                 font-family: "SFUIDisplaySemibold", sans-serif;
                 font-size: 1.25em;
                 font-weight: 600;
@@ -833,14 +833,14 @@ html, body {
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
-              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .company, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .company {
+              .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .company, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .company {
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 1.125em;
                 line-height: 1.22;
                 letter-spacing: -0.1px;
                 text-align: center;
                 color: #9b9b9b; }
-              .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
+              .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
                 margin-top: 32px;
                 font-family: "SFUIDisplayRegular", sans-serif;
                 font-size: 1em;
@@ -850,7 +850,7 @@ html, body {
                 color: #0a0c0f;
                 position: relative;
                 white-space: normal; }
-                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
+                .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
                   position: absolute;
                   line-height: 0.7;
                   display: block;
@@ -859,13 +859,13 @@ html, body {
                   font-size: 5.625em;
                   text-align: center;
                   color: #9b9b9b; }
-                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before {
+                .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before {
                   top: 0;
-                  left: -78px; }
-                .app-container > .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
-                  top: 0px;
-                  right: -78px; }
-          .app-container > .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap, .app-container > .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
+                  left: -9%; }
+                .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
+                  top: 0;
+                  right: -9%; }
+          .app-container .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
             max-width: 720px;
             width: 100%; }
   .app-container > footer {
@@ -1025,7 +1025,11 @@ html, body {
     padding-left: 0;
     padding-right: 0; }
   .app-container > .third-screen > .header > .row > .skills-offers .offer > p, .app-container > .third-screen > .header > .row > .skills-offers .skills > p {
-    line-height: 2; } }
+    line-height: 2; }
+  .app-container .section-comment .Path-2-Copy-2 {
+    right: calc(50% - 38%); }
+  .app-container .section-comment .Path-2-Copy {
+    left: calc(50% - 38%); } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
@@ -1120,7 +1124,37 @@ html, body {
           padding-left: 20px;
           padding-right: 20px; }
         html body .app-container > .third-screen > .header > .row .nav-tabs {
-          margin-top: 15px; } }
+          margin-top: 15px; }
+    html body .app-container .section-comment {
+      height: 424px; }
+      html body .app-container .section-comment .slick-slider {
+        min-height: 424px; }
+        html body .app-container .section-comment .slick-slider .slick-dots {
+          bottom: 10px; }
+        html body .app-container .section-comment .slick-slider .slick-list {
+          padding: 0; }
+          html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide {
+            padding: 40px 20px; }
+            html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
+              font-size: 1.2em;
+              margin-top: 13px;
+              margin-bottom: 4px; }
+            html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
+              margin-top: 46px; }
+              html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before {
+                position: absolute;
+                line-height: 0.7;
+                display: block;
+                content: "\0022";
+                font-family: "DINRoundPro", sans-serif;
+                font-size: 5.625em;
+                text-align: center;
+                color: #9b9b9b; }
+              html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:before, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:before {
+                top: -33px;
+                left: calc(50% - 14px); }
+              html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
+                display: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
