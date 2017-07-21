@@ -94,7 +94,8 @@ html, body {
       background-size: contain;
       padding-top: 159px;
       padding-bottom: 170px;
-      position: relative; }
+      position: relative;
+      height: 100vh; }
       .app-container > .first-screen > .header:before {
         content: '';
         position: absolute;
