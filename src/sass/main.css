@@ -1016,7 +1016,7 @@ html, body {
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 2560px) {
   .app-container .second-screen .header .line {
-    border-width: 0 5.5vw; } }
+    border-width: 0 90px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1440px) {
@@ -1051,7 +1051,7 @@ html, body {
       padding-top: 40px;
       padding-bottom: 40px; }
     html body .app-container > .second-screen .header .line {
-      border-width: 0 9vw; }
+      border-width: 0 80px; }
     html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
       height: 650px; }
     html body .app-container > footer > .row > form {
