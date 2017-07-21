@@ -1131,6 +1131,21 @@ html, body {
         min-height: 424px; }
         html body .app-container .section-comment .slick-slider .slick-dots {
           bottom: 10px; }
+          html body .app-container .section-comment .slick-slider .slick-dots li button:before {
+            font-size: 6px;
+            line-height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            content: '\2022';
+            text-align: center;
+            opacity: .25;
+            color: #21b4ed; }
+          html body .app-container .section-comment .slick-slider .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: #21b4ed; }
         html body .app-container .section-comment .slick-slider .slick-list {
           padding: 0; }
           html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide {
