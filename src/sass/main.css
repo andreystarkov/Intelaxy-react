@@ -1029,7 +1029,9 @@ html, body {
   .app-container .section-comment .Path-2-Copy-2 {
     right: calc(50% - 38%); }
   .app-container .section-comment .Path-2-Copy {
-    left: calc(50% - 38%); } }
+    left: calc(50% - 38%); }
+  .app-container > footer > .row > form legend {
+    font-size: 2.3em; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
@@ -1050,7 +1052,14 @@ html, body {
     html body .app-container > .second-screen .header .line {
       border-width: 0 9vw; }
     html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
-      height: 650px; } }
+      height: 650px; }
+    html body .app-container > footer > .row > form {
+      padding-left: 0; }
+      html body .app-container > footer > .row > form legend {
+        font-size: 2.3em; }
+    html body .app-container > footer > .row > .contact {
+      padding-left: 0;
+      max-width: 260px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
