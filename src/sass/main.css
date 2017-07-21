@@ -1169,7 +1169,33 @@ html, body {
                 top: -33px;
                 left: calc(50% - 14px); }
               html body .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review:after, html body .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review:after {
-                display: none; } }
+                display: none; }
+    html body .app-container > footer {
+      padding-left: 20px;
+      padding-right: 20px; }
+      html body .app-container > footer > .row > form {
+        padding: 40px 0; }
+        html body .app-container > footer > .row > form legend {
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 0.1px;
+          margin-bottom: 32px; }
+        html body .app-container > footer > .row > form button {
+          margin: 35px auto;
+          width: 280px;
+          margin-bottom: 0; }
+      html body .app-container > footer > .row > .contact {
+        padding: 0 0 40px;
+        min-height: 312px;
+        margin: 0 auto;
+        max-width: 250px; }
+        html body .app-container > footer > .row > .contact .email, html body .app-container > footer > .row > .contact .adress, html body .app-container > footer > .row > .contact .phone {
+          margin-top: 32px;
+          font-size: 12px; }
+          html body .app-container > footer > .row > .contact .email span, html body .app-container > footer > .row > .contact .adress span, html body .app-container > footer > .row > .contact .phone span {
+            font-size: 14px; }
+        html body .app-container > footer > .row > .contact .phone {
+          font-size: 26px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

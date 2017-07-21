@@ -10,21 +10,21 @@ const Footer = () => {
 
 		<div className="gutter-10 row">
 
-			<form action="#" name="contact-with-us" className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
+			<form action="#" name="contact-with-us" className="col-md-4 col-md-offset-2">
 
 				<legend>Обсудим проект?</legend>
 
 				<div className="wrap">
 
-					<input name="email" type="email" required placeholder="Email" id="email" /><label htmlFor="email"></label>
+					<input name="email" type="email" required placeholder="Email" id="email" /><label htmlFor="email" />
 
-					<input type="text" required placeholder="Имя" id="name" /><label htmlFor="name"></label>
+					<input type="text" required placeholder="Имя" id="name" /><label htmlFor="name" />
 
-					<input type="text" placeholder="Телефон" id="phone" /><label htmlFor="phone"></label>
+					<input type="text" placeholder="Телефон" id="phone" /><label htmlFor="phone" />
 
-					<input type="text" placeholder="Компания" id="company" /><label htmlFor="company"></label>
+					<input type="text" placeholder="Компания" id="company" /><label htmlFor="company" />
 
-					<input type="text" required placeholder="Тип проекта" id="project" /><label htmlFor="project"></label>
+					<input type="text" required placeholder="Тип проекта" id="project" /><label htmlFor="project" />
 
 				</div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
 
 			</form>
 
-			<div className="contact col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
+			<div className="contact col-md-3 col-md-offset-1">
 
 				<img src={page_1_copy_3}
 						 className="Page-1-Copy-3" />
