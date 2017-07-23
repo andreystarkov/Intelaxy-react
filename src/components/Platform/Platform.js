@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import classNames from 'classnames';
+import anime from 'animejs';
+import $ from "jquery";
+import {findDOMNode} from 'react-dom';
 
 import ReactSvg from '../common/svg/ReactSvg';
 import RailsSvg from '../common/svg/RailsSvg';
@@ -20,19 +24,31 @@ class Platform extends Component {
 		this.platforms = [{
 			title: 'React Native',
 			className: 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 col-xs-offset-2',
-			img: ReactSvg
+			classNameMobile: 'platform react',
+			img: ReactSvg,
+			name: 'react',
+			color: '#00D8FF'
 		}, {
 			title: 'Ruby on Rails',
 			className: 'platform rails col-md-2 col-sm-2',
-			img: RailsSvg
+			classNameMobile: 'platform rails',
+			img: RailsSvg,
+			name: 'rails',
+			color: '#D0011B'
 		}, {
 			title: 'iOS',
 			className: 'platform ios col-md-2 col-sm-2',
-			img: IosSvg
+			classNameMobile: 'platform ios',
+			img: IosSvg,
+			name: 'ios',
+			color: '#0A0C0F'
 		}, {
 			title: 'Android',
 			className: 'platform android col-md-2 col-sm-2',
-			img: AndroidSvg
+			classNameMobile: 'platform android',
+			img: AndroidSvg,
+			name: 'android',
+			color: '#7ED321'
 		}];
 
 		this.platformDescriptions = [{
@@ -70,12 +86,17 @@ class Platform extends Component {
 		}
 	}
 
+	componentDidMount() {
+		console.log('el', this.path);
+	}
+
 	componentDidUpdate() {
 		setTimeout( () => this.slider.slickGoTo(this.state.activePlatform));
 	}
 
 	changeHandler = (slide) => {
-		this.setState({ activePlatform: slide })
+		this.setState({ activePlatform: slide });
+
 	};
 
 	settings = {
@@ -89,31 +110,106 @@ class Platform extends Component {
 		draggable: false
 	};
 
-	render() {
+	drowElement = (selector, color) => {
+		anime.remove(selector);
+		$(selector).css({
+			'stroke': color,
+			'stroke-opacity': '1',
+			'stroke-width': '1px',
+			'opacity': '1',
+			'fill-opacity': '1',
+			'fill': 'none'
+		});
+		anime({
+			targets: selector,
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'linear',
+			duration: 1000,
+			delay: function(el, i) { return i * 250 },
+			// direction: 'alternate',
+			complete: function complete() {
+				$(selector).css({
+					'fill': color,
+					'strokeOpacity': '0'
+				})
+			}
+		});
+	};
 
+	reverseDrowElement = (selector, color) => {
+		anime.remove(selector);
+		$(selector).css({
+			'stroke': color,
+			'stroke-opacity': '1',
+			'stroke-width': '1px',
+			'opacity': '1',
+			'fill-opacity': '1',
+			'fill': 'none'
+		});
+		anime({
+			targets: selector,
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'linear',
+			duration: 1000,
+			delay: function(el, i) { return i * 250 },
+			direction: 'reverse',
+			complete: function complete() {
+				$(selector).css({
+					'fill': 'none',
+					'stroke': '#9b9b9b',
+					'stroke-opacity': '1',
+					'stroke-dashoffset': '1',
+					'stroke-width': '1'
+				})
+			}
+		});
+	};
+
+	drawStroke = (platform, color) => {
+		const selectors = document.getElementById(`${platform}-anim`);
+		const selectorPath = selectors.getElementsByTagName('path');
+		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		this.drowElement(selectorPath, color);
+		this.drowElement(selectorElipse, color);
+	};
+
+	drawStrokeReverse = (platform, color) => {
+		const selectors = document.getElementById(`${platform}-anim`);
+		const selectorPath = selectors.getElementsByTagName('path');
+		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		this.reverseDrowElement(selectorPath, color);
+		this.reverseDrowElement(selectorElipse, color);
+	};
+
+	render() {
+		const { viewPort } = this.props.appReducer.viewPort;
 		return (
 			<div className="second-screen">
 
 				<div className="header gutter-10 row">
 
-					{ this.platforms.map( (platform, index) => {
+					{this.platforms.map((platform, index) => {
 
-						const classes = classNames(platform.className, {
-							'active': index === this.state.activePlatform
-						});
+							const classes = classNames(platform.className, {
+								'active': index === this.state.activePlatform
+							});
 
-						return (
-							<div
-								key={`platform-${index}`}
-								className={classes}
-								onClick={() => this.changeHandler(index)}
-							>
-								<div className="empty-box" />
-								<div className="logo" />
-								<platform.img />
-								<h3>{platform.title}</h3>
-							</div>
-						)}
+							return (
+								<div
+									key={`platform-${index}`}
+									className={classes}
+									onMouseEnter={() => this.drawStroke(platform.name, platform.color)}
+									onMouseLeave={() => this.drawStrokeReverse(platform.name, platform.color)}
+									onClick={() => this.changeHandler(index)}
+								>
+									<div className="empty-box"/>
+									<div className="logo" >
+										<platform.img react={ c => this.path = c} />
+									</div>
+									<h3>{platform.title}</h3>
+								</div>
+							)
+						}
 					)}
 
 					<div className="col-md-2 col-sm-2" />
@@ -150,6 +246,12 @@ class Platform extends Component {
 			</div>
 		);
 	}
-};
+}
 
-export default Platform;
+function mapStateToProps(state) {
+	return {
+		appReducer: state.appReducer
+	}
+}
+
+export default connect(mapStateToProps)(Platform);
