@@ -109,6 +109,21 @@ class Platform extends Component {
 		draggable: false
 	};
 
+	settingsMob = {
+		// ref: (ref) => {this.slider = ref},
+		initialSlide: 0,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: false,
+		arrows: false,
+		fade: false,
+		draggable: true,
+		centerMode: true,
+		centerPadding: '50',
+		focusOnSelect: true,
+		variableWidth: true,
+	};
+
 	drowElement = (selector, color) => {
 		anime.remove(selector);
 		$(selector).css({
@@ -185,37 +200,77 @@ class Platform extends Component {
 		return (
 			<div className="second-screen">
 
-				<div className="header gutter-10 row">
+				{(viewPort === 'desktopHD' || viewPort === 'desktop' || viewPort === 'desktopSmall')
 
-					{this.platforms.map((platform, index) => {
+					?
 
-							const classes = classNames(platform.className, {
-								'active': index === this.state.activePlatform
-							});
+					<div className="header gutter-10 row">
 
-							return (
-								<div
-									key={`platform-${index}`}
-									className={classes}
-									onMouseEnter={() => this.drawStroke(platform.name, platform.color)}
-									onMouseLeave={() => this.drawStrokeReverse(platform.name, platform.color)}
-									onClick={() => this.changeHandler(index)}
-								>
-									<div className="empty-box"/>
-									<div className="logo" >
-										<platform.img react={ c => this.path = c} />
+						{this.platforms.map((platform, index) => {
+
+								const classes = classNames(platform.className, {
+									'active': index === this.state.activePlatform
+								});
+
+								return (
+									<div
+										key={`platform-${index}`}
+										className={classes}
+										onMouseEnter={() => this.drawStroke(platform.name, platform.color)}
+										onMouseLeave={() => this.drawStrokeReverse(platform.name, platform.color)}
+										onClick={() => this.changeHandler(index)}
+									>
+										<div className="empty-box"/>
+										<div className="logo">
+											<platform.img react={c => this.path = c}/>
+										</div>
+										<h3>{platform.title}</h3>
 									</div>
-									<h3>{platform.title}</h3>
-								</div>
-							)
-						}
-					)}
+								)
+							}
+						)}
 
-					<div className="col-md-2 col-sm-2" />
+						<div className="col-md-2 col-sm-2"/>
 
-					<div className="line col-md-offset-2 col-sm-offset-1 col-xs-offset-2" />
+						<div className="line col-md-offset-2 col-sm-offset-1 col-xs-offset-2"/>
 
-				</div>
+					</div>
+
+					:
+
+					<div className="header gutter-10 row">
+
+						<Slider {...this.settingsMob}>
+
+							{this.platforms.map((platform, index) => {
+
+									const classes = classNames(platform.classNameMobile, {
+										'active': index === this.state.activePlatform
+									});
+
+									return (
+										<div
+											key={`platform-${index}`}
+											className={classes}
+											onMouseEnter={() => this.drawStroke(platform.name, platform.color)}
+											onMouseLeave={() => this.drawStrokeReverse(platform.name, platform.color)}
+											onClick={() => this.changeHandler(index)}
+										>
+											<div className="empty-box"/>
+											<div className="logo">
+												<platform.img react={c => this.path = c}/>
+											</div>
+											<h3>{platform.title}</h3>
+										</div>
+									)
+								}
+							)}
+
+						</Slider>
+
+					</div>
+
+				}
 
 				<div className="gutter-10 row">
 
