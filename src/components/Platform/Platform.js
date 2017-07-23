@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import classNames from 'classnames';
 import anime from 'animejs';
 import $ from "jquery";
-import {findDOMNode} from 'react-dom';
 
 import ReactSvg from '../common/svg/ReactSvg';
 import RailsSvg from '../common/svg/RailsSvg';
