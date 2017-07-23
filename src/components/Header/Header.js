@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import scrollToElement from 'scroll-to-element';
 import ButtonAnimation from '../common/ButtonAnimation';
 import logo_copy from '../../img/logo-copy.svg';
 import page_1_copy_3 from '../../img/page-1-copy-3.png';
@@ -42,7 +43,15 @@ const Header = ({ appReducer }) => {
 
 				<ButtonAnimation id="filter-ripple-2" />
 
-				<div className="header-button" id="component-8" href="#contact">
+				<div
+					className="header-button"
+					id="component-8"
+					href="#contact"
+					onClick={() => scrollToElement('#contact', {
+						offset: 0,
+						duration: 1500
+					})}
+				>
 					Связаться с нами
 				</div>
 
