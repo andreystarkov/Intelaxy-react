@@ -106,7 +106,8 @@ class Platform extends Component {
 		infinite: false,
 		arrows: false,
 		fade: false,
-		draggable: false
+		draggable: false,
+		swipe: false
 	};
 
 	settingsMob = {

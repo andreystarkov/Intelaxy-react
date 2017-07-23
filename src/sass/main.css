@@ -999,6 +999,8 @@ html, body {
       padding-top: 40px; }
       html body .app-container > .second-screen .row .body .slick-slider {
         margin-bottom: 40px; }
+        html body .app-container > .second-screen .row .body .slick-slider .react p, html body .app-container > .second-screen .row .body .slick-slider .rails p, html body .app-container > .second-screen .row .body .slick-slider .ios p, html body .app-container > .second-screen .row .body .slick-slider .android p {
+          margin-bottom: 32px; }
     html body .app-container > .second-screen .footer > img {
       width: 645px; }
     html body .app-container > .second-screen .footer > .title > .col-md-4, html body .app-container > .second-screen .footer > .title .col-sm-4, html body .app-container > .second-screen .footer > .title .col-xs-4 {
