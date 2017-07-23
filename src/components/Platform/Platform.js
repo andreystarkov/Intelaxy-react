@@ -124,7 +124,7 @@ class Platform extends Component {
 			targets: selector,
 			strokeDashoffset: [anime.setDashoffset, 0],
 			easing: 'linear',
-			duration: 1000,
+			duration: 700,
 			delay: function(el, i) { return i * 250 },
 			// direction: 'alternate',
 			complete: function complete() {
@@ -150,7 +150,7 @@ class Platform extends Component {
 			targets: selector,
 			strokeDashoffset: [anime.setDashoffset, 0],
 			easing: 'linear',
-			duration: 1000,
+			duration: 700,
 			delay: function(el, i) { return i * 250 },
 			direction: 'reverse',
 			complete: function complete() {
