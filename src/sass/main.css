@@ -21,6 +21,22 @@
   font-family: 'DINRoundPro';
   src: local("DINRoundPro"), url(../fonts/DINRoundPro/DINRoundPro-Medi.woff) format("woff"); }
 
+@font-face {
+  font-family: 'SFUIDTextMedium';
+  src: local("SFUIDTextMedium"), url(../fonts/SFUIDTextMedium/SF-UI-Text-Medium.ttf) format("ttf"); }
+
+@font-face {
+  font-family: 'SFUITextLight';
+  src: local("SFUITextLight"), url(../fonts/SFUITextLight/SFUIText-Light.otf) format("otf"); }
+
+@font-face {
+  font-family: 'SFUITextSemibold';
+  src: local("SFUITextSemibold"), url(../fonts/SFUITextSemibold/SFUIText-Semibold.otf) format("otf"); }
+
+@font-face {
+  font-family: 'SFUITextRegular';
+  src: local("SFUITextRegular"), url(../fonts/SFUITextRegular/SF-UI-Text-Regular.otf) format("otf"); }
+
 *::-webkit-input-placeholder {
   color: #666;
   opacity: 1; }
@@ -124,7 +140,8 @@ html, body {
         max-width: 477px;
         width: 100%;
         object-fit: contain;
-        z-index: 1; }
+        z-index: 1;
+        min-height: 100px; }
       .app-container > .first-screen > .header > .Page-1-Copy-3 {
         margin-bottom: 50px;
         z-index: 1; }
@@ -153,7 +170,7 @@ html, body {
         max-width: 320px;
         width: 100%;
         min-height: 54px;
-        font-family: "SFUIDisplayMedium", sans-serif;
+        font-family: 'SFUIDTextMedium', sans-serif;
         font-size: 1.125em;
         background-color: #21B4ED;
         font-weight: 500;
@@ -196,7 +213,7 @@ html, body {
           margin: 0;
           margin-bottom: 8px; }
         .app-container > .first-screen > .footer > .row > .title > p {
-          font-family: "SFUIDisplay", sans-serif;
+          font-family: 'SFUITextLight', sans-serif;
           font-size: 1em;
           font-weight: 300;
           line-height: 1.63;
@@ -233,7 +250,7 @@ html, body {
               fill: none;
               stroke: #9b9b9b; }
         .app-container .second-screen .header .react h3, .app-container .second-screen .header .rails h3, .app-container .second-screen .header .ios h3, .app-container .second-screen .header .android h3 {
-          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-family: 'SFUITextSemibold', sans-serif;
           font-size: 1.25em;
           font-weight: 600;
           line-height: 1.5;
@@ -329,7 +346,7 @@ html, body {
           color: #0a0c0f;
           margin-bottom: 8px; }
         .app-container .second-screen > .row > .body .slick-slider .react > p, .app-container .second-screen > .row > .body .slick-slider .rails > p, .app-container .second-screen > .row > .body .slick-slider .ios > p, .app-container .second-screen > .row > .body .slick-slider .android > p {
-          font-family: "SFUIDisplay", sans-serif;
+          font-family: 'SFUITextLight', sans-serif;
           font-size: 1em;
           font-weight: 300;
           line-height: 1.63;
@@ -364,7 +381,7 @@ html, body {
         align-items: flex-start;
         padding-left: 7vw; }
         .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p, .app-container .second-screen > .footer > .title .col-xs-4 > p {
-          font-family: "SFUIDisplayRegular", sans-serif;
+          font-family: 'SFUITextRegular', sans-serif;
           font-size: 1em;
           line-height: 1.38;
           letter-spacing: 0px;
@@ -468,7 +485,7 @@ html, body {
             object-fit: contain;
             background-color: #fff;
             border-radius: 2px;
-            font-family: "SFUIDisplayMedium", sans-serif;
+            font-family: 'SFUIDTextMedium', sans-serif;
             font-size: 1.125em;
             font-weight: 500;
             line-height: 54px;
@@ -517,14 +534,14 @@ html, body {
         .app-container > .third-screen > .header > .row .skills-offers > .offer.active {
           display: block; }
         .app-container > .third-screen > .header > .row .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row .skills-offers .offer > .title {
-          font-family: "SFUIDisplayRegular", sans-serif;
-          font-size: 1.125em;
+          font-family: 'SFUITextRegular', sans-serif;
+          font-size: 1.25em;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7);
           margin-bottom: 20px; }
         .app-container > .third-screen > .header > .row .skills-offers > .skills > p, .app-container > .third-screen > .header > .row .skills-offers .offer > p {
-          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-family: 'SFUITextLight', sans-serif;
           margin: 0;
           font-size: 1em;
           font-weight: 500;
@@ -610,7 +627,7 @@ html, body {
             border: dashed 1.5px #ffffff;
             cursor: pointer; }
             .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone > p {
-              font-family: "SFUIDisplayMedium", sans-serif;
+              font-family: 'SFUIDTextMedium', sans-serif;
               font-size: 1.125em;
               font-weight: 500;
               line-height: 54px;
@@ -628,7 +645,7 @@ html, body {
         .app-container > .third-screen > .header > .row .respond > button {
           max-width: 270px;
           height: 54px;
-          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-family: 'SFUIDTextMedium', sans-serif;
           font-size: 1.125em;
           font-weight: 500;
           line-height: 1.22;
@@ -736,7 +753,7 @@ html, body {
                 width: 90px;
                 height: 90px; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .name, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .name {
-                font-family: "SFUIDisplaySemibold", sans-serif;
+                font-family: 'SFUITextSemibold', sans-serif;
                 font-size: 1.25em;
                 font-weight: 600;
                 line-height: 1.5;
@@ -745,7 +762,7 @@ html, body {
                 color: #0a0c0f;
                 margin-bottom: 5px; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .company, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .company {
-                font-family: "SFUIDisplayRegular", sans-serif;
+                font-family: 'SFUITextRegular', sans-serif;
                 font-size: 1.125em;
                 line-height: 1.22;
                 letter-spacing: -0.1px;
@@ -753,7 +770,7 @@ html, body {
                 color: #9b9b9b; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
                 margin-top: 32px;
-                font-family: "SFUIDisplayRegular", sans-serif;
+                font-family: 'SFUITextRegular', sans-serif;
                 font-size: 1em;
                 line-height: 1.63;
                 letter-spacing: -0.4px;
@@ -868,7 +885,7 @@ html, body {
         .app-container > footer > .row > form > button {
           width: 270px;
           height: 54px;
-          font-family: "SFUIDisplaySemibold", sans-serif;
+          font-family: 'SFUIDTextMedium', sans-serif;
           font-size: 1.125em;
           font-weight: 500;
           line-height: 1.22;
@@ -894,13 +911,13 @@ html, body {
           width: 250px;
           height: 59.4px; }
         .app-container > footer > .row > .contact > .email, .app-container > footer > .row > .contact .adress {
-          font-family: "SFUIDisplayRegular", sans-serif;
+          font-family: 'SFUITextRegular', sans-serif;
           font-size: 1.125em;
           line-height: 1.22;
           letter-spacing: -0.1px;
           color: rgba(255, 255, 255, 0.7); }
           .app-container > footer > .row > .contact > .email > span, .app-container > footer > .row > .contact .adress > span {
-            font-family: "SFUIDisplayRegular", sans-serif;
+            font-family: 'SFUIDTextMedium', sans-serif;
             font-size: 1.25em;
             font-weight: 500;
             line-height: 1.5;
@@ -909,7 +926,7 @@ html, body {
         .app-container > footer > .row > .contact > .adress {
           margin-top: 10px; }
         .app-container > footer > .row > .contact > .phone {
-          font-family: "SFUIDisplayRegular", sans-serif;
+          font-family: 'SFUIDTextMedium', sans-serif;
           font-size: 2.25em;
           font-weight: 500;
           line-height: 0.83;
