@@ -217,6 +217,7 @@ html, body {
           font-size: 1em;
           font-weight: 300;
           line-height: 1.63;
+          letter-spacing: 1px;
           text-align: center;
           color: #0a0c0f;
           margin: 0;
@@ -444,9 +445,9 @@ html, body {
           display: inline-block;
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 1em;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 1;
-          letter-spacing: -0.1px;
+          letter-spacing: 1px;
           color: #ffffff;
           padding-bottom: 10px;
           border-bottom: 1px solid #fff;
@@ -463,7 +464,7 @@ html, body {
             font-size: 2.3em;
             font-weight: 600;
             line-height: 1.14;
-            letter-spacing: 0.2px;
+            letter-spacing: 1px;
             color: #ffffff;
             border-bottom: none;
             cursor: default; }
@@ -537,16 +538,17 @@ html, body {
           font-family: 'SFUITextRegular', sans-serif;
           font-size: 1.25em;
           line-height: 1.22;
-          letter-spacing: -0.1px;
-          color: rgba(255, 255, 255, 0.7);
+          letter-spacing: 1px;
+          font-weight: 600;
+          color: #fff;
           margin-bottom: 20px; }
         .app-container > .third-screen > .header > .row .skills-offers > .skills > p, .app-container > .third-screen > .header > .row .skills-offers .offer > p {
           font-family: 'SFUITextLight', sans-serif;
           margin: 0;
           font-size: 1em;
-          font-weight: 500;
-          line-height: 3;
-          letter-spacing: -0.1px;
+          font-weight: 300;
+          line-height: 2.8;
+          letter-spacing: 1px;
           color: #ffffff; }
       .app-container > .third-screen > .header > .row .respond {
         display: none;
@@ -593,6 +595,7 @@ html, body {
             background-color: transparent;
             font-family: "SFUIDisplayRegular", sans-serif;
             font-size: 1em;
+            letter-spacing: 1px;
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
@@ -630,6 +633,7 @@ html, body {
               font-family: 'SFUIDTextMedium', sans-serif;
               font-size: 1.125em;
               font-weight: 500;
+              letter-spacing: 1px;
               line-height: 54px;
               text-align: center;
               color: #ffffff; }
@@ -639,6 +643,7 @@ html, body {
             list-style: none;
             font-family: "SFUIDisplayMedium", sans-serif;
             font-size: 0.875em;
+            letter-spacing: 1px;
             text-align: center;
             color: #ffffff;
             cursor: default; }
@@ -648,6 +653,7 @@ html, body {
           font-family: 'SFUIDTextMedium', sans-serif;
           font-size: 1.125em;
           font-weight: 500;
+          letter-spacing: 1px;
           line-height: 1.22;
           text-align: center;
           color: #27c6ce;
@@ -676,7 +682,7 @@ html, body {
             text-align: center;
             font-size: 14px;
             line-height: 1.29;
-            letter-spacing: -0.1px; }
+            letter-spacing: 1px; }
           .app-container > .third-screen > .header > .row .nav-tabs > li.active {
             background-color: #fff; }
             .app-container > .third-screen > .header > .row .nav-tabs > li.active > a {
@@ -757,7 +763,7 @@ html, body {
                 font-size: 1.25em;
                 font-weight: 600;
                 line-height: 1.5;
-                letter-spacing: -0.1px;
+                letter-spacing: 1px;
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
@@ -765,7 +771,7 @@ html, body {
                 font-family: 'SFUITextRegular', sans-serif;
                 font-size: 1.125em;
                 line-height: 1.22;
-                letter-spacing: -0.1px;
+                letter-spacing: 1px;
                 text-align: center;
                 color: #9b9b9b; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
@@ -773,7 +779,7 @@ html, body {
                 font-family: 'SFUITextRegular', sans-serif;
                 font-size: 1em;
                 line-height: 1.63;
-                letter-spacing: -0.4px;
+                letter-spacing: 1px;
                 text-align: center;
                 color: #0a0c0f;
                 position: relative;
@@ -889,6 +895,7 @@ html, body {
           font-size: 1.125em;
           font-weight: 500;
           line-height: 1.22;
+          letter-spacing: 1px;
           text-align: center;
           color: #27c6ce;
           border: none;
@@ -904,7 +911,7 @@ html, body {
         flex-direction: column;
         justify-content: space-between;
         max-width: 345px;
-        padding: 70px 0 70px 10px;
+        padding: 70px 0 70px 0px;
         width: 100%;
         min-height: 600px; }
         .app-container > footer > .row > .contact > img {
@@ -914,14 +921,14 @@ html, body {
           font-family: 'SFUITextRegular', sans-serif;
           font-size: 1.125em;
           line-height: 1.22;
-          letter-spacing: -0.1px;
+          letter-spacing: 1px;
           color: rgba(255, 255, 255, 0.7); }
           .app-container > footer > .row > .contact > .email > span, .app-container > footer > .row > .contact .adress > span {
             font-family: 'SFUIDTextMedium', sans-serif;
             font-size: 1.25em;
             font-weight: 500;
             line-height: 1.5;
-            letter-spacing: -0.1px;
+            letter-spacing: 0.3px;
             color: #ffffff; }
         .app-container > footer > .row > .contact > .adress {
           margin-top: 10px; }
@@ -930,7 +937,7 @@ html, body {
           font-size: 2.25em;
           font-weight: 500;
           line-height: 0.83;
-          letter-spacing: -0.5px;
+          letter-spacing: 0.6px;
           color: #ffffff;
           margin-top: 40px; }
 
@@ -975,6 +982,7 @@ html, body {
       html body .app-container > .first-screen > .header > .header-button {
         margin-top: 50px; }
     html body .app-container > .first-screen > .footer > .row > .title {
+      top: -50px;
       padding-top: 40px;
       padding-bottom: 40px; }
     html body .app-container > .second-screen .header .line {
