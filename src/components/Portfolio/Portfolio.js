@@ -1,4 +1,5 @@
 import React from 'react';
+import PortfolioScene from './PortfolioScene/PortfolioScene'
 
 import portfolio_todoya from '../../img/portfolio-todoya.jpg';
 import portfolio_todoya2x from '../../img/portfolio-todoya@2x.jpg';
@@ -11,10 +12,12 @@ const Portfolio = () => {
 
 			<div className="footer">
 
-				<img src={portfolio_todoya}
+				{/*<img src={portfolio_todoya}
 						 srcSet={`${portfolio_todoya2x} 2x,
              ${portfolio_todoya3x} 3x`}
-						 className="Portfolio-todoya"/>
+						 className="Portfolio-todoya"/>*/}
+
+			 <PortfolioScene />
 
 				<div className="title gutter-10 row">
 
