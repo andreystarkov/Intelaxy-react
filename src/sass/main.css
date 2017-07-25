@@ -167,6 +167,7 @@ html, body {
         width: 1px;
         height: 1px; }
       .app-container > .first-screen > .header > .header-button {
+        position: relative;
         max-width: 320px;
         width: 100%;
         min-height: 54px;
@@ -181,7 +182,8 @@ html, body {
         transition: all 0.45s ease-out;
         filter: url("/#filter-ripple-2");
         z-index: 1;
-        margin-top: 96px; }
+        margin-top: 96px;
+        overflow: hidden; }
         .app-container > .first-screen > .header > .header-button:hover {
           background-color: #0FABE8; }
     .app-container > .first-screen > .footer {
@@ -944,7 +946,25 @@ html, body {
 .img-responsive {
   display: block;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  overflow: hidden; }
+
+.btn-4:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10; }
+
+.btn-4:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1); }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

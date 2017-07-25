@@ -1,24 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import scrollToElement from 'scroll-to-element';
-import ButtonAnimation from '../common/ButtonAnimation';
 import logo_copy from '../../img/logo-copy.svg';
 import page_1_copy_3 from '../../img/page-1-copy-3.png';
 import page_1_copy_32x from '../../img/page-1-copy-3@2x.png';
 import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
-
-import { TweenLite } from "gsap";
-
-// onClick = (id) => {
-
-// 	return function(e) {
-
-// 		TweenLite.set(, { attr: { x: e.offsetX, y: e.offsetY, width: 0, height: 0 } });
-// 		TweenLite.to(turb, 5, { attr: { x: '-=300', y: '-=300', width: 600, height: 600 } });
-// 		TweenLite.fromTo(dm, 3, { attr: { scale: 30 } }, { attr: { scale: 0 } });
-// 	};
-// };
-
 
 const Header = ({ appReducer }) => {
 
@@ -41,10 +27,8 @@ const Header = ({ appReducer }) => {
 					Mobile & Web development
 				</div>
 
-				<ButtonAnimation id="filter-ripple-2" />
-
 				<div
-					className="header-button"
+					className="header-button btn-4"
 					id="component-8"
 					href="#contact"
 					onClick={() => scrollToElement('#contact', {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import ButtonAnimation from '../common/ButtonAnimation';
 import page_1_copy_3 from '../../img/page-1-copy-3.svg';
 import ViewPort from '../../containers/ViewPort'
 
@@ -34,8 +33,6 @@ const Footer = ({ appReducer }) => {
 						<input type="text" required placeholder="Тип проекта" id="project"/><label htmlFor="project"/>
 
 					</div>
-
-					<ButtonAnimation/>
 
 					<button type="submit" id="send-respond-button">Отправить запрос</button>
 
@@ -84,8 +81,6 @@ const Footer = ({ appReducer }) => {
 						<input type="text" required placeholder="Тип проекта" id="project"/><label htmlFor="project"/>
 
 					</div>
-
-					<ButtonAnimation/>
 
 					<button type="submit" id="send-respond-button">Отправить запрос</button>
 

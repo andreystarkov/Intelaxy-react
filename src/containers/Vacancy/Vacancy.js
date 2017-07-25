@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ButtonAnimation from '../../components/common/ButtonAnimation';
 import { Tabs, Tab } from 'react-bootstrap';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
