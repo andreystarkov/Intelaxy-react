@@ -549,6 +549,10 @@ html, body
 								color: #27c6ce
 								cursor: pointer
 								margin-top: 16px
+								position: relative
+								overflow: hidden
+								&:after
+									z-index: 0
 
 								&:hover
 									color: #0fabe8
@@ -763,6 +767,8 @@ html, body
 						border-radius: 5px
 						background-color: #fff
 						margin-top: 62px
+						position: relative
+						overflow: hidden
 
 						&:hover
 							color: #0fabe8
@@ -1049,6 +1055,8 @@ html, body
 					border-radius: 5px
 					background-color: #fff
 					margin-top: 43px
+					position: relative
+					overflow: hidden
 
 					&:hover
 						color: #0fabe8
@@ -1120,5 +1128,22 @@ html, body
 			left: 120%
 			transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
 
+.btn-4-blue
+	&:after
+		background: #0fabe8
+		content: ""
+		height: 155px
+		left: -75px
+		opacity: .2
+		position: absolute
+		top: -50px
+		transform: rotate(35deg)
+		transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
+		width: 50px
+		z-index: -10
+	&:hover
+		&:after
+			left: 120%
+			transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
 
 @import "./media"

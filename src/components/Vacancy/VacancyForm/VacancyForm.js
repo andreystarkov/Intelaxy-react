@@ -33,7 +33,7 @@ const VacancyForm = ({ formClasses, onDrop, files }) => {
 
 			</div>
 
-			<button type="submit" id="show-form-button">Отправить запрос</button>
+			<button className="btn-4-blue" type="submit" id="show-form-button">Отправить запрос</button>
 
 		</form>
 	)

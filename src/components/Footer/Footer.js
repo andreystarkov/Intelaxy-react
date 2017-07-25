@@ -82,7 +82,7 @@ const Footer = ({ appReducer }) => {
 
 					</div>
 
-					<button type="submit" id="send-respond-button">Отправить запрос</button>
+					<button className="btn-4-blue" type="submit" id="send-respond-button">Отправить запрос</button>
 
 
 				</form>

@@ -495,7 +495,11 @@ html, body {
             text-align: center;
             color: #27c6ce;
             cursor: pointer;
-            margin-top: 16px; }
+            margin-top: 16px;
+            position: relative;
+            overflow: hidden; }
+            .app-container > .third-screen > .header > .row .column > .profession.active > .button:after, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button:after {
+              z-index: 0; }
             .app-container > .third-screen > .header > .row .column > .profession.active > .button:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button:hover {
               color: #0fabe8; }
             .app-container > .third-screen > .header > .row .column > .profession.active > .button.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active {
@@ -667,7 +671,9 @@ html, body {
           border: none;
           border-radius: 5px;
           background-color: #fff;
-          margin-top: 62px; }
+          margin-top: 62px;
+          position: relative;
+          overflow: hidden; }
           .app-container > .third-screen > .header > .row .respond > button:hover {
             color: #0fabe8; }
         .app-container > .third-screen > .header > .row .respond > #show-form-button {
@@ -908,7 +914,9 @@ html, body {
           border: none;
           border-radius: 5px;
           background-color: #fff;
-          margin-top: 43px; }
+          margin-top: 43px;
+          position: relative;
+          overflow: hidden; }
           .app-container > footer > .row > form > button:hover {
             color: #0fabe8; }
         .app-container > footer > .row > form #send-respond-button {
@@ -968,6 +976,23 @@ html, body {
   z-index: -10; }
 
 .btn-4:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1); }
+
+.btn-4-blue:after {
+  background: #0fabe8;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10; }
+
+.btn-4-blue:hover:after {
   left: 120%;
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1); }
 
