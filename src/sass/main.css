@@ -639,6 +639,11 @@ html, body {
               line-height: 54px;
               text-align: center;
               color: #ffffff; }
+          .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone {
+            position: relative;
+            overflow: hidden; }
+            .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone:after {
+              z-index: 0; }
           .app-container > .third-screen > .header > .row .respond > .wrap > .drop-file > ul {
             padding: 0;
             text-decoration: none;

@@ -19,7 +19,7 @@ const VacancyForm = ({ formClasses, onDrop, files }) => {
 				<input type="text" placeholder="Желаемая зарплата" id="pay-respond"/>
 				<label htmlFor="pay-respond" />
 
-				<Dropzone onDrop={onDrop} className="drop-zone" >
+				<Dropzone onDrop={onDrop} className="drop-zone btn-4" >
 					<p>Прикрепить резюме</p>
 				</Dropzone>
 
