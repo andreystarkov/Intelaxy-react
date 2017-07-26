@@ -15,9 +15,9 @@ class PortfolioMobile extends Component {
 
 	render() {
 		const settingsMobile = {
-			initialSlide: 1,
+			initialSlide: 0,
 			slidesToShow: 1,
-			infinite: true,
+			infinite: false,
 			arrows: false,
 			fade: false,
 			draggable: true,
