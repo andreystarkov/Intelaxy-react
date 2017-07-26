@@ -430,6 +430,17 @@ html, body {
         width: 100%;
         height: auto;
         position: absolute; }
+    .app-container .second-screen > .footer .slick-slider {
+      max-width: 1440px;
+      width: 100%;
+      min-height: 400px;
+      height: auto; }
+      .app-container .second-screen > .footer .slick-slider .slick-list .slick-track .slick-slide {
+        overflow: hidden;
+        width: 100%;
+        height: 100%; }
+      .app-container .second-screen > .footer .slick-slider .slick-dots {
+        bottom: 10px; }
     .app-container .second-screen > .footer > img {
       max-width: 1440px;
       width: 100%;
