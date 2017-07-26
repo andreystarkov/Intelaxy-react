@@ -401,18 +401,14 @@ html, body
 			.parallax
 				max-width: 1440px
 				width: 100%
-				min-height: 900px
+				min-height: 400px
 				height: auto
-				.layers
+				position: relative
+				padding: 0px
+				img
+					max-width: 500px
 					width: 100%
-					height: 100%
-					position: relative
-					top: 200px
-					right: 200px
-					img
-						max-width: 500px
-						width: 100%
-						height: auto
+					height: auto
 			.parallax, .portfolio-mobile
 				.first
 					top: 4%
@@ -478,6 +474,8 @@ html, body
 							overflow: hidden
 							width: 100%
 							height: 100%
+							&.parallax
+								height: 900px
 				.slick-dots
 					bottom: 10px
 

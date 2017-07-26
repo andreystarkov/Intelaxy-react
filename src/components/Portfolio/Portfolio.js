@@ -6,9 +6,33 @@ import PortfolioMobile from './PortfolioMobile/PortfolioMobile';
 import path_2_copy_3 from '../../img/path-2-copy-3.svg';
 
 class Portfolio extends Component {
+	constructor(props) {
+		super(props);
+
+		this.portfolio = [{
+			title: '1 Планировщик задач',
+			name: '1 TODOYA'
+		}, {
+			title: '2 Планировщик задач',
+			name: '2 TODOYA'
+		}, {
+			title: '3 Планировщик задач',
+			name: '3 TODOYA'
+		}];
+
+		this.state = {
+			activeSlide: 1
+		}
+	}
+
+
+	currentSlide = (e) => {
+		this.setState({ activeSlide: e })
+	};
+
 	render() {
 		const { viewPort } = this.props.appReducer.viewPort;
-		console.log(viewPort)
+		console.log(this.state)
 		return (
 			<div className="second-screen">
 
@@ -18,20 +42,20 @@ class Portfolio extends Component {
 
 						?
 
-						<PortfolioScene/>
+						<PortfolioScene currentSlide={this.currentSlide} />
 
 						:
 
-						<PortfolioMobile />
+						<PortfolioMobile currentSlideMobile={this.currentSlide} />
 					}
 
 					<div className="title gutter-10 row">
 
 						<div className="col-md-4 col-sm-4 col-xs-4">
 
-							<p>Планировщик задач</p>
+							<p>{this.portfolio[this.state.activeSlide].title}</p>
 
-							<h3>TODOYA</h3>
+							<h3>{this.portfolio[this.state.activeSlide].name}</h3>
 
 						</div>
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import first from '../../../img/portfolio/1.png';
 import second from '../../../img/portfolio/2.png';
@@ -14,13 +12,6 @@ import ninth from '../../../img/portfolio/9.png';
 import tenth from '../../../img/portfolio/10.png';
 
 class PortfolioMobile extends Component {
-	constructor(props, context) {
-		super(props, context);
-		AOS.init();
-	}
-	componentWillReceiveProps() {
-		AOS.refresh();
-	}
 
 	render() {
 		const settingsMobile = {
@@ -30,10 +21,11 @@ class PortfolioMobile extends Component {
 			arrows: false,
 			fade: false,
 			draggable: true,
-			dots: true
+			dots: true,
+			afterChange: this.props.currentSlideMobile
 		};
 		return (
-			<Slider {...settingsMobile} >
+			<Slider ref={c => this.slider = c } {...settingsMobile} >
 				<div className="portfolio-mobile">
 					<img src={first} className="first" alt=""/>
 					<img src={second} className="second" alt=""/>
@@ -45,7 +37,7 @@ class PortfolioMobile extends Component {
 					<img src={ninth} className="ninth" alt=""/>
 					<img src={sixth} className="sixth" alt=""/>
 				</div>
-				<div className="portfolio-mobile" >
+				<div className="portfolio-mobile">
 					<img src={first} className="first" alt=""/>
 					<img src={second} className="second" alt=""/>
 					<img src={third} className="third" alt=""/>
