@@ -14,12 +14,20 @@ import tenth from '../../../img/portfolio/10.png';
 
 class PortfolioScene extends Component {
 	componentDidMount() {
-		this.parallax = new Parallax(this.scene, {
+		this.parallax1 = new Parallax(this.scene3, {
 			pointerEvents: true
-		})
+		});
+		this.parallax2 = new Parallax(this.scene1, {
+			pointerEvents: true
+		});
+		this.parallax3 = new Parallax(this.scene2, {
+			pointerEvents: true
+		});
 	}
 	componentWillUnmount() {
-		this.parallax.disable()
+		this.parallax1.disable()
+		this.parallax2.disable()
+		this.parallax3.disable()
 	}
 	render() {
 		const settings = {
@@ -34,7 +42,7 @@ class PortfolioScene extends Component {
 		};
 		return (
 			<Slider {...settings} >
-				<div ref={el => this.scene = el} className="parallax"
+				<div ref={el => this.scene3 = el} className="parallax"
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
@@ -66,7 +74,7 @@ class PortfolioScene extends Component {
 						<img className="sixth" src={sixth}/>
 					</div>
 				</div>
-				<div ref={el => this.scene = el} className="parallax"
+				<div ref={el => this.scene1 = el} className="parallax"
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
@@ -98,7 +106,7 @@ class PortfolioScene extends Component {
 						<img className="sixth" src={sixth}/>
 					</div>
 				</div>
-				<div ref={el => this.scene = el} className="parallax"
+				<div ref={el => this.scene2 = el} className="parallax"
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
