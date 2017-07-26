@@ -379,44 +379,57 @@ html, body {
         top: 200px;
         right: 200px; }
         .app-container .second-screen > .footer .parallax .layers img {
-          width: 500px;
+          max-width: 500px;
+          width: 100%;
           height: auto; }
-        .app-container .second-screen > .footer .parallax .layers .first {
-          top: 4%;
-          left: 2%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .second {
-          top: 24%;
-          left: 7%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .third {
-          top: 42%;
-          left: 14%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .fourth {
-          top: 60%;
-          left: 21%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .tenth {
-          top: 4%;
-          left: 30%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .seventh {
-          top: 20%;
-          left: 40%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .eighth {
-          top: 36%;
-          left: 50%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .ninth {
-          top: 52%;
-          left: 60%;
-          position: absolute; }
-        .app-container .second-screen > .footer .parallax .layers .sixth {
-          top: 4%;
-          left: 67%;
-          position: absolute; }
+    .app-container .second-screen > .footer .parallax .first, .app-container .second-screen > .footer .portfolio-mobile .first {
+      top: 4%;
+      left: 2%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .second, .app-container .second-screen > .footer .portfolio-mobile .second {
+      top: 24%;
+      left: 7%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .third, .app-container .second-screen > .footer .portfolio-mobile .third {
+      top: 42%;
+      left: 14%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .fourth, .app-container .second-screen > .footer .portfolio-mobile .fourth {
+      top: 60%;
+      left: 21%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .tenth, .app-container .second-screen > .footer .portfolio-mobile .tenth {
+      top: 4%;
+      left: 30%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .seventh, .app-container .second-screen > .footer .portfolio-mobile .seventh {
+      top: 20%;
+      left: 40%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .eighth, .app-container .second-screen > .footer .portfolio-mobile .eighth {
+      top: 36%;
+      left: 50%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .ninth, .app-container .second-screen > .footer .portfolio-mobile .ninth {
+      top: 52%;
+      left: 60%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .sixth, .app-container .second-screen > .footer .portfolio-mobile .sixth {
+      top: 4%;
+      left: 67%;
+      position: absolute; }
+    .app-container .second-screen > .footer .portfolio-mobile {
+      max-width: 1440px;
+      width: 100%;
+      min-height: 400px;
+      height: auto;
+      position: relative;
+      padding: 0px; }
+      .app-container .second-screen > .footer .portfolio-mobile img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        position: absolute; }
     .app-container .second-screen > .footer > img {
       max-width: 1440px;
       width: 100%;
@@ -1058,6 +1071,8 @@ html, body {
 @media only screen and (max-width: 1440px) {
   .app-container > .second-screen .header .line {
     border-width: 0 6vw; }
+  .app-container > .second-screen > .footer .parallax .layers img {
+    max-width: 500px; }
   .app-container > .third-screen > .header > .row > div {
     padding-left: 0;
     padding-right: 0; }
@@ -1072,7 +1087,10 @@ html, body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
-  /**/ }
+  .app-container > .second-screen .header .line {
+    border-width: 0 6vw; }
+  .app-container > .second-screen > .footer .parallax .layers img {
+    max-width: 450px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
@@ -1089,6 +1107,8 @@ html, body {
       padding-bottom: 40px; }
     html body .app-container > .second-screen .header .line {
       border-width: 0 80px; }
+    html body .app-container > .second-screen > .footer .parallax .layers img {
+      max-width: 380px; }
     html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
       height: 650px; }
     html body .app-container > footer > .row > form {
@@ -1266,7 +1286,9 @@ html, body {
       border-radius: 4px;
       font-size: 14px;
       font-weight: 500;
-      letter-spacing: -0.2px; } }
+      letter-spacing: -0.2px; }
+  html body .app-container > .second-screen > .footer .portfolio-mobile img {
+    max-width: 160px; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

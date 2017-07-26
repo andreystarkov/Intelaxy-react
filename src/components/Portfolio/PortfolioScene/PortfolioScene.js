@@ -56,6 +56,6 @@ class PortfolioScene extends Component {
 			</div>
 		)
 	}
-};
+}
 
 export default PortfolioScene;
