@@ -23,32 +23,32 @@ class PortfolioScene extends Component {
 	render() {
 		return (
 			<div ref={el => this.scene = el} className="parallax">
-				<div className="layers" data-depth="0.50"  >
+				<div className="layers" data-depth="0.10"  >
 					<img className="first" src={first}/>
 				</div>
-				<div className="layers" data-depth="0.50">
+				<div className="layers" data-depth="0.20">
 					<img className="second" src={second}/>
 				</div>
-				<div className="layers" data-depth="0.50">
+				<div className="layers" data-depth="0.30">
 					<img className="third" src={third}/>
 				</div>
-				<div className="layers" data-depth="0.50">
+				<div className="layers" data-depth="0.40">
 					<img className="fourth" src={fourth}/>
 				</div>
-				<div className="layers" data-depth="1.00">
-					<img className="sixth" src={sixth}/>
+				<div className="layers" data-depth="0.50">
+					<img className="tenth" src={tenth}/>
 				</div>
-				<div className="layers" data-depth="0.80">
+				<div className="layers" data-depth="0.60">
 					<img className="seventh" src={seventh}/>
 				</div>
-				<div className="layers" data-depth="0.80">
+				<div className="layers" data-depth="0.70">
 					<img className="eighth" src={eighth}/>
 				</div>
 				<div className="layers" data-depth="0.80">
 					<img className="ninth" src={ninth}/>
 				</div>
-				<div className="layers" data-depth="0.80">
-					<img className="tenth" src={tenth}/>
+				<div className="layers" data-depth="0.90">
+					<img className="sixth" src={sixth}/>
 				</div>
 			</div>
 		)

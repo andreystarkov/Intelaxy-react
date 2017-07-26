@@ -361,16 +361,17 @@ html, body {
   .app-container .second-screen > .footer {
     display: flex;
     position: relative;
+    max-width: 2560px;
     width: 100%;
     max-height: 900px;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    background: linear-gradient(to right, #26bf59, #4ede7e); }
     .app-container .second-screen > .footer .parallax {
       max-width: 1440px;
       width: 100%;
       min-height: 900px;
-      height: auto;
-      background: linear-gradient(to right, #26bf59, #4ede7e); }
+      height: auto; }
       .app-container .second-screen > .footer .parallax .layers {
         width: 100%;
         height: 100%;
@@ -431,7 +432,7 @@ html, body {
         align-items: flex-start;
         padding-left: 7vw; }
         .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p, .app-container .second-screen > .footer > .title .col-xs-4 > p {
-          font-family: 'SFUITextRegular', sans-serif;
+          font-family: 'SFUITextLight', sans-serif;
           font-size: 1em;
           line-height: 1.38;
           letter-spacing: 0px;
@@ -836,7 +837,7 @@ html, body {
                 color: #9b9b9b; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
                 margin-top: 32px;
-                font-family: 'SFUITextRegular', sans-serif;
+                font-family: 'SFUITextLight', sans-serif;
                 font-size: 1em;
                 line-height: 1.63;
                 letter-spacing: 1px;
