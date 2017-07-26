@@ -22,7 +22,10 @@ class PortfolioScene extends Component {
 	}
 	render() {
 		return (
-			<div ref={el => this.scene = el} className="parallax">
+			<div ref={el => this.scene = el} className="parallax"
+					 data-scalar-x="2"
+					 data-scalar-y="3"
+			>
 				<div className="layers" data-depth="0.10"  >
 					<img className="first" src={first}/>
 				</div>
