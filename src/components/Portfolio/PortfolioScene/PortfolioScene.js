@@ -25,7 +25,7 @@ class PortfolioScene extends Component {
 		});
 	}
 	componentWillUnmount() {
-		// this.parallax1.disable();
+		this.parallax1.disable();
 		this.parallax2.disable();
 		this.parallax3.disable();
 	}
@@ -35,8 +35,8 @@ class PortfolioScene extends Component {
 			slidesToShow: 1,
 			infinite: false,
 			arrows: false,
-			fade: false,
-			draggable: true,
+			fade: true,
+			draggable: false,
 			dots: true,
 			afterChange: this.props.currentSlide
 		};
