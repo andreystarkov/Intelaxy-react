@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 
-import first from '../../../img/portfolio/1.png';
-import second from '../../../img/portfolio/2.png';
-import third from '../../../img/portfolio/3.png';
-import fourth from '../../../img/portfolio/4.png';
-import sixth from '../../../img/portfolio/6.png';
-import seventh from '../../../img/portfolio/7.png';
-import eighth from '../../../img/portfolio/8.png';
-import ninth from '../../../img/portfolio/9.png';
-import tenth from '../../../img/portfolio/10.png';
+import first from '../../../img/portfolio/walexy/1.png';
+import second from '../../../img/portfolio/walexy/2.png';
+import third from '../../../img/portfolio/walexy/3.png';
+import fourth from '../../../img/portfolio/walexy/4.png';
+import sixth from '../../../img/portfolio/walexy/6.png';
+import seventh from '../../../img/portfolio/walexy/7.png';
+import eighth from '../../../img/portfolio/walexy/8.png';
+import ninth from '../../../img/portfolio/walexy/9.png';
+import tenth from '../../../img/portfolio/walexy/5.png';
+
+import firstFB from '../../../img/portfolio/fatburn/1.png';
+import secondFB from '../../../img/portfolio/fatburn/2.png';
+import thirdFB from '../../../img/portfolio/fatburn/3.png';
+import fourthFB from '../../../img/portfolio/fatburn/4.png';
+import sixthFB from '../../../img/portfolio/fatburn/6.png';
+import seventhFB from '../../../img/portfolio/fatburn/7.png';
+import eighthFB from '../../../img/portfolio/fatburn/8.png';
+import ninthFB from '../../../img/portfolio/fatburn/9.png';
+import tenthFB from '../../../img/portfolio/fatburn/5.png';
+
+import firstTD from '../../../img/portfolio/todoya/calendar.png';
+import secondTD from '../../../img/portfolio/todoya/page1.png';
+import thirdTD from '../../../img/portfolio/todoya/page2.png';
+import fourthTD from '../../../img/portfolio/todoya/page3.png';
+import sixthTD from '../../../img/portfolio/todoya/panel.png';
+import seventhTD from '../../../img/portfolio/todoya/prof.png';
+import eighthTD from '../../../img/portfolio/todoya/proj.png';
+import ninthTD from '../../../img/portfolio/todoya/sign.png';
 
 class PortfolioMobile extends Component {
 
@@ -38,26 +57,25 @@ class PortfolioMobile extends Component {
 					<img src={sixth} className="sixth" alt=""/>
 				</div>
 				<div className="portfolio-mobile">
-					<img src={first} className="first" alt=""/>
-					<img src={second} className="second" alt=""/>
-					<img src={third} className="third" alt=""/>
-					<img src={fourth} className="fourth" alt=""/>
-					<img src={tenth} className="tenth" alt=""/>
-					<img src={seventh} className="seventh" alt=""/>
-					<img src={eighth} className="eighth" alt=""/>
-					<img src={ninth} className="ninth" alt=""/>
-					<img src={sixth} className="sixth" alt=""/>
+					<img src={firstFB} className="first" alt=""/>
+					<img src={secondFB} className="second" alt=""/>
+					<img src={thirdFB} className="third" alt=""/>
+					<img src={fourthFB} className="fourth" alt=""/>
+					<img src={tenthFB} className="tenth" alt=""/>
+					<img src={seventhFB} className="seventh" alt=""/>
+					<img src={eighthFB} className="eighth" alt=""/>
+					<img src={ninthFB} className="ninth" alt=""/>
+					<img src={sixthFB} className="sixth" alt=""/>
 				</div>
 				<div className="portfolio-mobile">
-					<img src={first} className="first" alt=""/>
-					<img src={second} className="second" alt=""/>
-					<img src={third} className="third" alt=""/>
-					<img src={fourth} className="fourth" alt=""/>
-					<img src={tenth} className="tenth" alt=""/>
-					<img src={seventh} className="seventh" alt=""/>
-					<img src={eighth} className="eighth" alt=""/>
-					<img src={ninth} className="ninth" alt=""/>
-					<img src={sixth} className="sixth" alt=""/>
+					<img className="secondTD" src={secondTD}/>
+					<img className="thirdTD" src={thirdTD}/>
+					<img className="fourthTD" src={fourthTD}/>
+					<img className="eighthTD" src={eighthTD}/>
+					<img className="seventhTD" src={seventhTD}/>
+					<img className="firstTD" src={firstTD}/>
+					<img className="sixthTD" src={sixthTD}/>
+					<img className="ninthTD" src={ninthTD}/>
 				</div>
 			</Slider>
 		)

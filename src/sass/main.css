@@ -365,12 +365,9 @@ html, body {
     width: 100%;
     max-height: 900px;
     display: flex;
-    justify-content: center;
-    background: linear-gradient(to right, #26bf59, #4ede7e); }
+    justify-content: center; }
     .app-container .second-screen > .footer .parallax {
-      max-width: 1440px;
-      width: 100%;
-      min-height: 400px;
+      width: 1440px;
       height: auto;
       position: relative;
       padding: 0px; }
@@ -379,62 +376,121 @@ html, body {
         width: 100%;
         height: auto; }
     .app-container .second-screen > .footer .parallax .first, .app-container .second-screen > .footer .portfolio-mobile .first {
-      top: 4%;
-      left: 2%;
+      top: 1%;
+      left: 1%;
       position: absolute; }
     .app-container .second-screen > .footer .parallax .second, .app-container .second-screen > .footer .portfolio-mobile .second {
-      top: 24%;
-      left: 7%;
+      top: 1%;
+      left: 31%;
       position: absolute; }
     .app-container .second-screen > .footer .parallax .third, .app-container .second-screen > .footer .portfolio-mobile .third {
-      top: 42%;
-      left: 14%;
-      position: absolute; }
-    .app-container .second-screen > .footer .parallax .fourth, .app-container .second-screen > .footer .portfolio-mobile .fourth {
-      top: 60%;
-      left: 21%;
-      position: absolute; }
-    .app-container .second-screen > .footer .parallax .tenth, .app-container .second-screen > .footer .portfolio-mobile .tenth {
-      top: 4%;
-      left: 30%;
-      position: absolute; }
-    .app-container .second-screen > .footer .parallax .seventh, .app-container .second-screen > .footer .portfolio-mobile .seventh {
-      top: 20%;
-      left: 40%;
-      position: absolute; }
-    .app-container .second-screen > .footer .parallax .eighth, .app-container .second-screen > .footer .portfolio-mobile .eighth {
-      top: 36%;
-      left: 50%;
-      position: absolute; }
-    .app-container .second-screen > .footer .parallax .ninth, .app-container .second-screen > .footer .portfolio-mobile .ninth {
-      top: 52%;
+      top: 1%;
       left: 60%;
       position: absolute; }
+    .app-container .second-screen > .footer .parallax .fourth, .app-container .second-screen > .footer .portfolio-mobile .fourth {
+      top: 31%;
+      left: 6%;
+      position: absolute; }
     .app-container .second-screen > .footer .parallax .sixth, .app-container .second-screen > .footer .portfolio-mobile .sixth {
-      top: 4%;
-      left: 67%;
+      top: 31%;
+      left: 35%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .tenth, .app-container .second-screen > .footer .portfolio-mobile .tenth {
+      top: 31%;
+      left: 63%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .seventh, .app-container .second-screen > .footer .portfolio-mobile .seventh {
+      top: 62%;
+      left: 9%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .eighth, .app-container .second-screen > .footer .portfolio-mobile .eighth {
+      top: 62%;
+      left: 37%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .ninth, .app-container .second-screen > .footer .portfolio-mobile .ninth {
+      top: 62%;
+      left: 66%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .secondTD, .app-container .second-screen > .footer .portfolio-mobile .secondTD {
+      top: 7%;
+      left: 57%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .thirdTD, .app-container .second-screen > .footer .portfolio-mobile .thirdTD {
+      top: 33%;
+      left: 31%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .fourthTD, .app-container .second-screen > .footer .portfolio-mobile .fourthTD {
+      top: 59%;
+      left: 3%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .eighthTD, .app-container .second-screen > .footer .portfolio-mobile .eighthTD {
+      top: 21%;
+      left: 80%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .seventhTD, .app-container .second-screen > .footer .portfolio-mobile .seventhTD {
+      top: 35%;
+      left: 42%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .firstTD, .app-container .second-screen > .footer .portfolio-mobile .firstTD {
+      top: 80%;
+      left: 23%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .sixthTD, .app-container .second-screen > .footer .portfolio-mobile .sixthTD {
+      top: 20%;
+      left: 20%;
+      position: absolute; }
+    .app-container .second-screen > .footer .parallax .ninthTD, .app-container .second-screen > .footer .portfolio-mobile .ninthTD {
+      top: 63%;
+      left: 61%;
       position: absolute; }
     .app-container .second-screen > .footer .portfolio-mobile {
-      max-width: 1440px;
-      width: 100%;
+      width: 768px;
       min-height: 400px;
       height: auto;
       position: relative;
       padding: 0px; }
       .app-container .second-screen > .footer .portfolio-mobile img {
-        max-width: 250px;
-        width: 100%;
+        width: 230px;
         height: auto;
         position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .secondTD {
+        top: -5%;
+        left: 54%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .thirdTD {
+        top: 26%;
+        left: 27%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .fourthTD {
+        top: 57%;
+        left: 0%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .eighthTD {
+        top: 15%;
+        left: 84%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .seventhTD {
+        top: 28%;
+        left: 41%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .firstTD {
+        top: 89%;
+        left: 24%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .sixthTD {
+        top: 10%;
+        left: 15%;
+        position: absolute; }
+      .app-container .second-screen > .footer .portfolio-mobile .ninthTD {
+        top: 66%;
+        left: 62%;
+        position: absolute; }
     .app-container .second-screen > .footer .slick-slider {
-      max-width: 1440px;
-      width: 100%;
+      width: 1440px;
       min-height: 400px;
       height: auto; }
       .app-container .second-screen > .footer .slick-slider .slick-list .slick-track .slick-slide {
-        overflow: hidden;
-        width: 100%;
-        height: 100%; }
+        overflow: hidden; }
         .app-container .second-screen > .footer .slick-slider .slick-list .slick-track .slick-slide.parallax {
           height: 900px;
           position: relative; }
@@ -1081,7 +1137,19 @@ html, body {
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 2560px) {
   .app-container .second-screen .header .line {
-    border-width: 0 90px; } }
+    border-width: 0 90px; }
+  .app-container .second-screen > .footer .parallax .layers img {
+    max-width: 500px; }
+  .app-container .second-screen > .footer .parallax .layers .secondTD, .app-container .second-screen > .footer .parallax .layers .thirdTD, .app-container .second-screen > .footer .parallax .layers .fourthTD {
+    max-width: 600px; }
+  .app-container .second-screen > .footer .parallax .layers .eighthTD, .app-container .second-screen > .footer .parallax .layers .seventhTD {
+    max-width: 230px; }
+  .app-container .second-screen > .footer .parallax .layers .firstTD {
+    max-width: 180px; }
+  .app-container .second-screen > .footer .parallax .layers .sixthTD {
+    max-width: 310px; }
+  .app-container .second-screen > .footer .parallax .layers .ninthTD {
+    max-width: 260px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1440px) {
@@ -1089,6 +1157,16 @@ html, body {
     border-width: 0 6vw; }
   .app-container > .second-screen > .footer .parallax .layers img {
     max-width: 500px; }
+  .app-container > .second-screen > .footer .parallax .layers .secondTD, .app-container > .second-screen > .footer .parallax .layers .thirdTD, .app-container > .second-screen > .footer .parallax .layers .fourthTD {
+    max-width: 600px; }
+  .app-container > .second-screen > .footer .parallax .layers .eighthTD, .app-container > .second-screen > .footer .parallax .layers .seventhTD {
+    max-width: 230px; }
+  .app-container > .second-screen > .footer .parallax .layers .firstTD {
+    max-width: 180px; }
+  .app-container > .second-screen > .footer .parallax .layers .sixthTD {
+    max-width: 310px; }
+  .app-container > .second-screen > .footer .parallax .layers .ninthTD {
+    max-width: 260px; }
   .app-container > .third-screen > .header > .row > div {
     padding-left: 0;
     padding-right: 0; }
@@ -1106,7 +1184,7 @@ html, body {
   .app-container > .second-screen .header .line {
     border-width: 0 6vw; }
   .app-container > .second-screen > .footer .parallax .layers img {
-    max-width: 450px; } }
+    max-width: 500px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
@@ -1124,7 +1202,7 @@ html, body {
     html body .app-container > .second-screen .header .line {
       border-width: 0 80px; }
     html body .app-container > .second-screen > .footer .parallax .layers img {
-      max-width: 380px; }
+      max-width: 500px; }
     html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
       height: 650px; }
     html body .app-container > footer > .row > form {
@@ -1164,6 +1242,23 @@ html, body {
         margin-bottom: 40px; }
         html body .app-container > .second-screen .row .body .slick-slider .react p, html body .app-container > .second-screen .row .body .slick-slider .rails p, html body .app-container > .second-screen .row .body .slick-slider .ios p, html body .app-container > .second-screen .row .body .slick-slider .android p {
           margin-bottom: 32px; }
+    html body .app-container > .second-screen .footer .portfolio-mobile {
+      min-width: 320px; }
+    html body .app-container > .second-screen .footer .slick-slider {
+      max-width: 768px;
+      width: 100%;
+      min-height: 400px;
+      height: auto; }
+      html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .secondTD, html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .thirdTD, html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .fourthTD {
+        width: 400px; }
+      html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .eighthTD, html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .seventhTD {
+        width: 145px; }
+      html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .firstTD {
+        width: 135px; }
+      html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .sixthTD {
+        width: 200px; }
+      html body .app-container > .second-screen .footer .slick-slider .slick-list .slick-track .slick-slide .ninthTD {
+        width: 180px; }
     html body .app-container > .second-screen .footer > img {
       width: 645px; }
     html body .app-container > .second-screen .footer > .title > .col-md-4, html body .app-container > .second-screen .footer > .title .col-sm-4, html body .app-container > .second-screen .footer > .title .col-xs-4 {
@@ -1303,8 +1398,14 @@ html, body {
       font-size: 14px;
       font-weight: 500;
       letter-spacing: -0.2px; }
-  html body .app-container > .second-screen > .footer .portfolio-mobile img {
-    max-width: 160px; } }
+  html body .app-container > .second-screen > .footer .portfolio-mobile {
+    min-width: 320px; }
+  html body .app-container > .second-screen > .footer .slick-slider {
+    max-width: 600px;
+    min-width: 600px;
+    width: 100%;
+    min-height: 400px;
+    height: auto; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

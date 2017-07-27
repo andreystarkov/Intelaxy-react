@@ -36,14 +36,16 @@ class ViewPort extends Component {
 			newViewPort = 'mobile'
 		}
 
-		if (viewPort !== newViewPort) {
+		if (viewPort.viewPort.viewPort !== newViewPort) {
+			console.log('viewPort.viewPort', viewPort.viewPort.viewPort)
+			console.log('newViewPort', newViewPort)
 			changeViewPort(newViewPort, width)
 		}
 
 	};
 
 	render () {
-		console.log(this.props.viewPort.viewPort);
+		// console.log(this.props.viewPort.viewPort);
 		return null
 	}
 }

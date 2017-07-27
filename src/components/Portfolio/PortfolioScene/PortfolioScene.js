@@ -2,15 +2,34 @@ import React, {Component} from 'react';
 import Parallax from 'parallax-js';
 import Slider from 'react-slick';
 
-import first from '../../../img/portfolio/1.png';
-import second from '../../../img/portfolio/2.png';
-import third from '../../../img/portfolio/3.png';
-import fourth from '../../../img/portfolio/4.png';
-import sixth from '../../../img/portfolio/6.png';
-import seventh from '../../../img/portfolio/7.png';
-import eighth from '../../../img/portfolio/8.png';
-import ninth from '../../../img/portfolio/9.png';
-import tenth from '../../../img/portfolio/10.png';
+import first from '../../../img/portfolio/walexy/1.png';
+import second from '../../../img/portfolio/walexy/2.png';
+import third from '../../../img/portfolio/walexy/3.png';
+import fourth from '../../../img/portfolio/walexy/4.png';
+import sixth from '../../../img/portfolio/walexy/6.png';
+import seventh from '../../../img/portfolio/walexy/7.png';
+import eighth from '../../../img/portfolio/walexy/8.png';
+import ninth from '../../../img/portfolio/walexy/9.png';
+import tenth from '../../../img/portfolio/walexy/5.png';
+
+import firstFB from '../../../img/portfolio/fatburn/1.png';
+import secondFB from '../../../img/portfolio/fatburn/2.png';
+import thirdFB from '../../../img/portfolio/fatburn/3.png';
+import fourthFB from '../../../img/portfolio/fatburn/4.png';
+import sixthFB from '../../../img/portfolio/fatburn/6.png';
+import seventhFB from '../../../img/portfolio/fatburn/7.png';
+import eighthFB from '../../../img/portfolio/fatburn/8.png';
+import ninthFB from '../../../img/portfolio/fatburn/9.png';
+import tenthFB from '../../../img/portfolio/fatburn/5.png';
+
+import firstTD from '../../../img/portfolio/todoya/calendar.png';
+import secondTD from '../../../img/portfolio/todoya/page1.png';
+import thirdTD from '../../../img/portfolio/todoya/page2.png';
+import fourthTD from '../../../img/portfolio/todoya/page3.png';
+import sixthTD from '../../../img/portfolio/todoya/panel.png';
+import seventhTD from '../../../img/portfolio/todoya/prof.png';
+import eighthTD from '../../../img/portfolio/todoya/proj.png';
+import ninthTD from '../../../img/portfolio/todoya/sign.png';
 
 class PortfolioScene extends Component {
 	componentDidMount() {
@@ -46,96 +65,93 @@ class PortfolioScene extends Component {
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
-					<div className="layers" data-depth="0.10"  >
+					<div className="layers" data-depth="0.20"  >
 						<img className="first" src={first}/>
 					</div>
-					<div className="layers" data-depth="0.20">
+					<div className="layers" data-depth="0.30">
 						<img className="second" src={second}/>
 					</div>
-					<div className="layers" data-depth="0.30">
+					<div className="layers" data-depth="0.40">
 						<img className="third" src={third}/>
 					</div>
-					<div className="layers" data-depth="0.40">
+					<div className="layers" data-depth="0.50">
 						<img className="fourth" src={fourth}/>
 					</div>
-					<div className="layers" data-depth="0.50">
-						<img className="tenth" src={tenth}/>
+					<div className="layers" data-depth="0.10">
+						<img className="sixth" src={sixth}/>
 					</div>
 					<div className="layers" data-depth="0.60">
-						<img className="seventh" src={seventh}/>
+						<img className="tenth" src={tenth}/>
 					</div>
 					<div className="layers" data-depth="0.70">
-						<img className="eighth" src={eighth}/>
+						<img className="seventh" src={seventh}/>
 					</div>
 					<div className="layers" data-depth="0.80">
-						<img className="ninth" src={ninth}/>
+						<img className="eighth" src={eighth}/>
 					</div>
 					<div className="layers" data-depth="0.90">
-						<img className="sixth" src={sixth}/>
+						<img className="ninth" src={ninth}/>
 					</div>
 				</div>
 				<div ref={el => this.scene2 = el} className="parallax"
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
-					<div className="layers" data-depth="0.10"  >
-						<img className="first" src={first}/>
-					</div>
-					<div className="layers" data-depth="0.20">
-						<img className="second" src={second}/>
+					<div className="layers" data-depth="0.20"  >
+						<img className="first" src={firstFB}/>
 					</div>
 					<div className="layers" data-depth="0.30">
-						<img className="third" src={third}/>
+						<img className="second" src={secondFB}/>
 					</div>
 					<div className="layers" data-depth="0.40">
-						<img className="fourth" src={fourth}/>
+						<img className="third" src={thirdFB}/>
 					</div>
 					<div className="layers" data-depth="0.50">
-						<img className="tenth" src={tenth}/>
+						<img className="fourth" src={fourthFB}/>
+					</div>
+					<div className="layers" data-depth="0.10">
+						<img className="sixth" src={sixthFB}/>
 					</div>
 					<div className="layers" data-depth="0.60">
-						<img className="seventh" src={seventh}/>
+						<img className="tenth" src={tenthFB}/>
 					</div>
 					<div className="layers" data-depth="0.70">
-						<img className="eighth" src={eighth}/>
+						<img className="seventh" src={seventhFB}/>
 					</div>
 					<div className="layers" data-depth="0.80">
-						<img className="ninth" src={ninth}/>
+						<img className="eighth" src={eighthFB}/>
 					</div>
 					<div className="layers" data-depth="0.90">
-						<img className="sixth" src={sixth}/>
+						<img className="ninth" src={ninthFB}/>
 					</div>
 				</div>
 				<div ref={el => this.scene3 = el} className="parallax"
 						 data-scalar-x="2"
 						 data-scalar-y="3"
 				>
-					<div className="layers" data-depth="0.10"  >
-						<img className="first" src={first}/>
+					<div className="layers" data-depth="0.10">
+						<img className="secondTD" src={secondTD}/>
 					</div>
 					<div className="layers" data-depth="0.20">
-						<img className="second" src={second}/>
+						<img className="thirdTD" src={thirdTD}/>
 					</div>
 					<div className="layers" data-depth="0.30">
-						<img className="third" src={third}/>
+						<img className="fourthTD" src={fourthTD}/>
 					</div>
 					<div className="layers" data-depth="0.40">
-						<img className="fourth" src={fourth}/>
+						<img className="eighthTD" src={eighthTD}/>
 					</div>
 					<div className="layers" data-depth="0.50">
-						<img className="tenth" src={tenth}/>
+						<img className="seventhTD" src={seventhTD}/>
 					</div>
-					<div className="layers" data-depth="0.60">
-						<img className="seventh" src={seventh}/>
+					<div className="layers" data-depth="0.60" >
+						<img className="firstTD" src={firstTD}/>
 					</div>
 					<div className="layers" data-depth="0.70">
-						<img className="eighth" src={eighth}/>
+						<img className="sixthTD" src={sixthTD}/>
 					</div>
 					<div className="layers" data-depth="0.80">
-						<img className="ninth" src={ninth}/>
-					</div>
-					<div className="layers" data-depth="0.90">
-						<img className="sixth" src={sixth}/>
+						<img className="ninthTD" src={ninthTD}/>
 					</div>
 				</div>
 			</Slider>

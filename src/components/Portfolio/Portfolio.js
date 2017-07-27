@@ -11,17 +11,20 @@ class Portfolio extends Component {
 
 		this.portfolio = [{
 			title: '1 Планировщик задач',
-			name: '1 TODOYA'
+			name: 'WALEXY',
+			background: 'linear-gradient(to right, #26bf59, #4ede7e)'
 		}, {
 			title: '2 Планировщик задач',
-			name: '2 TODOYA'
+			name: 'FATBURN',
+			background: 'linear-gradient(to right, #ff931e, #ffaa4d)'
 		}, {
 			title: '3 Планировщик задач',
-			name: '3 TODOYA'
+			name: '3 TODOYA',
+			background: 'linear-gradient(to right, #62F8CD, #66F9D8)'
 		}];
 
 		this.state = {
-			activeSlide: 1
+			activeSlide: 0
 		}
 	}
 
@@ -32,11 +35,13 @@ class Portfolio extends Component {
 
 	render() {
 		const { viewPort } = this.props.appReducer.viewPort;
-		console.log(this.state)
+		const backgroundStyle = {
+			background: this.portfolio[this.state.activeSlide].background
+		};
 		return (
 			<div className="second-screen">
 
-				<div className="footer">
+				<div className="footer" style={backgroundStyle}>
 
 					{(viewPort === 'desktopHD' || viewPort === 'desktop' || viewPort === 'desktopSmall')
 
