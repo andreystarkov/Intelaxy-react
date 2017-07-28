@@ -1149,7 +1149,9 @@ html, body {
   .app-container .second-screen > .footer .parallax .layers .sixthTD {
     max-width: 310px; }
   .app-container .second-screen > .footer .parallax .layers .ninthTD {
-    max-width: 260px; } }
+    max-width: 260px; }
+  .app-container .second-screen > .footer .slick-slider {
+    width: 1700px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1440px) {
@@ -1167,6 +1169,8 @@ html, body {
     max-width: 310px; }
   .app-container > .second-screen > .footer .parallax .layers .ninthTD {
     max-width: 260px; }
+  .app-container > .second-screen > .footer .slick-slider {
+    width: 1440px; }
   .app-container > .third-screen > .header > .row > div {
     padding-left: 0;
     padding-right: 0; }

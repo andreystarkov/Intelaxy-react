@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ReactSvg = ({react} ) => {
+const ReactSvg = ({react, className} ) => {
 	return (
 		<svg ref={react} xmlns="http://www.w3.org/2000/svg" width="123" height="110" viewBox="0 0 123 110"
-				 className="react-anim" id="react-anim">
+				 className={className} id="react-anim">
 			<g fill="#00D8FF" fillRule="nonzero">
 				<ellipse cx="61.507" cy="54.601" rx="10.969" ry="10.981"/>
 				<path

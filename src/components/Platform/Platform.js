@@ -25,6 +25,7 @@ class Platform extends Component {
 			className: 'platform react col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-1 col-xs-offset-2',
 			classNameMobile: 'platform react',
 			img: ReactSvg,
+			classNameSvg: 'react-anim',
 			name: 'react',
 			color: '#00D8FF'
 		}, {
@@ -32,6 +33,7 @@ class Platform extends Component {
 			className: 'platform rails col-md-2 col-sm-2',
 			classNameMobile: 'platform rails',
 			img: RailsSvg,
+			classNameSvg: 'rails-anim',
 			name: 'rails',
 			color: '#D0011B'
 		}, {
@@ -39,6 +41,7 @@ class Platform extends Component {
 			className: 'platform ios col-md-2 col-sm-2',
 			classNameMobile: 'platform ios',
 			img: IosSvg,
+			classNameSvg: 'ios-anim',
 			name: 'ios',
 			color: '#0A0C0F'
 		}, {
@@ -46,6 +49,7 @@ class Platform extends Component {
 			className: 'platform android col-md-2 col-sm-2',
 			classNameMobile: 'platform android',
 			img: AndroidSvg,
+			classNameSvg: 'android-anim',
 			name: 'android',
 			color: '#7ED321'
 		}];
@@ -87,13 +91,22 @@ class Platform extends Component {
 
 	componentDidMount() {
 		console.log('el', this.path);
+		console.log('update');
 	}
 
 	componentDidUpdate() {
-		setTimeout( () => this.slider.slickGoTo(this.state.activePlatform));
+		setTimeout( () => this.slider.slickGoTo(this.state.activePlatform) );
+
 	}
 
 	changeHandler = (slide) => {
+		const active = document.getElementsByClassName('avtivePlatform');
+		const selectorActive = active[0].getElementsByTagName('path');
+		const selectorActiveEclipes = active[0].getElementsByTagName('ellipse');
+
+		this.reverseDrowElement(selectorActive, '#9b9b9b');
+		this.reverseDrowElement(selectorActiveEclipes, '#9b9b9b');
+
 		this.setState({ activePlatform: slide });
 
 	};
@@ -137,17 +150,52 @@ class Platform extends Component {
 		});
 		anime({
 			targets: selector,
-			strokeDashoffset: [anime.setDashoffset, 0],
-			easing: 'linear',
-			duration: 700,
-			delay: function(el, i) { return i * 250 },
-			// direction: 'alternate',
-			complete: function complete() {
-				$(selector).css({
-					'fill': color,
-					'strokeOpacity': '0'
-				})
-			}
+			strokeDashoffset: {
+				value: el => {
+					const pathLength = el.getTotalLength();
+					el.setAttribute('stroke-dasharray', pathLength);
+					return [-pathLength, 0];
+				},
+				easing: 'linear',
+				delay: function delay(e, i) {
+					return i * anime.random(150, 350);
+				}
+			},
+			strokeWidth: {
+				value: ['1px', '2px'],
+				duration: 600,
+				delay: function delay(e, i) {
+					return i * anime.random(10, 450);
+				}
+			},
+			elasticity: anime.random(300, 500),
+			duration: anime.random(400, 880),
+			complete: (e) => {
+				anime({
+						targets: selector,
+						fillOpacity: {
+							value: [0, 1],
+							delay: function delay(e, i) {
+								return i * 70;
+							},
+							duration: 2700
+						},
+						strokeOpacity: {
+							value: [1, 0],
+							delay: function delay(e, i) {
+								return i * 180;
+							},
+							duration: 3200,
+							complete: () => {
+								$(selector).css({
+									'fill': color,
+									'stroke-opacity': '1'
+								})
+							}
+						}
+					}
+				)
+			},
 		});
 	};
 
@@ -158,25 +206,123 @@ class Platform extends Component {
 			'stroke-opacity': '1',
 			'stroke-width': '1px',
 			'opacity': '1',
-			'fill-opacity': '1',
+			'fill-opacity': '0',
 			'fill': 'none'
 		});
 		anime({
 			targets: selector,
-			strokeDashoffset: [anime.setDashoffset, 0],
-			easing: 'linear',
-			duration: 700,
-			delay: function(el, i) { return i * 250 },
+			strokeDashoffset: {
+				value: el => {
+					const pathLength = el.getTotalLength();
+					el.setAttribute('stroke-dasharray', pathLength);
+					return [-pathLength, 0];
+				},
+				easing: 'linear',
+				delay: function delay(e, i) {
+					return i * anime.random(150, 350);
+				}
+			},
+			strokeWidth: {
+				value: ['2px', '1px'],
+				duration: 600,
+				delay: 1500
+			},
+			elasticity: anime.random(300, 500),
+			duration: anime.random(400, 880),
 			direction: 'reverse',
-			complete: function complete() {
-				$(selector).css({
-					'fill': 'none',
-					'stroke': '#9b9b9b',
-					'stroke-opacity': '1',
-					'stroke-dashoffset': '1',
-					'stroke-width': '1'
-				})
-			}
+			begin: (e) => {
+				anime({
+					targets: selector,
+					fillOpacity: {
+						value: [0, 1],
+						delay: function delay(e, i) {
+							return i * 70;
+						},
+						duration: 1700
+					},
+					strokeOpacity: {
+						value: [0.1, 1],
+						delay: function delay(e, i) {
+							return i * 180;
+						},
+						duration: 2200
+					},
+					direction: 'reverse',
+					complete: () => {
+						$(selector).css({
+							'fill': 'none',
+							'stroke': '#9b9b9b',
+							'stroke-opacity': '1',
+							'stroke-dashoffset': '1',
+							'stroke-width': '1'
+						})
+					}
+				});
+			},
+		});
+	};
+
+	reverseDrowActiveElement = (selector, color) => {
+		anime.remove(selector);
+		$(selector).css({
+			'stroke': color,
+			'stroke-opacity': '1',
+			'stroke-width': '1px',
+			'opacity': '1',
+			'fill-opacity': '0',
+			'fill': 'none'
+		});
+		anime({
+			targets: selector,
+			strokeDashoffset: {
+				value: el => {
+					const pathLength = el.getTotalLength();
+					el.setAttribute('stroke-dasharray', pathLength);
+					return [-pathLength, 0];
+				},
+				easing: 'linear',
+				delay: function delay(e, i) {
+					return i * anime.random(150, 350);
+				}
+			},
+			strokeWidth: {
+				value: ['2px', '1px'],
+				duration: 600,
+				delay: 1500
+			},
+			elasticity: anime.random(300, 500),
+			duration: anime.random(400, 880),
+			direction: 'reverse',
+			begin: (e) => {
+				anime({
+					targets: selector,
+					fillOpacity: {
+						value: [0, 1],
+						delay: function delay(e, i) {
+							return i * 70;
+						},
+						duration: 1700
+					},
+					strokeOpacity: {
+						value: [0.1, 1],
+						delay: function delay(e, i) {
+							return i * 180;
+						},
+						duration: 2200
+					},
+					direction: 'reverse',
+					complete: () => {
+						$(selector).css({
+							'fill': color,
+							'fill-opacity': '1',
+							'stroke': color,
+							'stroke-opacity': '1',
+							'stroke-dashoffset': '1',
+							'stroke-width': '1'
+						})
+					}
+				});
+			},
 		});
 	};
 
@@ -196,6 +342,14 @@ class Platform extends Component {
 		this.reverseDrowElement(selectorElipse, color);
 	};
 
+	drawStrokeActiveReverse = (platform, color) => {
+		const selectors = document.getElementById(`${platform}-anim`);
+		const selectorPath = selectors.getElementsByTagName('path');
+		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		this.reverseDrowActiveElement(selectorPath, color);
+		this.reverseDrowActiveElement(selectorElipse, color);
+	};
+
 	render() {
 		const { viewPort } = this.props.appReducer.viewPort;
 		return (
@@ -213,17 +367,23 @@ class Platform extends Component {
 									'active': index === this.state.activePlatform
 								});
 
+								const classesSvg = classNames(platform.classNameSvg, {
+									'avtivePlatform': index === this.state.activePlatform
+								});
+
 								return (
 									<div
 										key={`platform-${index}`}
 										className={classes}
 										onMouseEnter={() => this.drawStroke(platform.name, platform.color)}
-										onMouseLeave={() => this.drawStrokeReverse(platform.name, platform.color)}
+										onMouseLeave={ index === this.state.activePlatform
+											?	() => this.drawStrokeActiveReverse(platform.name, platform.color)
+											:	() => this.drawStrokeReverse(platform.name, platform.color) }
 										onClick={() => this.changeHandler(index)}
 									>
 										<div className="empty-box"/>
 										<div className="logo">
-											<platform.img react={c => this.path = c}/>
+											<platform.img react={c => this.path = c} className={classesSvg} />
 										</div>
 										<h3>{platform.title}</h3>
 									</div>
