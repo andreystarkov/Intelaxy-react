@@ -364,7 +364,6 @@ html, body {
     max-width: 2560px;
     width: 100%;
     max-height: 900px;
-    display: flex;
     justify-content: center; }
     .app-container .second-screen > .footer .parallax {
       width: 1440px;
@@ -502,6 +501,14 @@ html, body {
               position: absolute; }
       .app-container .second-screen > .footer .slick-slider .slick-dots {
         bottom: 10px; }
+        .app-container .second-screen > .footer .slick-slider .slick-dots li {
+          margin: 0 7px; }
+          .app-container .second-screen > .footer .slick-slider .slick-dots li button:before {
+            color: #fff;
+            font-size: 15px;
+            opacity: .5; }
+          .app-container .second-screen > .footer .slick-slider .slick-dots li.slick-active button:before {
+            opacity: 1; }
     .app-container .second-screen > .footer > img {
       max-width: 1440px;
       width: 100%;
@@ -952,6 +959,146 @@ html, body {
           .app-container .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
             max-width: 720px;
             width: 100%; }
+  .app-container .section-technologies {
+    height: 1032px;
+    position: relative;
+    background-color: #f0f6fa;
+    display: flex;
+    justify-content: center; }
+    .app-container .section-technologies > .wrap-technologies {
+      height: 100%;
+      padding: 6.25% 19.45%; }
+      .app-container .section-technologies > .wrap-technologies > .wrap-row {
+        width: 100%;
+        display: flex; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology {
+          width: 144px;
+          height: 144px;
+          background-color: transparent;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-position: center; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.slack {
+            border: solid 1px #25cbaa;
+            background-image: url("../img/roadmap/slack.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby {
+            border: solid 1px #ffc100;
+            background-image: url("../img/roadmap/ruby.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.in {
+            border: solid 1px #ff2a63;
+            background-image: url("../img/roadmap/in.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.p {
+            border: solid 1px #7f3db6;
+            background-image: url("../img/roadmap/p.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.react {
+            border: solid 1px #35b877;
+            background-image: url("../img/roadmap/react.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin {
+            border: solid 1px #f89920;
+            background-image: url("../img/roadmap/zeplin.svg"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim {
+            border: solid 1px #000000;
+            background-image: url("../img/roadmap/vim.png"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta {
+            border: solid 1px #0079ff;
+            background-image: url("../img/roadmap/penta.png"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat {
+            border: solid 1px #019ee1;
+            background-image: url("../img/roadmap/hat.png"); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app {
+            background-image: url("../img/roadmap/appstore.svg");
+            border-radius: 0;
+            width: 120px; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.android {
+            background-image: url("../img/roadmap/playmarket.svg");
+            border-radius: 0;
+            width: 120px; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line {
+          flex: 1;
+          align-self: center;
+          height: 2px;
+          object-fit: contain;
+          border-style: solid;
+          border-width: 1px;
+          border-image-slice: 1; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first {
+            position: relative;
+            border-image-source: linear-gradient(to right, #24ccaa, #ffc100); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first:after {
+              position: absolute;
+              content: '';
+              width: 12px;
+              height: 12px;
+              top: -5px;
+              left: calc(50% - 6px);
+              background-image: url("../img/roadmap/line.svg");
+              background-repeat: no-repeat; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.second {
+            border-image-source: linear-gradient(to right, #ffc100, #ff2a63); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.third {
+            border-image-source: linear-gradient(to right, #f89920, #7f3db6); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fourth {
+            border-image-source: linear-gradient(to right, #35b877, #f89920); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fifth {
+            border-image-source: linear-gradient(to right, #000000, #0079ff); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.sixth {
+            border-image-source: linear-gradient(to right, #0079ff, #019ee1); }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row.first {
+          justify-content: flex-end;
+          padding-right: 71px; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row.second {
+          justify-content: flex-start;
+          padding-left: 71px; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row.third {
+          flex-direction: column;
+          align-items: flex-end;
+          padding-right: 71px;
+          padding-left: 71px;
+          margin-bottom: -71px; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row.fourth {
+          padding: 0 22.3%; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical {
+          width: 2px;
+          height: 96px;
+          object-fit: contain;
+          border-style: solid;
+          border-width: 1px;
+          border-image-slice: 1; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.one {
+            border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.two {
+            border-image-source: linear-gradient(to bottom, #35b877, #000000); }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.seventh {
+            border-image-source: linear-gradient(to right, #2096c3, #019ee1);
+            height: 83px; }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth {
+          height: 1px;
+          width: 100%;
+          display: flex;
+          flex-direction: row; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth > .left {
+            flex: 1;
+            height: 0; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth > .right {
+            flex: 1;
+            height: 1px;
+            border-style: solid;
+            border-width: 1px;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .ninth {
+          width: 100%;
+          display: flex;
+          justify-content: center; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .ninth .-center {
+            width: 2px;
+            height: 96px;
+            border-style: solid;
+            border-width: 1px;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
+        .app-container .section-technologies > .wrap-technologies > .wrap-row > .tenth {
+          border-image-source: linear-gradient(to right, #00a6b9, #4086cd); }
   .app-container > footer {
     width: 100%;
     min-height: 720px;
@@ -1151,7 +1298,9 @@ html, body {
   .app-container .second-screen > .footer .parallax .layers .ninthTD {
     max-width: 260px; }
   .app-container .second-screen > .footer .slick-slider {
-    width: 1700px; } }
+    width: 1700px; }
+  .app-container .section-technologies > .wrap-technologies {
+    padding: 90px 288px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1440px) {
@@ -1176,6 +1325,8 @@ html, body {
     padding-right: 0; }
   .app-container > .third-screen > .header > .row > .skills-offers .offer > p, .app-container > .third-screen > .header > .row > .skills-offers .skills > p {
     line-height: 2; }
+  .app-container .section-technologies > .wrap-technologies {
+    padding: 6.25% 19.45%; }
   .app-container .section-comment .Path-2-Copy-2 {
     right: calc(50% - 38%); }
   .app-container .section-comment .Path-2-Copy {

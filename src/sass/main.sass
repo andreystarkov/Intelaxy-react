@@ -394,7 +394,6 @@ html, body
 			max-width: 2560px
 			width: 100%
 			max-height: 900px
-			display: flex
 			justify-content: center
 
 			.parallax
@@ -562,7 +561,15 @@ html, body
 										position: absolute
 				.slick-dots
 					bottom: 10px
-
+					li
+						margin: 0 7px
+						button:before
+							color: #fff
+							font-size: 15px
+							opacity: .5
+						&.slick-active
+							button:before
+								opacity: 1
 			>img
 				max-width: 1440px
 				width: 100%
@@ -1105,6 +1112,148 @@ html, body
 							max-width: 720px
 							width: 100%
 
+	.section-technologies
+		height: 1032px
+		position: relative
+		background-color: #f0f6fa
+		display: flex
+		justify-content: center
+		>.wrap-technologies
+			height: 100%
+			padding: 6.25% 19.45%
+			>.wrap-row
+				width: 100%
+				display: flex
+				>.technology
+					width: 144px
+					height: 144px
+					background-color: transparent
+					//box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
+					border-radius: 50%
+					background-repeat: no-repeat
+					background-position: center
+					&.slack
+						border: solid 1px #25cbaa
+						background-image: url("../img/roadmap/slack.svg")
+					&.ruby
+						border: solid 1px #ffc100
+						background-image: url("../img/roadmap/ruby.svg")
+					&.in
+						border: solid 1px #ff2a63
+						background-image: url("../img/roadmap/in.svg")
+					&.p
+						border: solid 1px #7f3db6
+						background-image: url("../img/roadmap/p.svg")
+					&.react
+						border: solid 1px #35b877
+						background-image: url("../img/roadmap/react.svg")
+					&.zeplin
+						border: solid 1px #f89920
+						background-image: url("../img/roadmap/zeplin.svg")
+					&.vim
+						border: solid 1px #000000
+						background-image: url("../img/roadmap/vim.png")
+					&.penta
+						border: solid 1px #0079ff
+						background-image: url("../img/roadmap/penta.png")
+					&.hat
+						border: solid 1px #019ee1
+						background-image: url("../img/roadmap/hat.png")
+					&.app
+						background-image: url("../img/roadmap/appstore.svg")
+						border-radius: 0
+						width: 120px
+					&.android
+						background-image: url("../img/roadmap/playmarket.svg")
+						border-radius: 0
+						width: 120px
+				>.technology-line
+					flex: 1
+					align-self: center
+					height: 2px
+					object-fit: contain
+					border-style: solid
+					border-width: 1px
+					border-image-slice: 1
+					&.first
+						position: relative
+						border-image-source: linear-gradient(to right, #24ccaa, #ffc100)
+						&:after
+							position: absolute
+							content: ''
+							width: 12px
+							height: 12px
+							top: -5px
+							left: calc(50% - 6px)
+							background-image: url("../img/roadmap/line.svg")
+							background-repeat: no-repeat
+					&.second
+						border-image-source: linear-gradient(to right, #ffc100, #ff2a63)
+					&.third
+						border-image-source: linear-gradient(to right, #f89920, #7f3db6)
+					&.fourth
+						border-image-source: linear-gradient(to right, #35b877, #f89920)
+					&.fifth
+						border-image-source: linear-gradient(to right, #000000, #0079ff)
+					&.sixth
+						border-image-source: linear-gradient(to right, #0079ff, #019ee1)
+				&.first
+					justify-content: flex-end
+					padding-right: 71px
+				&.second
+					justify-content: flex-start
+					padding-left: 71px
+				&.third
+					flex-direction: column
+					//justify-content: flex-end
+					align-items: flex-end
+					padding-right: 71px
+					padding-left: 71px
+					margin-bottom: -71px
+				&.fourth
+					padding: 0 22.3%
+				>.technology-line-vertical
+					width: 2px
+					height: 96px
+					object-fit: contain
+					border-style: solid
+					border-width: 1px
+					border-image-slice: 1
+					&.one
+						border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6)
+					&.two
+						border-image-source: linear-gradient(to bottom, #35b877, #000000)
+					&.seventh
+						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+						height: 83px
+				>.eighth
+					height: 1px
+					width: 100%
+					display: flex
+					flex-direction: row
+					>.left
+						flex: 1
+						height: 0
+					>.right
+						flex: 1
+						height: 1px
+						border-style: solid
+						border-width: 1px
+						border-image-slice: 1
+						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+				>.ninth
+					width: 100%
+					display: flex
+					justify-content: center
+					.-center
+						width: 2px
+						height: 96px
+						border-style: solid
+						border-width: 1px
+						border-image-slice: 1
+						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+				>.tenth
+					border-image-source: linear-gradient(to right, #00a6b9, #4086cd)
 	>footer
 		//max-width: 1440px
 		width: 100%

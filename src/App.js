@@ -4,6 +4,7 @@ import Platform from './components/Platform/Platform';
 import Vacancy from './containers/Vacancy/Vacancy';
 import Portfolio from './components/Portfolio/Portfolio';
 import Comment from './components/Comment/Comment';
+import Technologies from './components/Technologies';
 import Footer from './components/Footer/Footer';
 import './sass/main.css';
 
@@ -15,7 +16,7 @@ class App extends Component {
         <Platform />
         <Portfolio />
         <Vacancy />
-        <Comment />
+        <Technologies />
         <Footer />
       </div>
     );

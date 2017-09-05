@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import scrollToElement from 'scroll-to-element';
+
 import logo_copy from '../../img/logo-copy.svg';
+import logo from '../../img/new_logo.png';
 import page_1_copy_3 from '../../img/page-1-copy-3.png';
 import page_1_copy_32x from '../../img/page-1-copy-3@2x.png';
 import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
@@ -15,9 +17,7 @@ const Header = ({ appReducer }) => {
 
 			<div className="header">
 
-				<img src={page_1_copy_3}
-						 srcSet={`${page_1_copy_32x} 2x,
-			${page_1_copy_33x} 3x`}
+				<img src={logo}
 						 className="Page-1-Copy-3" />
 
 				<img src={logo_copy}
