@@ -17,100 +17,76 @@ class Vacancy extends Component {
 		this.profession = null;
 
 		this.professions = [{
-			title: 'QA Engineer',
-			price: '100 000 – 120 000 руб.'
+			title: 'Серверный администратор Linux (DevOps)',
+			price: '40 000 - 100 000 руб.'
 		}, {
-			title: 'Support Engineer',
-			price: '100 000 – 120 000 руб.'
+			title: 'Senior React Developer',
+			price: '130 000 - 200 000 руб.'
 		}, {
-			title: 'Lead Web-разработчик',
-			price: '100 000 – 120 000 руб.'
+			title: 'Middle React Developer',
+			price: '60 000 - 130 000 руб.'
 		}, {
-			title: 'Ведущий Front-End разработчик',
-			price: '100 000 – 120 000 руб.'
+			title: 'Junior React Developer',
+			price: '20 000 - 60 000 руб.'
 		}, {
-			title: 'Ведущий Web-разработчик',
-			price: '100 000 – 120 000 руб.'
-		}, {
-			title: 'HTML-верстальщик',
-			price: '100 000 – 120 000 руб.'
+			title: 'Ruby Developer',
+			price: '80 000 - 200 000 руб.'
 		}];
 
 		this.professionSkills = [{
-			title: 'Ключевые навыки QA Engineer',
-			firstSkill: 'Первый навык QA Engineer',
-			secondSkill: 'Второй навык QA Engineer',
-			thirdSkill: 'Третий навык подлиннее QA Engineer',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) QA Engineer'
+			title: 'Ключевые навыки',
+			firstSkill: 'Опыт админ. Linux от 2х лет',
+			secondSkill: 'Оптимизация производительности',
+			thirdSkill: 'Написание скриптов Shell / Bash',
+			fourthSkill: 'Linux мониторинг и диагностика',
+			fifthSkill: 'Резервное копирование/восстановление'
 		}, {
-			title: 'Ключевые навыки Support Engineer',
-			firstSkill: 'Первый навык Support Engineer',
-			secondSkill: 'Второй навык Support Engineer',
-			thirdSkill: 'Третий навык подлиннее Support Engineer',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Support Engineer'
+			title: 'Ключевые навыки',
+			firstSkill: 'Опыт от 5 лет в JavaScript',
+			secondSkill: 'Глубокое знание React',
+			thirdSkill: 'Опыт работы с Redux + Saga',
+			fourthSkill: 'Большой плюс опыт React Native',
+			fifthSkill: 'Наличие публичного репозитория github',
+			sixthSkill: 'Spaces not tabs!'
 		}, {
-			title: 'Ключевые навыки Lead Web-разработчик',
-			firstSkill: 'Первый навык Lead Web-разработчик',
-			secondSkill: 'Второй навык Lead Web-разработчик',
-			thirdSkill: 'Третий навык подлиннее Lead Web-разработчик',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Lead Web-разработчик'
+			title: 'Ключевые навыки',
+			firstSkill: 'Опыт от 2 лет в JavaScript',
+			secondSkill: 'Глубокое знание React',
+			thirdSkill: 'Опыт работы с Redux + Saga'
 		}, {
-			title: 'Ключевые навыки Ведущий Front-End разработчик',
-			firstSkill: 'Первый навык Ведущий Front-End разработчик',
-			secondSkill: 'Второй навык Ведущий Front-End разработчик',
-			thirdSkill: 'Третий навык подлиннее Ведущий Front-End разработчик',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Ведущий Front-End разработчик'
+			title: 'Ключевые навыки',
+			firstSkill: 'Хороший опыт HTML/CSS (FlexBox)',
+			secondSkill: 'Базовые знания JS, React',
+			thirdSkill: 'Большое желание обучатся'
 		}, {
-			title: 'Ключевые навыки Ведущий Web-разработчик',
-			firstSkill: 'Первый навык Ведущий Web-разработчик',
-			secondSkill: 'Второй навык Ведущий Web-разработчик',
-			thirdSkill: 'Третий навык подлиннее Ведущий Web-разработчик',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) Ведущий Web-разработчик'
-		}, {
-			title: 'Ключевые навыки HTML-верстальщик',
-			firstSkill: 'Первый навык HTML-верстальщик',
-			secondSkill: 'Второй навык HTML-верстальщик',
-			thirdSkill: 'Третий навык подлиннее HTML-верстальщик',
-			fourthSkill: 'А четвертый совсем длинный (с примерами в скобках) HTML-верстальщик'
+			title: 'Ключевые навыки',
+			firstSkill: 'Опыт от 2х лет',
+			secondSkill: 'Ruby on Rails',
+			thirdSkill: 'Хороший опыт верстки'
 		}];
 
 		this.professionOffers = [{
 				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество QA Engineer',
-				secondOffer: 'Второстепенное преимущество QA Engineer',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
+				firstOffer: 'Работа в офисе г. Самара',
+				secondOffer: 'Возможно удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество Support Engineer',
-				secondOffer: 'Второстепенное преимущество Support Engineer',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
+				firstOffer: 'Работа в офисе г. Самара',
+				secondOffer: 'Возможно удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество Lead Web-разработчик',
-				secondOffer: 'Второстепенное преимущество Lead Web-разработчик',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
+				firstOffer: 'Работа в офисе г. Самара',
+				secondOffer: 'Возможно удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество Front-End разработчик',
-				secondOffer: 'Второстепенное преимущество Ведущий Front-End разработчик',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
+				firstOffer: 'Работа в офисе г. Самара',
+				secondOffer: 'Возможно удаленная работа',
+				thirdOffer: 'Повысим уровень'
 			}, {
 				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество Ведущий Web-разработчик',
-				secondOffer: 'Второстепенное преимущество Ведущий Web-разработчик',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
-			}, {
-				title: 'Мы предлагаем',
-				firstOffer: 'Главное преимущество HTML-верстальщик',
-				secondOffer: 'Второстепенное преимущество HTML-верстальщик',
-				thirdOffer: 'Плюшки с чайком',
-				fourthOffer: 'Что-нибудь еще'
-		}];
+				firstOffer: 'Работа в офисе г. Самара',
+				secondOffer: 'Возможно удаленная работа'
+			}];
 
 		this.state = {
 			activeProfession: 0,
