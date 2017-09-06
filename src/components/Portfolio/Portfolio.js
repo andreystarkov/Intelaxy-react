@@ -36,7 +36,8 @@ class Portfolio extends Component {
 	render() {
 		const { viewPort } = this.props.appReducer.viewPort;
 		const backgroundStyle = {
-			background: this.portfolio[this.state.activeSlide].background
+			background: this.portfolio[this.state.activeSlide].background,
+			transition: 'background 10000ms linear'
 		};
 		return (
 			<div className="second-screen">

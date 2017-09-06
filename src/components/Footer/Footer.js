@@ -46,15 +46,15 @@ const Footer = ({ appReducer }) => {
 
 					<div className="email">
 						Email: <br/>
-						<span>example@mail.com</span>
+						<span>mail@itelaxy.com</span>
 					</div>
 
 					<div className="adress">
 						Адрес: <br/>
-						<span>Россия, Самара,<br/> ул. Ключникова, 90, офис 820</span>
+						<span>Россия, Самара,<br/> ул. Самарская, 169, офис 2</span>
 					</div>
 
-					<div className="phone">+7 (800) 200-50-10</div>
+					<div className="phone">+7 (927) 209-59-66</div>
 
 				</div>
 
@@ -94,15 +94,15 @@ const Footer = ({ appReducer }) => {
 
 					<div className="email">
 						Email: <br/>
-						<span>example@mail.com</span>
+						<span>mail@itelaxy.com</span>
 					</div>
 
 					<div className="adress">
 						Адрес: <br/>
-						<span>Россия, Самара,<br/> ул. Ключникова, 90, офис 820</span>
+						<span>Россия, Самара,<br/> ул. Самарская, 169, офис 2</span>
 					</div>
 
-					<div className="phone">+7 (800) 200-50-10</div>
+					<div className="phone">+7 (927) 209-59-66</div>
 
 				</div>
 

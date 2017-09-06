@@ -54,10 +54,11 @@ class PortfolioScene extends Component {
 			slidesToShow: 1,
 			infinite: false,
 			arrows: false,
-			fade: true,
+			fade: false,
 			draggable: false,
 			dots: true,
-			afterChange: this.props.currentSlide
+			speed: 800,
+			afterChange: this.props.currentSlide,
 		};
 		return (
 			<Slider {...settings} >

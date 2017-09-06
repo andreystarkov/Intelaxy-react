@@ -183,7 +183,8 @@ html, body {
         filter: url("/#filter-ripple-2");
         z-index: 1;
         margin-top: 96px;
-        overflow: hidden; }
+        overflow: hidden;
+        border-radius: 4px; }
         .app-container > .first-screen > .header > .header-button:hover {
           background-color: #0FABE8; }
     .app-container > .first-screen > .footer {
@@ -631,7 +632,7 @@ html, body {
             height: 54px;
             object-fit: contain;
             background-color: #fff;
-            border-radius: 2px;
+            border-radius: 4px;
             font-family: 'SFUIDTextMedium', sans-serif;
             font-size: 1.125em;
             font-weight: 500;
@@ -813,7 +814,7 @@ html, body {
           text-align: center;
           color: #27c6ce;
           border: none;
-          border-radius: 5px;
+          border-radius: 4px;
           background-color: #fff;
           margin-top: 62px;
           position: relative;
@@ -1196,7 +1197,7 @@ html, body {
           text-align: center;
           color: #27c6ce;
           border: none;
-          border-radius: 5px;
+          border-radius: 4px;
           background-color: #fff;
           margin-top: 43px;
           position: relative;
