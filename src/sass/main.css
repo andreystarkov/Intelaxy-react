@@ -111,7 +111,7 @@ html, body {
       padding-top: 159px;
       padding-bottom: 170px;
       position: relative;
-      min-height: 800px;
+      min-height: 600px;
       height: 100vh; }
       .app-container > .first-screen > .header:before {
         content: '';
@@ -145,7 +145,10 @@ html, body {
         min-height: 100px; }
       .app-container > .first-screen > .header > .Page-1-Copy-3 {
         margin-bottom: 5.5vh;
-        z-index: 1; }
+        z-index: 1;
+        min-width: 100px;
+        width: 225px;
+        height: auto; }
       .app-container > .first-screen > .header > .Mobile-Web-develop-Copy {
         max-width: 671px;
         width: 100%;
@@ -1036,17 +1039,20 @@ html, body {
               content: 'Zeplin'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim {
             border: solid 1px #000000;
-            background-image: url("../img/roadmap/vim.png"); }
+            background-image: url("../img/roadmap/vim.png");
+            background-size: 90px auto; }
             .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim:after {
               content: 'Vim'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta {
             border: solid 1px #0079ff;
-            background-image: url("../img/roadmap/penta.png"); }
+            background-image: url("../img/roadmap/penta.png");
+            background-size: 95px auto; }
             .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta:after {
               content: 'Fastlane'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat {
             border: solid 1px #019ee1;
-            background-image: url("../img/roadmap/hat.png"); }
+            background-image: url("../img/roadmap/hat.png");
+            background-size: 95px auto; }
             .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat:after {
               content: 'HockeyApp'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app {
@@ -1349,6 +1355,8 @@ html, body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1440px) {
+  .app-container .first-screen .header > .Page-1-Copy-3 {
+    width: 15.6vw; }
   .app-container > .second-screen .header .line {
     border-width: 0 6vw; }
   .app-container > .second-screen > .footer .parallax .layers img {
