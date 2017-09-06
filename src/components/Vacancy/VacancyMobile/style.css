@@ -18,7 +18,8 @@
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 28px;
           font-weight: 600;
-          letter-spacing: 0.1px;
+          letter-spacing: 0px;
+          line-height: 1.5;
           text-align: left;
           color: #ffffff; }
           .vacancy-mobile .panel .panel-heading .profession-header > a > h2:after {
@@ -50,8 +51,9 @@
             font-family: "SFUIDisplaySemibold", sans-serif;
             font-size: 28px;
             font-weight: 600;
-            letter-spacing: 0.1px;
+            letter-spacing: 0px;
             text-align: left;
+            line-height: 1.5;
             color: #ffffff; }
             .vacancy-mobile .panel .panel-heading .profession-header > a.collapsed > h2:after {
               background-image: url("../../../img/path-2-copy-5.png");
@@ -68,8 +70,8 @@
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 1em;
           font-weight: 500;
-          line-height: 1;
-          letter-spacing: -0.1px;
+          line-height: 1.5;
+          letter-spacing: 0px;
           color: #ffffff;
           padding-bottom: 3px;
           border-bottom: 1px solid #fff;

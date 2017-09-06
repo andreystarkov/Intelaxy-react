@@ -274,7 +274,7 @@ class Platform extends Component {
 				}
 			},
 			strokeWidth: {
-				value: ['2px', '1px'],
+				value: ['1px', '1px'],
 				duration: 600,
 				delay: 1500
 			},
