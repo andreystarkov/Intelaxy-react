@@ -1,42 +1,175 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 
-const VacancyForm = ({ formClasses, onDrop, files }) => {
-	return(
-		<form action="#" name="send-respond" className={formClasses}>
+const SENDGRID_API_KEY='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';
 
-			<div className="wrap">
+class VacancyForm extends Component {
+	constructor (props) {
+		super(props);
+		this.state = {
+			email: '',
+			name: '',
+			phone: '',
+			wages: '',
+			validEmail: false,
+			validName: false,
+		}
+	}
 
-				<input type="text" required placeholder="Имя" id="name-respond"/>
-				<label htmlFor="name-respond" />
+	handleChangeEmail = (e) => {
+		let validation;
+		e.target.validity.valid ? validation = true : validation = false;
+		this.setState({ email: e.target.value, validEmail: validation })
+	};
 
-				<input name="email" type="email" required placeholder="Email" id="email-respond"/>
-				<label	htmlFor="email-respond" />
+	handleChangeName = (e) => {
+		let validation;
+		e.target.validity.valid ? validation = true : validation = false;
+		this.setState({ name: e.target.value, validName: validation })
+	};
 
-				<input type="text" placeholder="Телефон" id="phone-respond"/>
-				<label htmlFor="phone-respond" />
+	handleChangePhone = (e) => {
+		this.setState({ phone: e.target.value })
+	};
 
-				<input type="text" placeholder="Желаемая зарплата" id="pay-respond"/>
-				<label htmlFor="pay-respond" />
+	handleChangeWages = (e) => {
+		this.setState({ wages: e.target.value })
+	};
 
-				<Dropzone onDrop={onDrop} className="drop-zone btn-4" >
-					<p>Прикрепить резюме</p>
-				</Dropzone>
-
-				<aside className="drop-file">
-					<ul>
+	sendForm = () => {
+		if (this.state.validEmail && this.state.validName) {
+			fetch("https://api.sendgrid.com/v3/mail/send", {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+					'Access-Control-Allow-Headers': 'X-Requested-With',
+					'Authorization': `Barer ${SENDGRID_API_KEY}`
+				},
+				body: JSON.stringify({
+					"personalizations": [
 						{
-							files.map((f, index) => <li key={`file-${index}`}>{f.name} - {f.size} bytes</li>)
+							"to": [
+								{
+									"email": "poter.t1mox@gmail.com",
+									"name": "John Doe"
+								}
+							],
+							"subject": "Vacancy form"
 						}
-					</ul>
-				</aside>
+					],
+					"from": {
+						"email": "poter.t1mox@gmail.com",
+						"name": "Sam Smith"
+					},
+					"reply_to": {
+						"email": "poter.t1mox@gmail.com",
+						"name": "Sam Smith"
+					},
+					"subject": "Vacancy form",
+					"content": [
+						{
+							"type": "text/plain",
+							"value": `email: ${this.state.email}`
+						},
+						{
+							"type": "text/plain",
+							"value": `name: ${this.state.name}`
+						},
+						{
+							"type": "text/plain",
+							"value": `phone: ${this.state.phone}`
+						},
+						{
+							"type": "text/plain",
+							"value": `wages: ${this.state.wages}`
+						}
+					],
+					"attachments": [
+						{
+							'filename': '',
+							'content': ''
+						}
+					]
+				})
+			})
+		} else {return (null)}
+	};
 
-			</div>
+	render () {
+		console.log(this.state)
+		return (
+			<form action="#" name="send-respond" className={this.props.formClasses}>
 
-			<button className="btn-4-blue" type="submit" id="show-form-button">Отправить запрос</button>
+				<div className="wrap">
 
-		</form>
-	)
-};
+					<input
+						type="text"
+						required
+						placeholder="Имя"
+						id="name-respond"
+						onChange={this.handleChangeName}
+						value={this.state.name}
+					/>
+					<label htmlFor="name-respond"/>
+
+					<input
+						name="email"
+						type="email"
+						required
+						placeholder="Email"
+						id="email-respond"
+						onChange={this.handleChangeEmail}
+						value={this.state.email}
+					/>
+					<label htmlFor="email-respond"/>
+
+					<input
+						type="text"
+						placeholder="Телефон"
+						id="phone-respond"
+						onChange={this.handleChangePhone}
+						value={this.state.phone}
+					/>
+					<label htmlFor="phone-respond"/>
+
+					<input
+						type="text"
+						placeholder="Желаемая зарплата"
+						id="pay-respond"
+						onChange={this.handleChangeWages}
+						value={this.state.wages}
+					/>
+					<label htmlFor="pay-respond"/>
+
+					<Dropzone onDrop={this.props.onDrop} className="drop-zone btn-4">
+						<p>Прикрепить резюме</p>
+					</Dropzone>
+
+					<aside className="drop-file">
+						<ul>
+							{
+								this.props.files.map((f, index) => <li key={`file-${index}`}>{f.name} - {f.size} bytes</li>)
+							}
+						</ul>
+					</aside>
+
+				</div>
+
+				<button
+					className="btn-4-blue"
+					type="submit"
+					id="show-form-button"
+					onClick={this.sendForm}
+				>
+					Отправить запрос
+				</button>
+
+			</form>
+		)
+	}
+}
 
 export default VacancyForm;
