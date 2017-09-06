@@ -42,9 +42,9 @@ const Technologies = () => {
 					</div>
 				</div>
 				<div className="wrap-row fourth">
-					<div className="technology app"></div>
-					<div className="technology-line tenth"></div>
 					<div className="technology android"></div>
+					<div className="technology-line tenth"></div>
+					<div className="technology app"></div>
 				</div>
 			</div>
 		</div>

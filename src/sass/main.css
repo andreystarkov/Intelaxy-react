@@ -111,7 +111,7 @@ html, body {
       padding-top: 159px;
       padding-bottom: 170px;
       position: relative;
-      min-height: 600px;
+      min-height: 800px;
       height: 100vh; }
       .app-container > .first-screen > .header:before {
         content: '';
@@ -982,45 +982,83 @@ html, body {
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology {
           width: 144px;
           height: 144px;
-          background-color: transparent;
+          background-color: #fff;
           border-radius: 50%;
           background-repeat: no-repeat;
-          background-position: center; }
+          background-position: center;
+          position: relative; }
+          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology:after {
+            position: absolute;
+            height: 50px;
+            width: 162px;
+            text-align: center;
+            bottom: -55px;
+            left: calc(50% - 81px);
+            font-family: "SFUIDisplay", sans-serif;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 1.56;
+            letter-spacing: -0px;
+            color: #0a0c0f; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.slack {
             border: solid 1px #25cbaa;
             background-image: url("../img/roadmap/slack.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.slack:after {
+              content: 'Slack'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby {
             border: solid 1px #ffc100;
             background-image: url("../img/roadmap/ruby.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby:after {
+              content: 'Sketch'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.in {
             border: solid 1px #ff2a63;
             background-image: url("../img/roadmap/in.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.in:after {
+              content: 'Invision'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.p {
             border: solid 1px #7f3db6;
             background-image: url("../img/roadmap/p.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.p:after {
+              content: 'Principle'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.react {
             border: solid 1px #35b877;
             background-image: url("../img/roadmap/react.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.react:after {
+              content: 'Atom'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin {
             border: solid 1px #f89920;
             background-image: url("../img/roadmap/zeplin.svg"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin:after {
+              content: 'Zeplin'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim {
             border: solid 1px #000000;
             background-image: url("../img/roadmap/vim.png"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim:after {
+              content: 'Vim'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta {
             border: solid 1px #0079ff;
             background-image: url("../img/roadmap/penta.png"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta:after {
+              content: 'Fastlane'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat {
             border: solid 1px #019ee1;
             background-image: url("../img/roadmap/hat.png"); }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat:after {
+              content: 'HockeyApp'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app {
             background-image: url("../img/roadmap/appstore.svg");
             border-radius: 0;
-            width: 120px; }
+            width: 120px;
+            background-color: transparent; }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app:after {
+              content: 'App Store'; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.android {
             background-image: url("../img/roadmap/playmarket.svg");
             border-radius: 0;
-            width: 120px; }
+            width: 120px;
+            background-color: transparent; }
+            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.android:after {
+              content: 'Google Play'; }
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line {
           flex: 1;
           align-self: center;

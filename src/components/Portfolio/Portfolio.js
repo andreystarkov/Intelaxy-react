@@ -55,7 +55,7 @@ class Portfolio extends Component {
 						<PortfolioMobile currentSlideMobile={this.currentSlide} />
 					}
 
-					<div className="title gutter-10 row">
+					{/*<div className="title gutter-10 row">
 
 						<div className="col-md-4 col-sm-4 col-xs-4">
 
@@ -65,7 +65,7 @@ class Portfolio extends Component {
 
 						</div>
 
-					</div>
+					</div>*/}
 
 				</div>
 
