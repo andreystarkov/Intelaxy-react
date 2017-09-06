@@ -1218,23 +1218,24 @@ html, body
 				>.technology-line
 					flex: 1
 					align-self: center
-					height: 2px
+					height: 1px
 					object-fit: contain
 					border-style: solid
 					border-width: 1px
 					border-image-slice: 1
+					border-top: none
 					&.first
 						position: relative
 						border-image-source: linear-gradient(to right, #24ccaa, #ffc100)
-						&:after
-							position: absolute
-							content: ''
-							width: 12px
-							height: 12px
-							top: -5px
-							left: calc(50% - 6px)
-							background-image: url("../img/roadmap/line.svg")
-							background-repeat: no-repeat
+						//&:after
+						//	position: absolute
+						//	content: ''
+						//	width: 12px
+						//	height: 12px
+						//	top: -5px
+						//	left: calc(50% - 6px)
+						//	background-image: url("../img/roadmap/line.svg")
+						//	background-repeat: no-repeat
 					&.second
 						border-image-source: linear-gradient(to right, #ffc100, #ff2a63)
 					&.third
@@ -1257,16 +1258,17 @@ html, body
 					align-items: flex-end
 					padding-right: 71px
 					padding-left: 71px
-					margin-bottom: -71px
+					margin-bottom: -72px
 				&.fourth
 					padding: 0 22.3%
 				>.technology-line-vertical
-					width: 2px
+					width: 1px
 					height: 96px
 					object-fit: contain
 					border-style: solid
 					border-width: 1px
 					border-image-slice: 1
+					border-left: none
 					&.one
 						border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6)
 					&.two
@@ -1288,6 +1290,7 @@ html, body
 						border-style: solid
 						border-width: 1px
 						border-image-slice: 1
+						border-top: none
 						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
 				>.ninth
 					width: 100%
@@ -1299,6 +1302,7 @@ html, body
 						border-style: solid
 						border-width: 1px
 						border-image-slice: 1
+						border-right: none
 						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
 				>.tenth
 					border-image-source: linear-gradient(to right, #00a6b9, #4086cd)

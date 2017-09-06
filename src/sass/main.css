@@ -1066,23 +1066,15 @@ html, body {
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line {
           flex: 1;
           align-self: center;
-          height: 2px;
+          height: 1px;
           object-fit: contain;
           border-style: solid;
           border-width: 1px;
-          border-image-slice: 1; }
+          border-image-slice: 1;
+          border-top: none; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first {
             position: relative;
             border-image-source: linear-gradient(to right, #24ccaa, #ffc100); }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first:after {
-              position: absolute;
-              content: '';
-              width: 12px;
-              height: 12px;
-              top: -5px;
-              left: calc(50% - 6px);
-              background-image: url("../img/roadmap/line.svg");
-              background-repeat: no-repeat; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.second {
             border-image-source: linear-gradient(to right, #ffc100, #ff2a63); }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.third {
@@ -1104,16 +1096,17 @@ html, body {
           align-items: flex-end;
           padding-right: 71px;
           padding-left: 71px;
-          margin-bottom: -71px; }
+          margin-bottom: -72px; }
         .app-container .section-technologies > .wrap-technologies > .wrap-row.fourth {
           padding: 0 22.3%; }
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical {
-          width: 2px;
+          width: 1px;
           height: 96px;
           object-fit: contain;
           border-style: solid;
           border-width: 1px;
-          border-image-slice: 1; }
+          border-image-slice: 1;
+          border-left: none; }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.one {
             border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6); }
           .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.two {
@@ -1135,6 +1128,7 @@ html, body {
             border-style: solid;
             border-width: 1px;
             border-image-slice: 1;
+            border-top: none;
             border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .ninth {
           width: 100%;
@@ -1146,6 +1140,7 @@ html, body {
             border-style: solid;
             border-width: 1px;
             border-image-slice: 1;
+            border-right: none;
             border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
         .app-container .section-technologies > .wrap-technologies > .wrap-row > .tenth {
           border-image-source: linear-gradient(to right, #00a6b9, #4086cd); }
