@@ -68,24 +68,24 @@ class Vacancy extends Component {
 		this.professionOffers = [{
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможно удаленная работа'
+				secondOffer: 'Возможна удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможно удаленная работа'
+				secondOffer: 'Возможна удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможно удаленная работа'
+				secondOffer: 'Возможна удаленная работа'
 			}, {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможно удаленная работа',
+				secondOffer: 'Возможна удаленная работа',
 				thirdOffer: 'Повысим уровень'
 			}, {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможно удаленная работа'
+				secondOffer: 'Возможна удаленная работа'
 			}];
 
 		this.state = {

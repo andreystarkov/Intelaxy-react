@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 const Professions = ({ professions, activeProfession, handleChange, buttonClasses, showForm, buttonText }) => {
 	return(
-		<div className="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 column">
+		<div className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 column">
 
 			{ professions.map( (profession, index) => {
 

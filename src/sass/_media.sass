@@ -96,6 +96,17 @@
 						img
 							max-width: 500px
 
+@media only screen and (max-width : 1100px)
+	.app-container
+		> .third-screen
+			> .header
+				> .row
+					.column
+						width: 370px
+						> .profession
+							> h2
+								font-size: 1.1em
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1024px)
 	html
@@ -128,6 +139,8 @@
 				>.third-screen
 					> .header
 						> .row
+							>.column
+								width: 320px
 							>.column, .skills-offers, .respond
 								height: 650px
 				>footer

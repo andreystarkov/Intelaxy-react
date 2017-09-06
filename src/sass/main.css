@@ -118,8 +118,8 @@ html, body {
         position: absolute;
         max-width: 276px;
         min-width: 105px;
-        width: 19%;
-        height: 620px;
+        width: 18%;
+        height: 700px;
         background: url("../img/page-1.svg") no-repeat;
         background-size: contain;
         left: 0;
@@ -130,8 +130,8 @@ html, body {
         position: absolute;
         max-width: 276px;
         min-width: 105px;
-        width: 19%;
-        height: 620px;
+        width: 18%;
+        height: 700px;
         background: url("../img/page-1-copy-2.svg") no-repeat;
         background-size: contain;
         right: 0;
@@ -582,19 +582,23 @@ html, body {
       height: 100%;
       margin-left: -5px;
       background: url(../img/3.svg) 88% bottom no-repeat; }
+      .app-container > .third-screen > .header > .row .column {
+        width: 410px; }
       .app-container > .third-screen > .header > .row .column, .app-container > .third-screen > .header > .row .skills-offers {
         height: 720px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding-top: 70px;
-        padding-bottom: 70px; }
+        padding-bottom: 70px;
+        padding-left: 0;
+        padding-right: 0; }
         .app-container > .third-screen > .header > .row .column > .profession, .app-container > .third-screen > .header > .row .skills-offers > .profession {
           transition: all 0.5s; }
           .app-container > .third-screen > .header > .row .column > .profession > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession > h2 {
             display: inline-block;
             font-family: "SFUIDisplaySemibold", sans-serif;
-            font-size: 1em;
+            font-size: 1.25em;
             font-weight: 600;
             line-height: 1;
             letter-spacing: 0px;
@@ -1387,6 +1391,12 @@ html, body {
   .app-container > .second-screen > .footer .parallax .layers img {
     max-width: 500px; } }
 
+@media only screen and (max-width: 1100px) {
+  .app-container > .third-screen > .header > .row .column {
+    width: 370px; }
+    .app-container > .third-screen > .header > .row .column > .profession > h2 {
+      font-size: 1.1em; } }
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
   html body {
@@ -1404,6 +1414,8 @@ html, body {
       border-width: 0 80px; }
     html body .app-container > .second-screen > .footer .parallax .layers img {
       max-width: 500px; }
+    html body .app-container > .third-screen > .header > .row > .column {
+      width: 320px; }
     html body .app-container > .third-screen > .header > .row > .column, html body .app-container > .third-screen > .header > .row .skills-offers, html body .app-container > .third-screen > .header > .row .respond {
       height: 650px; }
     html body .app-container > footer > .row > form {
