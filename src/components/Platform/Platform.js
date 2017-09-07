@@ -150,7 +150,7 @@ class Platform extends Component {
 				}
 			},
 			strokeWidth: {
-				value: ['1px', '2px'],
+				value: ['1px', '1px'],
 				duration: 600,
 				delay: function delay(e, i) {
 					return i * anime.random(10, 450);
@@ -211,7 +211,7 @@ class Platform extends Component {
 				}
 			},
 			strokeWidth: {
-				value: ['2px', '1px'],
+				value: ['1px', '1px'],
 				duration: 600,
 				delay: 1500
 			},
