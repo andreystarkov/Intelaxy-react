@@ -4,6 +4,8 @@ import scrollToElement from 'scroll-to-element';
 
 import logo_copy from '../../img/logo-copy.svg';
 import logo from '../../img/new_Logo.png';
+import newLogo from '../../img/Logo mask.png';
+import logoBG from '../../img/logoBGcircle+.png';
 import page_1_copy_3 from '../../img/page-1-copy-3.png';
 import page_1_copy_32x from '../../img/page-1-copy-3@2x.png';
 import page_1_copy_33x from '../../img/page-1-copy-3@3x.png';
@@ -17,8 +19,13 @@ const Header = ({ appReducer }) => {
 
 			<div className="header">
 
-				<img src={logo}
-						 className="Page-1-Copy-3" />
+				<div className='logo'>
+
+					<img src={logoBG}
+							 className="logoBG" />
+					<img src={newLogo}
+							 className="Page-1-Copy-3" />
+				</div>
 
 				<img src={logo_copy}
 						 className="Logo-Copy" />

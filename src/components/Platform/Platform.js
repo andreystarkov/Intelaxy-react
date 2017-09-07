@@ -166,14 +166,14 @@ class Platform extends Component {
 							delay: function delay(e, i) {
 								return i * 70;
 							},
-							duration: 2700
+							duration: 100
 						},
 						strokeOpacity: {
 							value: [1, 0],
 							delay: function delay(e, i) {
 								return i * 180;
 							},
-							duration: 3200,
+							duration: 100,
 							complete: () => {
 								$(selector).css({
 									'fill': color,
