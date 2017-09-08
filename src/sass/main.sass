@@ -1576,6 +1576,35 @@ html, body
 			left: 120%
 			transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
 
+.message
+	position: relative
+	width: 270px
+	display: none
+	&:after
+		position: absolute
+		content: 'Успешно отправлено'
+		width: 160px
+		bottom: -40px
+		left: calc(50% - 80px)
+		color: #fff
+		font-family: 'SFUITextRegular', sans-serif
+	&.active
+		display: block
+
+.message-mobile
+	position: relative
+	width: 100%
+	display: none
+	&:after
+		position: absolute
+		content: 'Успешно отправлено'
+		width: 120px
+		bottom: -30px
+		left: calc(50% - 60px)
+		color: #fff
+		font-family: 'SFUITextRegular', sans-serif
+	&.active
+		display: block
 @keyframes App-logo-spin
 	from
 		transform: rotate(0deg)

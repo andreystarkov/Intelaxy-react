@@ -34,8 +34,14 @@ class VacancyForm extends Component {
 		this.setState({ wages: e.target.value })
 	};
 
+	showSuccefulRespond = () => {
+		this.showMessageVanacy.classList.add('active');
+		setTimeout(() => this.showMessageVanacy.classList.remove('active'), 2000)
+	};
+
 	sendForm = (e) => {
 		e.preventDefault();
+		let self = this;
 		if (this.state.validEmail && this.state.validName) {
 			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
@@ -50,6 +56,25 @@ class VacancyForm extends Component {
 					}
 				})
 			})
+				.then((response) => {
+					if (response.ok) {
+						this.showSuccefulRespond();
+						self.setState({
+							email: '',
+							name: '',
+							phone: '',
+							wages: '',
+							validEmail: false,
+							validName: false
+						})
+						this.props.unsetFiles();
+					} else {
+						self.setState({
+							problem: response.problem
+						})
+					}
+					console.log('response', response)
+				})
 		} else {return (null)}
 	};
 
@@ -112,6 +137,10 @@ class VacancyForm extends Component {
 					</aside>
 
 				</div>
+
+				<div className='message'
+						 ref={ div => this.showMessageVanacy = div}
+				/>
 
 				<button
 					className="btn-4-blue"

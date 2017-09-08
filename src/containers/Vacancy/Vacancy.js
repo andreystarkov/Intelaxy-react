@@ -176,6 +176,13 @@ class Vacancy extends Component {
 		})
 	};
 
+	unsetFiles = () => {
+		this.setState({
+			files: [],
+			base64: '',
+		})
+	};
+
 	render() {
 		console.log('this.state', this.state)
 		const formClasses = classNames('col-md-4 col-sm-4 col-md-offset-1 col-sm-offset-1 respond', { 'active': this.state.activeForm });
@@ -218,6 +225,8 @@ class Vacancy extends Component {
 									onDrop={this.onDrop.bind(this)}
 									files={this.state.files}
 									activeForm={true}
+									base64={this.state.base64}
+									unsetFiles={this.unsetFiles}
 								/>
 							</Tab>
 						</Tabs>
@@ -250,6 +259,7 @@ class Vacancy extends Component {
 							onDrop={this.onDrop.bind(this)}
 							files={this.state.files}
 							base64={this.state.base64}
+							unsetFiles={this.unsetFiles}
 						/>
 
 					</div>

@@ -14,7 +14,8 @@ class Footer extends Component {
 			project: '',
 			validEmail: false,
 			validName: false,
-			validPhone: false
+			validPhone: false,
+			problem: ''
 		}
 	}
 
@@ -44,8 +45,14 @@ class Footer extends Component {
 		this.setState({ project: e.target.value, validPhone: validation })
 	};
 
+	showSuccefulRespond = () => {
+		this.showMessage.classList.add('active');
+		setTimeout(() => this.showMessage.classList.remove('active'), 2000)
+	};
+
 	sendForm = (e) => {
 		e.preventDefault();
+		let self = this
 		if (this.state.validEmail && this.state.validName && this.state.validPhone) {
 			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
@@ -60,6 +67,26 @@ class Footer extends Component {
 					"company": `company: ${this.state.company}`,
 					"project": `project: ${this.state.project}`
 				})
+			})
+			.then((response) => {
+				if (response.ok) {
+					this.showSuccefulRespond()
+					self.setState({
+						email: '',
+						name: '',
+						phone: '',
+						company: '',
+						project: '',
+						validEmail: false,
+						validName: false,
+						validPhone: false
+					})
+				} else {
+					self.setState({
+						problem: response.problem
+					})
+				}
+				console.log('response', response)
 			})
 		} else {return (null)}
 	};
@@ -134,10 +161,14 @@ class Footer extends Component {
 
 							</div>
 
+							<div className='message-mobile'
+									 ref={ div => this.showMessage = div}
+							/>
+
 							<button
 								type="submit"
 								id="send-respond-button"
-								// onClick={this.sendForm}
+								onClick={this.sendForm}
 							>
 								Отправить запрос
 							</button>
@@ -226,6 +257,10 @@ class Footer extends Component {
 								<label htmlFor="project"/>
 
 							</div>
+
+							<div className='message'
+									 ref={ div => this.showMessage = div}
+							/>
 
 							<button
 								className="btn-4-blue"
