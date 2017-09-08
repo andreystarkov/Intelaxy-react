@@ -11,6 +11,7 @@ class VacancyForm extends Component {
 			wages: '',
 			validEmail: false,
 			validName: false,
+			problem: ''
 		}
 	}
 
