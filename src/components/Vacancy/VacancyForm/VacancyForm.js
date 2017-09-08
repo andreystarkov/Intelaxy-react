@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 
-const SENDGRID_API_KEY='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';
-
 class VacancyForm extends Component {
 	constructor (props) {
 		super(props);
@@ -36,70 +34,24 @@ class VacancyForm extends Component {
 		this.setState({ wages: e.target.value })
 	};
 
-	sendForm = () => {
+	sendForm = (e) => {
+		e.preventDefault();
 		if (this.state.validEmail && this.state.validName) {
-			fetch("https://api.sendgrid.com/v3/mail/send", {
+			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json',
-					'Access-Control-Allow-Origin': '*',
-					'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-					'Access-Control-Allow-Headers': 'X-Requested-With',
-					'Authorization': `Barer ${SENDGRID_API_KEY}`
-				},
 				body: JSON.stringify({
-					"personalizations": [
-						{
-							"to": [
-								{
-									"email": "poter.t1mox@gmail.com",
-									"name": "John Doe"
-								}
-							],
-							"subject": "Vacancy form"
-						}
-					],
-					"from": {
-						"email": "poter.t1mox@gmail.com",
-						"name": "Sam Smith"
-					},
-					"reply_to": {
-						"email": "poter.t1mox@gmail.com",
-						"name": "Sam Smith"
-					},
-					"subject": "Vacancy form",
-					"content": [
-						{
-							"type": "text/plain",
-							"value": `email: ${this.state.email}`
-						},
-						{
-							"type": "text/plain",
-							"value": `name: ${this.state.name}`
-						},
-						{
-							"type": "text/plain",
-							"value": `phone: ${this.state.phone}`
-						},
-						{
-							"type": "text/plain",
-							"value": `wages: ${this.state.wages}`
-						}
-					],
-					"attachments": [
-						{
-							'filename': '',
-							'content': ''
-						}
-					]
+					"Vacancy-email": `email: ${this.state.email}`,
+					"Vacancy-name": `name: ${this.state.name}`,
+					"Vacancy-phone": `phone: ${this.state.phone}`,
+					"Vacancy-wages": `wages: ${this.state.wages}`,
+					"Vacancy-filesBase64": `file: ${this.props.base64}`
 				})
 			})
 		} else {return (null)}
 	};
 
 	render () {
-		console.log(this.state)
+		console.log(this.props.Base64)
 		return (
 			<form action="#" name="send-respond" className={this.props.formClasses}>
 

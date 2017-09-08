@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import page_1_copy_3 from '../../img/page-1-copy-3.svg';
 import ViewPort from '../../containers/ViewPort'
 
-const SENDGRID_API_KEY='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';
-
 class Footer extends Component {
 	constructor (props) {
 		super(props);
@@ -46,61 +44,21 @@ class Footer extends Component {
 		this.setState({ project: e.target.value, validPhone: validation })
 	};
 
-	sendForm = () => {
+	sendForm = (e) => {
+		e.preventDefault();
 		if (this.state.validEmail && this.state.validName && this.state.validPhone) {
-			fetch("https://api.sendgrid.com/v3/mail/send", {
+			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',
 					'Content-Type': 'application/json',
-					'Access-Control-Allow-Origin': '*',
-					'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-					'Access-Control-Allow-Headers': 'X-Requested-With',
-					'Authorization': `Barer ${SENDGRID_API_KEY}`
 				},
 				body: JSON.stringify({
-					"personalizations": [
-						{
-							"to": [
-								{
-									"email": "poter.t1mox@gmail.com",
-									"name": "John Doe"
-								}
-							],
-							"subject": "Contact form"
-						}
-					],
-					"from": {
-						"email": "poter.t1mox@gmail.com",
-						"name": "Sam Smith"
-					},
-					"reply_to": {
-						"email": "poter.t1mox@gmail.com",
-						"name": "Sam Smith"
-					},
-					"subject": "Contact form",
-					"content": [
-						{
-							"type": "text/plain",
-							"value": `email: ${this.state.email}`
-						},
-						{
-							"type": "text/plain",
-							"value": `name: ${this.state.name}`
-						},
-						{
-							"type": "text/plain",
-							"value": `phone: ${this.state.phone}`
-						},
-						{
-							"type": "text/plain",
-							"value": `company: ${this.state.company}`
-						},
-						{
-							"type": "text/plain",
-							"value": `project: ${this.state.project}`
-						}
-					]
+					"email": `email: ${this.state.email}`,
+					"name": `name: ${this.state.name}`,
+					"phone": `phone: ${this.state.phone}`,
+					"company": `company: ${this.state.company}`,
+					"project": `project: ${this.state.project}`
 				})
 			})
 		} else {return (null)}
@@ -118,7 +76,7 @@ class Footer extends Component {
 
 					<div className="gutter-10 row">
 
-						<form action="#" name="contact-with-us" className="col-md-4 col-md-offset-2">
+						<form name="contact-with-us" className="col-md-4 col-md-offset-2">
 
 							<legend>Обсудим проект?</legend>
 
@@ -179,7 +137,7 @@ class Footer extends Component {
 							<button
 								type="submit"
 								id="send-respond-button"
-								onClick={this.sendForm}
+								// onClick={this.sendForm}
 							>
 								Отправить запрос
 							</button>
@@ -212,7 +170,7 @@ class Footer extends Component {
 
 					<div className="gutter-10 row">
 
-						<form action="#" name="contact-with-us" className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
+						<form name="contact-with-us" className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
 
 							<legend>Обсудим проект?</legend>
 
