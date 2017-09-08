@@ -12,22 +12,24 @@ class Portfolio extends Component {
 		this.portfolio = [{
 			title: 'Ведение бюджета',
 			name: 'WALEXY',
-			background: 'linear-gradient(to right, #26bf59, #4ede7e)'
+			background: 'linear-gradient(to right, #26bf59, #4ede7e)',
+			className: 'backgroundAnim0'
 		}, {
 			title: 'Фитнес-приложение',
 			name: 'Жиротоп',
-			background: 'linear-gradient(to right, #ff931e, #ffaa4d)'
+			background: 'linear-gradient(to right, #ff931e, #ffaa4d)',
+			className: 'backgroundAnim1'
 		}, {
 			title: 'Планировщик задач',
 			name: 'TODOYA',
-			background: 'linear-gradient(to right, #62F8CD, #66F9D8)'
+			background: 'linear-gradient(to right, #62F8CD, #66F9D8)',
+			className: 'backgroundAnim2'
 		}];
 
 		this.state = {
 			activeSlide: 0
 		}
 	}
-
 
 	currentSlide = (e) => {
 		this.setState({ activeSlide: e })
@@ -42,7 +44,9 @@ class Portfolio extends Component {
 		return (
 			<div className="second-screen">
 
-				<div className="footer" style={backgroundStyle}>
+				<div className="footer">
+
+					<div className={this.portfolio[this.state.activeSlide].className} />
 
 					{(viewPort === 'desktopHD' || viewPort === 'desktop' || viewPort === 'desktopSmall')
 
