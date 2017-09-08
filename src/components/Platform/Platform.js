@@ -133,56 +133,21 @@ class Platform extends Component {
 			'stroke-opacity': '1',
 			'stroke-width': '1px',
 			'opacity': '1',
-			'fill-opacity': '1',
+			'fill-opacity': '0',
 			'fill': 'none'
 		});
 		anime({
 			targets: selector,
-			strokeDashoffset: {
-				value: el => {
-					const pathLength = el.getTotalLength();
-					el.setAttribute('stroke-dasharray', pathLength);
-					return [-pathLength, 0];
-				},
-				easing: 'linear',
-				delay: function delay(e, i) {
-					return i * anime.random(150, 350);
-				}
-			},
-			strokeWidth: {
-				value: ['1px', '1px'],
-				duration: 600,
-				delay: function delay(e, i) {
-					return i * anime.random(10, 450);
-				}
-			},
-			elasticity: anime.random(300, 500),
-			duration: anime.random(400, 880),
-			complete: (e) => {
-				anime({
-						targets: selector,
-						fillOpacity: {
-							value: [0, 1],
-							delay: function delay(e, i) {
-								return i * 70;
-							},
-							duration: 100
-						},
-						strokeOpacity: {
-							value: [1, 0],
-							delay: function delay(e, i) {
-								return i * 180;
-							},
-							duration: 100,
-							complete: () => {
-								$(selector).css({
-									'fill': color,
-									'stroke-opacity': '1'
-								})
-							}
-						}
-					}
-				)
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'linear',
+			duration: 700,
+			delay: function(el, i) { return i * 250 },
+			complete: function complete() {
+				$(selector).css({
+					'fill': color,
+					'strokeOpacity': '0',
+					'fill-opacity': '1'
+				})
 			},
 		});
 	};
@@ -199,54 +164,20 @@ class Platform extends Component {
 		});
 		anime({
 			targets: selector,
-			strokeDashoffset: {
-				value: el => {
-					const pathLength = el.getTotalLength();
-					el.setAttribute('stroke-dasharray', pathLength);
-					return [-pathLength, 0];
-				},
-				easing: 'linear',
-				delay: function delay(e, i) {
-					return i * anime.random(150, 350);
-				}
-			},
-			strokeWidth: {
-				value: ['1px', '1px'],
-				duration: 600,
-				delay: 1500
-			},
-			elasticity: anime.random(300, 500),
-			duration: anime.random(400, 880),
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'linear',
+			duration: 700,
+			delay: function(el, i) { return i * 250 },
 			direction: 'reverse',
-			begin: (e) => {
-				anime({
-					targets: selector,
-					fillOpacity: {
-						value: [0, 1],
-						delay: function delay(e, i) {
-							return i * 70;
-						},
-						duration: 1700
-					},
-					strokeOpacity: {
-						value: [0.1, 1],
-						delay: function delay(e, i) {
-							return i * 180;
-						},
-						duration: 2200
-					},
-					direction: 'reverse',
-					complete: () => {
-						$(selector).css({
-							'fill': 'none',
-							'stroke': '#9b9b9b',
-							'stroke-opacity': '1',
-							'stroke-dashoffset': '1',
-							'stroke-width': '1'
-						})
-					}
-				});
-			},
+			complete: function complete() {
+				$(selector).css({
+					'fill': 'none',
+					'stroke': '#9b9b9b',
+					'stroke-opacity': '1',
+					'stroke-dashoffset': '1',
+					'stroke-width': '1'
+				})
+			}
 		});
 	};
 
@@ -262,55 +193,21 @@ class Platform extends Component {
 		});
 		anime({
 			targets: selector,
-			strokeDashoffset: {
-				value: el => {
-					const pathLength = el.getTotalLength();
-					el.setAttribute('stroke-dasharray', pathLength);
-					return [-pathLength, 0];
-				},
-				easing: 'linear',
-				delay: function delay(e, i) {
-					return i * anime.random(150, 350);
-				}
-			},
-			strokeWidth: {
-				value: ['1px', '1px'],
-				duration: 600,
-				delay: 1500
-			},
-			elasticity: anime.random(300, 500),
-			duration: anime.random(400, 880),
+			strokeDashoffset: [anime.setDashoffset, 0],
+			easing: 'linear',
+			duration: 700,
+			delay: function(el, i) { return i * 250 },
 			direction: 'reverse',
-			begin: (e) => {
-				anime({
-					targets: selector,
-					fillOpacity: {
-						value: [0, 1],
-						delay: function delay(e, i) {
-							return i * 70;
-						},
-						duration: 1700
-					},
-					strokeOpacity: {
-						value: [0.1, 1],
-						delay: function delay(e, i) {
-							return i * 180;
-						},
-						duration: 2200
-					},
-					direction: 'reverse',
-					complete: () => {
-						$(selector).css({
-							'fill': color,
-							'fill-opacity': '1',
-							'stroke': color,
-							'stroke-opacity': '1',
-							'stroke-dashoffset': '1',
-							'stroke-width': '1'
-						})
-					}
-				});
-			},
+			complete: () => {
+				$(selector).css({
+					'fill': color,
+					'fill-opacity': '1',
+					'stroke': color,
+					'stroke-opacity': '1',
+					'stroke-dashoffset': '1',
+					'stroke-width': '1'
+				})
+			}
 		});
 	};
 
