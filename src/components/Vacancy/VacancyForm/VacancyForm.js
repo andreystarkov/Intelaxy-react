@@ -44,7 +44,10 @@ class VacancyForm extends Component {
 					"Vacancy-name": `name: ${this.state.name}`,
 					"Vacancy-phone": `phone: ${this.state.phone}`,
 					"Vacancy-wages": `wages: ${this.state.wages}`,
-					"Vacancy-filesBase64": `file: ${this.props.base64}`
+					"attach": {
+						'content': `${this.props.base64}`,
+						'filename': `${this.props.files[0].name}`
+					}
 				})
 			})
 		} else {return (null)}
