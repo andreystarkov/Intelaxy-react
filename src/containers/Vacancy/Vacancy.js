@@ -34,14 +34,13 @@ class Vacancy extends Component {
 		}];
 
 		this.professionSkills = [{
-			title: 'Ключевые навыки',
+			title: 'Требования',
 			firstSkill: 'Опыт админ. Linux от 2х лет',
 			secondSkill: 'Оптимизация производительности',
 			thirdSkill: 'Написание скриптов Shell / Bash',
-			fourthSkill: 'Linux мониторинг и диагностика',
-			fifthSkill: 'Резервное копирование/восстановление'
+			fourthSkill: 'Linux мониторинг и диагностика'
 		}, {
-			title: 'Ключевые навыки',
+			title: 'Требования',
 			firstSkill: 'Опыт от 5 лет в JavaScript',
 			secondSkill: 'Глубокое знание React',
 			thirdSkill: 'Опыт работы с Redux + Saga',
@@ -49,17 +48,17 @@ class Vacancy extends Component {
 			fifthSkill: 'Наличие публичного репозитория github',
 			sixthSkill: 'Spaces not tabs!'
 		}, {
-			title: 'Ключевые навыки',
+			title: 'Требования',
 			firstSkill: 'Опыт от 2 лет в JavaScript',
 			secondSkill: 'Глубокое знание React',
 			thirdSkill: 'Опыт работы с Redux + Saga'
 		}, {
-			title: 'Ключевые навыки',
+			title: 'Требования',
 			firstSkill: 'Хороший опыт HTML/CSS (FlexBox)',
 			secondSkill: 'Базовые знания JS, React',
-			thirdSkill: 'Большое желание обучатся'
+			thirdSkill: 'Большое желание обучаться'
 		}, {
-			title: 'Ключевые навыки',
+			title: 'Требования',
 			firstSkill: 'Опыт от 2х лет',
 			secondSkill: 'Ruby on Rails',
 			thirdSkill: 'Хороший опыт верстки'

@@ -57,19 +57,19 @@ class Platform extends Component {
 		this.platformDescriptions = [{
 			// title: 'Гибридная разработка приложений',
 			className: 'platform react',
-			text: `React Native (RN) - быстрое и экономичное создание нативных приложения для iOS и Android. Использует все возможности обеих платформ, т.к. использует нативные (родные) компоненты. При раздельной создании - получаются приложения на разных языках программирования и скорее всего с иной архитектурой, каждое отдельно придется отлаживать и позже отдельно поддерживать. В RN исправленная ошибка, доработка в одном приложении влияет и на другое. `
+			text: `React Native (RN) — это быстрое и экономичное создание нативных приложений для iOS и Android. RN использует нативные компоненты обеих платформ. Если разрабатывать приложения для двух ОС отдельно, они будут на разных языках и скорее всего с разной архитектурой. Каждое придется потом отдельно отлаживать и поддерживать. RN же позволяет делать все сразу: исправляете ошибку в одном приложении, она исправляется и в другом.`
 		}, {
 			// title: 'Ruby on rails',
 			className: 'platform rails',
-			text: `Ruby on Rails (RoR) — современный высокоуровневый фреймворк, написанный на языке Ruby. Это фреймфорк с высоким порогом вхождения, поэтому с ним работают только опытные разработчики. Хорош в создании средних и крупных проектов. Скорость разработки на нем в среднем быстрее до 1,5 раз из-за сплоченного сообщества программистов, которые делятся наработками. Разработчиков на RoR мало - как и опытных программистов. Разработчики на RoR стоят в среднем дороже, чем на других серверных языках.`
+			text: `Ruby on Rails (RoR) — современный высокоуровневый фреймворк, написанный на языке Ruby. Он подходит для средних и крупных проектов. Чтобы работать с ним, нужен большой опыт программирования, и такие программисты стоят в среднем дороже, чем программисты на других серверных языках. Зато на проекты уходит меньше времени.`
 		}, {
 			// title: 'iOS',
 			className: 'platform ios',
-			text: `Мы делаем нативные приложения используя Xcode, Objective-C, что дает возможность встроить последние технологии от Apple. Применение нативных инструментов позволяет максимально использовать производительность устройств при экономном потреблении энергоресурсов устройств.`
+			text: `Мы делаем нативные приложения для Apple, используя Xcode и Objective-C. Благодаря нативным технологиям мы можем максимально использовать производительность системы, при этом приложения не слишком тратят заряд батареи.`
 		}, {
 			// title: 'Android',
 			className: 'platform android',
-			text: `Самая распространенная операционная система для мобильных устройств, в среднем пользователи тратят меньше денег на маркете т.к. ценовой сегмент устройств значительно шире и развито пиратство. Как и для iOS мы создаем приложения используя нативные инструменты.`
+			text: `Android — самая распространенная операционная система для мобильных устройств. Здесь, увы, распространено пиратство, пользователи тратят меньше денег на покупку приложений. Мы создаем приложения, используя нативные инструменты.`
 		}];
 
 		this.state = {
@@ -83,17 +83,16 @@ class Platform extends Component {
 	}
 
 	componentDidUpdate() {
-		setTimeout( () => this.slider.slickGoTo(this.state.activePlatform) );
-
+		setTimeout( () => this.slider.slickGoTo(this.state.activePlatform), 0);
 	}
 
 	changeHandler = (slide) => {
 		const active = document.getElementsByClassName('avtivePlatform');
 		const selectorActive = active[0].getElementsByTagName('path');
-		const selectorActiveEclipes = active[0].getElementsByTagName('ellipse');
+		// const selectorActiveEclipes = active[0].getElementsByTagName('ellipse');
 
 		this.reverseDrowElement(selectorActive, '#9b9b9b');
-		this.reverseDrowElement(selectorActiveEclipes, '#9b9b9b');
+		// this.reverseDrowElement(selectorActiveEclipes, '#9b9b9b');
 
 		this.setState({ activePlatform: slide });
 
@@ -112,7 +111,7 @@ class Platform extends Component {
 	};
 
 	settingsMob = {
-		// ref: (ref) => {this.slider = ref},
+		// ref: (ref) => {this.sliderM = ref},
 		initialSlide: 0,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -214,25 +213,25 @@ class Platform extends Component {
 	drawStroke = (platform, color) => {
 		const selectors = document.getElementById(`${platform}-anim`);
 		const selectorPath = selectors.getElementsByTagName('path');
-		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		// const selectorElipse = selectors.getElementsByTagName('ellipse');
 		this.drowElement(selectorPath, color);
-		this.drowElement(selectorElipse, color);
+		// this.drowElement(selectorElipse, color);
 	};
 
 	drawStrokeReverse = (platform, color) => {
 		const selectors = document.getElementById(`${platform}-anim`);
 		const selectorPath = selectors.getElementsByTagName('path');
-		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		// const selectorElipse = selectors.getElementsByTagName('ellipse');
 		this.reverseDrowElement(selectorPath, color);
-		this.reverseDrowElement(selectorElipse, color);
+		// this.reverseDrowElement(selectorElipse, color);
 	};
 
 	drawStrokeActiveReverse = (platform, color) => {
 		const selectors = document.getElementById(`${platform}-anim`);
 		const selectorPath = selectors.getElementsByTagName('path');
-		const selectorElipse = selectors.getElementsByTagName('ellipse');
+		// const selectorElipse = selectors.getElementsByTagName('ellipse');
 		this.reverseDrowActiveElement(selectorPath, color);
-		this.reverseDrowActiveElement(selectorElipse, color);
+		// this.reverseDrowActiveElement(selectorElipse, color);
 	};
 
 	render() {
@@ -294,6 +293,10 @@ class Platform extends Component {
 										'active': index === this.state.activePlatform
 									});
 
+									const classesSvg = classNames(platform.classNameSvg, {
+										'avtivePlatform': index === this.state.activePlatform
+									});
+
 									return (
 										<div
 											key={`platform-${index}`}
@@ -304,7 +307,7 @@ class Platform extends Component {
 										>
 											<div className="empty-box"/>
 											<div className="logo">
-												<platform.img react={c => this.path = c}/>
+												<platform.img react={c => this.pathM = c} className={classesSvg} />
 											</div>
 											<h3>{platform.title}</h3>
 										</div>
