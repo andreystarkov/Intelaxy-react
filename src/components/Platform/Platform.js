@@ -78,8 +78,6 @@ class Platform extends Component {
 	}
 
 	componentDidMount() {
-		console.log('el', this.path);
-		console.log('update');
 	}
 
 	componentDidUpdate() {
@@ -174,7 +172,7 @@ class Platform extends Component {
 					'stroke': '#9b9b9b',
 					'stroke-opacity': '1',
 					'stroke-dashoffset': '1',
-					'stroke-width': '1'
+					'stroke-width': '1px'
 				})
 			}
 		});
@@ -201,7 +199,7 @@ class Platform extends Component {
 				$(selector).css({
 					'fill': color,
 					'fill-opacity': '1',
-					'stroke': color,
+					'stroke': 'none',
 					'stroke-opacity': '1',
 					'stroke-dashoffset': '1',
 					'stroke-width': '1'
@@ -334,7 +332,7 @@ class Platform extends Component {
 											<div className='title'>{platform.title}</div>
 											<p>{platform.text}</p>
 											<img src={rectangle_3_copy_2}
-													 className="Rectangle-3-Copy-2"/>
+													 className="Rectangle-3-Copy-2" alt=' '/>
 										</div>
 									)
 								}

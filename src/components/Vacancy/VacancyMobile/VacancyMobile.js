@@ -1,7 +1,5 @@
 import React from 'react';
-import { Accordion, Panel } from 'react-bootstrap';
-import classNames from 'classnames';
-
+import { Panel } from 'react-bootstrap';
 
 const VacancyMobile = ({ professions, activeProfession, onClickMobile, expanded, showContent}) => {
 	return (
@@ -20,7 +18,6 @@ const VacancyMobile = ({ professions, activeProfession, onClickMobile, expanded,
 
 				{ professions.map( (profession, index) => {
 
-					const classes = classNames('profession', { 'active': index === activeProfession });
 						return(
 							<div key={`profession-mobile-${index}`}>
 								<h2 onClick={() => onClickMobile(index)}

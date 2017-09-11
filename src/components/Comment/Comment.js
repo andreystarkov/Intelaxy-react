@@ -130,7 +130,7 @@ class Comment extends Component {
 													className="wrap"
 													key={`comment-${index}`}
 												>
-													<img src={comment.img} />
+													<img src={comment.img} alt=" "/>
 
 													<div className="name">{comment.name}</div>
 
@@ -163,7 +163,7 @@ class Comment extends Component {
 											className="wrap"
 											key={`comment-${index}`}
 										>
-											<img src={comment.img} />
+											<img src={comment.img} alt=" "/>
 
 											<div className="name">{comment.name}</div>
 

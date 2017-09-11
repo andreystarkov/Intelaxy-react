@@ -18,13 +18,13 @@ const Header = ({ appReducer }) => {
 				<div className='logo'>
 
 					<img src={logoBG}
-							 className="logoBG" />
+							 className="logoBG" alt=' '/>
 					<img src={newLogo}
-							 className="Page-1-Copy-3" />
+							 className="Page-1-Copy-3" alt=' '/>
 				</div>
 
 				<img src={logo_copy}
-						 className="Logo-Copy" />
+						 className="Logo-Copy" alt=' '/>
 
 				<div className="Mobile-Web-develop-Copy">
 					Mobile & Web development

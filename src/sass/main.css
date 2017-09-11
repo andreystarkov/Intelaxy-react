@@ -283,22 +283,22 @@ html, body {
           color: #000; }
       .app-container .second-screen .header .react.active svg g, .app-container .second-screen .header .react.active svg path, .app-container .second-screen .header .react.active svg ellipse {
         fill: #00D8FF !important;
-        stroke: #00D8FF !important; }
+        stroke: none; }
       .app-container .second-screen .header .react.active h3 {
         color: #000; }
       .app-container .second-screen .header .rails.active svg g, .app-container .second-screen .header .rails.active svg path {
         fill: #D0011B !important;
-        stroke: #D0011B !important; }
+        stroke: none; }
       .app-container .second-screen .header .rails.active h3 {
         color: #000; }
       .app-container .second-screen .header .ios.active svg g, .app-container .second-screen .header .ios.active svg path {
         fill: #0A0C0F !important;
-        stroke: #0A0C0F !important; }
+        stroke: none; }
       .app-container .second-screen .header .ios.active h3 {
         color: #000; }
       .app-container .second-screen .header .android.active svg g, .app-container .second-screen .header .android.active svg path {
         fill: #7ED321 !important;
-        stroke: #7ED321 !important; }
+        stroke: none; }
       .app-container .second-screen .header .android.active h3 {
         color: #000; }
   .app-container .second-screen > .header {
@@ -979,7 +979,7 @@ html, body {
                 font-size: 1.25em;
                 font-weight: 600;
                 line-height: 1.5;
-                letter-spacing: 1px;
+                letter-spacing: 0;
                 text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
@@ -987,7 +987,7 @@ html, body {
                 font-family: 'SFUITextRegular', sans-serif;
                 font-size: 1.125em;
                 line-height: 1.22;
-                letter-spacing: 1px;
+                letter-spacing: normal;
                 text-align: center;
                 color: #9b9b9b; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
@@ -995,7 +995,7 @@ html, body {
                 font-family: 'SFUITextLight', sans-serif;
                 font-size: 1em;
                 line-height: 1.63;
-                letter-spacing: 1px;
+                letter-spacing: normal;
                 text-align: center;
                 color: #0a0c0f;
                 position: relative;

@@ -86,7 +86,6 @@ class Footer extends Component {
 						problem: response.problem
 					})
 				}
-				console.log('response', response)
 			})
 		} else {return (null)}
 	};
@@ -179,11 +178,11 @@ class Footer extends Component {
 						<div className="contact col-md-3 col-md-offset-1">
 
 							<img src={page_1_copy_3}
-									 className="Page-1-Copy-3"/>
+									 className="Page-1-Copy-3" alt=" "/>
 
 							<div className="email">
 								Email: <br/>
-								<span>mail@itelaxy.com</span>
+								<span>mail@itelaxy.ru</span>
 							</div>
 
 							<div className="adress">
@@ -277,11 +276,11 @@ class Footer extends Component {
 						<div className="contact col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1">
 
 							<img src={page_1_copy_3}
-									 className="Page-1-Copy-3"/>
+									 className="Page-1-Copy-3" alt=" "/>
 
 							<div className="email">
 								Email: <br/>
-								<span>mail@itelaxy.com</span>
+								<span>mail@itelaxy.ru</span>
 							</div>
 
 							<div className="adress">

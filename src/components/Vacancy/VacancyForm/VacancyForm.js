@@ -74,13 +74,11 @@ class VacancyForm extends Component {
 							problem: response.problem
 						})
 					}
-					console.log('response', response)
 				})
 		} else {return (null)}
 	};
 
 	render () {
-		console.log(this.props.Base64)
 		return (
 			<form action="#" name="send-respond" className={this.props.formClasses}>
 

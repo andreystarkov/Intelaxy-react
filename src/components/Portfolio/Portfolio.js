@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PortfolioScene from './PortfolioScene/PortfolioScene'
+import PortfolioScene from './PortfolioScene/PortfolioScene';
 import PortfolioMobile from './PortfolioMobile/PortfolioMobile';
-
-import path_2_copy_3 from '../../img/path-2-copy-3.svg';
 
 class Portfolio extends Component {
 	constructor(props) {
@@ -37,10 +35,6 @@ class Portfolio extends Component {
 
 	render() {
 		const { viewPort } = this.props.appReducer.viewPort;
-		const backgroundStyle = {
-			background: this.portfolio[this.state.activeSlide].background,
-			transition: 'background 10000ms linear'
-		};
 		return (
 			<div className="second-screen">
 

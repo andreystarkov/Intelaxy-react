@@ -46,36 +46,36 @@ class PortfolioMobile extends Component {
 		return (
 			<Slider ref={c => this.slider = c } {...settingsMobile} >
 				<div className="portfolio-mobile">
-					<img src={first} className="first" alt=""/>
-					<img src={second} className="second" alt=""/>
-					<img src={third} className="third" alt=""/>
-					<img src={fourth} className="fourth" alt=""/>
-					<img src={tenth} className="tenth" alt=""/>
-					<img src={seventh} className="seventh" alt=""/>
-					<img src={eighth} className="eighth" alt=""/>
-					<img src={ninth} className="ninth" alt=""/>
-					<img src={sixth} className="sixth" alt=""/>
+					<img src={first} className="first" alt=" "/>
+					<img src={second} className="second" alt=" "/>
+					<img src={third} className="third" alt=" "/>
+					<img src={fourth} className="fourth" alt=" "/>
+					<img src={tenth} className="tenth" alt=" "/>
+					<img src={seventh} className="seventh" alt=" "/>
+					<img src={eighth} className="eighth" alt=" "/>
+					<img src={ninth} className="ninth" alt=" "/>
+					<img src={sixth} className="sixth" alt=" "/>
 				</div>
 				<div className="portfolio-mobile">
-					<img src={firstFB} className="first" alt=""/>
-					<img src={secondFB} className="second" alt=""/>
-					<img src={thirdFB} className="third" alt=""/>
-					<img src={fourthFB} className="fourth" alt=""/>
-					<img src={tenthFB} className="tenth" alt=""/>
-					<img src={seventhFB} className="seventh" alt=""/>
-					<img src={eighthFB} className="eighth" alt=""/>
-					<img src={ninthFB} className="ninth" alt=""/>
-					<img src={sixthFB} className="sixth" alt=""/>
+					<img src={firstFB} className="first" alt=" "/>
+					<img src={secondFB} className="second" alt=" "/>
+					<img src={thirdFB} className="third" alt=" "/>
+					<img src={fourthFB} className="fourth" alt=" "/>
+					<img src={tenthFB} className="tenth" alt=" "/>
+					<img src={seventhFB} className="seventh" alt=" "/>
+					<img src={eighthFB} className="eighth" alt=" "/>
+					<img src={ninthFB} className="ninth" alt=" "/>
+					<img src={sixthFB} className="sixth" alt=" "/>
 				</div>
 				<div className="portfolio-mobile">
-					<img className="secondTD" src={secondTD}/>
-					<img className="thirdTD" src={thirdTD}/>
-					<img className="fourthTD" src={fourthTD}/>
-					<img className="eighthTD" src={eighthTD}/>
-					<img className="seventhTD" src={seventhTD}/>
-					<img className="firstTD" src={firstTD}/>
-					<img className="sixthTD" src={sixthTD}/>
-					<img className="ninthTD" src={ninthTD}/>
+					<img className="secondTD" alt=" " src={secondTD}/>
+					<img className="thirdTD" alt=" " src={thirdTD}/>
+					<img className="fourthTD" alt=" " src={fourthTD}/>
+					<img className="eighthTD" alt=" " src={eighthTD}/>
+					<img className="seventhTD" alt=" " src={seventhTD}/>
+					<img className="firstTD" alt=" " src={firstTD}/>
+					<img className="sixthTD" alt=" " src={sixthTD}/>
+					<img className="ninthTD" alt=" " src={ninthTD}/>
 				</div>
 			</Slider>
 		)
