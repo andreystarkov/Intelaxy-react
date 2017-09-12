@@ -38,26 +38,12 @@
   font-family: 'SFUITextRegular';
   src: local("SFUITextRegular"), url(../fonts/SFUITextRegular/SF-UI-Text-Regular.otf) format("otf"); }
 
-*::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1; }
-
-*:-moz-placeholder {
-  color: #666;
-  opacity: 1; }
-
-*::-moz-placeholder {
-  color: #666;
-  opacity: 1; }
-
-*:-ms-input-placeholder {
+*::-webkit-input-placeholder, *:-moz-placeholder, *::-moz-placeholder, *:-ms-input-placeholder {
   color: #666;
   opacity: 1; }
 
 body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-  color: #666; }
-
+body textarea:focus:required:invalid,
 body input:required:valid,
 body textarea:required:valid {
   color: #666; }
@@ -109,39 +95,30 @@ html, body {
       max-width: 100%;
       background-color: #F6F9FB;
       background-size: contain;
-      padding-top: 159px;
-      padding-bottom: 170px;
+      padding: 159px 0 170px;
       position: relative;
       min-height: 600px;
       height: 100vh; }
-      .app-container > .first-screen > .header:before {
+      .app-container > .first-screen > .header:before, .app-container > .first-screen > .header:after {
         content: '';
         position: absolute;
-        max-width: 276px;
+        height: 700px;
         min-width: 90px;
         width: 18%;
-        height: 700px;
-        background: url("../img/page-1.svg") no-repeat;
-        background-size: contain;
-        left: 0;
         top: 15vh;
         z-index: 10; }
+      .app-container > .first-screen > .header:before {
+        left: 0;
+        background: url("../img/page-1.svg") no-repeat;
+        background-size: contain;
+        max-width: 276px; }
       .app-container > .first-screen > .header:after {
-        content: '';
-        position: absolute;
-        max-width: 276px;
-        min-width: 90px;
-        width: 18%;
-        height: 700px;
         background: url("../img/page-1-copy-2.svg") no-repeat;
         background-size: contain;
         right: 0;
-        top: 15vh;
-        z-index: 10; }
+        max-width: 263px; }
       .app-container > .first-screen > .header > .logo {
         position: relative;
-        width: 300px;
-        height: 300px;
         margin-bottom: 5.5vh; }
         .app-container > .first-screen > .header > .logo > .Page-1-Copy-3 {
           width: 300px;
@@ -158,15 +135,11 @@ html, body {
           animation: App-logo-spin infinite 100s linear; }
       .app-container > .first-screen > .header > .Logo-Copy {
         max-width: 477px;
-        width: 100%;
-        object-fit: contain;
         z-index: 11;
         min-height: 100px; }
       .app-container > .first-screen > .header > .Mobile-Web-develop-Copy {
         max-width: 671px;
-        width: 100%;
         min-height: 50px;
-        object-fit: contain;
         font-family: "SFUIDisplay", sans-serif;
         font-size: 3em;
         font-weight: 300;
@@ -177,13 +150,6 @@ html, body {
         margin-top: 3.33vh;
         position: relative;
         z-index: 12; }
-      .app-container > .first-screen > .header .svg--s {
-        position: absolute; }
-      .app-container > .first-screen > .header .svg-filters {
-        position: absolute;
-        visibility: hidden;
-        width: 1px;
-        height: 1px; }
       .app-container > .first-screen > .header > .header-button {
         position: relative;
         max-width: 320px;
@@ -198,7 +164,6 @@ html, body {
         color: #ffffff;
         cursor: pointer;
         transition: all 0.45s ease-out;
-        filter: url("/#filter-ripple-2");
         z-index: 1;
         margin-top: 10.5vh;
         overflow: hidden;
@@ -208,48 +173,38 @@ html, body {
     .app-container > .first-screen > .footer {
       display: flex;
       justify-content: center;
-      width: 100%;
-      object-fit: contain;
-      background-image: linear-gradient(to right, #21b4ed, #00c2de);
-      position: relative; }
+      background-image: linear-gradient(to right, #21b4ed, #00c2de); }
       .app-container > .first-screen > .footer > .row > .title {
         position: relative;
         top: -60px;
         border-radius: 4px;
         background-color: #ffffff;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
-        padding-top: 47px;
-        padding-bottom: 61px;
+        padding: 47px 0 61px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; }
+        justify-content: space-between;
+        text-align: center;
+        color: #0a0c0f; }
         .app-container > .first-screen > .footer > .row > .title > h2 {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 2em;
           font-weight: 600;
           line-height: 1.81;
           letter-spacing: -0.1px;
-          text-align: center;
-          color: #0a0c0f;
-          margin: 0;
-          margin-bottom: 8px; }
+          margin: 0 0 8px 0; }
         .app-container > .first-screen > .footer > .row > .title > p {
           font-family: 'SFUITextLight', sans-serif;
           font-size: 1em;
           font-weight: 300;
           line-height: 1.63;
           letter-spacing: 1px;
-          text-align: center;
-          color: #0a0c0f;
           margin: 0;
           padding: 0 13%; }
   .app-container .second-screen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     background-color: #ffffff;
     box-sizing: border-box; }
     .app-container .second-screen .header {
@@ -268,7 +223,7 @@ html, body {
           .app-container .second-screen .header .react .logo svg, .app-container .second-screen .header .rails .logo svg, .app-container .second-screen .header .ios .logo svg, .app-container .second-screen .header .android .logo svg {
             min-height: 0;
             min-width: 0; }
-            .app-container .second-screen .header .react .logo svg path, .app-container .second-screen .header .react .logo svg ellipse, .app-container .second-screen .header .rails .logo svg path, .app-container .second-screen .header .rails .logo svg ellipse, .app-container .second-screen .header .ios .logo svg path, .app-container .second-screen .header .ios .logo svg ellipse, .app-container .second-screen .header .android .logo svg path, .app-container .second-screen .header .android .logo svg ellipse {
+            .app-container .second-screen .header .react .logo svg path, .app-container .second-screen .header .rails .logo svg path, .app-container .second-screen .header .ios .logo svg path, .app-container .second-screen .header .android .logo svg path {
               fill: none;
               stroke: #9b9b9b; }
         .app-container .second-screen .header .react h3, .app-container .second-screen .header .rails h3, .app-container .second-screen .header .ios h3, .app-container .second-screen .header .android h3 {
@@ -281,26 +236,18 @@ html, body {
           color: #9b9b9b; }
         .app-container .second-screen .header .react:hover > h3, .app-container .second-screen .header .rails:hover > h3, .app-container .second-screen .header .ios:hover > h3, .app-container .second-screen .header .android:hover > h3 {
           color: #000; }
-      .app-container .second-screen .header .react.active svg g, .app-container .second-screen .header .react.active svg path, .app-container .second-screen .header .react.active svg ellipse {
-        fill: #00D8FF !important;
+      .app-container .second-screen .header .react.active svg g, .app-container .second-screen .header .react.active svg path, .app-container .second-screen .header .rails.active svg g, .app-container .second-screen .header .rails.active svg path, .app-container .second-screen .header .ios.active svg g, .app-container .second-screen .header .ios.active svg path, .app-container .second-screen .header .android.active svg g, .app-container .second-screen .header .android.active svg path {
         stroke: none; }
-      .app-container .second-screen .header .react.active h3 {
+      .app-container .second-screen .header .react.active h3, .app-container .second-screen .header .rails.active h3, .app-container .second-screen .header .ios.active h3, .app-container .second-screen .header .android.active h3 {
         color: #000; }
+      .app-container .second-screen .header .react.active svg g, .app-container .second-screen .header .react.active svg path {
+        fill: #00D8FF !important; }
       .app-container .second-screen .header .rails.active svg g, .app-container .second-screen .header .rails.active svg path {
-        fill: #D0011B !important;
-        stroke: none; }
-      .app-container .second-screen .header .rails.active h3 {
-        color: #000; }
+        fill: #D0011B !important; }
       .app-container .second-screen .header .ios.active svg g, .app-container .second-screen .header .ios.active svg path {
-        fill: #0A0C0F !important;
-        stroke: none; }
-      .app-container .second-screen .header .ios.active h3 {
-        color: #000; }
+        fill: #0A0C0F !important; }
       .app-container .second-screen .header .android.active svg g, .app-container .second-screen .header .android.active svg path {
-        fill: #7ED321 !important;
-        stroke: none; }
-      .app-container .second-screen .header .android.active h3 {
-        color: #000; }
+        fill: #7ED321 !important; }
   .app-container .second-screen > .header {
     position: relative; }
     .app-container .second-screen > .header > .platform {
@@ -315,12 +262,10 @@ html, body {
       min-width: 192px;
       height: 2px;
       pointer-events: none;
-      border: 1px solid #fff;
-      border-width: 0 6vw;
+      border: 6vw solid #fff;
       background: #0fabe8;
       -webkit-transition: -webkit-transform 0.5s;
       transition: transform 0.5s;
-      -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
       -webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
       transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22); }
     .app-container .second-screen > .header .platform:nth-child(1).active ~ .line {
@@ -341,31 +286,24 @@ html, body {
     justify-content: space-around;
     padding-top: 137px; }
     .app-container .second-screen > .row > .body .slick-slider {
-      width: 100%;
-      overflow: hidden; }
-      .app-container .second-screen > .row > .body .slick-slider:focus {
-        outline: none;
-        border: none; }
-      .app-container .second-screen > .row > .body .slick-slider:active {
-        outline: none;
-        border: none; }
-    .app-container .second-screen > .row > .body .slick-slider {
+      overflow: hidden;
       margin-bottom: 146px; }
-      .app-container .second-screen > .row > .body .slick-slider .slick-track {
-        display: flex; }
+      .app-container .second-screen > .row > .body .slick-slider:focus, .app-container .second-screen > .row > .body .slick-slider:active {
+        outline: none;
+        border: none; }
       .app-container .second-screen > .row > .body .slick-slider .react, .app-container .second-screen > .row > .body .slick-slider .rails, .app-container .second-screen > .row > .body .slick-slider .ios, .app-container .second-screen > .row > .body .slick-slider .android {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        text-align: center;
+        color: #0a0c0f; }
         .app-container .second-screen > .row > .body .slick-slider .react > .title, .app-container .second-screen > .row > .body .slick-slider .rails > .title, .app-container .second-screen > .row > .body .slick-slider .ios > .title, .app-container .second-screen > .row > .body .slick-slider .android > .title {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 2em;
           font-weight: 600;
           line-height: 1.81;
           letter-spacing: -0.1px;
-          text-align: center;
-          color: #0a0c0f;
           margin-bottom: 8px; }
         .app-container .second-screen > .row > .body .slick-slider .react > p, .app-container .second-screen > .row > .body .slick-slider .rails > p, .app-container .second-screen > .row > .body .slick-slider .ios > p, .app-container .second-screen > .row > .body .slick-slider .android > p {
           font-family: 'SFUITextLight', sans-serif;
@@ -373,10 +311,7 @@ html, body {
           font-weight: 300;
           line-height: 1.63;
           letter-spacing: 1px;
-          text-align: center;
-          color: #0a0c0f;
-          margin: 0;
-          margin-bottom: 60px; }
+          margin: 0 0 60px 0; }
   .app-container .second-screen > .footer {
     display: flex;
     position: relative;
@@ -384,155 +319,119 @@ html, body {
     width: 100%;
     max-height: 900px;
     justify-content: center; }
-    .app-container .second-screen > .footer .backgroundAnim0 {
+    .app-container .second-screen > .footer .backgroundAnim0, .app-container .second-screen > .footer .backgroundAnim1, .app-container .second-screen > .footer .backgroundAnim2 {
       position: absolute;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
-      animation-name: backgroundAnim0;
       animation-duration: 2s;
-      animation-timing-function: ease-out;
+      animation-timing-function: ease-out; }
+    .app-container .second-screen > .footer .backgroundAnim0 {
+      animation-name: backgroundAnim0;
       background: linear-gradient(to right, #26bf59, #4ede7e); }
     .app-container .second-screen > .footer .backgroundAnim1 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
       animation-name: backgroundAnim1;
-      animation-duration: 2s;
-      animation-timing-function: ease-out;
       background: linear-gradient(to right, #ff931e, #ffaa4d); }
     .app-container .second-screen > .footer .backgroundAnim2 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
       animation-name: backgroundAnim2;
-      animation-duration: 2s;
-      animation-timing-function: ease-out;
       background: linear-gradient(to right, #62F8CD, #66F9D8); }
     .app-container .second-screen > .footer .parallax {
       width: 1440px;
       height: auto;
       position: relative;
-      padding: 0px; }
+      padding: 0; }
       .app-container .second-screen > .footer .parallax img {
         max-width: 500px;
         width: 100%;
         height: auto; }
+    .app-container .second-screen > .footer .parallax img, .app-container .second-screen > .footer .portfolio-mobile img {
+      position: absolute; }
     .app-container .second-screen > .footer .parallax .first, .app-container .second-screen > .footer .portfolio-mobile .first {
       top: 1%;
-      left: 1%;
-      position: absolute; }
+      left: 1%; }
     .app-container .second-screen > .footer .parallax .second, .app-container .second-screen > .footer .portfolio-mobile .second {
       top: 1%;
-      left: 31%;
-      position: absolute; }
+      left: 31%; }
     .app-container .second-screen > .footer .parallax .third, .app-container .second-screen > .footer .portfolio-mobile .third {
       top: 1%;
-      left: 60%;
-      position: absolute; }
+      left: 60%; }
     .app-container .second-screen > .footer .parallax .fourth, .app-container .second-screen > .footer .portfolio-mobile .fourth {
       top: 31%;
-      left: 6%;
-      position: absolute; }
+      left: 6%; }
     .app-container .second-screen > .footer .parallax .sixth, .app-container .second-screen > .footer .portfolio-mobile .sixth {
       top: 31%;
-      left: 35%;
-      position: absolute; }
+      left: 35%; }
     .app-container .second-screen > .footer .parallax .tenth, .app-container .second-screen > .footer .portfolio-mobile .tenth {
       top: 31%;
-      left: 63%;
-      position: absolute; }
+      left: 63%; }
     .app-container .second-screen > .footer .parallax .seventh, .app-container .second-screen > .footer .portfolio-mobile .seventh {
       top: 62%;
-      left: 9%;
-      position: absolute; }
+      left: 9%; }
     .app-container .second-screen > .footer .parallax .eighth, .app-container .second-screen > .footer .portfolio-mobile .eighth {
       top: 62%;
-      left: 37%;
-      position: absolute; }
+      left: 37%; }
     .app-container .second-screen > .footer .parallax .ninth, .app-container .second-screen > .footer .portfolio-mobile .ninth {
       top: 62%;
-      left: 66%;
-      position: absolute; }
+      left: 66%; }
     .app-container .second-screen > .footer .parallax .secondTD, .app-container .second-screen > .footer .portfolio-mobile .secondTD {
       top: 7%;
-      left: 57%;
-      position: absolute; }
+      left: 57%; }
     .app-container .second-screen > .footer .parallax .thirdTD, .app-container .second-screen > .footer .portfolio-mobile .thirdTD {
       top: 33%;
-      left: 31%;
-      position: absolute; }
+      left: 31%; }
     .app-container .second-screen > .footer .parallax .fourthTD, .app-container .second-screen > .footer .portfolio-mobile .fourthTD {
       top: 59%;
-      left: 3%;
-      position: absolute; }
+      left: 3%; }
     .app-container .second-screen > .footer .parallax .eighthTD, .app-container .second-screen > .footer .portfolio-mobile .eighthTD {
       top: 21%;
-      left: 80%;
-      position: absolute; }
+      left: 80%; }
     .app-container .second-screen > .footer .parallax .seventhTD, .app-container .second-screen > .footer .portfolio-mobile .seventhTD {
       top: 35%;
-      left: 42%;
-      position: absolute; }
+      left: 42%; }
     .app-container .second-screen > .footer .parallax .firstTD, .app-container .second-screen > .footer .portfolio-mobile .firstTD {
       top: 80%;
-      left: 23%;
-      position: absolute; }
+      left: 23%; }
     .app-container .second-screen > .footer .parallax .sixthTD, .app-container .second-screen > .footer .portfolio-mobile .sixthTD {
       top: 20%;
-      left: 20%;
-      position: absolute; }
+      left: 20%; }
     .app-container .second-screen > .footer .parallax .ninthTD, .app-container .second-screen > .footer .portfolio-mobile .ninthTD {
       top: 63%;
-      left: 61%;
-      position: absolute; }
+      left: 61%; }
     .app-container .second-screen > .footer .portfolio-mobile {
       width: 768px;
       min-height: 400px;
       height: auto;
       position: relative;
-      padding: 0px; }
+      padding: 0; }
       .app-container .second-screen > .footer .portfolio-mobile img {
         width: 230px;
         height: auto;
         position: absolute; }
       .app-container .second-screen > .footer .portfolio-mobile .secondTD {
         top: -5%;
-        left: 54%;
-        position: absolute; }
+        left: 54%; }
       .app-container .second-screen > .footer .portfolio-mobile .thirdTD {
         top: 26%;
-        left: 27%;
-        position: absolute; }
+        left: 27%; }
       .app-container .second-screen > .footer .portfolio-mobile .fourthTD {
         top: 57%;
-        left: 0%;
-        position: absolute; }
+        left: 0%; }
       .app-container .second-screen > .footer .portfolio-mobile .eighthTD {
         top: 15%;
-        left: 84%;
-        position: absolute; }
+        left: 84%; }
       .app-container .second-screen > .footer .portfolio-mobile .seventhTD {
         top: 28%;
-        left: 41%;
-        position: absolute; }
+        left: 41%; }
       .app-container .second-screen > .footer .portfolio-mobile .firstTD {
         top: 89%;
-        left: 24%;
-        position: absolute; }
+        left: 24%; }
       .app-container .second-screen > .footer .portfolio-mobile .sixthTD {
         top: 10%;
-        left: 15%;
-        position: absolute; }
+        left: 15%; }
       .app-container .second-screen > .footer .portfolio-mobile .ninthTD {
         top: 66%;
-        left: 62%;
-        position: absolute; }
+        left: 62%; }
     .app-container .second-screen > .footer .slick-slider {
       width: 1440px;
       min-height: 400px;
@@ -575,22 +474,20 @@ html, body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 7vw; }
+        padding-left: 7vw;
+        color: #0a0c0f; }
         .app-container .second-screen > .footer > .title > .col-md-4 > p, .app-container .second-screen > .footer > .title .col-sm-4 > p, .app-container .second-screen > .footer > .title .col-xs-4 > p {
           font-family: 'SFUITextLight', sans-serif;
           font-size: 1em;
           line-height: 1.38;
-          letter-spacing: 0px;
-          color: #0a0c0f;
-          margin: 0;
-          margin-bottom: 10px; }
+          letter-spacing: 0;
+          margin: 0 0 10px 0; }
         .app-container .second-screen > .footer > .title > .col-md-4 > h3, .app-container .second-screen > .footer > .title .col-sm-4 > h3, .app-container .second-screen > .footer > .title .col-xs-4 > h3 {
           font-family: "SFUIDisplaySemibold", sans-serif;
           font-size: 2.75em;
           font-weight: 600;
           line-height: 1.14;
           letter-spacing: 0.2px;
-          color: #0a0c0f;
           margin: 0; }
     .app-container .second-screen > .footer > img {
       width: 100%;
@@ -621,7 +518,6 @@ html, body {
   .app-container > .third-screen > .header {
     width: 100%;
     height: auto;
-    object-fit: contain;
     background: linear-gradient(to right, #00c2de, #27cecb);
     display: flex;
     justify-content: center; }
@@ -630,43 +526,39 @@ html, body {
       margin-left: -5px;
       background: url(../img/3.svg) 88% bottom no-repeat; }
       .app-container > .third-screen > .header > .row .column {
-        width: 410px; }
+        width: 460px; }
       .app-container > .third-screen > .header > .row .column, .app-container > .third-screen > .header > .row .skills-offers {
         height: 720px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 70px;
-        padding-bottom: 70px;
-        padding-left: 0;
-        padding-right: 0; }
+        padding: 70px 0; }
         .app-container > .third-screen > .header > .row .column > .profession, .app-container > .third-screen > .header > .row .skills-offers > .profession {
-          transition: all 0.5s; }
+          transition: all 0.5s;
+          letter-spacing: 0; }
           .app-container > .third-screen > .header > .row .column > .profession > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession > h2 {
             display: inline-block;
             font-family: "SFUIDisplaySemibold", sans-serif;
             font-size: 1.25em;
             font-weight: 600;
             line-height: 1;
-            letter-spacing: 0px;
             color: #ffffff;
             padding-bottom: 10px;
             border-bottom: 1px solid #fff;
             cursor: pointer;
             margin: 0; }
           .app-container > .third-screen > .header > .row .column > .profession > .price, .app-container > .third-screen > .header > .row .column > .profession .button, .app-container > .third-screen > .header > .row .skills-offers > .profession > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession .button {
-            display: none; }
+            display: none;
+            color: #fff; }
           .app-container > .third-screen > .header > .row .column > .profession.active, .app-container > .third-screen > .header > .row .skills-offers > .profession.active {
             margin-bottom: 25px;
-            margin-top: 25px; }
+            margin-top: 25px;
+            color: #fff; }
             .app-container > .third-screen > .header > .row .column > .profession.active > h2, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > h2 {
-              object-fit: contain;
               font-family: "SFUIDisplaySemibold", sans-serif;
               font-size: 2.3em;
               font-weight: 600;
               line-height: 1.14;
-              letter-spacing: 0px;
-              color: #ffffff;
               border-bottom: none;
               cursor: default; }
             .app-container > .third-screen > .header > .row .column > .profession.active > .price, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .price {
@@ -676,15 +568,12 @@ html, body {
               font-size: 2em;
               font-weight: 300;
               line-height: 1.56;
-              letter-spacing: 0px;
-              color: #ffffff;
               margin-top: 10px; }
             .app-container > .third-screen > .header > .row .column > .profession.active > .button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button {
               display: block;
               max-width: 270px;
               width: 100%;
               height: 54px;
-              object-fit: contain;
               background-color: #fff;
               border-radius: 4px;
               font-family: 'SFUIDTextMedium', sans-serif;
@@ -708,18 +597,6 @@ html, body {
                 .app-container > .third-screen > .header > .row .column > .profession.active > .button.active:hover, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > .button.active:hover {
                   background-color: #fff;
                   color: #27c6ce; }
-            .app-container > .third-screen > .header > .row .column > .profession.active > #qa-show-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active > #qa-show-button {
-              filter: url("/#qa-show-form"); }
-            .app-container > .third-screen > .header > .row .column > .profession.active #support-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #support-show-form-button {
-              filter: url("/#support-show-form"); }
-            .app-container > .third-screen > .header > .row .column > .profession.active #lead-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #lead-show-form-button {
-              filter: url("/#lead-show-form"); }
-            .app-container > .third-screen > .header > .row .column > .profession.active #front-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #front-show-form-button {
-              filter: url("/#front-show-form"); }
-            .app-container > .third-screen > .header > .row .column > .profession.active #web-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #web-show-form-button {
-              filter: url("/#web-show-form"); }
-            .app-container > .third-screen > .header > .row .column > .profession.active #html-show-form-button, .app-container > .third-screen > .header > .row .skills-offers > .profession.active #html-show-form-button {
-              filter: url("/#html-show-form"); }
           .app-container > .third-screen > .header > .row .column > .profession:first-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:first-child {
             margin-top: 0; }
           .app-container > .third-screen > .header > .row .column > .profession:last-child, .app-container > .third-screen > .header > .row .skills-offers > .profession:last-child {
@@ -728,8 +605,7 @@ html, body {
         display: none;
         flex-direction: column;
         justify-content: space-around;
-        padding-top: 70px;
-        padding-bottom: 70px; }
+        padding: 70px 0; }
         .app-container > .third-screen > .header > .row .skills-offers.active {
           display: flex; }
         .app-container > .third-screen > .header > .row .skills-offers > .skills, .app-container > .third-screen > .header > .row .skills-offers .offer {
@@ -743,22 +619,20 @@ html, body {
           transition: all 0.5s; }
           .app-container > .third-screen > .header > .row .skills-offers > .offer.active {
             display: block; }
-        .app-container > .third-screen > .header > .row .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row .skills-offers .offer > .title {
+        .app-container > .third-screen > .header > .row .skills-offers > .skills, .app-container > .third-screen > .header > .row .skills-offers .offer {
           font-family: 'SFUITextRegular', sans-serif;
-          font-size: 1.25em;
-          line-height: 1.22;
           letter-spacing: 1px;
-          font-weight: 600;
-          color: #fff;
-          margin-bottom: 20px; }
-        .app-container > .third-screen > .header > .row .skills-offers > .skills > p, .app-container > .third-screen > .header > .row .skills-offers .offer > p {
-          font-family: 'SFUITextLight', sans-serif;
-          margin: 0;
-          font-size: 1em;
-          font-weight: 300;
-          line-height: 2.8;
-          letter-spacing: 1px;
-          color: #ffffff; }
+          color: #fff; }
+          .app-container > .third-screen > .header > .row .skills-offers > .skills > .title, .app-container > .third-screen > .header > .row .skills-offers .offer > .title {
+            font-size: 1.25em;
+            line-height: 1.22;
+            font-weight: 600;
+            margin-bottom: 20px; }
+          .app-container > .third-screen > .header > .row .skills-offers > .skills > p, .app-container > .third-screen > .header > .row .skills-offers .offer > p {
+            margin: 0;
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 2.8; }
       .app-container > .third-screen > .header > .row .respond {
         display: none;
         flex-direction: column;
@@ -796,9 +670,7 @@ html, body {
           .app-container > .third-screen > .header > .row .respond > .wrap > input {
             width: 100%;
             height: 36px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
+            border: none;
             box-shadow: none;
             border-bottom: 1px solid #fff;
             background-color: transparent;
@@ -837,7 +709,9 @@ html, body {
             height: 54px;
             border-radius: 4px;
             border: dashed 1.5px #ffffff;
-            cursor: pointer; }
+            cursor: pointer;
+            position: relative;
+            overflow: hidden; }
             .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone > p {
               font-family: 'SFUIDTextMedium', sans-serif;
               font-size: 1.125em;
@@ -846,11 +720,8 @@ html, body {
               line-height: 54px;
               text-align: center;
               color: #ffffff; }
-          .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone {
-            position: relative;
-            overflow: hidden; }
-            .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone:after {
-              z-index: 0; }
+          .app-container > .third-screen > .header > .row .respond > .wrap > .drop-zone:after {
+            z-index: 0; }
           .app-container > .third-screen > .header > .row .respond > .wrap > .drop-file > ul {
             padding: 0;
             text-decoration: none;
@@ -879,11 +750,8 @@ html, body {
           overflow: hidden; }
           .app-container > .third-screen > .header > .row .respond > button:hover {
             color: #0fabe8; }
-        .app-container > .third-screen > .header > .row .respond > #show-form-button {
-          filter: url("/#show-form"); }
       .app-container > .third-screen > .header > .row .nav-tabs {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
         display: flex;
         border-bottom: none; }
         .app-container > .third-screen > .header > .row .nav-tabs > li {
@@ -903,12 +771,9 @@ html, body {
             background-color: #fff; }
             .app-container > .third-screen > .header > .row .nav-tabs > li.active > a {
               color: #27c6ce; }
-        .app-container > .third-screen > .header > .row .nav-tabs > li:first-child {
+        .app-container > .third-screen > .header > .row .nav-tabs > li:first-child, .app-container > .third-screen > .header > .row .nav-tabs li:last-child {
           border-bottom-right-radius: 0;
           border-top-right-radius: 0; }
-        .app-container > .third-screen > .header > .row .nav-tabs > li:last-child {
-          border-bottom-left-radius: 0;
-          border-top-left-radius: 0; }
       .app-container > .third-screen > .header > .row .respond.mobile {
         max-width: 800px; }
   .app-container .section-comment {
@@ -937,10 +802,7 @@ html, body {
       min-height: 580px;
       display: flex;
       overflow: visible; }
-      .app-container .section-comment .slick-slider:focus {
-        outline: none;
-        border: none; }
-      .app-container .section-comment .slick-slider:active {
+      .app-container .section-comment .slick-slider:focus, .app-container .section-comment .slick-slider:active {
         outline: none;
         border: none; }
       .app-container .section-comment .slick-slider .slick-list {
@@ -970,7 +832,8 @@ html, body {
               align-items: center;
               background-color: #ffffff;
               box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07);
-              padding: 0 11%; }
+              padding: 0 11%;
+              text-align: center; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > img, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > img {
                 width: 90px;
                 height: 90px; }
@@ -980,7 +843,6 @@ html, body {
                 font-weight: 600;
                 line-height: 1.5;
                 letter-spacing: 0;
-                text-align: center;
                 color: #0a0c0f;
                 margin-bottom: 5px; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .company, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .company {
@@ -988,7 +850,6 @@ html, body {
                 font-size: 1.125em;
                 line-height: 1.22;
                 letter-spacing: normal;
-                text-align: center;
                 color: #9b9b9b; }
               .app-container .section-comment .slick-slider .slick-list .slick-track > .comment > .wrap > .review, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap > .review {
                 margin-top: 32px;
@@ -996,7 +857,6 @@ html, body {
                 font-size: 1em;
                 line-height: 1.63;
                 letter-spacing: normal;
-                text-align: center;
                 color: #0a0c0f;
                 position: relative;
                 white-space: normal; }
@@ -1018,194 +878,272 @@ html, body {
           .app-container .section-comment .slick-slider .slick-list .slick-track > .slick-center > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-active > .wrap, .app-container .section-comment .slick-slider .slick-list .slick-track .slick-slide > .wrap {
             max-width: 720px;
             width: 100%; }
-  .app-container .section-technologies {
+  .app-container .wrap-section .section-technologies, .app-container .wrap-section .section-technologies-mobile {
     height: 792px;
     position: relative;
     background-color: #f0f6fa;
     display: flex;
     justify-content: center; }
-    .app-container .section-technologies > .wrap-technologies {
-      height: 100%;
-      padding: 5% 21.67%; }
-      .app-container .section-technologies > .wrap-technologies > .wrap-row {
-        width: 100%;
-        display: flex; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology {
-          width: 96px;
-          height: 96px;
-          background-color: #fff;
-          border-radius: 50%;
-          background-repeat: no-repeat;
-          background-position: center;
-          position: relative;
+  .app-container .wrap-section .section-technologies > .wrap-technologies, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies {
+    height: 100%;
+    padding: 5% 21.67%; }
+    .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row {
+      width: 100%;
+      display: flex; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology {
+        width: 96px;
+        height: 96px;
+        background: #fff center no-repeat;
+        border-radius: 50%;
+        position: relative;
+        background-size: 60px auto; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology:after {
+          position: absolute;
+          height: 33px;
+          width: 162px;
+          text-align: center;
+          bottom: -37px;
+          left: calc(50% - 81px);
+          font-family: "SFUIDisplay", sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          letter-spacing: -0px;
+          color: #0a0c0f;
+          background-color: #f0f6fa; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.slack, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.slack {
+          border: solid 1px #25cbaa;
+          background-image: url("../img/roadmap/slack.svg"); }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.slack:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.slack:after {
+            content: 'Slack'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.ruby {
+          border: solid 1px #ffc100;
+          background-image: url("../img/roadmap/ruby.svg"); }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.ruby:after {
+            content: 'Sketch'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.in, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.in {
+          border: solid 1px #ff2a63;
+          background-image: url("../img/roadmap/in.svg");
+          background-size: 50px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.in:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.in:after {
+            content: 'Invision'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.p, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.p {
+          border: solid 1px #7f3db6;
+          background-image: url("../img/roadmap/p.svg");
+          background-size: 40px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.p:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.p:after {
+            content: 'Principle'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.react, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.react {
+          border: solid 1px #35b877;
+          background-image: url("../img/roadmap/react.svg"); }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.react:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.react:after {
+            content: 'Atom'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.zeplin {
+          border: solid 1px #f89920;
+          background-image: url("../img/roadmap/zeplin.svg"); }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.zeplin:after {
+            content: 'Zeplin'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.vim, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.vim {
+          border: solid 1px #000000;
+          background-image: url("../img/roadmap/vim.png");
           background-size: 60px auto; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology:after {
-            position: absolute;
-            height: 33px;
-            width: 162px;
-            text-align: center;
-            bottom: -37px;
-            left: calc(50% - 81px);
-            font-family: "SFUIDisplay", sans-serif;
-            font-size: 20px;
-            font-weight: 300;
-            letter-spacing: -0px;
-            text-align: center;
-            color: #0a0c0f;
-            background-color: #f0f6fa; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.slack {
-            border: solid 1px #25cbaa;
-            background-image: url("../img/roadmap/slack.svg"); }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.slack:after {
-              content: 'Slack'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby {
-            border: solid 1px #ffc100;
-            background-image: url("../img/roadmap/ruby.svg"); }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.ruby:after {
-              content: 'Sketch'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.in {
-            border: solid 1px #ff2a63;
-            background-image: url("../img/roadmap/in.svg");
-            background-size: 50px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.in:after {
-              content: 'Invision'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.p {
-            border: solid 1px #7f3db6;
-            background-image: url("../img/roadmap/p.svg");
-            background-size: 40px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.p:after {
-              content: 'Principle'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.react {
-            border: solid 1px #35b877;
-            background-image: url("../img/roadmap/react.svg"); }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.react:after {
-              content: 'Atom'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin {
-            border: solid 1px #f89920;
-            background-image: url("../img/roadmap/zeplin.svg"); }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.zeplin:after {
-              content: 'Zeplin'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim {
-            border: solid 1px #000000;
-            background-image: url("../img/roadmap/vim.png");
-            background-size: 60px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.vim:after {
-              content: 'Vim'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta {
-            border: solid 1px #0079ff;
-            background-image: url("../img/roadmap/penta.png");
-            background-size: 60px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.penta:after {
-              content: 'Fastlane'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat {
-            border: solid 1px #019ee1;
-            background-image: url("../img/roadmap/hat.png");
-            background-size: 65px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.hat:after {
-              content: 'HockeyApp'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app {
-            background-image: url("../img/roadmap/appstore.svg");
-            border-radius: 0;
-            width: 80px;
-            height: 80px;
-            background-color: transparent;
-            background-size: 80px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.app:after {
-              content: 'App Store'; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.android {
-            background-image: url("../img/roadmap/playmarket.svg");
-            border-radius: 0;
-            width: 80px;
-            height: 80px;
-            background-color: transparent;
-            background-size: 80px auto; }
-            .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology.android:after {
-              content: 'Google Play'; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line {
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.vim:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.vim:after {
+            content: 'Vim'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.penta, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.penta {
+          border: solid 1px #0079ff;
+          background-image: url("../img/roadmap/penta.png");
+          background-size: 60px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.penta:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.penta:after {
+            content: 'Fastlane'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.hat, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.hat {
+          border: solid 1px #019ee1;
+          background-image: url("../img/roadmap/hat.png");
+          background-size: 65px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.hat:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.hat:after {
+            content: 'HockeyApp'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.app, .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.android, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.app, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.android {
+          border-radius: 0;
+          width: 80px;
+          height: 80px; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.app, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.app {
+          background: url("../img/roadmap/appstore.svg") transparent;
+          background-size: 80px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.app:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.app:after {
+            content: 'App Store'; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.android, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.android {
+          background: url("../img/roadmap/playmarket.svg") transparent;
+          background-size: 80px auto; }
+          .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology.android:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.android:after {
+            content: 'Google Play'; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line {
+        flex: 1;
+        align-self: center;
+        height: 1px;
+        object-fit: contain;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-top: none; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.first {
+          position: relative;
+          border-image-source: linear-gradient(to right, #24ccaa, #ffc100); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.second, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.second {
+          border-image-source: linear-gradient(to right, #ffc100, #ff2a63); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.third, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.third {
+          border-image-source: linear-gradient(to right, #f89920, #7f3db6); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fourth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.fourth {
+          border-image-source: linear-gradient(to right, #35b877, #f89920); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fifth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.fifth {
+          border-image-source: linear-gradient(to right, #000000, #0079ff); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line.sixth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.sixth {
+          border-image-source: linear-gradient(to right, #0079ff, #019ee1); }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row.first, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row.first {
+        justify-content: flex-end;
+        padding-right: 47px; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row.second, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row.second {
+        justify-content: flex-start;
+        padding-left: 47px; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row.third, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row.third {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 47px;
+        padding-left: 47px;
+        margin-bottom: -40px; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row.fourth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row.fourth {
+        padding: 0 22.3%; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line-vertical {
+        width: 1px;
+        height: 80px;
+        object-fit: contain;
+        border: 1px solid;
+        border-image-slice: 1;
+        border-left: none; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.one, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line-vertical.one {
+          border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.two, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line-vertical.two {
+          border-image-source: linear-gradient(to bottom, #35b877, #000000); }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.seventh, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line-vertical.seventh {
+          border-image-source: linear-gradient(to right, #2096c3, #019ee1);
+          height: 64px; }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .eighth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .eighth {
+        height: 1px;
+        width: 100%;
+        display: flex;
+        flex-direction: row; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .eighth > .left, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .eighth > .left {
           flex: 1;
-          align-self: center;
+          height: 0; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .eighth > .right, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .eighth > .right {
+          flex: 1;
           height: 1px;
-          object-fit: contain;
-          border-style: solid;
-          border-width: 1px;
+          border: 1px solid;
           border-image-slice: 1;
-          border-top: none; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.first {
-            position: relative;
-            border-image-source: linear-gradient(to right, #24ccaa, #ffc100); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.second {
-            border-image-source: linear-gradient(to right, #ffc100, #ff2a63); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.third {
-            border-image-source: linear-gradient(to right, #f89920, #7f3db6); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fourth {
-            border-image-source: linear-gradient(to right, #35b877, #f89920); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.fifth {
-            border-image-source: linear-gradient(to right, #000000, #0079ff); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line.sixth {
-            border-image-source: linear-gradient(to right, #0079ff, #019ee1); }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row.first {
-          justify-content: flex-end;
-          padding-right: 47px; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row.second {
-          justify-content: flex-start;
-          padding-left: 47px; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row.third {
-          flex-direction: column;
-          align-items: flex-end;
-          padding-right: 47px;
-          padding-left: 47px;
-          margin-bottom: -40px; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row.fourth {
-          padding: 0 22.3%; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical {
-          width: 1px;
-          height: 80px;
-          object-fit: contain;
-          border-style: solid;
-          border-width: 1px;
+          border-top: none;
+          border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .ninth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .ninth {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .ninth .-center, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .ninth .-center {
+          width: 2px;
+          height: 64px;
+          border: 1px solid;
           border-image-slice: 1;
+          border-right: none;
+          border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
+      .app-container .wrap-section .section-technologies > .wrap-technologies > .wrap-row > .tenth, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .tenth {
+        border-image-source: linear-gradient(to right, #00a6b9, #4086cd); }
+  .app-container .wrap-section .section-technologies-mobile {
+    height: 1104px; }
+    .app-container .wrap-section .section-technologies-mobile > .wrap-technologies {
+      height: 100%;
+      padding: 60px 0 60px; }
+      .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology {
+          width: 60px;
+          height: 60px;
+          background-size: 40px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.in {
+            background-size: 35px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.p {
+            background-size: 30px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.vim {
+            background-size: 35px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.penta {
+            background-size: 40px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.hat {
+            background-size: 40px auto; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology:after {
+            text-align: right;
+            left: -175px;
+            bottom: calc(50% - 17px);
+            height: 34px;
+            font-size: 18px; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology.-right:after {
+            text-align: left;
+            left: 70px; }
+        .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line {
+          flex: 1;
+          height: 38px;
           border-left: none; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.one {
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.one {
             border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.two {
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.two {
             border-image-source: linear-gradient(to bottom, #35b877, #000000); }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .technology-line-vertical.seventh {
-            border-image-source: linear-gradient(to right, #2096c3, #019ee1);
-            height: 64px; }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth {
-          height: 1px;
-          width: 100%;
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .technology-line.seventh {
+            border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
+        .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store {
           display: flex;
-          flex-direction: row; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth > .left {
+          flex-direction: row;
+          width: 200px;
+          margin-top: -30px; }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology {
+            width: 60px;
+            height: 60px;
+            background-size: 40px auto; }
+            .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.app, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.android {
+              border-radius: 0;
+              width: 60px;
+              height: 60px; }
+              .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.app:after, .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.android:after {
+                position: absolute;
+                height: 33px;
+                width: 162px;
+                text-align: center;
+                bottom: 20px;
+                font-family: "SFUIDisplay", sans-serif;
+                font-size: 18px;
+                font-weight: 300;
+                letter-spacing: -0px;
+                color: #0a0c0f; }
+            .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.app {
+              background: url("../img/roadmap/appstore.svg") transparent;
+              background-size: 60px auto; }
+              .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.app:after {
+                content: 'App Store';
+                left: calc(50% - 10px); }
+            .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.android {
+              background: url("../img/roadmap/playmarket.svg") transparent;
+              background-size: 60px auto; }
+              .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology.android:after {
+                content: 'Google Play';
+                left: calc(50% - 152px); }
+          .app-container .wrap-section .section-technologies-mobile > .wrap-technologies > .wrap-row > .-store > .technology-line.tenth {
             flex: 1;
-            height: 0; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .eighth > .right {
-            flex: 1;
+            align-self: center;
             height: 1px;
-            border-style: solid;
-            border-width: 1px;
+            object-fit: contain;
+            border: 1px solid;
             border-image-slice: 1;
             border-top: none;
-            border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .ninth {
-          width: 100%;
-          display: flex;
-          justify-content: center; }
-          .app-container .section-technologies > .wrap-technologies > .wrap-row > .ninth .-center {
-            width: 2px;
-            height: 64px;
-            border-style: solid;
-            border-width: 1px;
-            border-image-slice: 1;
-            border-right: none;
-            border-image-source: linear-gradient(to right, #2096c3, #019ee1); }
-        .app-container .section-technologies > .wrap-technologies > .wrap-row > .tenth {
-          border-image-source: linear-gradient(to right, #00a6b9, #4086cd); }
+            border-image-source: linear-gradient(to right, #00a6b9, #4086cd); }
   .app-container > footer {
     width: 100%;
     min-height: 720px;
-    object-fit: contain;
     background-image: linear-gradient(to left, #27c4ce, #33d4bd);
     display: flex;
     justify-content: center; }
@@ -1222,7 +1160,7 @@ html, body {
           font-weight: 600;
           line-height: 1.14;
           letter-spacing: 0.2px;
-          color: #ffffff;
+          color: #fff;
           margin-bottom: 73px;
           border: none; }
         .app-container > footer > .row > form > .wrap {
@@ -1242,12 +1180,10 @@ html, body {
               width: 100%;
               height: 1px;
               top: -17px; }
-          .app-container > footer > .row > form > .wrap > input {
+          .app-container > footer > .row > form > .wrap > input, .app-container > footer > .row > form > .wrap select {
             width: 100%;
             height: 36px;
-            border-top: none;
-            border-left: none;
-            border-right: none;
+            border: none;
             box-shadow: none;
             border-bottom: 1px solid #fff;
             background-color: transparent;
@@ -1256,23 +1192,29 @@ html, body {
             text-align: left;
             color: rgba(255, 255, 255, 0.7);
             position: relative; }
-            .app-container > footer > .row > form > .wrap > input:focus {
+            .app-container > footer > .row > form > .wrap > input:focus, .app-container > footer > .row > form > .wrap select:focus {
               outline: 0;
               outline-offset: 0; }
-            .app-container > footer > .row > form > .wrap > input:focus:required:invalid {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid, .app-container > footer > .row > form > .wrap select:focus:required:invalid {
               font-family: "SFUIDisplayRegular", sans-serif;
               font-size: 1em;
               text-align: left;
               color: #f8e81c;
               border-bottom: 1px solid #f8e81c; }
-            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-webkit-input-placeholder, .app-container > footer > .row > form > .wrap select:focus:required:invalid::-webkit-input-placeholder {
               color: #f8e81c; }
-            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid::-moz-placeholder, .app-container > footer > .row > form > .wrap select:focus:required:invalid::-moz-placeholder {
               color: #f8e81c; }
-            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-moz-placeholder, .app-container > footer > .row > form > .wrap select:focus:required:invalid:-moz-placeholder {
               color: #f8e81c; }
-            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder {
+            .app-container > footer > .row > form > .wrap > input:focus:required:invalid:-ms-input-placeholder, .app-container > footer > .row > form > .wrap select:focus:required:invalid:-ms-input-placeholder {
               color: #f8e81c; }
+          .app-container > footer > .row > form > .wrap > select > option {
+            color: #000;
+            background-color: #fff;
+            font-family: "SFUIDisplayRegular", sans-serif;
+            font-size: 1em;
+            border-radius: 5px; }
           .app-container > footer > .row > form > .wrap ::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.7); }
           .app-container > footer > .row > form > .wrap ::-moz-placeholder {
@@ -1306,13 +1248,11 @@ html, body {
           overflow: hidden; }
           .app-container > footer > .row > form > button:hover {
             color: #0fabe8; }
-        .app-container > footer > .row > form #send-respond-button {
-          filter: url("/#send-respond"); }
       .app-container > footer > .row > .contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 345px;
+        max-width: 360px;
         padding: 70px 0 70px 0px;
         width: 100%;
         min-height: 600px; }
@@ -1325,7 +1265,7 @@ html, body {
           line-height: 1.22;
           letter-spacing: 1px;
           color: rgba(255, 255, 255, 0.7); }
-          .app-container > footer > .row > .contact > .email > span, .app-container > footer > .row > .contact .adress > span {
+          .app-container > footer > .row > .contact > .email > a, .app-container > footer > .row > .contact > .email span, .app-container > footer > .row > .contact .adress > a, .app-container > footer > .row > .contact .adress span {
             font-family: 'SFUIDTextMedium', sans-serif;
             font-size: 1.25em;
             font-weight: 500;
@@ -1339,7 +1279,7 @@ html, body {
           font-size: 2.25em;
           font-weight: 500;
           line-height: 0.83;
-          letter-spacing: 0.6px;
+          letter-spacing: 0px;
           color: #ffffff;
           margin-top: 40px; }
 
@@ -1377,7 +1317,7 @@ html, body {
   transform: rotate(35deg);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   width: 50px;
-  z-index: -10; }
+  z-index: 0; }
 
 .btn-4-blue:hover:after {
   left: 120%;

@@ -4,25 +4,12 @@
 @import "~slick-carousel/slick/slick-theme.css"
 @import "../components/Vacancy/VacancyMobile/style.css"
 
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
+*::-webkit-input-placeholder, *:-moz-placeholder, *::-moz-placeholder, *:-ms-input-placeholder
 	color: #666
 	opacity: 1
 
 body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
+body textarea:focus:required:invalid,
 body input:required:valid,
 body textarea:required:valid
 	color: #666
@@ -80,41 +67,32 @@ html, body
 			//background-image: radial-gradient(circle at 66% 45%, #fafdff, #ecf0f3)
 			background-color: #F6F9FB
 			background-size: contain
-			padding-top: 159px
-			padding-bottom: 170px
+			padding: 159px 0 170px
 			position: relative
 			min-height: 600px
 			height: 100vh
 
-			&:before
+			&:before, &:after
 				content: ''
 				position: absolute
-				max-width: 276px
+				height: 700px
 				min-width: 90px
 				width: 18%
-				height: 700px
-				background: url("../img/page-1.svg") no-repeat
-				background-size: contain
-				left: 0
 				top: 15vh
 				z-index: 10
-
-			&:after
-				content: ''
-				position: absolute
+			&:before
+				left: 0
+				background: url("../img/page-1.svg") no-repeat
+				background-size: contain
 				max-width: 276px
-				min-width: 90px
-				width: 18%
-				height: 700px
+			&:after
 				background: url("../img/page-1-copy-2.svg") no-repeat
 				background-size: contain
 				right: 0
-				top: 15vh
-				z-index: 10
+				max-width: 263px
+
 			>.logo
 				position: relative
-				width: 300px
-				height: 300px
 				margin-bottom: 5.5vh
 				>.Page-1-Copy-3
 					width: 300px
@@ -130,20 +108,14 @@ html, body
 					z-index: 1
 					animation: App-logo-spin infinite 100s linear
 
-
-
 			>.Logo-Copy
 				max-width: 477px
-				width: 100%
-				object-fit: contain
 				z-index: 11
 				min-height: 100px
 
 			>.Mobile-Web-develop-Copy
 				max-width: 671px
-				width: 100%
 				min-height: 50px
-				object-fit: contain
 				font-family: $SFUID
 				font-size: 3em
 				font-weight: 300
@@ -154,15 +126,6 @@ html, body
 				margin-top: 3.33vh
 				position: relative
 				z-index: 12
-
-			.svg--s
-				position: absolute
-
-			.svg-filters
-				position: absolute
-				visibility: hidden
-				width: 1px
-				height: 1px
 
 			>.header-button
 				position: relative
@@ -178,7 +141,6 @@ html, body
 				color: #ffffff
 				cursor: pointer
 				transition: all 0.45s ease-out
-				filter: url("/#filter-ripple-2")
 				z-index: 1
 				margin-top: 10.5vh
 				overflow: hidden
@@ -190,10 +152,7 @@ html, body
 		>.footer
 			display: flex
 			justify-content: center
-			width: 100%
-			object-fit: contain
 			background-image: linear-gradient(to right, #21b4ed, #00c2de)
-			position: relative
 
 			>.row
 
@@ -203,12 +162,12 @@ html, body
 					border-radius: 4px
 					background-color: #ffffff
 					box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
-					padding-top: 47px
-					padding-bottom: 61px
+					padding: 47px 0 61px
 					display: flex
 					flex-direction: column
 					justify-content: space-between
-
+					text-align: center
+					color: #0a0c0f
 
 					>h2
 						font-family: $SFUIDsemibold
@@ -216,10 +175,7 @@ html, body
 						font-weight: 600
 						line-height: 1.81
 						letter-spacing: -0.1px
-						text-align: center
-						color: #0a0c0f
-						margin: 0
-						margin-bottom: 8px
+						margin: 0 0 8px 0
 
 					>p
 						font-family: 'SFUITextLight', sans-serif
@@ -227,8 +183,6 @@ html, body
 						font-weight: 300
 						line-height: 1.63
 						letter-spacing: 1px
-						text-align: center
-						color: #0a0c0f
 						margin: 0
 						padding: 0 13%
 
@@ -236,9 +190,6 @@ html, body
 		display: flex
 		flex-direction: column
 		align-items: center
-		width: 100%
-		height: 100%
-		object-fit: contain
 		background-color: #ffffff
 		box-sizing: border-box
 
@@ -260,7 +211,7 @@ html, body
 					svg
 						min-height: 0
 						min-width: 0
-						path, ellipse
+						path
 							fill: none
 							stroke: #9b9b9b
 
@@ -277,42 +228,37 @@ html, body
 					>h3
 						color: #000
 
-			.react
+			.react, .rails, .ios, .android
 				&.active
 					svg
-						g, path, ellipse
-							fill: #00D8FF !important
+						g, path
 							stroke: none
 					h3
 						color: #000
 
+			.react
+				&.active
+					svg
+						g, path
+							fill: #00D8FF !important
 
 			.rails
 				&.active
 					svg
 						g, path
 							fill: #D0011B !important
-							stroke: none
-					h3
-						color: #000
 
 			.ios
 				&.active
 					svg
 						g, path
 							fill: #0A0C0F !important
-							stroke: none
-					h3
-						color: #000
 
 			.android
 				&.active
 					svg
 						g, path
 							fill: #7ED321 !important
-							stroke: none
-					h3
-						color: #000
 
 	.second-screen
 		>.header
@@ -330,12 +276,10 @@ html, body
 				min-width: 192px
 				height: 2px
 				pointer-events: none
-				border: 1px solid #fff
-				border-width: 0 6vw
+				border: 6vw solid #fff
 				background: #0fabe8
 				-webkit-transition: -webkit-transform 0.5s
 				transition: transform 0.5s
-				-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1)
 				-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22)
 				transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22)
 
@@ -364,28 +308,20 @@ html, body
 				padding-top: 137px
 
 				.slick-slider
-					width: 100%
 					overflow: hidden
-
-					&:focus
-						outline: none
-						border: none
-
-					&:active
-						outline: none
-						border: none
-
-				.slick-slider
 					margin-bottom: 146px
 
-					.slick-track
-						display: flex
+					&:focus, &:active
+						outline: none
+						border: none
 
 					.react, .rails, .ios, .android
 						display: flex
 						flex-direction: column
 						justify-content: space-between
 						align-items: center
+						text-align: center
+						color: #0a0c0f
 
 						>.title
 							font-family: $SFUIDsemibold
@@ -393,8 +329,6 @@ html, body
 							font-weight: 600
 							line-height: 1.81
 							letter-spacing: -0.1px
-							text-align: center
-							color: #0a0c0f
 							margin-bottom: 8px
 
 						>p
@@ -403,10 +337,7 @@ html, body
 							font-weight: 300
 							line-height: 1.63
 							letter-spacing: 1px
-							text-align: center
-							color: #0a0c0f
-							margin: 0
-							margin-bottom: 60px
+							margin: 0 0 60px 0
 
 		>.footer
 			display: flex
@@ -416,140 +347,113 @@ html, body
 			max-height: 900px
 			justify-content: center
 
-			.backgroundAnim0
+			.backgroundAnim0, .backgroundAnim1, .backgroundAnim2
 				position: absolute
 				width: 100%
 				height: 100%
 				top: 0
 				left: 0
-				animation-name: backgroundAnim0
 				animation-duration: 2s
 				animation-timing-function: ease-out
+
+			.backgroundAnim0
+				animation-name: backgroundAnim0
 				background: linear-gradient(to right, #26bf59, #4ede7e)
 
 			.backgroundAnim1
-				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				left: 0
 				animation-name: backgroundAnim1
-				animation-duration: 2s
-				animation-timing-function: ease-out
 				background: linear-gradient(to right, #ff931e, #ffaa4d)
 
 			.backgroundAnim2
-				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				left: 0
 				animation-name: backgroundAnim2
-				animation-duration: 2s
-				animation-timing-function: ease-out
 				background: linear-gradient(to right, #62F8CD, #66F9D8)
 
 			.parallax
 				width: 1440px
 				height: auto
 				position: relative
-				padding: 0px
+				padding: 0
 				img
 					max-width: 500px
 					width: 100%
 					height: auto
 			.parallax, .portfolio-mobile
+				img
+					position: absolute
 				.first
 					top: 1%
 					left: 1%
-					position: absolute
 
 				.second
 					top: 1%
 					left: 31%
-					position: absolute
 
 				.third
 					top: 1%
 					left: 60%
-					position: absolute
 
 				.fourth
 					top: 31%
 					left: 6%
-					position: absolute
 
 				.sixth
 					top: 31%
 					left: 35%
-					position: absolute
 
 				.tenth
 					top: 31%
 					left: 63%
-					position: absolute
 
 				.seventh
 					top: 62%
 					left: 9%
-					position: absolute
 
 				.eighth
 					top: 62%
 					left: 37%
-					position: absolute
 
 				.ninth
 					top: 62%
 					left: 66%
-					position: absolute
 
 				.secondTD
 					top: 7%
 					left: 57%
-					position: absolute
 
 				.thirdTD
 					top: 33%
 					left: 31%
-					position: absolute
 
 				.fourthTD
 					top: 59%
 					left: 3%
-					position: absolute
 
 				.eighthTD
 					top: 21%
 					left: 80%
-					position: absolute
 
 				.seventhTD
 					top: 35%
 					left: 42%
-					position: absolute
 
 				.firstTD
 					top: 80%
 					left: 23%
-					position: absolute
 
 				.sixthTD
 					top: 20%
 					left: 20%
-					position: absolute
 
 				.ninthTD
 					top: 63%
 					left: 61%
-					position: absolute
 
 			.portfolio-mobile
 				width: 768px
 				min-height: 400px
 				height: auto
 				position: relative
-				padding: 0px
+				padding: 0
 				img
 					width: 230px
 					height: auto
@@ -558,42 +462,34 @@ html, body
 				.secondTD
 					top: -5%
 					left: 54%
-					position: absolute
 
 				.thirdTD
 					top: 26%
 					left: 27%
-					position: absolute
 
 				.fourthTD
 					top: 57%
 					left: 0%
-					position: absolute
 
 				.eighthTD
 					top: 15%
 					left: 84%
-					position: absolute
 
 				.seventhTD
 					top: 28%
 					left: 41%
-					position: absolute
 
 				.firstTD
 					top: 89%
 					left: 24%
-					position: absolute
 
 				.sixthTD
 					top: 10%
 					left: 15%
-					position: absolute
 
 				.ninthTD
 					top: 66%
 					left: 62%
-					position: absolute
 
 			.slick-slider
 				width: 1440px
@@ -643,15 +539,14 @@ html, body
 					justify-content: center
 					align-items: flex-start
 					padding-left: 7vw
+					color: #0a0c0f
 
 					>p
 						font-family: 'SFUITextLight', sans-serif
 						font-size: 1em
 						line-height: 1.38
-						letter-spacing: 0px
-						color: #0a0c0f
-						margin: 0
-						margin-bottom: 10px
+						letter-spacing: 0
+						margin: 0 0 10px 0
 
 					>h3
 						font-family: $SFUIDsemibold
@@ -659,7 +554,6 @@ html, body
 						font-weight: 600
 						line-height: 1.14
 						letter-spacing: 0.2px
-						color: #0a0c0f
 						margin: 0
 
 			>img
@@ -698,7 +592,6 @@ html, body
 		>.header
 			width: 100%
 			height: auto
-			object-fit: contain
 			background: linear-gradient(to right, #00c2de, #27cecb)
 			display: flex
 			justify-content: center
@@ -709,20 +602,18 @@ html, body
 				background: url(../img/3.svg) 88% bottom no-repeat
 
 				.column
-					width: 410px
+					width: 460px
 
 				.column, .skills-offers
 					height: 720px
 					display: flex
 					flex-direction: column
 					justify-content: space-between
-					padding-top: 70px
-					padding-bottom: 70px
-					padding-left: 0
-					padding-right: 0
+					padding: 70px 0
 
 					>.profession
 						transition: all 0.5s
+						letter-spacing: 0
 
 						>h2
 							display: inline-block
@@ -730,7 +621,6 @@ html, body
 							font-size: 1.25em
 							font-weight: 600
 							line-height: 1
-							letter-spacing: 0px
 							color: #ffffff
 							padding-bottom: 10px
 							border-bottom: 1px solid #fff
@@ -739,19 +629,18 @@ html, body
 
 						>.price, .button
 							display: none
+							color: #fff
 
 						&.active
 							margin-bottom: 25px
 							margin-top: 25px
+							color: #fff
 
 							>h2
-								object-fit: contain
 								font-family: $SFUIDsemibold
 								font-size: 2.3em
 								font-weight: 600
 								line-height: 1.14
-								letter-spacing: 0px
-								color: #ffffff
 								border-bottom: none
 								cursor: default
 
@@ -762,8 +651,6 @@ html, body
 								font-size: 2em
 								font-weight: 300
 								line-height: 1.56
-								letter-spacing: 0px
-								color: #ffffff
 								margin-top: 10px
 
 							>.button
@@ -771,7 +658,6 @@ html, body
 								max-width: 270px
 								width: 100%
 								height: 54px
-								object-fit: contain
 								background-color: #fff
 								border-radius: 4px
 								font-family: 'SFUIDTextMedium', sans-serif
@@ -799,24 +685,6 @@ html, body
 										background-color: #fff
 										color: #27c6ce
 
-							>#qa-show-button
-								filter: url("/#qa-show-form")
-
-							#support-show-form-button
-								filter: url('/#support-show-form')
-
-							#lead-show-form-button
-								filter: url('/#lead-show-form')
-
-							#front-show-form-button
-								filter: url('/#front-show-form')
-
-							#web-show-form-button
-								filter: url('/#web-show-form')
-
-							#html-show-form-button
-								filter: url('/#html-show-form')
-
 						&:first-child
 							margin-top: 0
 
@@ -827,8 +695,7 @@ html, body
 					display: none
 					flex-direction: column
 					justify-content: space-around
-					padding-top: 70px
-					padding-bottom: 70px
+					padding: 70px 0
 
 					&.active
 						display: flex
@@ -850,24 +717,21 @@ html, body
 							display: block
 
 					>.skills, .offer
+						font-family: 'SFUITextRegular', sans-serif
+						letter-spacing: 1px
+						color: #fff
 
 						>.title
-							font-family: 'SFUITextRegular', sans-serif
 							font-size: 1.25em
 							line-height: 1.22
-							letter-spacing: 1px
 							font-weight: 600
-							color: #fff
 							margin-bottom: 20px
 
 						>p
-							font-family: 'SFUITextLight', sans-serif
 							margin: 0
 							font-size: 1em
 							font-weight: 300
 							line-height: 2.8
-							letter-spacing: 1px
-							color: #ffffff
 
 				.respond
 					display: none
@@ -908,9 +772,7 @@ html, body
 						>input
 							width: 100%
 							height: 36px
-							border-top: none
-							border-left: none
-							border-right: none
+							border: none
 							box-shadow: none
 							border-bottom: 1px solid #fff
 							background-color: transparent
@@ -949,8 +811,6 @@ html, body
 						:-ms-input-placeholder
 							color: rgba(255, 255, 255, 0.7)
 
-						>label
-
 
 						>input:focus:required:invalid + label:after
 							color: #f8e81c
@@ -962,6 +822,8 @@ html, body
 							border-radius: 4px
 							border: dashed 1.5px #ffffff
 							cursor: pointer
+							position: relative
+							overflow: hidden
 							>p
 								font-family: 'SFUIDTextMedium', sans-serif
 								font-size: 1.125em
@@ -971,8 +833,6 @@ html, body
 								text-align: center
 								color: #ffffff
 						>.drop-zone
-							position: relative
-							overflow: hidden
 							&:after
 								z-index: 0
 
@@ -1008,12 +868,8 @@ html, body
 						&:hover
 							color: #0fabe8
 
-					>#show-form-button
-						filter: url('/#show-form')
-
 				.nav-tabs
-					padding-left: 20px
-					padding-right: 20px
+					padding: 0 20px
 					display: flex
 					border-bottom: none
 
@@ -1034,12 +890,9 @@ html, body
 							background-color: #fff
 							> a
 								color: #27c6ce
-					> li:first-child
+					> li:first-child, li:last-child
 						border-bottom-right-radius: 0
 						border-top-right-radius: 0
-					> li:last-child
-						border-bottom-left-radius: 0
-						border-top-left-radius: 0
 
 				.respond
 					&.mobile
@@ -1077,11 +930,7 @@ html, body
 			display: flex
 			overflow: visible
 
-			&:focus
-				outline: none
-				border: none
-
-			&:active
+			&:focus, &:active
 				outline: none
 				border: none
 
@@ -1116,6 +965,7 @@ html, body
 							background-color: #ffffff
 							box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
 							padding: 0 11%
+							text-align: center
 
 							>img
 								width: 90px
@@ -1127,7 +977,6 @@ html, body
 								font-weight: 600
 								line-height: 1.5
 								letter-spacing: 0
-								text-align: center
 								color: #0a0c0f
 								margin-bottom: 5px
 
@@ -1136,7 +985,6 @@ html, body
 								font-size: 1.125em
 								line-height: 1.22
 								letter-spacing: normal
-								text-align: center
 								color: #9b9b9b
 
 							>.review
@@ -1145,7 +993,6 @@ html, body
 								font-size: 1em
 								line-height: 1.63
 								letter-spacing: normal
-								text-align: center
 								color: #0a0c0f
 								position: relative
 								white-space: normal
@@ -1173,122 +1020,116 @@ html, body
 							max-width: 720px
 							width: 100%
 
-	.section-technologies
-		height: 792px
-		position: relative
-		background-color: #f0f6fa
-		display: flex
-		justify-content: center
-		>.wrap-technologies
-			height: 100%
-			padding: 5% 21.67%
-			>.wrap-row
-				width: 100%
-				display: flex
-				>.technology
-					width: 96px
-					height: 96px
-					background-color: #fff
-					//box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
-					border-radius: 50%
-					background-repeat: no-repeat
-					background-position: center
-					position: relative
-					background-size: 60px auto
-					&:after
-						position: absolute
-						height: 33px
-						width: 162px
-						text-align: center
-						bottom: -37px
-						left: calc(50% - 81px)
-						font-family: $SFUID
-						font-size: 20px
-						font-weight: 300
-						letter-spacing: -0px
-						text-align: center
-						color: #0a0c0f
-						background-color: #f0f6fa
-					&.slack
-						border: solid 1px #25cbaa
-						background-image: url("../img/roadmap/slack.svg")
-						&:after
-							content: 'Slack'
-					&.ruby
-						border: solid 1px #ffc100
-						background-image: url("../img/roadmap/ruby.svg")
-						&:after
-							content: 'Sketch'
-					&.in
-						border: solid 1px #ff2a63
-						background-image: url("../img/roadmap/in.svg")
-						background-size: 50px auto
-						&:after
-							content: 'Invision'
-					&.p
-						border: solid 1px #7f3db6
-						background-image: url("../img/roadmap/p.svg")
-						background-size: 40px auto
-						&:after
-							content: 'Principle'
-					&.react
-						border: solid 1px #35b877
-						background-image: url("../img/roadmap/react.svg")
-						&:after
-							content: 'Atom'
-					&.zeplin
-						border: solid 1px #f89920
-						background-image: url("../img/roadmap/zeplin.svg")
-						&:after
-							content: 'Zeplin'
-					&.vim
-						border: solid 1px #000000
-						background-image: url("../img/roadmap/vim.png")
-						background-size: 60px auto
-						&:after
-							content: 'Vim'
-					&.penta
-						border: solid 1px #0079ff
-						background-image: url("../img/roadmap/penta.png")
-						background-size: 60px auto
-						&:after
-							content: 'Fastlane'
-					&.hat
-						border: solid 1px #019ee1
-						background-image: url("../img/roadmap/hat.png")
-						background-size: 65px auto
-						&:after
-							content: 'HockeyApp'
-					&.app
-						background-image: url("../img/roadmap/appstore.svg")
-						border-radius: 0
-						width: 80px
-						height: 80px
-						background-color: transparent
-						background-size: 80px auto
-						&:after
-							content: 'App Store'
-					&.android
-						background-image: url("../img/roadmap/playmarket.svg")
-						border-radius: 0
-						width: 80px
-						height: 80px
-						background-color: transparent
-						background-size: 80px auto
-						&:after
-							content: 'Google Play'
-				>.technology-line
-					flex: 1
-					align-self: center
-					height: 1px
-					object-fit: contain
-					border-style: solid
-					border-width: 1px
-					border-image-slice: 1
-					border-top: none
-					&.first
+	.wrap-section
+		.section-technologies, .section-technologies-mobile
+			height: 792px
+			position: relative
+			background-color: #f0f6fa
+			display: flex
+			justify-content: center
+		.section-technologies, .section-technologies-mobile
+			>.wrap-technologies
+				height: 100%
+				padding: 5% 21.67%
+				>.wrap-row
+					width: 100%
+					display: flex
+					>.technology
+						width: 96px
+						height: 96px
+						background: #fff center no-repeat
+						//box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.07)
+						border-radius: 50%
 						position: relative
-						border-image-source: linear-gradient(to right, #24ccaa, #ffc100)
+						background-size: 60px auto
+						&:after
+							position: absolute
+							height: 33px
+							width: 162px
+							text-align: center
+							bottom: -37px
+							left: calc(50% - 81px)
+							font-family: $SFUID
+							font-size: 20px
+							font-weight: 300
+							letter-spacing: -0px
+							color: #0a0c0f
+							background-color: #f0f6fa
+						&.slack
+							border: solid 1px #25cbaa
+							background-image: url("../img/roadmap/slack.svg")
+							&:after
+								content: 'Slack'
+						&.ruby
+							border: solid 1px #ffc100
+							background-image: url("../img/roadmap/ruby.svg")
+							&:after
+								content: 'Sketch'
+						&.in
+							border: solid 1px #ff2a63
+							background-image: url("../img/roadmap/in.svg")
+							background-size: 50px auto
+							&:after
+								content: 'Invision'
+						&.p
+							border: solid 1px #7f3db6
+							background-image: url("../img/roadmap/p.svg")
+							background-size: 40px auto
+							&:after
+								content: 'Principle'
+						&.react
+							border: solid 1px #35b877
+							background-image: url("../img/roadmap/react.svg")
+							&:after
+								content: 'Atom'
+						&.zeplin
+							border: solid 1px #f89920
+							background-image: url("../img/roadmap/zeplin.svg")
+							&:after
+								content: 'Zeplin'
+						&.vim
+							border: solid 1px #000000
+							background-image: url("../img/roadmap/vim.png")
+							background-size: 60px auto
+							&:after
+								content: 'Vim'
+						&.penta
+							border: solid 1px #0079ff
+							background-image: url("../img/roadmap/penta.png")
+							background-size: 60px auto
+							&:after
+								content: 'Fastlane'
+						&.hat
+							border: solid 1px #019ee1
+							background-image: url("../img/roadmap/hat.png")
+							background-size: 65px auto
+							&:after
+								content: 'HockeyApp'
+						&.app, &.android
+							border-radius: 0
+							width: 80px
+							height: 80px
+						&.app
+							background: url("../img/roadmap/appstore.svg") transparent
+							background-size: 80px auto
+							&:after
+								content: 'App Store'
+						&.android
+							background: url("../img/roadmap/playmarket.svg") transparent
+							background-size: 80px auto
+							&:after
+								content: 'Google Play'
+					>.technology-line
+						flex: 1
+						align-self: center
+						height: 1px
+						object-fit: contain
+						border: 1px solid
+						border-image-slice: 1
+						border-top: none
+						&.first
+							position: relative
+							border-image-source: linear-gradient(to right, #24ccaa, #ffc100)
 						//&:after
 						//	position: absolute
 						//	content: ''
@@ -1296,83 +1137,169 @@ html, body
 						//	height: 12px
 						//	top: -5px
 						//	left: calc(50% - 6px)
-						//	background-image: url("../img/roadmap/line.svg")
-						//	background-repeat: no-repeat
+						//	background: url("../img/roadmap/line.svg") no-repeat
+						&.second
+							border-image-source: linear-gradient(to right, #ffc100, #ff2a63)
+						&.third
+							border-image-source: linear-gradient(to right, #f89920, #7f3db6)
+						&.fourth
+							border-image-source: linear-gradient(to right, #35b877, #f89920)
+						&.fifth
+							border-image-source: linear-gradient(to right, #000000, #0079ff)
+						&.sixth
+							border-image-source: linear-gradient(to right, #0079ff, #019ee1)
+					&.first
+						justify-content: flex-end
+						padding-right: 47px
 					&.second
-						border-image-source: linear-gradient(to right, #ffc100, #ff2a63)
+						justify-content: flex-start
+						padding-left: 47px
 					&.third
-						border-image-source: linear-gradient(to right, #f89920, #7f3db6)
+						flex-direction: column
+						align-items: flex-end
+						padding-right: 47px
+						padding-left: 47px
+						margin-bottom: -40px
 					&.fourth
-						border-image-source: linear-gradient(to right, #35b877, #f89920)
-					&.fifth
-						border-image-source: linear-gradient(to right, #000000, #0079ff)
-					&.sixth
-						border-image-source: linear-gradient(to right, #0079ff, #019ee1)
-				&.first
-					justify-content: flex-end
-					padding-right: 47px
-				&.second
-					justify-content: flex-start
-					padding-left: 47px
-				&.third
-					flex-direction: column
-					//justify-content: flex-end
-					align-items: flex-end
-					padding-right: 47px
-					padding-left: 47px
-					margin-bottom: -40px
-				&.fourth
-					padding: 0 22.3%
-				>.technology-line-vertical
-					width: 1px
-					height: 80px
-					object-fit: contain
-					border-style: solid
-					border-width: 1px
-					border-image-slice: 1
-					border-left: none
-					&.one
-						border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6)
-					&.two
-						border-image-source: linear-gradient(to bottom, #35b877, #000000)
-					&.seventh
-						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
-						height: 64px
-				>.eighth
-					height: 1px
-					width: 100%
-					display: flex
-					flex-direction: row
-					>.left
-						flex: 1
-						height: 0
-					>.right
-						flex: 1
+						padding: 0 22.3%
+					>.technology-line-vertical
+						width: 1px
+						height: 80px
+						object-fit: contain
+						border: 1px solid
+						border-image-slice: 1
+						border-left: none
+						&.one
+							border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6)
+						&.two
+							border-image-source: linear-gradient(to bottom, #35b877, #000000)
+						&.seventh
+							border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+							height: 64px
+					>.eighth
 						height: 1px
-						border-style: solid
-						border-width: 1px
-						border-image-slice: 1
-						border-top: none
-						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
-				>.ninth
+						width: 100%
+						display: flex
+						flex-direction: row
+						>.left
+							flex: 1
+							height: 0
+						>.right
+							flex: 1
+							height: 1px
+							border: 1px solid
+							border-image-slice: 1
+							border-top: none
+							border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+					>.ninth
+						width: 100%
+						display: flex
+						justify-content: center
+						.-center
+							width: 2px
+							height: 64px
+							border: 1px solid
+							border-image-slice: 1
+							border-right: none
+							border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+					>.tenth
+						border-image-source: linear-gradient(to right, #00a6b9, #4086cd)
+		.section-technologies-mobile
+			height: 1104px
+			>.wrap-technologies
+				height: 100%
+				padding: 60px 0 60px
+				>.wrap-row
 					width: 100%
+					height: 100%
 					display: flex
+					flex-direction: column
+					align-items: center
 					justify-content: center
-					.-center
-						width: 2px
-						height: 64px
-						border-style: solid
-						border-width: 1px
-						border-image-slice: 1
-						border-right: none
-						border-image-source: linear-gradient(to right, #2096c3, #019ee1)
-				>.tenth
-					border-image-source: linear-gradient(to right, #00a6b9, #4086cd)
+					>.technology
+						width: 60px
+						height: 60px
+						background-size: 40px auto
+						&.in
+							background-size: 35px auto
+						&.p
+							background-size: 30px auto
+						&.vim
+							background-size: 35px auto
+						&.penta
+							background-size: 40px auto
+						&.hat
+							background-size: 40px auto
+						&:after
+							text-align: right
+							left: -175px
+							bottom: calc(50% - 17px)
+							height: 34px
+							font-size: 18px
+						&.-right
+							&:after
+								text-align: left
+								left: 70px
+					>.technology-line
+						flex: 1
+						height: 38px
+						border-left: none
+						&.one
+							border-image-source: linear-gradient(to bottom, #ff2a63, #7f3db6)
+						&.two
+							border-image-source: linear-gradient(to bottom, #35b877, #000000)
+						&.seventh
+							border-image-source: linear-gradient(to right, #2096c3, #019ee1)
+					>.-store
+						display: flex
+						flex-direction: row
+						width: 200px
+						margin-top: -30px
+						>.technology
+							width: 60px
+							height: 60px
+							background-size: 40px auto
+							&.app, &.android
+								border-radius: 0
+								width: 60px
+								height: 60px
+								&:after
+									position: absolute
+									height: 33px
+									width: 162px
+									text-align: center
+									bottom: 20px
+									font-family: $SFUID
+									font-size: 18px
+									font-weight: 300
+									letter-spacing: -0px
+									color: #0a0c0f
+							&.app
+								background: url("../img/roadmap/appstore.svg") transparent
+								background-size: 60px auto
+								&:after
+									content: 'App Store'
+									left: calc(50% - 10px)
+							&.android
+								background: url("../img/roadmap/playmarket.svg") transparent
+								background-size: 60px auto
+								&:after
+									content: 'Google Play'
+									left: calc(50% - 152px)
+						>.technology-line
+							&.tenth
+								flex: 1
+								align-self: center
+								height: 1px
+								object-fit: contain
+								border: 1px solid
+								border-image-slice: 1
+								border-top: none
+								border-image-source: linear-gradient(to right, #00a6b9, #4086cd)
+
 	>footer
-		//max-width: 1440px
 		width: 100%
 		min-height: 720px
-		object-fit: contain
 		background-image: linear-gradient(to left, #27c4ce, #33d4bd)
 		display: flex
 		justify-content: center
@@ -1392,7 +1319,7 @@ html, body
 					font-weight: 600
 					line-height: 1.14
 					letter-spacing: 0.2px
-					color: #ffffff
+					color: #fff
 					margin-bottom: 73px
 					border: none
 
@@ -1413,12 +1340,10 @@ html, body
 							height: 1px
 							top: -17px
 
-					>input
+					>input, select
 						width: 100%
 						height: 36px
-						border-top: none
-						border-left: none
-						border-right: none
+						border: none
 						box-shadow: none
 						border-bottom: 1px solid #fff
 						background-color: transparent
@@ -1446,6 +1371,14 @@ html, body
 							color: #f8e81c
 						&:focus:required:invalid:-ms-input-placeholder
 							color: #f8e81c
+
+					>select
+						>option
+							color: #000
+							background-color: #fff
+							font-family: $SFUIDregular
+							font-size: 1em
+							border-radius: 5px
 
 					::-webkit-input-placeholder
 						color: rgba(255, 255, 255, 0.7)
@@ -1487,18 +1420,14 @@ html, body
 					margin-top: 43px
 					position: relative
 					overflow: hidden
-
 					&:hover
 						color: #0fabe8
-
-				#send-respond-button
-					filter: url('/#send-respond')
 
 			>.contact
 				display: flex
 				flex-direction: column
 				justify-content: space-between
-				max-width: 345px
+				max-width: 360px
 				padding: 70px 0 70px 0px
 				width: 100%
 				min-height: 600px
@@ -1514,7 +1443,7 @@ html, body
 					letter-spacing: 1px
 					color: rgba(255, 255, 255, 0.7)
 
-					>span
+					>a, span
 						font-family: 'SFUIDTextMedium', sans-serif
 						font-size: 1.25em
 						font-weight: 500
@@ -1530,7 +1459,7 @@ html, body
 					font-size: 2.25em
 					font-weight: 500
 					line-height: 0.83
-					letter-spacing: 0.6px
+					letter-spacing: 0px
 					color: #ffffff
 					margin-top: 40px
 
@@ -1570,7 +1499,7 @@ html, body
 		transform: rotate(35deg)
 		transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1)
 		width: 50px
-		z-index: -10
+		z-index: 0
 	&:hover
 		&:after
 			left: 120%

@@ -52,7 +52,7 @@ class Footer extends Component {
 
 	sendForm = (e) => {
 		e.preventDefault();
-		let self = this
+		let self = this;
 		if (this.state.validEmail && this.state.validName && this.state.validPhone) {
 			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
@@ -102,7 +102,7 @@ class Footer extends Component {
 
 					<div className="gutter-10 row">
 
-						<form name="contact-with-us" className="col-md-4 col-md-offset-2">
+						<form onSubmit={e => this.sendForm(e)} name="contact-with-us" className="col-md-4 col-md-offset-2">
 
 							<legend>Обсудим проект?</legend>
 
@@ -148,15 +148,23 @@ class Footer extends Component {
 								/>
 								<label htmlFor="company"/>
 
-								<input
+								<select required value={this.state.project} onChange={this.handleChangeProject} id="project">
+									<option value="">Выберите тип проекта</option>
+									<option value="Мобильное приложение">Мобильное приложение</option>
+									<option value="Создание API">Создание API</option>
+									<option value="UX/UI дизайн">UX/UI дизайн</option>
+									<option value="Веб приложение (CRM, ERP…)">Веб приложение (CRM, ERP…)</option>
+								</select>
+
+								{/*<input
 									type="text"
 									required
 									placeholder="Тип проекта"
 									id="project"
 									onChange={this.handleChangeProject}
 									value={this.state.project}
-								/>
-								<label htmlFor="project"/>
+								/>*/}
+								{/*<label htmlFor="project"/>*/}
 
 							</div>
 
@@ -167,7 +175,6 @@ class Footer extends Component {
 							<button
 								type="submit"
 								id="send-respond-button"
-								onClick={this.sendForm}
 							>
 								Отправить запрос
 							</button>
@@ -182,7 +189,7 @@ class Footer extends Component {
 
 							<div className="email">
 								Email: <br/>
-								<span>mail@itelaxy.ru</span>
+								<a href='mailto:mail@intelaxy.ru'>mail@intelaxy.ru</a>
 							</div>
 
 							<div className="adress">
@@ -200,7 +207,7 @@ class Footer extends Component {
 
 					<div className="gutter-10 row">
 
-						<form name="contact-with-us" className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
+						<form onSubmit={e => this.sendForm(e)} name="contact-with-us" className="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2">
 
 							<legend>Обсудим проект?</legend>
 
@@ -245,15 +252,23 @@ class Footer extends Component {
 								/>
 								<label htmlFor="company"/>
 
-								<input
+								<select required value={this.state.project} onChange={this.handleChangeProject} id="project">
+									<option value="">Выберите тип проекта</option>
+									<option value="Мобильное приложение">Мобильное приложение</option>
+									<option value="Создание API">Создание API</option>
+									<option value="UX/UI дизайн">UX/UI дизайн</option>
+									<option value="Веб приложение (CRM, ERP…)">Веб приложение (CRM, ERP…)</option>
+								</select>
+
+								{/*<input
 									type="text"
 									required
 									placeholder="Тип проекта"
 									id="project"
 									onChange={this.handleChangeProject}
 									value={this.state.project}
-								/>
-								<label htmlFor="project"/>
+								/>*/}
+								{/*<label htmlFor="project"/>*/}
 
 							</div>
 
@@ -262,10 +277,9 @@ class Footer extends Component {
 							/>
 
 							<button
-								className="btn-4-blue"
+								className="button btn-4-blue"
 								type="submit"
 								id="send-respond-button"
-								onClick={this.sendForm}
 							>
 								Отправить запрос
 							</button>
@@ -280,7 +294,7 @@ class Footer extends Component {
 
 							<div className="email">
 								Email: <br/>
-								<span>mail@itelaxy.ru</span>
+								<a href='mailto:mail@intelaxy.ru'>mail@intelaxy.ru</a>
 							</div>
 
 							<div className="adress">

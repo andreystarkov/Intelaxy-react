@@ -16,9 +16,6 @@ class Vacancy extends Component {
 		this.profession = null;
 
 		this.professions = [{
-			title: 'Серверный администратор Linux (DevOps)',
-			price: '40 000 - 100 000 руб.'
-		}, {
 			title: 'Senior React Developer',
 			price: '130 000 - 200 000 руб.'
 		}, {
@@ -30,15 +27,12 @@ class Vacancy extends Component {
 		}, {
 			title: 'Ruby Developer',
 			price: '80 000 - 200 000 руб.'
+		}, {
+			title: 'Серверный администратор Linux (DevOps)',
+			price: '40 000 - 100 000 руб.'
 		}];
 
 		this.professionSkills = [{
-			title: 'Требования',
-			firstSkill: 'Опыт админ. Linux от 2х лет',
-			secondSkill: 'Оптимизация производительности',
-			thirdSkill: 'Написание скриптов Shell / Bash',
-			fourthSkill: 'Linux мониторинг и диагностика'
-		}, {
 			title: 'Требования',
 			firstSkill: 'Опыт от 5 лет в JavaScript',
 			secondSkill: 'Глубокое знание React',
@@ -61,13 +55,15 @@ class Vacancy extends Component {
 			firstSkill: 'Опыт от 2х лет',
 			secondSkill: 'Ruby on Rails',
 			thirdSkill: 'Хороший опыт верстки'
+		}, {
+			title: 'Требования',
+			firstSkill: 'Опыт админ. Linux от 2х лет',
+			secondSkill: 'Оптимизация производительности',
+			thirdSkill: 'Написание скриптов Shell / Bash',
+			fourthSkill: 'Linux мониторинг и диагностика'
 		}];
 
 		this.professionOffers = [{
-				title: 'Мы предлагаем',
-				firstOffer: 'Работа в офисе г. Самара',
-				secondOffer: 'Возможна удаленная работа'
-			}, {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
 				secondOffer: 'Возможна удаленная работа'
@@ -84,7 +80,11 @@ class Vacancy extends Component {
 				title: 'Мы предлагаем',
 				firstOffer: 'Работа в офисе г. Самара',
 				secondOffer: 'Возможна удаленная работа'
-			}];
+			}, {
+			title: 'Мы предлагаем',
+			firstOffer: 'Работа в офисе г. Самара',
+			secondOffer: 'Возможна удаленная работа'
+		}];
 
 		this.state = {
 			activeProfession: 0,

@@ -43,7 +43,7 @@ class VacancyForm extends Component {
 	sendForm = (e) => {
 		e.preventDefault();
 		let self = this;
-		if (this.state.validEmail && this.state.validName) {
+		if (this.state.validEmail && this.state.validName && this.props.base64 !== '') {
 			fetch("http://intelaxy.ru/api", {
 				method: 'POST',
 				body: JSON.stringify({
@@ -67,7 +67,7 @@ class VacancyForm extends Component {
 							wages: '',
 							validEmail: false,
 							validName: false
-						})
+						});
 						this.props.unsetFiles();
 					} else {
 						self.setState({
@@ -75,12 +75,44 @@ class VacancyForm extends Component {
 						})
 					}
 				})
-		} else {return (null)}
+		} else if (this.state.validEmail && this.state.validName && this.props.base64 === '') {
+			fetch("http://intelaxy.ru/api", {
+				method: 'POST',
+				body: JSON.stringify({
+					"Vacancy-email": `email: ${this.state.email}`,
+					"Vacancy-name": `name: ${this.state.name}`,
+					"Vacancy-phone": `phone: ${this.state.phone}`,
+					"Vacancy-wages": `wages: ${this.state.wages}`,
+					"attach": {
+						'content': '',
+						'filename': ''
+					}
+				})
+			})
+				.then((response) => {
+					if (response.ok) {
+						this.showSuccefulRespond();
+						self.setState({
+							email: '',
+							name: '',
+							phone: '',
+							wages: '',
+							validEmail: false,
+							validName: false
+						})
+					} else {
+						self.setState({
+							problem: response.problem
+						})
+					}
+				})
+		}
+		else {return (null)}
 	};
 
 	render () {
 		return (
-			<form action="#" name="send-respond" className={this.props.formClasses}>
+			<form onSubmit={e => this.sendForm(e)} action="#" name="send-respond" className={this.props.formClasses}>
 
 				<div className="wrap">
 
@@ -145,7 +177,6 @@ class VacancyForm extends Component {
 					className="btn-4-blue"
 					type="submit"
 					id="show-form-button"
-					onClick={this.sendForm}
 				>
 					Отправить запрос
 				</button>
